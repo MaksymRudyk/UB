@@ -1,0 +1,28 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-12T08:50:44
+
+20211012 08504439  ! srvr  StartupPath: '/home/admloc/Documents/ubProject/CityPortal/'; BinPath: '/opt/unitybase/server/'
+20211012 08504439  ! srvr  JS Engine params: engine-max-mem=512Mb, engine-lifetime=360sec, engine-full-gc=every 100 HTTP req
+20211012 08504439  ! warn  CPU support for AVX2 and SSE42 not available or can not be used
+20211012 08504439  ! srvr  FTS is disabled
+20211012 08504439  "  +    init
+20211012 08504439  " srvr  	Start application initialization...
+20211012 08504448  " info  	Loading domain models...
+20211012 08504448  " info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211012 08504448  " info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211012 08504449  " info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211012 08504449  " info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211012 08504449  " info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211012 08504449  " info  	"requests"(1.0.0) from "./models/requests"
+20211012 08504449  " info  	Loading meta files for 40 entities... 
+20211012 08504451  " info  	load domain: 46ms
+20211012 08504451  " info  	applying metadata transformation hook from UB
+20211012 08504451  " debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211012 08504451  " info  	applying hooks: 4ms
+20211012 08504452  " info  	native init: 6ms
+20211012 08504452  " srvr  	The domain loaded successfully with 40 entities
+20211012 08504462  " ERROR 	GET init ERROR=500 (BLOB store "attach" path "/home/admloc/Documents/ubProject/CityPortal/.\docs\attach\" not exists)
+20211012 08504462  "  -    00.369.857
+20211012 08504500  ! EXC   EMetabaseException Failed to start - exception during initialization [] at   $000000000073AB3C
+20211012 08504500  ! mon   {"sessions_total":0,"threads_total":4,"incoming_bytes":0,"outcoming_bytes":0,"responses_total":[0,0,0,0,0,0],"security_exception_count":0,"js_gc_count":7,"js_memory_bytes":3641344,"http_perning_request_count":0}

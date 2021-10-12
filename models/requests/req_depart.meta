@@ -27,6 +27,13 @@
       "caption": "Phone",
       "description": "Department Phone",
       "allowNull": false
+    },
+    {
+      "name":"roleInSystem",
+      "dataType": "Entity",
+      "associatedEntity": "uba_role",
+      "caption": "Role in System",
+      "allowNull": true
     }
   ],
   "mixins": {

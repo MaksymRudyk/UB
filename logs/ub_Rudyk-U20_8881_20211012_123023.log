@@ -1,0 +1,6 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-12T09:30:23
+
+20211012 09303044  ! srvr  Terminating...
+20211012 09303044  ! mon   {"sessions_total":2,"threads_total":4,"incoming_bytes":484766,"outcoming_bytes":1645212,"responses_total":[0,0,651,0,1,15],"security_exception_count":4,"js_gc_count":40,"js_memory_bytes":13328384,"http_perning_request_count":0}

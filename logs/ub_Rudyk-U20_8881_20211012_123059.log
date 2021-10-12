@@ -1,0 +1,275 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-12T09:30:59
+
+20211012 09305916  ! srvr  StartupPath: '/home/admloc/Documents/ubProject/CityPortal/'; BinPath: '/opt/unitybase/server/'
+20211012 09305916  ! srvr  JS Engine params: engine-max-mem=512Mb, engine-lifetime=360sec, engine-full-gc=every 100 HTTP req
+20211012 09305916  ! warn  CPU support for AVX2 and SSE42 not available or can not be used
+20211012 09305916  ! auth  Build-in session admin/00000000 created
+20211012 09305916  ! auth  Build-in session anonymous/00000001 created
+20211012 09305916  ! auth  Build-in session root/00000002 created
+20211012 09305916  ! srvr  FTS is disabled
+20211012 09305916  "  +    init
+20211012 09305916  " srvr  	Start application initialization...
+20211012 09305926  " info  	Loading domain models...
+20211012 09305926  " info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211012 09305926  " info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211012 09305927  " info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211012 09305927  " info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211012 09305927  " info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211012 09305927  " info  	"requests"(1.0.0) from "./models/requests"
+20211012 09305927  " info  	Loading meta files for 40 entities... 
+20211012 09305928  " info  	load domain: 42ms
+20211012 09305928  " info  	applying metadata transformation hook from UB
+20211012 09305928  " debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211012 09305928  " info  	applying hooks: 4ms
+20211012 09305929  " info  	native init: 4ms
+20211012 09305929  " srvr  	The domain loaded successfully with 40 entities
+20211012 09305939  "  +    	Init ELS
+20211012 09305939  "  +    		DataStore.init(uba_role)
+20211012 09305939  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 09305939  "  +    				
+20211012 09305939  "  -    				00.001.903
+20211012 09305939  " SQL   				r=7 t=1941 fr=1921 c=0 q=SELECT A01.ID,A01.name,A01.sessionTimeout,A01.allowedAppMethods  FROM uba_role A01 
+20211012 09305939  "  -    			00.001.986
+20211012 09305939  "  -    		00.002.004
+20211012 09305939  "  +    		DataStore.init(uba_els)
+20211012 09305939  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 09305939  " SQL   				r=1 t=36 fr=22 c=0 q=SELECT A01.ID,A01.entityMask,A01.methodMask,A01.ruleType,A01.ruleRole,A01.disabled,A01.code  FROM uba_els A01 
+20211012 09305939  "  -    			00.000.055
+20211012 09305939  "  -    		00.000.062
+20211012 09305939  "  -    	00.002.466
+20211012 09305939  "  +    	DataStore.init(ubs_settings)
+20211012 09305939  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211012 09305939  " cust1 			{"P1s34":"UBA.passwordPolicy.maxDurationDays"}
+20211012 09305939  " SQL   			r=0 t=36 fr=21 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211012 09305939  "  -    		00.000.058
+20211012 09305939  "  -    	00.000.068
+20211012 09305939  "  +    	DataStore.init(ubs_settings)
+20211012 09305939  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211012 09305939  " cust1 			{"P1s37":"UBA.passwordPolicy.maxInvalidAttempts"}
+20211012 09305939  " SQL   			r=0 t=40 fr=36 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211012 09305939  "  -    		00.000.014
+20211012 09305939  "  -    	00.000.020
+20211012 09305939  "  -    00.366.993
+20211012 09305940  ! srvr  Enable zip compression
+20211012 09305940  ! srvr  Local IP addresses: 10.8.125.48;127.0.0.1
+20211012 09305940  ! srvr  Socket server URLs: http://localhost:8881/
+20211012 09305940  ! srvr  Started and ready to accept requests...
+20211012 09310234  "  +    adm
+20211012 09310234  " http  	127.0.0.1 -> GET adm
+20211012 09310234  " info  	endpoint adm
+20211012 09310236  " info  	index.mustache is generated from template /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-pub/index.mustache
+20211012 09310236  " debug 	default-src 'self' https://localhost:8083 http://localhost:8081; connect-src 'self'  https://localhost:8083 http://localhost:8081 blob:; script-src 'self' 'nonce-589d4917' 'unsafe-eval' https://localhost:8083 http://localhost:8081 resource://pdf.js/build/ resource://pdf.js/web/; object-src blob: https://localhost:8083 http://localhost:8081; base-uri resource:; style-src 'self' 'unsafe-inline' data: ; font-src 'self' data: ; frame-src 'self'  blob:; img-src 'self' https://unitybase.info  data: blob:; plugin-types application/pdf
+20211012 09310236  " http  	127.0.0.1 <- 200
+20211012 09310236  "  -    00.027.440
+20211012 09310238  "  +    models/adminui-pub/themes/UBGrayTheme/UBGrayTheme-all.css?ver=5.20.26
+20211012 09310238  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/UBGrayTheme-all.css?ver=5.20.26
+20211012 09310238  " info  	endpoint models
+20211012 09310238  " http  	127.0.0.1 <- 200
+20211012 09310238  "  -    00.001.825
+20211012 09310238  "  +    models/adminui-pub/ub-css-all.css?ver=5.20.26
+20211012 09310238  " http  	127.0.0.1 -> GET models/adminui-pub/ub-css-all.css?ver=5.20.26
+20211012 09310238  " info  	endpoint models
+20211012 09310238  " http  	127.0.0.1 <- 200
+20211012 09310238  "  -    00.000.990
+20211012 09310238  "  +    models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211012 09310238  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211012 09310238  " info  	endpoint models
+20211012 09310238  " http  	127.0.0.1 <- 200
+20211012 09310238  "  -    00.001.863
+20211012 09310239  "  +    models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211012 09310239  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211012 09310239  " info  	endpoint models
+20211012 09310239  " http  	127.0.0.1 <- 200
+20211012 09310239  "  -    00.000.597
+20211012 09310239  "  +    models/adminui-vue/dist/fonts/fa/css/regular.min.css
+20211012 09310239  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/regular.min.css
+20211012 09310239  " info  	endpoint models
+20211012 09310239  " http  	127.0.0.1 <- 200
+20211012 09310239  "  -    00.000.729
+20211012 09310239  "  +    models/adminui-vue/dist/fonts/fa/css/v4-shims.min.css
+20211012 09310239  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/v4-shims.min.css
+20211012 09310239  " info  	endpoint models
+20211012 09310239  " http  	127.0.0.1 <- 200
+20211012 09310239  "  -    00.000.627
+20211012 09310239  "  +    models/adminui-pub/themes/UBGrayTheme/ub.css?ver=5.20.26
+20211012 09310239  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/ub.css?ver=5.20.26
+20211012 09310239  " info  	endpoint models
+20211012 09310239  " http  	127.0.0.1 <- 200
+20211012 09310239  "  -    00.000.568
+20211012 09310239  "  +    models/adminui-vue/theme/el-theme-compiled.min.css
+20211012 09310239  " http  	127.0.0.1 -> GET models/adminui-vue/theme/el-theme-compiled.min.css
+20211012 09310239  " info  	endpoint models
+20211012 09310239  " http  	127.0.0.1 <- 200
+20211012 09310239  "  -    00.000.687
+20211012 09310240  "  +    models/adminui-vue/views/ub-auth.html?returnUrl=http%3A%2F%2Flocalhost%3A8881%2Fadm
+20211012 09310240  " http  	127.0.0.1 -> GET models/adminui-vue/views/ub-auth.html?returnUrl=http%3A%2F%2Flocalhost%3A8881%2Fadm
+20211012 09310240  " info  	endpoint models
+20211012 09310240  " http  	127.0.0.1 <- 200
+20211012 09310240  "  -    00.000.616
+20211012 09310240  "  +    clientRequire/systemjs/dist/system.js
+20211012 09310240  " http  	127.0.0.1 -> GET clientRequire/systemjs/dist/system.js
+20211012 09310240  " info  	endpoint clientRequire
+20211012 09310240  " debug 	Try to resolve systemjs/dist/system.js
+20211012 09310240  " debug 	Resolve systemjs/dist/system.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/systemjs/dist/system.js
+20211012 09310240  " http  	127.0.0.1 <- 200
+20211012 09310240  "  -    00.001.875
+20211012 09310240  "  +    models/adminui-pub/dist/ext-all.min.js
+20211012 09310240  " http  	127.0.0.1 -> GET models/adminui-pub/dist/ext-all.min.js
+20211012 09310240  " info  	endpoint models
+20211012 09310240  " http  	127.0.0.1 <- 200
+20211012 09310240  "  -    00.001.342
+20211012 09310242  " EXC   ECrtSocket ("SndLow() len=498099 [32  Broken pipe]") [] at   $000000000046BBBD  $000000000046BB11
+20211012 09310242  "  +    models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211012 09310242  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211012 09310242  " info  	endpoint models
+20211012 09310242  " debug 	model file is resolved from cache
+20211012 09310242  " http  	127.0.0.1 <- 200
+20211012 09310242  "  -    00.000.792
+20211012 09310242  "  +    models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211012 09310242  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211012 09310242  " info  	endpoint models
+20211012 09310242  " debug 	model file is resolved from cache
+20211012 09310242  " http  	127.0.0.1 <- 200
+20211012 09310242  "  -    00.000.334
+20211012 09310242  "  +    models/adminui-vue/theme/el-theme-compiled.min.css
+20211012 09310242  " http  	127.0.0.1 -> GET models/adminui-vue/theme/el-theme-compiled.min.css
+20211012 09310242  " info  	endpoint models
+20211012 09310242  " debug 	model file is resolved from cache
+20211012 09310242  " http  	127.0.0.1 <- 200
+20211012 09310242  "  -    00.000.362
+20211012 09310243  "  +    clientRequire/lodash/lodash.min.js
+20211012 09310243  " http  	127.0.0.1 -> GET clientRequire/lodash/lodash.min.js
+20211012 09310243  " info  	endpoint clientRequire
+20211012 09310243  " debug 	Try to resolve lodash/lodash.min.js
+20211012 09310243  " debug 	Resolve lodash/lodash.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/lodash/lodash.min.js
+20211012 09310243  " http  	127.0.0.1 <- 200
+20211012 09310243  "  -    00.001.071
+20211012 09310243  "  +    clientRequire/@unitybase/ub-pub/dist/ub-pub.min.js
+20211012 09310243  " http  	127.0.0.1 -> GET clientRequire/@unitybase/ub-pub/dist/ub-pub.min.js
+20211012 09310243  " info  	endpoint clientRequire
+20211012 09310243  " debug 	Try to resolve @unitybase/ub-pub/dist/ub-pub.min.js
+20211012 09310243  " debug 	Resolve @unitybase/ub-pub/dist/ub-pub.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211012 09310243  " http  	127.0.0.1 <- 200
+20211012 09310243  "  -    00.000.672
+20211012 09310244  "  +    models/adminui-vue/dist/adminui-vue.min.js
+20211012 09310244  " http  	127.0.0.1 -> GET models/adminui-vue/dist/adminui-vue.min.js
+20211012 09310244  " info  	endpoint models
+20211012 09310244  " http  	127.0.0.1 <- 200
+20211012 09310244  "  -    00.001.096
+20211012 09310256  "  +    clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211012 09310256  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211012 09310256  " info  	endpoint clientRequire
+20211012 09310256  " debug 	Try to resolve @unitybase/adminui-vue/dist/adminui-vue.min.css
+20211012 09310256  " debug 	Resolve @unitybase/adminui-vue/dist/adminui-vue.min.css -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211012 09310256  " http  	127.0.0.1 <- 200
+20211012 09310256  "  -    00.000.561
+20211012 09310260  "  +    getAppInfo
+20211012 09310260  " http  	127.0.0.1 -> GET getAppInfo
+20211012 09310260  " info  	endpoint getAppInfo
+20211012 09310260  " http  	127.0.0.1 <- 200
+20211012 09310260  "  -    00.005.433
+20211012 09310260  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211012 09310260  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211012 09310260  " info  	endpoint clientRequire
+20211012 09310260  " debug 	Try to resolve @unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211012 09310260  " debug 	Resolve @unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211012 09310260  " http  	127.0.0.1 <- 200
+20211012 09310260  "  -    00.000.754
+20211012 09310261  "  +    models/ub-pub/locale/lang-en.json
+20211012 09310261  " http  	127.0.0.1 -> GET models/ub-pub/locale/lang-en.json
+20211012 09310261  " info  	endpoint models
+20211012 09310261  " http  	127.0.0.1 <- 200
+20211012 09310261  "  -    00.000.590
+20211012 09310300  "  +    models/ub-pub/img/login-logo.svg
+20211012 09310300  " http  	127.0.0.1 -> GET models/ub-pub/img/login-logo.svg
+20211012 09310300  " info  	endpoint models
+20211012 09310300  " http  	127.0.0.1 <- 200
+20211012 09310300  "  -    00.000.580
+20211012 09310301  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211012 09310301  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211012 09310301  " info  	endpoint clientRequire
+20211012 09310301  " debug 	Try to resolve @unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211012 09310301  " debug 	Resolve @unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211012 09310301  " http  	127.0.0.1 <- 200
+20211012 09310301  "  -    00.000.788
+20211012 09310301  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211012 09310301  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211012 09310301  " info  	endpoint clientRequire
+20211012 09310301  " debug 	Try to resolve @unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211012 09310301  " debug 	Resolve @unitybase/adminui-vue/dist/fonts/ub-icons.woff2 -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211012 09310301  " http  	127.0.0.1 <- 200
+20211012 09310301  "  -    00.000.569
+20211012 09310301  "  +    models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211012 09310301  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211012 09310301  " info  	endpoint models
+20211012 09310301  " http  	127.0.0.1 <- 200
+20211012 09310301  "  -    00.000.396
+20211012 09310302  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211012 09310302  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211012 09310302  " info  	endpoint clientRequire
+20211012 09310302  " debug 	Try to resolve @unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211012 09310302  " debug 	Resolve @unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211012 09310302  " http  	127.0.0.1 <- 200
+20211012 09310302  "  -    00.000.471
+20211012 09310436  "  +    auth?AUTHTYPE=UB&userName=admin
+20211012 09310436  " http  	127.0.0.1 -> POST auth?AUTHTYPE=UB&userName=admin
+20211012 09310436  " info  	endpoint auth
+20211012 09310436  " http  	127.0.0.1 <- 200
+20211012 09310436  "  -    00.000.234
+20211012 09310436  "  +    auth?AUTHTYPE=UB&clientNonce=54ea9d0ac21444a73665db2e936613304e80164a9c192bddb39480ce2d3da772&password=d840e7b622b32aac28447c62610716df769386612843d27a596b94123ec00cc1&userName=admin
+20211012 09310436  " http  	127.0.0.1 -> POST auth?AUTHTYPE=UB&clientNonce=54ea9d0ac21444a73665db2e936613304e80164a9c192bddb39480ce2d3da772&password=d840e7b622b32aac28447c62610716df769386612843d27a596b94123ec00cc1&userName=admin
+20211012 09310436  " info  	endpoint auth
+20211012 09310436  "  +    	DataStore.init(uba_user)
+20211012 09310436  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211012 09310436  " cust1 			{"P1s5":"admin"}
+20211012 09310436  " SQL   			r=1 t=117 fr=73 c=0 q=select id, name, uPasswordHashHexa, uData, isPending, trustedIP from UBA_USER where name=? and disabled=0
+20211012 09310436  "  -    		00.000.162
+20211012 09310436  "  -    	00.000.183
+20211012 09310436  "  +    	method(TubStorageMixin) uba_user.select
+20211012 09310436  "  +    		DataStore.init(uba_user)
+20211012 09310436  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 09310436  " EXC   				ESQLite3Exception Error SQLITE_ERROR (1) [SELECT A01.name,A01.uData,A01.uPasswordHashHexa,A01.lastPasswordChangeDate,A01.firstName,A01.lastName,A01.fullName  FROM uba_user A01  WHERE A01.ID=?] using 3.36.0 - no such column: A01.firstName, extended_errcode=1 [] at   $000000000084F342  $000000000084E84C  $000000000075EC9E  $00000000005D28CE  $00000000005D3184  $00000000005DC776  $00000000005DD43F  $00000000005DDB25  $000000000058D2B4  $00000000005DEE55  $0000000000613460  $00007F466F5BFD78
+20211012 09310436  " ERROR 				q=SELECT A01.name,A01.uData,A01.uPasswordHashHexa,A01.lastPasswordChangeDate,A01.firstName,A01.lastName,A01.fullName  FROM uba_user A01  WHERE A01.ID=?
+20211012 09310436  "  -    			00.000.650
+20211012 09310436  "  -    		00.000.669
+20211012 09310436  "  -    	00.000.771
+20211012 09310436  " EXC   	ESMException: Error SQLITE_ERROR (1) [SELECT A01.name,A01.uData,A01.uPasswordHashHexa,A01.lastPasswordChangeDate,A01.firstName,A01.lastName,A01.fullName  FROM uba_user A01  WHERE A01.ID=?] using 3.36.0 - no such column: A01.firstName, extended_errcode=1 Stack: selectAsObject@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/base/ServerRepository.js:69:7 selectSingle@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/base/ServerRepository.js:177:15 selectById@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/base/ServerRepository.js:241:12 Session._getRBACInfo@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/Session.js:485:20 ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at 
+20211012 09310436  " ERROR 	POST auth?AUTHTYPE=UB&clientNonce=54ea9d0ac21444a73665db2e936613304e80164a9c192bddb39480ce2d3da772&password=d840e7b622b32aac28447c62610716df769386612843d27a596b94123ec00cc1&userName=admin ERROR=500 (ESMException: Error SQLITE_ERROR (1) [SELECT A01.name,A01.uData,A01.uPasswordHashHexa,A01.lastPasswordChangeDate,A01.firstName,A01.lastName,A01.fullName  FROM uba_user A01  WHERE A01.ID=?] using 3.36.0 - no such column: A01.firstName, extended_errcode=1 Stack: selectAsObject@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/base/ServerRepository.js:69:7 selectSingle@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/base/ServerRepository.js:177:15 selectById@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/base/ServerRepository.js:241:12 Session._getRBACInfo@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/Session.js:485:20 ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at )
+20211012 09310436  " http  	127.0.0.1 <- 500
+20211012 09310436  "  -    00.002.747
+20211012 09310438  "  +    models/adminui-vue/theme/fonts/element-icons.woff
+20211012 09310438  " http  	127.0.0.1 -> GET models/adminui-vue/theme/fonts/element-icons.woff
+20211012 09310438  " info  	endpoint models
+20211012 09310438  " http  	127.0.0.1 <- 200
+20211012 09310438  "  -    00.000.403
+20211012 09311342  "  +    auth?AUTHTYPE=UB&userName=admin
+20211012 09311342  " http  	127.0.0.1 -> POST auth?AUTHTYPE=UB&userName=admin
+20211012 09311342  " info  	endpoint auth
+20211012 09311342  " http  	127.0.0.1 <- 200
+20211012 09311342  "  -    00.000.172
+20211012 09311342  "  +    auth?AUTHTYPE=UB&clientNonce=54ea9d0ac21444a73665db2e936613304e80164a9c192bddb39480ce2d3da772&password=d840e7b622b32aac28447c62610716df769386612843d27a596b94123ec00cc1&userName=admin
+20211012 09311342  " http  	127.0.0.1 -> POST auth?AUTHTYPE=UB&clientNonce=54ea9d0ac21444a73665db2e936613304e80164a9c192bddb39480ce2d3da772&password=d840e7b622b32aac28447c62610716df769386612843d27a596b94123ec00cc1&userName=admin
+20211012 09311342  " info  	endpoint auth
+20211012 09311343  "  +    	DataStore.init(uba_user)
+20211012 09311343  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211012 09311343  " cust1 			{"P1s5":"admin"}
+20211012 09311343  " SQL   			r=1 t=151 fr=117 c=0 q=select id, name, uPasswordHashHexa, uData, isPending, trustedIP from UBA_USER where name=? and disabled=0
+20211012 09311343  "  -    		00.000.079
+20211012 09311343  "  -    	00.000.098
+20211012 09311343  "  +    	method(TubStorageMixin) uba_user.select
+20211012 09311343  "  +    		DataStore.init(uba_user)
+20211012 09311343  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 09311343  " EXC   				ESQLite3Exception Error SQLITE_ERROR (1) [SELECT A01.name,A01.uData,A01.uPasswordHashHexa,A01.lastPasswordChangeDate,A01.firstName,A01.lastName,A01.fullName  FROM uba_user A01  WHERE A01.ID=?] using 3.36.0 - no such column: A01.firstName, extended_errcode=1 [] at   $000000000084F342  $000000000084E84C  $000000000075EC9E  $00000000005D28CE  $00000000005D3184  $00000000005DC776  $00000000005DD43F  $00000000005DDB25  $000000000058D2B4  $00000000005DEE55  $0000000000613460  $00007F466F5BFD78
+20211012 09311343  " ERROR 				q=SELECT A01.name,A01.uData,A01.uPasswordHashHexa,A01.lastPasswordChangeDate,A01.firstName,A01.lastName,A01.fullName  FROM uba_user A01  WHERE A01.ID=?
+20211012 09311343  "  -    			00.000.788
+20211012 09311343  "  -    		00.000.798
+20211012 09311343  "  -    	00.000.929
+20211012 09311343  " EXC   	ESMException: Error SQLITE_ERROR (1) [SELECT A01.name,A01.uData,A01.uPasswordHashHexa,A01.lastPasswordChangeDate,A01.firstName,A01.lastName,A01.fullName  FROM uba_user A01  WHERE A01.ID=?] using 3.36.0 - no such column: A01.firstName, extended_errcode=1 Stack: selectAsObject@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/base/ServerRepository.js:69:7 selectSingle@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/base/ServerRepository.js:177:15 selectById@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/base/ServerRepository.js:241:12 Session._getRBACInfo@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/Session.js:485:20 ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at 
+20211012 09311343  " ERROR 	POST auth?AUTHTYPE=UB&clientNonce=54ea9d0ac21444a73665db2e936613304e80164a9c192bddb39480ce2d3da772&password=d840e7b622b32aac28447c62610716df769386612843d27a596b94123ec00cc1&userName=admin ERROR=500 (ESMException: Error SQLITE_ERROR (1) [SELECT A01.name,A01.uData,A01.uPasswordHashHexa,A01.lastPasswordChangeDate,A01.firstName,A01.lastName,A01.fullName  FROM uba_user A01  WHERE A01.ID=?] using 3.36.0 - no such column: A01.firstName, extended_errcode=1 Stack: selectAsObject@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/base/ServerRepository.js:69:7 selectSingle@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/base/ServerRepository.js:177:15 selectById@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/base/ServerRepository.js:241:12 Session._getRBACInfo@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/Session.js:485:20 ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at )
+20211012 09311343  " http  	127.0.0.1 <- 500
+20211012 09311343  "  -    00.001.822
+20211012 09312916  ! srvr  Restarting...
+20211012 09312916  ! mon   {"sessions_total":0,"threads_total":1,"incoming_bytes":21504,"outcoming_bytes":13711,"responses_total":[0,0,30,0,0,2],"security_exception_count":0,"js_gc_count":7,"js_memory_bytes":4321280,"http_perning_request_count":0}
+20211012 09312923  ! srvr  Override thread pool size to 1 (dev mode)

@@ -73,7 +73,10 @@
 
   ],
   "mixins": {
-    "mStorage": {
+    "mStorage": {    "simpleAudit": true
+    },
+    "rls": {
+      "expression": "'(' + $.currentOwner() + ' OR ' + '[department.roleInSystem] in (' + Session.userRoles + '))'"
     }
   }
 }

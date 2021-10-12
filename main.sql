@@ -16,7 +16,9 @@ CREATE TABLE req_depart (
 	ID BIGINT NOT NULL PRIMARY KEY,
 	name VARCHAR(255) NOT NULL, --Department Name
 	postAddr VARCHAR(255) NOT NULL, --Department Address
-	phoneNum VARCHAR(255) NOT NULL --Department Phone
+	phoneNum VARCHAR(255) NOT NULL, --Department Phone
+	roleInSystem BIGINT NULL --Role in System
+	, CONSTRAINT FK_REQ_DEPART_ROLEINSYSTEM_REF_ROLE FOREIGN KEY (ROLEINSYSTEM) REFERENCES uba_role(ID)	
 );
 --
 CREATE TABLE req_reqList (
@@ -29,9 +31,17 @@ CREATE TABLE req_reqList (
 	reqText TEXT NOT NULL, --Text of request
 	reqDoc VARCHAR(4000) NULL, --doc
 	answer TEXT NULL, --Request answer
-	status VARCHAR(32) NOT NULL --Status
+	status VARCHAR(32) NOT NULL, --Status
+	mi_owner BIGINT NOT NULL, --Row owner
+	mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date
+	mi_createUser BIGINT NOT NULL, --User who create row
+	mi_modifyDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Modification date
+	mi_modifyUser BIGINT NOT NULL --User who modify row
 	, CONSTRAINT FK_REQ_DEPARTMENT_REF_REQ_DEPART FOREIGN KEY (DEPARTMENT) REFERENCES req_depart(ID)	
 	, CONSTRAINT FK_REQ_SUBDEPARTMENT_REF_REQ_SUBDEPART FOREIGN KEY (SUBDEPARTMENT) REFERENCES req_subDepart(ID)	
+	, CONSTRAINT FK_REQ_MI_OWNER_REF_USR FOREIGN KEY (MI_OWNER) REFERENCES uba_user(ID)	
+	, CONSTRAINT FK_REQ_MI_CREATEUSER_REF_USR FOREIGN KEY (MI_CREATEUSER) REFERENCES uba_user(ID)	
+	, CONSTRAINT FK_REQ_MI_MODIFYUSER_REF_USR FOREIGN KEY (MI_MODIFYUSER) REFERENCES uba_user(ID)	
 );
 --
 CREATE TABLE req_subDepart (
@@ -470,9 +480,17 @@ UPDATE ubs_settings SET defaultValue_uk = defaultValue WHERE (1 = 1);
 --######################################
 CREATE UNIQUE INDEX UIDX_REQ_DEPART_NAME ON req_depart(NAME) ;
 --
+CREATE INDEX IDX_REQ_DEPART_ROLEINSYSTEM ON req_depart(ROLEINSYSTEM) ;
+--
 CREATE INDEX IDX_REQ_DEPARTMENT ON req_reqList(DEPARTMENT) ;
 --
 CREATE INDEX IDX_REQ_SUBDEPARTMENT ON req_reqList(SUBDEPARTMENT) ;
+--
+CREATE INDEX IDX_REQ_MI_OWNER ON req_reqList(MI_OWNER) ;
+--
+CREATE INDEX IDX_REQ_MI_CREATEUSER ON req_reqList(MI_CREATEUSER) ;
+--
+CREATE INDEX IDX_REQ_MI_MODIFYUSER ON req_reqList(MI_MODIFYUSER) ;
 --
 CREATE INDEX IDX_REQ_SUBDEPART_DEPARTMENT ON req_subDepart(DEPARTMENT) ;
 --

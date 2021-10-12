@@ -28,7 +28,8 @@ CREATE TABLE req_reqList (
 	subDepartment BIGINT NULL, --SubDepartment
 	reqText TEXT NOT NULL, --Text of request
 	reqDoc VARCHAR(4000) NULL, --doc
-	answer TEXT NULL --Request answer
+	answer TEXT NULL, --Request answer
+	status VARCHAR(32) NOT NULL --Status
 	, CONSTRAINT FK_REQ_DEPARTMENT_REF_REQ_DEPART FOREIGN KEY (DEPARTMENT) REFERENCES req_depart(ID)	
 	, CONSTRAINT FK_REQ_SUBDEPARTMENT_REF_REQ_SUBDEPART FOREIGN KEY (SUBDEPARTMENT) REFERENCES req_subDepart(ID)	
 );
@@ -108,6 +109,7 @@ CREATE TABLE uba_group (
 	ID BIGINT NOT NULL PRIMARY KEY,
 	code VARCHAR(50) NOT NULL, --Group code
 	name VARCHAR(128) NOT NULL, --Name
+	name_uk VARCHAR(128) NOT NULL, --Name
 	description VARCHAR(256) NULL, --Description
 	mi_owner BIGINT NOT NULL, --Row owner
 	mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date
@@ -212,8 +214,10 @@ CREATE TABLE uba_usergroup (
 CREATE TABLE ubm_desktop (
 	ID BIGINT NOT NULL PRIMARY KEY,
 	caption VARCHAR(255) NOT NULL, --Desktop name
+	caption_uk VARCHAR(255) NOT NULL, --Desktop name
 	code VARCHAR(50) NOT NULL, --Code
 	description VARCHAR(255) NULL, --Desktop description
+	description_uk VARCHAR(255) NULL, --Desktop description
 	iconCls VARCHAR(255) DEFAULT ('u-icon-desktop') NOT NULL, --Desktop icon
 	url VARCHAR(255) NULL, --Static server page URL which is displayed in screen centre of selected desktop
 	isDefault SMALLINT(1) DEFAULT (0) NOT NULL CHECK (isDefault IN (0,1) ), --By default?
@@ -244,7 +248,9 @@ CREATE TABLE ubm_enum (
 	eGroup VARCHAR(32) NOT NULL, --Group
 	code VARCHAR(32) NOT NULL, --Value code
 	shortName VARCHAR(128) NULL, --Short name
+	shortName_uk VARCHAR(128) NULL, --Short name
 	name VARCHAR(255) NOT NULL, --Value name
+	name_uk VARCHAR(255) NOT NULL, --Value name
 	sortOrder INTEGER DEFAULT (100) NOT NULL, --Order #
 	mi_owner BIGINT NOT NULL, --Row owner
 	mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date
@@ -266,13 +272,16 @@ CREATE TABLE ubm_navshortcut (
 	code VARCHAR(50) NOT NULL, --Code
 	isFolder SMALLINT(1) DEFAULT (0) NOT NULL CHECK (isFolder IN (0,1) ), --Is folder?
 	caption VARCHAR(255) NOT NULL, --Shortcut caption
+	caption_uk VARCHAR(255) NOT NULL, --Shortcut caption
 	cmdCode TEXT NULL, --Command code
 	inWindow SMALLINT(1) DEFAULT (0) NOT NULL CHECK (inWindow IN (0,1) ), --Display in new window
 	isCollapsed SMALLINT(1) DEFAULT (0) NOT NULL CHECK (isCollapsed IN (0,1) ), --Show collapsed at the first start
 	displayOrder INTEGER DEFAULT (1000) NOT NULL, --Display order (in current node)
 	iconCls VARCHAR(50) NULL, --Icon (CSS class)
 	description VARCHAR(256) NULL, --Shortcut description
+	description_uk VARCHAR(256) NULL, --Shortcut description
 	keywords VARCHAR(512) NULL, --Search keywords
+	keywords_uk VARCHAR(512) NULL, --Search keywords
 	mi_treePath VARCHAR(450) NOT NULL,
 	mi_owner BIGINT NOT NULL, --Row owner
 	mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date
@@ -301,6 +310,7 @@ CREATE TABLE ubm_query (
 	ID BIGINT NOT NULL PRIMARY KEY,
 	code VARCHAR(50) NOT NULL, --Code
 	name VARCHAR(256) NOT NULL, --Name
+	name_uk VARCHAR(256) NOT NULL, --Name
 	ubql JSON(4000) NOT NULL, --UBQL (JSON)
 	type VARCHAR(32) NOT NULL, --Type
 	mi_unityEntity VARCHAR(64) NOT NULL,
@@ -321,6 +331,7 @@ CREATE TABLE ubm_sysdictionary (
 	ID BIGINT NOT NULL PRIMARY KEY,
 	code VARCHAR(50) NOT NULL, --Code
 	name VARCHAR(256) NOT NULL, --Name
+	name_uk VARCHAR(256) NOT NULL, --Name
 	ubql JSON(4000) NOT NULL, --UBQL (JSON)
 	mi_owner BIGINT NOT NULL, --Row owner
 	mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date
@@ -413,6 +424,10 @@ CREATE TABLE ubs_softLock (
 --######################################
 ALTER TABLE uba_audit ADD targetGroup VARCHAR(128) NULL;
 --
+ALTER TABLE uba_role ADD description_uk VARCHAR(256) NULL;
+--
+ALTER TABLE uba_subject ADD name_uk VARCHAR(256) NULL;
+--
 ALTER TABLE uba_user ADD firstName VARCHAR(64) NULL;
 --
 ALTER TABLE uba_user ADD lastName VARCHAR(64) NULL;
@@ -426,6 +441,29 @@ ALTER TABLE uba_user ADD email VARCHAR(64) NULL;
 ALTER TABLE uba_user ADD phone VARCHAR(32) NULL;
 --
 ALTER TABLE uba_user ADD avatar VARCHAR(4000) NULL;
+--
+ALTER TABLE ubs_settings ADD name_uk VARCHAR(150) NULL;
+--
+ALTER TABLE ubs_settings ADD description_uk VARCHAR(1024) NULL;
+--
+ALTER TABLE ubs_settings ADD settingValue_uk VARCHAR(2000) NULL;
+--
+ALTER TABLE ubs_settings ADD defaultValue_uk VARCHAR(150) NULL;
+--
+ 
+-- ! update values for known or estimated changes
+--######################################
+UPDATE uba_role SET description_uk = description WHERE (1 = 1);
+--
+UPDATE uba_subject SET name_uk = name WHERE (1 = 1);
+--
+UPDATE ubs_settings SET name_uk = name WHERE (1 = 1);
+--
+UPDATE ubs_settings SET description_uk = description WHERE (1 = 1);
+--
+UPDATE ubs_settings SET settingValue_uk = settingValue WHERE (1 = 1);
+--
+UPDATE ubs_settings SET defaultValue_uk = defaultValue WHERE (1 = 1);
 --
  
 -- Create indexes
@@ -467,6 +505,8 @@ CREATE INDEX IDX_ELS_MI_MODIFYUSER ON uba_els(MI_MODIFYUSER) ;
 CREATE UNIQUE INDEX UIDX_GR_CODE ON uba_group(CODE) ;
 --
 CREATE UNIQUE INDEX UIDX_GR_NAME ON uba_group(NAME) ;
+--
+CREATE UNIQUE INDEX UIDX_GR_NAME_UK ON uba_group(NAME_UK) ;
 --
 CREATE INDEX IDX_GR_MI_OWNER ON uba_group(MI_OWNER) ;
 --

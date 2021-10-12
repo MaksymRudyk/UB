@@ -2948,3 +2948,1661 @@ TubLog 1.18.6324 CM PRTL 2021-10-12T07:54:54
 20211012 08182605  "  +    		DataStore.ParseInsertAndExec
 20211012 08182605  "  +    			DataStore.BuildAndExecInsertSQL
 20211012 08182605  " EXC   				ESecurityException SecurityException: insert into restricted attribute \"uba_user.disabled\" denied [] at   $00000000006FA5F6  $00000000006FD0C5  $00000000005DE5E6  $000000000058D2B4  $00000000005D93BE  $000000000085CB5C  $000024DD9AF7F17A  $00007F2E8C44EFF0  $000024DD9AF73888  $00007F2E9AD88C2A
+20211012 08182605  "  -    			00.000.562
+20211012 08182605  "  -    		00.000.586
+20211012 08182605  "  -    	00.000.647
+20211012 08182605  " DB    	Rollback connection "main"
+20211012 08182605  " EXC   	ESMException: SecurityException: insert into restricted attribute "uba_user.disabled" denied Stack: ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at 
+20211012 08182605  " ERROR 	POST ubql?rq=uba_user.insert&uitag=frm-uba_user ERROR=500 (ESMException: SecurityException: insert into restricted attribute "uba_user.disabled" denied Stack: ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at )
+20211012 08182605  " debug 	Call JS method: UBA.securityViolation
+20211012 08182605  "  +    	method(TubStorageMixin) uba_audit.insert
+20211012 08182605  "  +    		DataStore.ParseInsertAndExec
+20211012 08182605  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08182605  "  +    				DataStore.Execute
+20211012 08182605  "  +    					App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08182605  " cust1 						{"P1s8":"uba_user", "P2":10, "P3s18":"SECURITY_VIOLATION", "P4s2":"10", "P5s2":"10", "P6d":"2021-10-12T08:18:26", "P7s9":"127.0.0.1", "P8":335018763812867, "P9s78":"SecurityException: insert into restricted attribute \"uba_user.disabled\" denied"}
+20211012 08182605  " SQL   						r=1 t=415 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,targetUser,actionTime,remoteIP,ID,fromValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211012 08182605  "  -    					00.000.066
+20211012 08182605  "  -    				00.000.083
+20211012 08182605  "  -    			00.000.210
+20211012 08182605  "  -    		00.000.228
+20211012 08182605  "  -    	00.000.263
+20211012 08182605  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211012 08182605  "  -    	00.000.003
+20211012 08182605  " DB    	Commit connection "main"
+20211012 08182605  " http  	127.0.0.1 <- 500
+20211012 08182605  "  -    00.002.863
+20211012 08373239  "  +    ubql?rq=uba_user.insert&uitag=frm-uba_user
+20211012 08373239  " http  	127.0.0.1 -> POST ubql?rq=uba_user.insert&uitag=frm-uba_user
+20211012 08373239  " info  	endpoint ubql
+20211012 08373239  " info  	[{"fieldList":["firstName","name","lastName","fullName","gender","email","phone","description","disabled","isPending","trustedIP","uData","avatar","ID","mi_modifyDate"],"entity":"uba_user","method":"insert","execParams":{"disabled":false,"isPending":false,"ID":335018762993665,"mi_modifyDate":"2021-10-12T08:18:01.000Z","firstName":"ed","fullName":"user ed","name":"ed_user","lastName":"user","gender":"male","email":"ed@mail.com","description":"education depart user "}}]
+20211012 08373239  " http  	127.0.0.1 <- 401
+20211012 08373239  " http  	127.0.0.1 <- 401
+20211012 08373239  "  -    00.000.097
+20211012 08373241  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211012 08373241  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211012 08373241  " info  	endpoint clientRequire
+20211012 08373241  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211012 08373241  " http  	127.0.0.1 <- 200
+20211012 08373241  "  -    00.000.299
+20211012 08373406  "  +    auth?AUTHTYPE=UB&userName=admin
+20211012 08373406  " http  	127.0.0.1 -> POST auth?AUTHTYPE=UB&userName=admin
+20211012 08373406  " info  	endpoint auth
+20211012 08373406  " http  	127.0.0.1 <- 200
+20211012 08373406  "  -    00.000.276
+20211012 08373406  "  +    auth?AUTHTYPE=UB&clientNonce=1f36c07e551a49a8d114c21dfc1f3c7dafbad795ef29d5ca6767b95233025c58&password=ea2c3a15ecd103330d087f1e9bc8dd06673493191b93ec304d2e4a19f30b8edd&userName=admin
+20211012 08373406  " http  	127.0.0.1 -> POST auth?AUTHTYPE=UB&clientNonce=1f36c07e551a49a8d114c21dfc1f3c7dafbad795ef29d5ca6767b95233025c58&password=ea2c3a15ecd103330d087f1e9bc8dd06673493191b93ec304d2e4a19f30b8edd&userName=admin
+20211012 08373406  " info  	endpoint auth
+20211012 08373406  "  +    	DataStore.init(uba_user)
+20211012 08373406  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08373406  " cust1 			{"P1s5":"admin"}
+20211012 08373406  " SQL   			r=1 t=622 fr=593 c=0 q=select id, name, uPasswordHashHexa, uData, isPending, trustedIP from UBA_USER where name=? and disabled=0
+20211012 08373406  "  -    		00.000.078
+20211012 08373406  "  -    	00.000.097
+20211012 08373406  "  +    	method(TubStorageMixin) uba_user.select
+20211012 08373406  "  +    		DataStore.init(uba_user)
+20211012 08373406  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08373406  " cust1 				{"P1":10}
+20211012 08373406  " SQL   				r=1 t=545 fr=524 c=0 q=SELECT A01.name,A01.uData,A01.uPasswordHashHexa,A01.lastPasswordChangeDate,A01.firstName,A01.lastName,A01.fullName  FROM uba_user A01  WHERE A01.ID=?
+20211012 08373406  "  -    			00.000.060
+20211012 08373406  "  -    		00.000.073
+20211012 08373406  "  -    	00.000.217
+20211012 08373406  "  +    	method(TubStorageMixin) uba_role.select
+20211012 08373406  "  +    		DataStore.init(uba_role)
+20211012 08373406  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08373406  " cust1 				{"P1":10, "P2":10}
+20211012 08373407  " SQL   				r=1 t=685 fr=629 c=0 q=SELECT A01.ID,A01.name  FROM uba_role A01  WHERE (((EXISTS (SELECT 1  FROM uba_userrole A02  WHERE A02.userID=? AND A02.roleID=A01.ID)) OR (EXISTS (SELECT 1  FROM uba_grouprole A03  WHERE EXISTS (SELECT 1  FROM uba_usergroup A04  WHERE A04.userID=? AND A04.groupID=A03.groupID) AND A03.roleID=A01.ID))))
+20211012 08373407  "  -    			00.000.118
+20211012 08373407  "  -    		00.000.153
+20211012 08373407  "  -    	00.000.429
+20211012 08373407  "  +    	method(TubStorageMixin) uba_usergroup.select
+20211012 08373407  "  +    		DataStore.init(uba_usergroup)
+20211012 08373407  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08373407  " cust1 				{"P1":10}
+20211012 08373407  " SQL   				r=0 t=288 fr=270 c=0 q=SELECT A01.groupID  FROM uba_usergroup A01  WHERE A01.userID=?
+20211012 08373407  "  -    			00.000.051
+20211012 08373407  "  -    		00.000.064
+20211012 08373407  "  -    	00.000.149
+20211012 08373407  " auth  	New session admin/267e1247 created at 127.0.0.1/0 using Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
+20211012 08373407  " debug 	Call JS method: UBA.onUserLogin
+20211012 08373407  "  +    	method(TubStorageMixin) uba_advSecurity.select
+20211012 08373407  "  +    		DataStore.init(uba_advSecurity)
+20211012 08373407  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08373407  " cust1 				{"P1":10}
+20211012 08373407  " SQL   				r=0 t=354 fr=335 c=0 q=SELECT A01.ID,A01.allowedIP,A01.refreshIP,A01.fp,A01.refreshFp,A01.keyMediaName,A01.refreshKeyMedia,A01.mi_modifyDate  FROM uba_advSecurity A01  WHERE A01.userID=?
+20211012 08373407  "  -    			00.000.095
+20211012 08373407  "  -    		00.000.115
+20211012 08373407  "  -    	00.000.286
+20211012 08373407  "  +    	method(TubStorageMixin) uba_audit.insert
+20211012 08373407  "  +    		DataStore.ParseInsertAndExec
+20211012 08373407  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08373407  "  +    				DataStore.Execute
+20211012 08373407  "  +    					App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08373407  " cust1 						{"P1s8":"uba_user", "P2":10, "P3s5":"LOGIN", "P4s5":"admin", "P5d":"2021-10-12T08:37:34", "P6s9":"127.0.0.1", "P7s5":"admin", "P8s0":"", "P9":335018801430529, "P10s512":"Host: localhost:8881\r\nConnection: keep-alive\r\nContent-Length: 0\r\nsec-ch-ua: \"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\"\r\nAccept: application/json, text/plain, */*\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nOrigin: http://localhost:8881\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: http://localhost:8881/adm\r\nAccept-Encodin..."}
+20211012 08373407  " SQL   						r=1 t=514 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetUser,targetRole,ID,fromValue) VALUES (?,?,?,?,?,?,?,?,?,?)
+20211012 08373407  "  -    					00.000.080
+20211012 08373407  "  -    				00.000.098
+20211012 08373407  "  -    			00.000.246
+20211012 08373407  "  -    		00.000.290
+20211012 08373407  "  -    	00.000.341
+20211012 08373407  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211012 08373407  "  -    	00.000.005
+20211012 08373407  " DB    	Commit connection "main"
+20211012 08373407  " http  	127.0.0.1 <- 200
+20211012 08373407  "  -    00.008.652
+20211012 08373407  "  +    ubql?rq=uba_user.insert&uitag=frm-uba_user
+20211012 08373407  " http  	127.0.0.1 -> POST ubql?rq=uba_user.insert&uitag=frm-uba_user
+20211012 08373407  " info  	endpoint ubql
+20211012 08373407  " info  	[{"fieldList":["firstName","name","lastName","fullName","gender","email","phone","description","disabled","isPending","trustedIP","uData","avatar","ID","mi_modifyDate"],"entity":"uba_user","method":"insert","execParams":{"disabled":false,"isPending":false,"ID":335018762993665,"mi_modifyDate":"2021-10-12T08:18:01.000Z","firstName":"ed","fullName":"user ed","name":"ed_user","lastName":"user","gender":"male","email":"ed@mail.com","description":"education depart user "}}]
+20211012 08373407  " debug 	Auth: got token 267e12476165494e440591e0
+20211012 08373407  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634027854
+20211012 08373407  " auth  	admin/267e1247
+20211012 08373407  "  +    	method(TubStorageMixin) uba_user.select
+20211012 08373407  "  +    		DataStore.init(uba_user)
+20211012 08373407  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08373407  " cust1 				{"P1s7":"ed_user", "P2":335018762993665}
+20211012 08373407  " SQL   				r=0 t=376 fr=332 c=0 q=SELECT A01.ID  FROM uba_user A01  WHERE A01.name=? AND A01.ID<>?
+20211012 08373407  "  -    			00.000.093
+20211012 08373407  "  -    		00.000.117
+20211012 08373407  "  -    	00.000.226
+20211012 08373407  "  +    	method(TubUnityMixin) uba_user.insert
+20211012 08373407  "  +    		method(TubStorageMixin) uba_subject.insert
+20211012 08373407  "  +    			DataStore.ParseInsertAndExec
+20211012 08373407  "  +    				DataStore.BuildAndExecInsertSQL
+20211012 08373407  "  +    					DataStore.Execute
+20211012 08373407  "  +    						App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08373407  " cust1 							{"P1s7":"user ed", "P2s7":"ed_user", "P3":335018762993665, "P4s8":"uba_user", "P5s1":"U", "P6s7":"user ed"}
+20211012 08373407  " SQL   							r=1 t=626 c=0 q=INSERT INTO uba_subject (name,code,ID,mi_unityEntity,sType,name_uk) VALUES (?,?,?,?,?,?)
+20211012 08373407  "  -    						00.000.134
+20211012 08373407  "  -    					00.000.148
+20211012 08373407  "  -    				00.000.279
+20211012 08373407  "  -    			00.000.311
+20211012 08373407  "  -    		00.000.359
+20211012 08373407  "  +    		method(TubStorageMixin) uba_subject.afterinsert
+20211012 08373407  "  -    		00.000.004
+20211012 08373407  "  +    		method(TubAuditMixin) uba_subject.afterinsert
+20211012 08373407  " info  			requestID=335018801430531
+20211012 08373407  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08373407  "  +    				DataStore.Execute
+20211012 08373407  "  +    					App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08373407  " SQL   						r=1 t=562 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211012 08373407  "  -    					00.000.048
+20211012 08373407  "  -    				00.000.062
+20211012 08373407  "  -    			00.000.185
+20211012 08373407  "  -    		00.000.218
+20211012 08373407  "  -    	00.000.774
+20211012 08373407  "  +    	method(TubStorageMixin) uba_user.insert
+20211012 08373407  " debug 		Start processing documents for entity uba_user
+20211012 08373408  "  +    		DataStore.ParseInsertAndExec
+20211012 08373408  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08373408  " EXC   				ESecurityException SecurityException: insert into restricted attribute \"uba_user.disabled\" denied [] at   $00000000006FA5F6  $00000000006FD0C5  $00000000005DE5E6  $000000000058D2B4  $00000000005D93BE  $000000000085CB5C  $000024DD9AF7F17A  $00007F2E8C44EFF0  $000024DD9AF73888  $00007F2E9AD88C2A
+20211012 08373408  "  -    			00.000.767
+20211012 08373408  "  -    		00.000.829
+20211012 08373408  "  -    	00.000.973
+20211012 08373408  " DB    	Rollback connection "main"
+20211012 08373408  " EXC   	ESMException: SecurityException: insert into restricted attribute "uba_user.disabled" denied Stack: ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at 
+20211012 08373408  " ERROR 	POST ubql?rq=uba_user.insert&uitag=frm-uba_user ERROR=500 (ESMException: SecurityException: insert into restricted attribute "uba_user.disabled" denied Stack: ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at )
+20211012 08373408  " debug 	Call JS method: UBA.securityViolation
+20211012 08373408  "  +    	method(TubStorageMixin) uba_audit.insert
+20211012 08373408  "  +    		DataStore.ParseInsertAndExec
+20211012 08373408  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08373408  "  +    				DataStore.Execute
+20211012 08373408  "  +    					App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08373408  " cust1 						{"P1s8":"uba_user", "P2":10, "P3s18":"SECURITY_VIOLATION", "P4s2":"10", "P5s2":"10", "P6d":"2021-10-12T08:37:34", "P7s9":"127.0.0.1", "P8":335018801430532, "P9s78":"SecurityException: insert into restricted attribute \"uba_user.disabled\" denied"}
+20211012 08373408  " SQL   						r=1 t=473 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,targetUser,actionTime,remoteIP,ID,fromValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211012 08373408  "  -    					00.000.139
+20211012 08373408  "  -    				00.000.159
+20211012 08373408  "  -    			00.000.328
+20211012 08373408  "  -    		00.000.360
+20211012 08373408  "  -    	00.000.814
+20211012 08373408  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211012 08373408  "  -    	00.000.006
+20211012 08373408  " DB    	Commit connection "main"
+20211012 08373408  " http  	127.0.0.1 <- 500
+20211012 08373408  "  -    00.005.345
+20211012 08375033  "  +    ubql?rq=uba_user.addnew&uitag=frm-uba_user
+20211012 08375033  " http  	127.0.0.1 -> POST ubql?rq=uba_user.addnew&uitag=frm-uba_user
+20211012 08375033  " info  	endpoint ubql
+20211012 08375033  " info  	[{"entity":"uba_user","fieldList":["firstName","name","lastName","fullName","gender","email","phone","description","disabled","isPending","trustedIP","uData","avatar","ID","mi_modifyDate"],"method":"addnew"}]
+20211012 08375033  " debug 	Auth: got token 267e12476165495e5d1ea0a1
+20211012 08375033  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634027870
+20211012 08375033  " auth  	admin/267e1247
+20211012 08375033  "  +    	method(TubStorageMixin) uba_user.addnew
+20211012 08375033  "  -    	00.000.048
+20211012 08375033  " http  	127.0.0.1 <- 200
+20211012 08375033  "  -    00.000.394
+20211012 08375042  "  +    ubql?rq=uba_role.select&uitag=frm-uba_user
+20211012 08375042  " http  	127.0.0.1 -> POST ubql?rq=uba_role.select&uitag=frm-uba_user
+20211012 08375042  " info  	endpoint ubql
+20211012 08375042  " info  	[{"entity":"uba_role","method":"select","fieldList":["ID","name","mi_modifyDate"],"options":{"limit":10000}}]
+20211012 08375042  " debug 	Auth: got token 267e12476165495e5d1ea0a1
+20211012 08375042  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634027870
+20211012 08375042  " auth  	admin/267e1247
+20211012 08375042  "  +    	method(TubStorageMixin) uba_role.select
+20211012 08375042  "  +    		DataStore.init(uba_role)
+20211012 08375042  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08375042  " SQL   				r=8 t=1406 fr=1372 c=0 q=SELECT A01.ID,A01.name,A01.mi_modifyDate  FROM uba_role A01  LIMIT 10000 OFFSET 0 
+20211012 08375042  "  -    			00.000.064
+20211012 08375042  "  -    		00.000.077
+20211012 08375042  "  -    	00.000.158
+20211012 08375042  " http  	127.0.0.1 <- 200
+20211012 08375042  "  -    00.000.516
+20211012 08375044  "  +    ubql?rq=uba_userrole.select&uitag=frm-uba_user
+20211012 08375044  " http  	127.0.0.1 -> POST ubql?rq=uba_userrole.select&uitag=frm-uba_user
+20211012 08375044  " info  	endpoint ubql
+20211012 08375044  " info  	[{"entity":"uba_userrole","method":"select","fieldList":["roleID","ID","mi_modifyDate"],"whereList":{"__MD0":{"expression":"[userID]","condition":"equal","value":335018801954817}},"options":{"limit":100,"start":0}}]
+20211012 08375044  " debug 	Auth: got token 267e12476165495e5d1ea0a1
+20211012 08375044  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634027870
+20211012 08375044  " auth  	admin/267e1247
+20211012 08375044  "  +    	method(TubStorageMixin) uba_userrole.select
+20211012 08375044  "  +    		DataStore.init(uba_userrole)
+20211012 08375044  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08375044  " cust1 				{"P1":335018801954817}
+20211012 08375044  " SQL   				r=0 t=582 fr=558 c=0 q=SELECT A01.roleID,A01.ID,A01.mi_modifyDate  FROM uba_userrole A01  WHERE A01.userID=? LIMIT 100 OFFSET 0 
+20211012 08375044  "  -    			00.000.077
+20211012 08375044  "  -    		00.000.095
+20211012 08375044  "  -    	00.000.245
+20211012 08375044  " http  	127.0.0.1 <- 200
+20211012 08375044  "  -    00.000.675
+20211012 08381260  "  +    ubql?rq=uba_user.insert&uitag=frm-uba_user
+20211012 08381260  " http  	127.0.0.1 -> POST ubql?rq=uba_user.insert&uitag=frm-uba_user
+20211012 08381260  " info  	endpoint ubql
+20211012 08381260  " info  	[{"fieldList":["firstName","name","lastName","fullName","gender","email","phone","description","disabled","isPending","trustedIP","uData","avatar","ID","mi_modifyDate"],"entity":"uba_user","method":"insert","execParams":{"disabled":false,"isPending":false,"ID":335018801954817,"mi_modifyDate":"2021-10-12T08:37:50.000Z","firstName":"ed","fullName":"user ed","name":"ed_user","lastName":"user","gender":"male","email":"ed@mail.com","description":"education depart user "}}]
+20211012 08381260  " debug 	Auth: got token 267e1247616549747344a341
+20211012 08381260  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634027892
+20211012 08381260  " auth  	admin/267e1247
+20211012 08381260  "  +    	method(TubStorageMixin) uba_user.select
+20211012 08381260  "  +    		DataStore.init(uba_user)
+20211012 08381260  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08381260  " cust1 				{"P1s7":"ed_user", "P2":335018801954817}
+20211012 08381260  " SQL   				r=0 t=397 fr=377 c=0 q=SELECT A01.ID  FROM uba_user A01  WHERE A01.name=? AND A01.ID<>?
+20211012 08381260  "  -    			00.000.058
+20211012 08381260  "  -    		00.000.074
+20211012 08381260  "  -    	00.000.175
+20211012 08381260  "  +    	method(TubUnityMixin) uba_user.insert
+20211012 08381260  "  +    		method(TubStorageMixin) uba_subject.insert
+20211012 08381260  "  +    			DataStore.ParseInsertAndExec
+20211012 08381260  "  +    				DataStore.BuildAndExecInsertSQL
+20211012 08381260  "  +    					DataStore.Execute
+20211012 08381260  "  +    						App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08381260  " cust1 							{"P1s7":"user ed", "P2s7":"ed_user", "P3":335018801954817, "P4s8":"uba_user", "P5s1":"U", "P6s7":"user ed"}
+20211012 08381260  " SQL   							r=1 t=670 c=0 q=INSERT INTO uba_subject (name,code,ID,mi_unityEntity,sType,name_uk) VALUES (?,?,?,?,?,?)
+20211012 08381260  "  -    						00.000.076
+20211012 08381260  "  -    					00.000.090
+20211012 08381260  "  -    				00.000.186
+20211012 08381260  "  -    			00.000.201
+20211012 08381260  "  -    		00.000.234
+20211012 08381260  "  +    		method(TubStorageMixin) uba_subject.afterinsert
+20211012 08381260  "  -    		00.000.002
+20211012 08381260  "  +    		method(TubAuditMixin) uba_subject.afterinsert
+20211012 08381260  " info  			requestID=335018802675714
+20211012 08381260  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08381260  "  +    				DataStore.Execute
+20211012 08381260  "  +    					App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08381260  " SQL   						r=1 t=597 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211012 08381260  "  -    					00.000.047
+20211012 08381260  "  -    				00.000.063
+20211012 08381260  "  -    			00.000.192
+20211012 08381260  "  -    		00.000.221
+20211012 08381260  "  -    	00.000.595
+20211012 08381260  "  +    	method(TubStorageMixin) uba_user.insert
+20211012 08381260  " debug 		Start processing documents for entity uba_user
+20211012 08381260  "  +    		DataStore.ParseInsertAndExec
+20211012 08381260  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08381260  " EXC   				ESecurityException SecurityException: insert into restricted attribute \"uba_user.disabled\" denied [] at   $00000000006FA5F6  $00000000006FD0C5  $00000000005DE5E6  $000000000058D2B4  $00000000005D93BE  $000000000085CB5C  $000024DD9AF7F17A  $00007F2E8C44EFF0  $000024DD9AF73888  $00007F2E9AD88C2A
+20211012 08381260  "  -    			00.000.717
+20211012 08381260  "  -    		00.000.754
+20211012 08381260  "  -    	00.000.882
+20211012 08381260  " DB    	Rollback connection "main"
+20211012 08381260  " EXC   	ESMException: SecurityException: insert into restricted attribute "uba_user.disabled" denied Stack: ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at 
+20211012 08381260  " ERROR 	POST ubql?rq=uba_user.insert&uitag=frm-uba_user ERROR=500 (ESMException: SecurityException: insert into restricted attribute "uba_user.disabled" denied Stack: ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at )
+20211012 08381260  " debug 	Call JS method: UBA.securityViolation
+20211012 08381260  "  +    	method(TubStorageMixin) uba_audit.insert
+20211012 08381260  "  +    		DataStore.ParseInsertAndExec
+20211012 08381260  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08381260  "  +    				DataStore.Execute
+20211012 08381260  "  +    					App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08381260  " cust1 						{"P1s8":"uba_user", "P2":10, "P3s18":"SECURITY_VIOLATION", "P4s2":"10", "P5s2":"10", "P6d":"2021-10-12T08:38:12", "P7s9":"127.0.0.1", "P8":335018802675715, "P9s78":"SecurityException: insert into restricted attribute \"uba_user.disabled\" denied"}
+20211012 08381260  " SQL   						r=1 t=495 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,targetUser,actionTime,remoteIP,ID,fromValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211012 08381260  "  -    					00.000.065
+20211012 08381260  "  -    				00.000.082
+20211012 08381260  "  -    			00.000.230
+20211012 08381260  "  -    		00.000.249
+20211012 08381260  "  -    	00.000.277
+20211012 08381260  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211012 08381260  "  -    	00.000.004
+20211012 08381261  " DB    	Commit connection "main"
+20211012 08381261  " http  	127.0.0.1 <- 500
+20211012 08381261  "  -    00.003.780
+20211012 08381427  "  +    ubql?rq=uba_user.insert&uitag=frm-uba_user
+20211012 08381427  " http  	127.0.0.1 -> POST ubql?rq=uba_user.insert&uitag=frm-uba_user
+20211012 08381427  " info  	endpoint ubql
+20211012 08381427  " info  	[{"fieldList":["firstName","name","lastName","fullName","gender","email","phone","description","disabled","isPending","trustedIP","uData","avatar","ID","mi_modifyDate"],"entity":"uba_user","method":"insert","execParams":{"disabled":false,"isPending":false,"ID":335018801954817,"mi_modifyDate":"2021-10-12T08:37:50.000Z","firstName":"ed","fullName":"user ed","name":"ed_user","lastName":"user","gender":"male","email":"ed@mail.com","description":"education depart user "}}]
+20211012 08381427  " debug 	Auth: got token 267e1247616549769d4ac26d
+20211012 08381427  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634027894
+20211012 08381427  " auth  	admin/267e1247
+20211012 08381427  "  +    	method(TubStorageMixin) uba_user.select
+20211012 08381427  "  +    		DataStore.init(uba_user)
+20211012 08381427  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08381427  " cust1 				{"P1s7":"ed_user", "P2":335018801954817}
+20211012 08381427  " SQL   				r=0 t=426 fr=397 c=0 q=SELECT A01.ID  FROM uba_user A01  WHERE A01.name=? AND A01.ID<>?
+20211012 08381427  "  -    			00.000.073
+20211012 08381427  "  -    		00.000.093
+20211012 08381427  "  -    	00.000.213
+20211012 08381427  "  +    	method(TubUnityMixin) uba_user.insert
+20211012 08381427  "  +    		method(TubStorageMixin) uba_subject.insert
+20211012 08381427  "  +    			DataStore.ParseInsertAndExec
+20211012 08381427  "  +    				DataStore.BuildAndExecInsertSQL
+20211012 08381427  "  +    					DataStore.Execute
+20211012 08381427  "  +    						App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08381427  " cust1 							{"P1s7":"user ed", "P2s7":"ed_user", "P3":335018801954817, "P4s8":"uba_user", "P5s1":"U", "P6s7":"user ed"}
+20211012 08381427  " SQL   							r=1 t=736 c=0 q=INSERT INTO uba_subject (name,code,ID,mi_unityEntity,sType,name_uk) VALUES (?,?,?,?,?,?)
+20211012 08381427  "  -    						00.000.111
+20211012 08381427  "  -    					00.000.127
+20211012 08381427  "  -    				00.000.255
+20211012 08381427  "  -    			00.000.278
+20211012 08381427  "  -    		00.000.306
+20211012 08381427  "  +    		method(TubStorageMixin) uba_subject.afterinsert
+20211012 08381427  "  -    		00.000.002
+20211012 08381427  "  +    		method(TubAuditMixin) uba_subject.afterinsert
+20211012 08381427  " info  			requestID=335018802741250
+20211012 08381427  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08381427  "  +    				DataStore.Execute
+20211012 08381427  "  +    					App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08381427  " SQL   						r=1 t=646 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211012 08381427  "  -    					00.000.068
+20211012 08381427  "  -    				00.000.091
+20211012 08381427  "  -    			00.000.271
+20211012 08381427  "  -    		00.000.307
+20211012 08381427  "  -    	00.000.792
+20211012 08381427  "  +    	method(TubStorageMixin) uba_user.insert
+20211012 08381427  " debug 		Start processing documents for entity uba_user
+20211012 08381427  "  +    		DataStore.ParseInsertAndExec
+20211012 08381427  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08381427  " EXC   				ESecurityException SecurityException: insert into restricted attribute \"uba_user.disabled\" denied [] at   $00000000006FA5F6  $00000000006FD0C5  $00000000005DE5E6  $000000000058D2B4  $00000000005D93BE  $000000000085CB5C  $000024DD9AF7F17A  $00007F2E8C44EFF0  $000024DD9AF73888  $00007F2E9AD88C2A
+20211012 08381427  "  -    			00.000.897
+20211012 08381427  "  -    		00.000.960
+20211012 08381427  "  -    	00.001.074
+20211012 08381427  " DB    	Rollback connection "main"
+20211012 08381427  " EXC   	ESMException: SecurityException: insert into restricted attribute "uba_user.disabled" denied Stack: ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at 
+20211012 08381427  " ERROR 	POST ubql?rq=uba_user.insert&uitag=frm-uba_user ERROR=500 (ESMException: SecurityException: insert into restricted attribute "uba_user.disabled" denied Stack: ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at )
+20211012 08381427  " debug 	Call JS method: UBA.securityViolation
+20211012 08381427  "  +    	method(TubStorageMixin) uba_audit.insert
+20211012 08381427  "  +    		DataStore.ParseInsertAndExec
+20211012 08381427  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08381427  "  +    				DataStore.Execute
+20211012 08381427  "  +    					App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08381427  " cust1 						{"P1s8":"uba_user", "P2":10, "P3s18":"SECURITY_VIOLATION", "P4s2":"10", "P5s2":"10", "P6d":"2021-10-12T08:38:14", "P7s9":"127.0.0.1", "P8":335018802741251, "P9s78":"SecurityException: insert into restricted attribute \"uba_user.disabled\" denied"}
+20211012 08381427  " SQL   						r=1 t=518 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,targetUser,actionTime,remoteIP,ID,fromValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211012 08381427  "  -    					00.000.060
+20211012 08381427  "  -    				00.000.074
+20211012 08381427  "  -    			00.000.200
+20211012 08381427  "  -    		00.000.219
+20211012 08381427  "  -    	00.000.259
+20211012 08381427  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211012 08381427  "  -    	00.000.004
+20211012 08381427  " DB    	Commit connection "main"
+20211012 08381427  " http  	127.0.0.1 <- 500
+20211012 08381427  "  -    00.004.943
+20211012 08384055  "  +    ubql?rq=uba_user.select&uitag=nsc-uba_user
+20211012 08384055  " http  	127.0.0.1 -> POST ubql?rq=uba_user.select&uitag=nsc-uba_user
+20211012 08384055  " info  	endpoint ubql
+20211012 08384055  " info  	[{"entity":"uba_user","method":"select","fieldList":["ID","name","disabled","isPending","firstName","lastName"],"options":{"start":0,"limit":101}}]
+20211012 08384055  " debug 	Auth: got token 267e124761654990eaaa4ad6
+20211012 08384055  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634027920
+20211012 08384055  " auth  	admin/267e1247
+20211012 08384055  "  +    	method(TubStorageMixin) uba_user.select
+20211012 08384055  "  +    		DataStore.init(uba_user)
+20211012 08384055  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08384055  " SQL   				r=3 t=272 fr=243 c=0 q=SELECT A01.ID,A01.name,null AS C1,null AS C2,A01.firstName,A01.lastName  FROM uba_user A01  LIMIT 101 OFFSET 0 
+20211012 08384055  "  -    			00.000.064
+20211012 08384055  "  -    		00.000.079
+20211012 08384055  "  -    	00.000.189
+20211012 08384055  " http  	127.0.0.1 <- 200
+20211012 08384055  "  -    00.000.542
+20211012 08395416  "  +    ubql?rq=uba_user.select&uitag=nsc-uba_user
+20211012 08395416  " http  	127.0.0.1 -> POST ubql?rq=uba_user.select&uitag=nsc-uba_user
+20211012 08395416  " info  	endpoint ubql
+20211012 08395416  " info  	[{"entity":"uba_user","method":"select","fieldList":["ID","name","disabled","isPending","firstName","lastName"],"options":{"start":0,"limit":101}}]
+20211012 08395416  " debug 	Auth: got token 267e1247616549daf9d308ad
+20211012 08395416  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634027994
+20211012 08395416  " auth  	admin/267e1247
+20211012 08395416  "  +    	method(TubStorageMixin) uba_user.select
+20211012 08395416  "  +    		DataStore.init(uba_user)
+20211012 08395416  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08395416  " SQL   				r=3 t=302 fr=272 c=0 q=SELECT A01.ID,A01.name,null AS C1,null AS C2,A01.firstName,A01.lastName  FROM uba_user A01  LIMIT 101 OFFSET 0 
+20211012 08395416  "  -    			00.000.070
+20211012 08395416  "  -    		00.000.085
+20211012 08395416  "  -    	00.000.210
+20211012 08395416  " http  	127.0.0.1 <- 200
+20211012 08395416  "  -    00.000.555
+20211012 08395636  "  +    ubql?rq=uba_user.addnew&uitag=frm-uba_user
+20211012 08395636  " http  	127.0.0.1 -> POST ubql?rq=uba_user.addnew&uitag=frm-uba_user
+20211012 08395636  " info  	endpoint ubql
+20211012 08395636  " info  	[{"entity":"uba_user","fieldList":["firstName","name","lastName","fullName","gender","email","phone","description","disabled","isPending","trustedIP","uData","avatar","ID","mi_modifyDate"],"method":"addnew"}]
+20211012 08395636  " debug 	Auth: got token 267e1247616549dc17dd6981
+20211012 08395636  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634027996
+20211012 08395636  " auth  	admin/267e1247
+20211012 08395636  "  +    	method(TubStorageMixin) uba_user.addnew
+20211012 08395636  "  -    	00.000.046
+20211012 08395636  " http  	127.0.0.1 <- 200
+20211012 08395636  "  -    00.000.384
+20211012 08395642  "  +    ubql?rq=uba_role.select&uitag=frm-uba_user
+20211012 08395642  " http  	127.0.0.1 -> POST ubql?rq=uba_role.select&uitag=frm-uba_user
+20211012 08395642  " info  	endpoint ubql
+20211012 08395642  " info  	[{"entity":"uba_role","method":"select","fieldList":["ID","name","mi_modifyDate"],"options":{"limit":10000}}]
+20211012 08395642  " debug 	Auth: got token 267e1247616549dc17dd6981
+20211012 08395642  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634027996
+20211012 08395642  " auth  	admin/267e1247
+20211012 08395642  "  +    	method(TubStorageMixin) uba_role.select
+20211012 08395642  "  +    		DataStore.init(uba_role)
+20211012 08395642  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08395642  " SQL   				r=8 t=1441 fr=1406 c=0 q=SELECT A01.ID,A01.name,A01.mi_modifyDate  FROM uba_role A01  LIMIT 10000 OFFSET 0 
+20211012 08395642  "  -    			00.000.071
+20211012 08395642  "  -    		00.000.088
+20211012 08395642  "  -    	00.000.188
+20211012 08395642  " http  	127.0.0.1 <- 200
+20211012 08395642  "  -    00.000.671
+20211012 08395645  "  +    ubql?rq=uba_userrole.select&uitag=frm-uba_user
+20211012 08395645  " http  	127.0.0.1 -> POST ubql?rq=uba_userrole.select&uitag=frm-uba_user
+20211012 08395645  " info  	endpoint ubql
+20211012 08395645  " info  	[{"entity":"uba_userrole","method":"select","fieldList":["roleID","ID","mi_modifyDate"],"whereList":{"__MD0":{"expression":"[userID]","condition":"equal","value":335018806083585}},"options":{"limit":100,"start":0}}]
+20211012 08395645  " debug 	Auth: got token 267e1247616549dc17dd6981
+20211012 08395645  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634027996
+20211012 08395645  " auth  	admin/267e1247
+20211012 08395645  "  +    	method(TubStorageMixin) uba_userrole.select
+20211012 08395645  "  +    		DataStore.init(uba_userrole)
+20211012 08395645  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08395645  " cust1 				{"P1":335018806083585}
+20211012 08395645  " SQL   				r=0 t=605 fr=582 c=0 q=SELECT A01.roleID,A01.ID,A01.mi_modifyDate  FROM uba_userrole A01  WHERE A01.userID=? LIMIT 100 OFFSET 0 
+20211012 08395645  "  -    			00.000.062
+20211012 08395645  "  -    		00.000.079
+20211012 08395645  "  -    	00.000.194
+20211012 08395645  " http  	127.0.0.1 <- 200
+20211012 08395645  "  -    00.000.627
+20211012 08401135  "  +    ubql?rq=uba_user.insert&uitag=frm-uba_user
+20211012 08401135  " http  	127.0.0.1 -> POST ubql?rq=uba_user.insert&uitag=frm-uba_user
+20211012 08401135  " info  	endpoint ubql
+20211012 08401135  " info  	[{"fieldList":["firstName","name","lastName","fullName","gender","email","phone","description","disabled","isPending","trustedIP","uData","avatar","ID","mi_modifyDate"],"entity":"uba_user","method":"insert","execParams":{"disabled":false,"isPending":false,"ID":335018806083585,"mi_modifyDate":"2021-10-12T08:39:56.000Z","name":"126+5"}}]
+20211012 08401135  " debug 	Auth: got token 267e1247616549eb79c16856
+20211012 08401135  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634028011
+20211012 08401135  " auth  	admin/267e1247
+20211012 08401135  "  +    	method(TubStorageMixin) uba_user.select
+20211012 08401135  "  +    		DataStore.init(uba_user)
+20211012 08401135  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08401135  " cust1 				{"P1s5":"126+5", "P2":335018806083585}
+20211012 08401135  " SQL   				r=0 t=446 fr=427 c=0 q=SELECT A01.ID  FROM uba_user A01  WHERE A01.name=? AND A01.ID<>?
+20211012 08401135  "  -    			00.000.053
+20211012 08401135  "  -    		00.000.067
+20211012 08401135  "  -    	00.000.158
+20211012 08401135  "  +    	method(TubUnityMixin) uba_user.insert
+20211012 08401135  "  +    		method(TubStorageMixin) uba_subject.insert
+20211012 08401135  "  +    			DataStore.ParseInsertAndExec
+20211012 08401135  "  +    				DataStore.BuildAndExecInsertSQL
+20211012 08401135  "  +    					DataStore.Execute
+20211012 08401135  "  +    						App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08401135  " cust1 							{"P1s5":"126+5", "P2s5":"126+5", "P3":335018806083585, "P4s8":"uba_user", "P5s1":"U", "P6s5":"126+5"}
+20211012 08401135  " SQL   							r=1 t=184 c=0 q=INSERT INTO uba_subject (code,name,ID,mi_unityEntity,sType,name_uk) VALUES (?,?,?,?,?,?)
+20211012 08401135  "  -    						00.000.074
+20211012 08401135  "  -    					00.000.084
+20211012 08401135  "  -    				00.000.169
+20211012 08401135  "  -    			00.000.181
+20211012 08401135  "  -    		00.000.203
+20211012 08401135  "  +    		method(TubStorageMixin) uba_subject.afterinsert
+20211012 08401135  "  -    		00.000.002
+20211012 08401135  "  +    		method(TubAuditMixin) uba_subject.afterinsert
+20211012 08401135  " info  			requestID=335018806575106
+20211012 08401135  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08401135  "  +    				DataStore.Execute
+20211012 08401135  "  +    					App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08401135  " SQL   						r=1 t=678 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211012 08401135  "  -    					00.000.044
+20211012 08401135  "  -    				00.000.058
+20211012 08401135  "  -    			00.000.171
+20211012 08401135  "  -    		00.000.198
+20211012 08401135  "  -    	00.000.526
+20211012 08401135  "  +    	method(TubStorageMixin) uba_user.insert
+20211012 08401135  " debug 		Start processing documents for entity uba_user
+20211012 08401135  "  +    		DataStore.ParseInsertAndExec
+20211012 08401135  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08401135  " EXC   				ESecurityException SecurityException: insert into restricted attribute \"uba_user.disabled\" denied [] at   $00000000006FA5F6  $00000000006FD0C5  $00000000005DE5E6  $000000000058D2B4  $00000000005D93BE  $000000000085CB5C  $000024DD9AF7F17A  $00007F2E8C44EFF0  $000024DD9AF73888  $00007F2E9AD88C2A
+20211012 08401135  "  -    			00.000.785
+20211012 08401135  "  -    		00.000.817
+20211012 08401135  "  -    	00.000.882
+20211012 08401135  " DB    	Rollback connection "main"
+20211012 08401135  " EXC   	ESMException: SecurityException: insert into restricted attribute "uba_user.disabled" denied Stack: ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at 
+20211012 08401135  " ERROR 	POST ubql?rq=uba_user.insert&uitag=frm-uba_user ERROR=500 (ESMException: SecurityException: insert into restricted attribute "uba_user.disabled" denied Stack: ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at )
+20211012 08401135  " debug 	Call JS method: UBA.securityViolation
+20211012 08401135  "  +    	method(TubStorageMixin) uba_audit.insert
+20211012 08401135  "  +    		DataStore.ParseInsertAndExec
+20211012 08401135  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08401135  "  +    				DataStore.Execute
+20211012 08401135  "  +    					App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08401135  " cust1 						{"P1s8":"uba_user", "P2":10, "P3s18":"SECURITY_VIOLATION", "P4s2":"10", "P5s2":"10", "P6d":"2021-10-12T08:40:11", "P7s9":"127.0.0.1", "P8":335018806575107, "P9s78":"SecurityException: insert into restricted attribute \"uba_user.disabled\" denied"}
+20211012 08401135  " SQL   						r=1 t=553 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,targetUser,actionTime,remoteIP,ID,fromValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211012 08401135  "  -    					00.000.087
+20211012 08401135  "  -    				00.000.110
+20211012 08401135  "  -    			00.000.306
+20211012 08401135  "  -    		00.000.332
+20211012 08401135  "  -    	00.000.366
+20211012 08401135  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211012 08401135  "  -    	00.000.006
+20211012 08401135  " DB    	Commit connection "main"
+20211012 08401135  " http  	127.0.0.1 <- 500
+20211012 08401135  "  -    00.004.139
+20211012 08401314  "  +    clientRequire/@unitybase/systemjs-plugin-vue-ub/package.json
+20211012 08401314  " http  	127.0.0.1 -> GET clientRequire/@unitybase/systemjs-plugin-vue-ub/package.json
+20211012 08401314  " info  	endpoint clientRequire
+20211012 08401314  " debug 	Retrieve cached @unitybase/systemjs-plugin-vue-ub/package.json -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/systemjs-plugin-vue-ub/package.json
+20211012 08401314  " http  	127.0.0.1 <- 200
+20211012 08401314  "  -    00.000.295
+20211012 08401315  "  +    clientRequire/@unitybase/systemjs-plugin-vue-ub/dist/system_plugin_vue_ub.min.js
+20211012 08401315  " http  	127.0.0.1 -> GET clientRequire/@unitybase/systemjs-plugin-vue-ub/dist/system_plugin_vue_ub.min.js
+20211012 08401315  " info  	endpoint clientRequire
+20211012 08401315  " debug 	Retrieve cached @unitybase/systemjs-plugin-vue-ub/dist/system_plugin_vue_ub.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/systemjs-plugin-vue-ub/dist/system_plugin_vue_ub.min.js
+20211012 08401315  " http  	127.0.0.1 <- 200
+20211012 08401315  "  -    00.000.290
+20211012 08401316  "  +    clientRequire/@unitybase/uba/public/forms/uba_user-changeUserPassword-fm.vue
+20211012 08401316  " http  	127.0.0.1 -> GET clientRequire/@unitybase/uba/public/forms/uba_user-changeUserPassword-fm.vue
+20211012 08401316  " info  	endpoint clientRequire
+20211012 08401316  " debug 	Retrieve cached @unitybase/uba/public/forms/uba_user-changeUserPassword-fm.vue -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/uba/public/forms/uba_user-changeUserPassword-fm.vue
+20211012 08401316  " http  	127.0.0.1 <- 200
+20211012 08401316  "  -    00.001.047
+20211012 08401317  "  +    clientRequire/vuelidate/lib/validators/index
+20211012 08401317  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/index
+20211012 08401317  " info  	endpoint clientRequire
+20211012 08401317  " debug 	Retrieve cached vuelidate/lib/validators/index -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/index.js
+20211012 08401317  " http  	127.0.0.1 <- 200
+20211012 08401317  "  -    00.000.263
+20211012 08401318  "  +    clientRequire/vuelidate/lib/validators/alpha
+20211012 08401318  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/alpha
+20211012 08401318  " info  	endpoint clientRequire
+20211012 08401318  " debug 	Retrieve cached vuelidate/lib/validators/alpha -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/alpha.js
+20211012 08401318  " http  	127.0.0.1 <- 200
+20211012 08401318  "  -    00.000.252
+20211012 08401318  "  +    clientRequire/vuelidate/lib/validators/alphaNum
+20211012 08401318  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/alphaNum
+20211012 08401318  " info  	endpoint clientRequire
+20211012 08401318  " debug 	Retrieve cached vuelidate/lib/validators/alphaNum -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/alphaNum.js
+20211012 08401318  " http  	127.0.0.1 <- 200
+20211012 08401318  "  -    00.000.226
+20211012 08401319  "  +    clientRequire/vuelidate/lib/validators/numeric
+20211012 08401319  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/numeric
+20211012 08401319  " info  	endpoint clientRequire
+20211012 08401319  " debug 	Retrieve cached vuelidate/lib/validators/numeric -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/numeric.js
+20211012 08401319  " http  	127.0.0.1 <- 200
+20211012 08401319  "  -    00.000.248
+20211012 08401319  "  +    clientRequire/vuelidate/lib/validators/between
+20211012 08401319  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/between
+20211012 08401319  " info  	endpoint clientRequire
+20211012 08401319  " debug 	Retrieve cached vuelidate/lib/validators/between -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/between.js
+20211012 08401319  " http  	127.0.0.1 <- 200
+20211012 08401319  "  -    00.000.319
+20211012 08401319  "  +    clientRequire/vuelidate/lib/validators/email
+20211012 08401319  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/email
+20211012 08401319  " info  	endpoint clientRequire
+20211012 08401319  " debug 	Retrieve cached vuelidate/lib/validators/email -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/email.js
+20211012 08401319  " http  	127.0.0.1 <- 200
+20211012 08401319  "  -    00.000.247
+20211012 08401319  "  +    clientRequire/vuelidate/lib/validators/ipAddress
+20211012 08401319  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/ipAddress
+20211012 08401319  " info  	endpoint clientRequire
+20211012 08401319  " debug 	Retrieve cached vuelidate/lib/validators/ipAddress -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/ipAddress.js
+20211012 08401319  " http  	127.0.0.1 <- 200
+20211012 08401319  "  -    00.000.234
+20211012 08401319  "  +    clientRequire/vuelidate/lib/validators/macAddress
+20211012 08401319  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/macAddress
+20211012 08401319  " info  	endpoint clientRequire
+20211012 08401319  " debug 	Retrieve cached vuelidate/lib/validators/macAddress -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/macAddress.js
+20211012 08401319  " http  	127.0.0.1 <- 200
+20211012 08401319  "  -    00.000.194
+20211012 08401319  "  +    clientRequire/vuelidate/lib/validators/maxLength
+20211012 08401319  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/maxLength
+20211012 08401319  " info  	endpoint clientRequire
+20211012 08401319  " debug 	Retrieve cached vuelidate/lib/validators/maxLength -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/maxLength.js
+20211012 08401319  " http  	127.0.0.1 <- 200
+20211012 08401319  "  -    00.000.223
+20211012 08401319  "  +    clientRequire/vuelidate/lib/validators/minLength
+20211012 08401319  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/minLength
+20211012 08401319  " info  	endpoint clientRequire
+20211012 08401319  " debug 	Retrieve cached vuelidate/lib/validators/minLength -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/minLength.js
+20211012 08401319  " http  	127.0.0.1 <- 200
+20211012 08401319  "  -    00.000.228
+20211012 08401319  "  +    clientRequire/vuelidate/lib/validators/required
+20211012 08401319  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/required
+20211012 08401319  " info  	endpoint clientRequire
+20211012 08401319  " debug 	Retrieve cached vuelidate/lib/validators/required -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/required.js
+20211012 08401319  " http  	127.0.0.1 <- 200
+20211012 08401319  "  -    00.000.206
+20211012 08401319  "  +    clientRequire/vuelidate/lib/validators/requiredIf
+20211012 08401319  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/requiredIf
+20211012 08401319  " info  	endpoint clientRequire
+20211012 08401319  " debug 	Retrieve cached vuelidate/lib/validators/requiredIf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/requiredIf.js
+20211012 08401319  " http  	127.0.0.1 <- 200
+20211012 08401319  "  -    00.000.212
+20211012 08401320  "  +    clientRequire/vuelidate/lib/validators/requiredUnless
+20211012 08401320  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/requiredUnless
+20211012 08401320  " info  	endpoint clientRequire
+20211012 08401320  " debug 	Retrieve cached vuelidate/lib/validators/requiredUnless -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/requiredUnless.js
+20211012 08401320  " http  	127.0.0.1 <- 200
+20211012 08401320  "  -    00.000.217
+20211012 08401320  "  +    clientRequire/vuelidate/lib/validators/sameAs
+20211012 08401320  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/sameAs
+20211012 08401320  " info  	endpoint clientRequire
+20211012 08401320  " debug 	Retrieve cached vuelidate/lib/validators/sameAs -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/sameAs.js
+20211012 08401320  " http  	127.0.0.1 <- 200
+20211012 08401320  "  -    00.000.207
+20211012 08401320  "  +    clientRequire/vuelidate/lib/validators/url
+20211012 08401320  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/url
+20211012 08401320  " info  	endpoint clientRequire
+20211012 08401320  " debug 	Retrieve cached vuelidate/lib/validators/url -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/url.js
+20211012 08401320  " http  	127.0.0.1 <- 200
+20211012 08401320  "  -    00.000.209
+20211012 08401320  "  +    clientRequire/vuelidate/lib/validators/or
+20211012 08401320  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/or
+20211012 08401320  " info  	endpoint clientRequire
+20211012 08401320  " debug 	Retrieve cached vuelidate/lib/validators/or -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/or.js
+20211012 08401320  " http  	127.0.0.1 <- 200
+20211012 08401320  "  -    00.000.207
+20211012 08401320  "  +    clientRequire/vuelidate/lib/validators/and
+20211012 08401320  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/and
+20211012 08401320  " info  	endpoint clientRequire
+20211012 08401320  " debug 	Retrieve cached vuelidate/lib/validators/and -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/and.js
+20211012 08401320  " http  	127.0.0.1 <- 200
+20211012 08401320  "  -    00.000.217
+20211012 08401320  "  +    clientRequire/vuelidate/lib/validators/not
+20211012 08401320  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/not
+20211012 08401320  " info  	endpoint clientRequire
+20211012 08401320  " debug 	Retrieve cached vuelidate/lib/validators/not -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/not.js
+20211012 08401320  " http  	127.0.0.1 <- 200
+20211012 08401320  "  -    00.000.225
+20211012 08401320  "  +    clientRequire/vuelidate/lib/validators/minValue
+20211012 08401320  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/minValue
+20211012 08401320  " info  	endpoint clientRequire
+20211012 08401320  " debug 	Retrieve cached vuelidate/lib/validators/minValue -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/minValue.js
+20211012 08401320  " http  	127.0.0.1 <- 200
+20211012 08401320  "  -    00.000.208
+20211012 08401320  "  +    clientRequire/vuelidate/lib/validators/maxValue
+20211012 08401320  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/maxValue
+20211012 08401320  " info  	endpoint clientRequire
+20211012 08401320  " debug 	Retrieve cached vuelidate/lib/validators/maxValue -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/maxValue.js
+20211012 08401320  " http  	127.0.0.1 <- 200
+20211012 08401320  "  -    00.000.234
+20211012 08401320  "  +    clientRequire/vuelidate/lib/validators/integer
+20211012 08401320  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/integer
+20211012 08401320  " info  	endpoint clientRequire
+20211012 08401320  " debug 	Retrieve cached vuelidate/lib/validators/integer -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/integer.js
+20211012 08401320  " http  	127.0.0.1 <- 200
+20211012 08401320  "  -    00.000.225
+20211012 08401321  "  +    clientRequire/vuelidate/lib/validators/decimal
+20211012 08401321  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/decimal
+20211012 08401321  " info  	endpoint clientRequire
+20211012 08401321  " debug 	Retrieve cached vuelidate/lib/validators/decimal -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/decimal.js
+20211012 08401321  " http  	127.0.0.1 <- 200
+20211012 08401321  "  -    00.000.217
+20211012 08401321  "  +    clientRequire/vuelidate/lib/validators/common
+20211012 08401321  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/validators/common
+20211012 08401321  " info  	endpoint clientRequire
+20211012 08401321  " debug 	Retrieve cached vuelidate/lib/validators/common -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/validators/common.js
+20211012 08401321  " http  	127.0.0.1 <- 200
+20211012 08401321  "  -    00.000.216
+20211012 08401321  "  +    clientRequire/vuelidate/lib/withParams
+20211012 08401321  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/withParams
+20211012 08401321  " info  	endpoint clientRequire
+20211012 08401321  " debug 	Retrieve cached vuelidate/lib/withParams -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/withParams.js
+20211012 08401321  " http  	127.0.0.1 <- 200
+20211012 08401321  "  -    00.000.250
+20211012 08401321  "  +    clientRequire/vuelidate/lib/withParamsBrowser
+20211012 08401321  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/withParamsBrowser
+20211012 08401321  " info  	endpoint clientRequire
+20211012 08401321  " debug 	Retrieve cached vuelidate/lib/withParamsBrowser -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/withParamsBrowser.js
+20211012 08401321  " http  	127.0.0.1 <- 200
+20211012 08401321  "  -    00.000.223
+20211012 08401321  "  +    clientRequire/vuelidate/lib/params
+20211012 08401321  " http  	127.0.0.1 -> GET clientRequire/vuelidate/lib/params
+20211012 08401321  " info  	endpoint clientRequire
+20211012 08401321  " debug 	Retrieve cached vuelidate/lib/params -> /home/admloc/Documents/ubProject/CityPortal/node_modules/vuelidate/lib/params.js
+20211012 08401321  " http  	127.0.0.1 <- 200
+20211012 08401321  "  -    00.000.216
+20211012 08401952  "  +    ubql?rq=uba_user.changeOtherUserPassword&uitag=frm-uba_user
+20211012 08401952  " http  	127.0.0.1 -> POST ubql?rq=uba_user.changeOtherUserPassword&uitag=frm-uba_user
+20211012 08401952  " info  	endpoint ubql
+20211012 08401952  " info  	[{"fieldList":[],"entity":"uba_user","method":"changeOtherUserPassword","execParams":{"newPwd":"1111","forUser":"126+5","needChangePassword":false}}]
+20211012 08401952  " debug 	Auth: got token 267e1247616549f34e805af7
+20211012 08401952  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634028019
+20211012 08401952  " auth  	admin/267e1247
+20211012 08401952  "  +    	method(TubStorageMixin) uba_user.select
+20211012 08401952  "  +    		DataStore.init(uba_user)
+20211012 08401952  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08401952  " cust1 				{"P1s5":"126+5"}
+20211012 08401952  " SQL   				r=0 t=102 fr=81 c=0 q=SELECT A01.ID,A01.uPasswordHashHexa  FROM uba_user A01  WHERE A01.name=?
+20211012 08401952  "  -    			00.000.066
+20211012 08401952  "  -    		00.000.083
+20211012 08401952  "  -    	00.000.198
+20211012 08401952  "  +    	method(TubStorageMixin) uba_audit.insert
+20211012 08401952  "  +    		DataStore.ParseInsertAndExec
+20211012 08401952  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08401952  "  +    				DataStore.Execute
+20211012 08401952  "  +    					App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08401952  " cust1 						{"P1s8":"uba_user", "P2":20, "P3s18":"SECURITY_VIOLATION", "P4s5":"admin", "P5d":"2021-10-12T08:40:19", "P6s9":"127.0.0.1", "P7s5":"126+5", "P8":335018806837249, "P9s53":"{\"action\":\"changePassword\",\"reason\":\"User not found\"}"}
+20211012 08401952  " SQL   						r=1 t=150 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetUser,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211012 08401952  "  -    					00.000.080
+20211012 08401952  "  -    				00.000.100
+20211012 08401952  "  -    			00.000.226
+20211012 08401952  "  -    		00.000.240
+20211012 08401952  "  -    	00.000.274
+20211012 08401952  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211012 08401952  "  -    	00.000.005
+20211012 08401952  " DB    	Commit connection "main" in 131us
+20211012 08401952  " EXC   	ESMException: User not found Stack: changeOtherUserPassword@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/uba/uba_user.js:256:26 ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at 
+20211012 08401952  " ERROR 	POST ubql?rq=uba_user.changeOtherUserPassword&uitag=frm-uba_user ERROR=500 (ESMException: User not found Stack: changeOtherUserPassword@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/uba/uba_user.js:256:26 ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at )
+20211012 08401952  " http  	127.0.0.1 <- 500
+20211012 08401952  "  -    00.002.015
+20211012 08403700  "  +    ubql?rq=uba_user.insert&uitag=frm-uba_user
+20211012 08403700  " http  	127.0.0.1 -> POST ubql?rq=uba_user.insert&uitag=frm-uba_user
+20211012 08403700  " info  	endpoint ubql
+20211012 08403700  " info  	[{"fieldList":["firstName","name","lastName","fullName","gender","email","phone","description","disabled","isPending","trustedIP","uData","avatar","ID","mi_modifyDate"],"entity":"uba_user","method":"insert","execParams":{"disabled":true,"isPending":false,"ID":335018806083585,"mi_modifyDate":"2021-10-12T08:39:56.000Z","name":"126+5"}}]
+20211012 08403700  " debug 	Auth: got token 267e124761654a0529ad7a18
+20211012 08403700  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634028037
+20211012 08403700  " auth  	admin/267e1247
+20211012 08403700  "  +    	method(TubStorageMixin) uba_user.select
+20211012 08403700  "  +    		DataStore.init(uba_user)
+20211012 08403700  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08403700  " cust1 				{"P1s5":"126+5", "P2":335018806083585}
+20211012 08403700  " SQL   				r=0 t=467 fr=446 c=0 q=SELECT A01.ID  FROM uba_user A01  WHERE A01.name=? AND A01.ID<>?
+20211012 08403700  "  -    			00.000.061
+20211012 08403700  "  -    		00.000.078
+20211012 08403700  "  -    	00.000.188
+20211012 08403700  "  +    	method(TubUnityMixin) uba_user.insert
+20211012 08403700  "  +    		method(TubStorageMixin) uba_subject.insert
+20211012 08403700  "  +    			DataStore.ParseInsertAndExec
+20211012 08403700  "  +    				DataStore.BuildAndExecInsertSQL
+20211012 08403700  "  +    					DataStore.Execute
+20211012 08403700  "  +    						App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08403700  " cust1 							{"P1s5":"126+5", "P2s5":"126+5", "P3":335018806083585, "P4s8":"uba_user", "P5s1":"U", "P6s5":"126+5"}
+20211012 08403700  " SQL   							r=1 t=227 c=0 q=INSERT INTO uba_subject (code,name,ID,mi_unityEntity,sType,name_uk) VALUES (?,?,?,?,?,?)
+20211012 08403700  "  -    						00.000.076
+20211012 08403700  "  -    					00.000.089
+20211012 08403700  "  -    				00.000.188
+20211012 08403700  "  -    			00.000.205
+20211012 08403700  "  -    		00.000.231
+20211012 08403700  "  +    		method(TubStorageMixin) uba_subject.afterinsert
+20211012 08403700  "  -    		00.000.002
+20211012 08403700  "  +    		method(TubAuditMixin) uba_subject.afterinsert
+20211012 08403700  " info  			requestID=335018807427074
+20211012 08403700  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08403700  "  +    				DataStore.Execute
+20211012 08403700  "  +    					App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08403700  " SQL   						r=1 t=716 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211012 08403700  "  -    					00.000.052
+20211012 08403700  "  -    				00.000.073
+20211012 08403700  "  -    			00.000.229
+20211012 08403700  "  -    		00.000.264
+20211012 08403700  "  -    	00.000.643
+20211012 08403700  "  +    	method(TubStorageMixin) uba_user.insert
+20211012 08403700  " debug 		Start processing documents for entity uba_user
+20211012 08403700  "  +    		DataStore.ParseInsertAndExec
+20211012 08403700  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08403700  " EXC   				ESecurityException SecurityException: insert into restricted attribute \"uba_user.disabled\" denied [] at   $00000000006FA5F6  $00000000006FD0C5  $00000000005DE5E6  $000000000058D2B4  $00000000005D93BE  $000000000085CB5C  $000024DD9AF7F17A  $00007F2E8C44EFF0  $000024DD9AF73888  $00007F2E9AD88C2A
+20211012 08403700  "  -    			00.000.926
+20211012 08403700  "  -    		00.000.969
+20211012 08403700  "  -    	00.001.045
+20211012 08403700  " DB    	Rollback connection "main"
+20211012 08403700  " EXC   	ESMException: SecurityException: insert into restricted attribute "uba_user.disabled" denied Stack: ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at 
+20211012 08403700  " ERROR 	POST ubql?rq=uba_user.insert&uitag=frm-uba_user ERROR=500 (ESMException: SecurityException: insert into restricted attribute "uba_user.disabled" denied Stack: ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at )
+20211012 08403700  " debug 	Call JS method: UBA.securityViolation
+20211012 08403700  "  +    	method(TubStorageMixin) uba_audit.insert
+20211012 08403700  "  +    		DataStore.ParseInsertAndExec
+20211012 08403700  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08403700  "  +    				DataStore.Execute
+20211012 08403700  "  +    					App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08403700  " cust1 						{"P1s8":"uba_user", "P2":10, "P3s18":"SECURITY_VIOLATION", "P4s2":"10", "P5s2":"10", "P6d":"2021-10-12T08:40:37", "P7s9":"127.0.0.1", "P8":335018807427075, "P9s78":"SecurityException: insert into restricted attribute \"uba_user.disabled\" denied"}
+20211012 08403700  " SQL   						r=1 t=575 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,targetUser,actionTime,remoteIP,ID,fromValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211012 08403700  "  -    					00.000.068
+20211012 08403700  "  -    				00.000.086
+20211012 08403700  "  -    			00.000.195
+20211012 08403700  "  -    		00.000.208
+20211012 08403700  "  -    	00.000.230
+20211012 08403700  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211012 08403700  "  -    	00.000.003
+20211012 08403700  " DB    	Commit connection "main"
+20211012 08403700  " http  	127.0.0.1 <- 500
+20211012 08403700  "  -    00.003.701
+20211012 08405034  "  +    ubql?rq=uba_user.select&uitag=frm-uba_user
+20211012 08405034  " http  	127.0.0.1 -> POST ubql?rq=uba_user.select&uitag=frm-uba_user
+20211012 08405034  " info  	endpoint ubql
+20211012 08405034  " info  	[{"entity":"uba_user","fieldList":["firstName","name","lastName","fullName","gender","email","phone","description","disabled","isPending","trustedIP","uData","avatar","ID","mi_modifyDate"],"ID":7,"method":"select"}]
+20211012 08405034  " debug 	Auth: got token 267e124761654a12aed2defa
+20211012 08405034  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634028050
+20211012 08405034  " auth  	admin/267e1247
+20211012 08405034  "  +    	method(TubStorageMixin) uba_user.select
+20211012 08405034  "  +    		DataStore.init(uba_user)
+20211012 08405034  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08405034  " cust1 				{"P1":7}
+20211012 08405034  " SQL   				r=1 t=249 fr=214 c=0 q=SELECT A01.firstName,A01.name,A01.lastName,A01.fullName,A01.gender,A01.email,A01.phone,A01.description,null AS C1,null AS C2,'*****' AS C3,A01.uData,A01.avatar,A01.ID,A01.mi_modifyDate  FROM uba_user A01  WHERE A01.ID=?
+20211012 08405034  "  -    			00.000.098
+20211012 08405034  "  -    		00.000.121
+20211012 08405034  "  -    	00.000.364
+20211012 08405034  " http  	127.0.0.1 <- 200
+20211012 08405034  "  -    00.000.756
+20211012 08405039  "  +    ubql?rq=uba_role.select&uitag=frm-uba_user
+20211012 08405039  " http  	127.0.0.1 -> POST ubql?rq=uba_role.select&uitag=frm-uba_user
+20211012 08405039  " info  	endpoint ubql
+20211012 08405039  " info  	[{"entity":"uba_role","method":"select","fieldList":["ID","name","mi_modifyDate"],"options":{"limit":10000}}]
+20211012 08405039  " debug 	Auth: got token 267e124761654a12aed2defa
+20211012 08405039  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634028050
+20211012 08405039  " auth  	admin/267e1247
+20211012 08405039  "  +    	method(TubStorageMixin) uba_role.select
+20211012 08405039  "  +    		DataStore.init(uba_role)
+20211012 08405039  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08405039  " SQL   				r=8 t=1468 fr=1441 c=0 q=SELECT A01.ID,A01.name,A01.mi_modifyDate  FROM uba_role A01  LIMIT 10000 OFFSET 0 
+20211012 08405039  "  -    			00.000.059
+20211012 08405039  "  -    		00.000.077
+20211012 08405039  "  -    	00.000.171
+20211012 08405039  " http  	127.0.0.1 <- 200
+20211012 08405039  "  -    00.000.632
+20211012 08405041  "  +    ubql?rq=uba_userrole.select&uitag=frm-uba_user
+20211012 08405041  " http  	127.0.0.1 -> POST ubql?rq=uba_userrole.select&uitag=frm-uba_user
+20211012 08405041  " info  	endpoint ubql
+20211012 08405041  " info  	[{"entity":"uba_userrole","method":"select","fieldList":["roleID","ID","mi_modifyDate"],"whereList":{"__MD0":{"expression":"[userID]","condition":"equal","value":7}},"options":{"limit":100,"start":0}}]
+20211012 08405041  " debug 	Auth: got token 267e124761654a12aed2defa
+20211012 08405041  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634028050
+20211012 08405041  " auth  	admin/267e1247
+20211012 08405041  "  +    	method(TubStorageMixin) uba_userrole.select
+20211012 08405041  "  +    		DataStore.init(uba_userrole)
+20211012 08405041  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08405041  " cust1 				{"P1":7}
+20211012 08405041  " SQL   				r=0 t=633 fr=605 c=0 q=SELECT A01.roleID,A01.ID,A01.mi_modifyDate  FROM uba_userrole A01  WHERE A01.userID=? LIMIT 100 OFFSET 0 
+20211012 08405041  "  -    			00.000.097
+20211012 08405041  "  -    		00.000.114
+20211012 08405041  "  -    	00.000.244
+20211012 08405041  " http  	127.0.0.1 <- 200
+20211012 08405041  "  -    00.000.738
+20211012 08415447  "  +    ubql?rq=uba_user.select&uitag=nsc-uba_user
+20211012 08415447  " http  	127.0.0.1 -> POST ubql?rq=uba_user.select&uitag=nsc-uba_user
+20211012 08415447  " info  	endpoint ubql
+20211012 08415447  " info  	[{"entity":"uba_user","method":"select","fieldList":["ID","name","disabled","isPending","firstName","lastName"],"options":{"start":0,"limit":101}}]
+20211012 08415447  " debug 	Auth: got token 267e124761654a52cabe1bfe
+20211012 08415447  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634028114
+20211012 08415447  " auth  	admin/267e1247
+20211012 08415447  "  +    	method(TubStorageMixin) uba_user.select
+20211012 08415447  "  +    		DataStore.init(uba_user)
+20211012 08415447  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08415447  " SQL   				r=3 t=331 fr=302 c=0 q=SELECT A01.ID,A01.name,null AS C1,null AS C2,A01.firstName,A01.lastName  FROM uba_user A01  LIMIT 101 OFFSET 0 
+20211012 08415447  "  -    			00.000.083
+20211012 08415447  "  -    		00.000.099
+20211012 08415447  "  -    	00.000.252
+20211012 08415447  " http  	127.0.0.1 <- 200
+20211012 08415447  "  -    00.000.684
+20211012 08415719  "  +    logout
+20211012 08415719  " http  	127.0.0.1 -> POST logout
+20211012 08415719  " info  	endpoint logout
+20211012 08415719  " info  	{}
+20211012 08415719  " debug 	Auth: got token 267e124761654a5554da8e5d
+20211012 08415719  " debug 	Server side session.fSessionID = 267e1247, crc32(privKey + secretWord)=-1041800698 checkMonoliticTime=1, client time stamp=1634028117
+20211012 08415719  " auth  	admin/267e1247
+20211012 08415719  " http  	127.0.0.1 <- 200
+20211012 08415719  "  -    00.000.193
+20211012 08415719  "  +    adm
+20211012 08415719  " http  	127.0.0.1 -> GET adm
+20211012 08415719  " info  	endpoint adm
+20211012 08415719  " debug 	Compiled index.mustache is used
+20211012 08415719  " debug 	default-src 'self' https://localhost:8083 http://localhost:8081; connect-src 'self'  https://localhost:8083 http://localhost:8081 blob:; script-src 'self' 'nonce-b6ef5f63' 'unsafe-eval' https://localhost:8083 http://localhost:8081 resource://pdf.js/build/ resource://pdf.js/web/; object-src blob: https://localhost:8083 http://localhost:8081; base-uri resource:; style-src 'self' 'unsafe-inline' data: ; font-src 'self' data: ; frame-src 'self'  blob:; img-src 'self' https://unitybase.info  data: blob:; plugin-types application/pdf
+20211012 08415719  " http  	127.0.0.1 <- 200
+20211012 08415719  "  -    00.001.532
+20211012 08415721  "  +    models/adminui-pub/themes/UBGrayTheme/UBGrayTheme-all.css?ver=5.20.26
+20211012 08415721  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/UBGrayTheme-all.css?ver=5.20.26
+20211012 08415721  " info  	endpoint models
+20211012 08415721  " debug 	model file is resolved from cache
+20211012 08415721  " http  	127.0.0.1 <- 200
+20211012 08415721  "  -    00.000.270
+20211012 08415721  "  +    models/adminui-pub/ub-css-all.css?ver=5.20.26
+20211012 08415721  " http  	127.0.0.1 -> GET models/adminui-pub/ub-css-all.css?ver=5.20.26
+20211012 08415721  " info  	endpoint models
+20211012 08415721  " debug 	model file is resolved from cache
+20211012 08415721  " http  	127.0.0.1 <- 200
+20211012 08415721  "  -    00.000.299
+20211012 08415722  "  +    models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211012 08415722  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211012 08415722  " info  	endpoint models
+20211012 08415722  " debug 	model file is resolved from cache
+20211012 08415722  " http  	127.0.0.1 <- 200
+20211012 08415722  "  -    00.000.352
+20211012 08415722  "  +    models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211012 08415722  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211012 08415722  " info  	endpoint models
+20211012 08415722  " debug 	model file is resolved from cache
+20211012 08415722  " http  	127.0.0.1 <- 200
+20211012 08415722  "  -    00.000.803
+20211012 08415722  "  +    models/adminui-vue/dist/fonts/fa/css/regular.min.css
+20211012 08415722  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/regular.min.css
+20211012 08415722  " info  	endpoint models
+20211012 08415722  " debug 	model file is resolved from cache
+20211012 08415722  " http  	127.0.0.1 <- 200
+20211012 08415722  "  -    00.000.241
+20211012 08415722  "  +    models/adminui-vue/dist/fonts/fa/css/v4-shims.min.css
+20211012 08415722  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/v4-shims.min.css
+20211012 08415722  " info  	endpoint models
+20211012 08415722  " debug 	model file is resolved from cache
+20211012 08415722  " http  	127.0.0.1 <- 200
+20211012 08415722  "  -    00.000.488
+20211012 08415722  "  +    models/adminui-pub/themes/UBGrayTheme/ub.css?ver=5.20.26
+20211012 08415722  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/ub.css?ver=5.20.26
+20211012 08415722  " info  	endpoint models
+20211012 08415722  " debug 	model file is resolved from cache
+20211012 08415722  " http  	127.0.0.1 <- 200
+20211012 08415722  "  -    00.000.235
+20211012 08415722  "  +    models/adminui-vue/theme/el-theme-compiled.min.css
+20211012 08415722  " http  	127.0.0.1 -> GET models/adminui-vue/theme/el-theme-compiled.min.css
+20211012 08415722  " info  	endpoint models
+20211012 08415722  " debug 	model file is resolved from cache
+20211012 08415722  " http  	127.0.0.1 <- 200
+20211012 08415722  "  -    00.000.391
+20211012 08415723  "  +    models/adminui-vue/views/ub-auth.html?returnUrl=http%3A%2F%2Flocalhost%3A8881%2Fadm
+20211012 08415723  " http  	127.0.0.1 -> GET models/adminui-vue/views/ub-auth.html?returnUrl=http%3A%2F%2Flocalhost%3A8881%2Fadm
+20211012 08415723  " info  	endpoint models
+20211012 08415723  " debug 	model file is resolved from cache
+20211012 08415723  " http  	127.0.0.1 <- 200
+20211012 08415723  "  -    00.000.395
+20211012 08415723  "  +    clientRequire/systemjs/dist/system.js
+20211012 08415723  " http  	127.0.0.1 -> GET clientRequire/systemjs/dist/system.js
+20211012 08415723  " info  	endpoint clientRequire
+20211012 08415723  " debug 	Retrieve cached systemjs/dist/system.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/systemjs/dist/system.js
+20211012 08415723  " http  	127.0.0.1 <- 200
+20211012 08415723  "  -    00.000.328
+20211012 08415723  "  +    models/adminui-pub/dist/ext-all.min.js
+20211012 08415723  " http  	127.0.0.1 -> GET models/adminui-pub/dist/ext-all.min.js
+20211012 08415723  " info  	endpoint models
+20211012 08415723  " debug 	model file is resolved from cache
+20211012 08415723  " http  	127.0.0.1 <- 200
+20211012 08415723  "  -    00.000.238
+20211012 08415725  " EXC   ECrtSocket ("SndLow() len=498099 [32  Broken pipe]") [] at   $000000000046BBBD  $000000000046BB11
+20211012 08415725  "  +    models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211012 08415725  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211012 08415725  " info  	endpoint models
+20211012 08415725  " debug 	model file is resolved from cache
+20211012 08415725  " http  	127.0.0.1 <- 200
+20211012 08415725  "  -    00.000.249
+20211012 08415725  "  +    models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211012 08415725  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211012 08415725  " info  	endpoint models
+20211012 08415725  " debug 	model file is resolved from cache
+20211012 08415725  " http  	127.0.0.1 <- 200
+20211012 08415725  "  -    00.000.215
+20211012 08415725  "  +    models/adminui-vue/theme/el-theme-compiled.min.css
+20211012 08415725  " http  	127.0.0.1 -> GET models/adminui-vue/theme/el-theme-compiled.min.css
+20211012 08415725  " info  	endpoint models
+20211012 08415725  " debug 	model file is resolved from cache
+20211012 08415725  " http  	127.0.0.1 <- 200
+20211012 08415725  "  -    00.000.211
+20211012 08415726  "  +    clientRequire/lodash/lodash.min.js
+20211012 08415726  " http  	127.0.0.1 -> GET clientRequire/lodash/lodash.min.js
+20211012 08415726  " info  	endpoint clientRequire
+20211012 08415726  " debug 	Retrieve cached lodash/lodash.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/lodash/lodash.min.js
+20211012 08415726  " http  	127.0.0.1 <- 200
+20211012 08415726  "  -    00.000.230
+20211012 08415726  "  +    clientRequire/@unitybase/ub-pub/dist/ub-pub.min.js
+20211012 08415726  " http  	127.0.0.1 -> GET clientRequire/@unitybase/ub-pub/dist/ub-pub.min.js
+20211012 08415726  " info  	endpoint clientRequire
+20211012 08415726  " debug 	Retrieve cached @unitybase/ub-pub/dist/ub-pub.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211012 08415726  " http  	127.0.0.1 <- 200
+20211012 08415726  "  -    00.000.235
+20211012 08415726  "  +    models/adminui-vue/dist/adminui-vue.min.js
+20211012 08415726  " http  	127.0.0.1 -> GET models/adminui-vue/dist/adminui-vue.min.js
+20211012 08415726  " info  	endpoint models
+20211012 08415726  " debug 	model file is resolved from cache
+20211012 08415726  " http  	127.0.0.1 <- 200
+20211012 08415726  "  -    00.000.255
+20211012 08415736  "  +    clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211012 08415736  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211012 08415736  " info  	endpoint clientRequire
+20211012 08415736  " debug 	Retrieve cached @unitybase/adminui-vue/dist/adminui-vue.min.css -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211012 08415737  " http  	127.0.0.1 <- 200
+20211012 08415737  "  -    00.005.993
+20211012 08415740  "  +    getAppInfo
+20211012 08415740  " http  	127.0.0.1 -> GET getAppInfo
+20211012 08415740  " info  	endpoint getAppInfo
+20211012 08415740  " http  	127.0.0.1 <- 200
+20211012 08415740  "  -    00.005.805
+20211012 08415740  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211012 08415740  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211012 08415740  " info  	endpoint clientRequire
+20211012 08415740  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211012 08415740  " http  	127.0.0.1 <- 200
+20211012 08415740  "  -    00.000.266
+20211012 08415740  "  +    models/ub-pub/locale/lang-en.json
+20211012 08415740  " http  	127.0.0.1 -> GET models/ub-pub/locale/lang-en.json
+20211012 08415740  " info  	endpoint models
+20211012 08415740  " debug 	model file is resolved from cache
+20211012 08415740  " http  	127.0.0.1 <- 200
+20211012 08415740  "  -    00.000.585
+20211012 08415742  "  +    models/ub-pub/img/login-logo.svg
+20211012 08415742  " http  	127.0.0.1 -> GET models/ub-pub/img/login-logo.svg
+20211012 08415742  " info  	endpoint models
+20211012 08415742  " debug 	model file is resolved from cache
+20211012 08415742  " http  	127.0.0.1 <- 200
+20211012 08415742  "  -    00.000.379
+20211012 08415743  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211012 08415743  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211012 08415743  " info  	endpoint clientRequire
+20211012 08415743  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211012 08415743  " http  	127.0.0.1 <- 200
+20211012 08415743  "  -    00.000.383
+20211012 08415743  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211012 08415743  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211012 08415743  " info  	endpoint clientRequire
+20211012 08415744  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/ub-icons.woff2 -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211012 08415744  " http  	127.0.0.1 <- 200
+20211012 08415744  "  -    00.000.695
+20211012 08415744  "  +    models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211012 08415744  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211012 08415744  " info  	endpoint models
+20211012 08415744  " debug 	model file is resolved from cache
+20211012 08415744  " http  	127.0.0.1 <- 200
+20211012 08415744  "  -    00.000.474
+20211012 08415744  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211012 08415744  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211012 08415744  " info  	endpoint clientRequire
+20211012 08415744  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211012 08415744  " http  	127.0.0.1 <- 200
+20211012 08415744  "  -    00.000.378
+20211012 08415843  "  +    auth?AUTHTYPE=UB&userName=admin
+20211012 08415843  " http  	127.0.0.1 -> POST auth?AUTHTYPE=UB&userName=admin
+20211012 08415843  " info  	endpoint auth
+20211012 08415843  " http  	127.0.0.1 <- 200
+20211012 08415843  "  -    00.000.201
+20211012 08415844  "  +    auth?AUTHTYPE=UB&clientNonce=27574a8560c35ca14d9165a6d505064f9b256848f9f8ae6b8189b73c42dd160b&password=8c6e1b782c69e6b6db350e2ae72f1ee247da3f3e2e7bc659018e48baef52ab14&userName=admin
+20211012 08415844  " http  	127.0.0.1 -> POST auth?AUTHTYPE=UB&clientNonce=27574a8560c35ca14d9165a6d505064f9b256848f9f8ae6b8189b73c42dd160b&password=8c6e1b782c69e6b6db350e2ae72f1ee247da3f3e2e7bc659018e48baef52ab14&userName=admin
+20211012 08415844  " info  	endpoint auth
+20211012 08415844  "  +    	DataStore.init(uba_user)
+20211012 08415844  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08415844  " cust1 			{"P1s5":"admin"}
+20211012 08415844  " SQL   			r=1 t=646 fr=622 c=0 q=select id, name, uPasswordHashHexa, uData, isPending, trustedIP from UBA_USER where name=? and disabled=0
+20211012 08415844  "  -    		00.000.078
+20211012 08415844  "  -    	00.000.095
+20211012 08415844  "  +    	method(TubStorageMixin) uba_user.select
+20211012 08415844  "  +    		DataStore.init(uba_user)
+20211012 08415844  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08415844  " cust1 				{"P1":10}
+20211012 08415844  " SQL   				r=1 t=568 fr=545 c=0 q=SELECT A01.name,A01.uData,A01.uPasswordHashHexa,A01.lastPasswordChangeDate,A01.firstName,A01.lastName,A01.fullName  FROM uba_user A01  WHERE A01.ID=?
+20211012 08415844  "  -    			00.000.054
+20211012 08415844  "  -    		00.000.065
+20211012 08415844  "  -    	00.000.167
+20211012 08415844  "  +    	method(TubStorageMixin) uba_role.select
+20211012 08415844  "  +    		DataStore.init(uba_role)
+20211012 08415844  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08415844  " cust1 				{"P1":10, "P2":10}
+20211012 08415844  " SQL   				r=1 t=726 fr=686 c=0 q=SELECT A01.ID,A01.name  FROM uba_role A01  WHERE (((EXISTS (SELECT 1  FROM uba_userrole A02  WHERE A02.userID=? AND A02.roleID=A01.ID)) OR (EXISTS (SELECT 1  FROM uba_grouprole A03  WHERE EXISTS (SELECT 1  FROM uba_usergroup A04  WHERE A04.userID=? AND A04.groupID=A03.groupID) AND A03.roleID=A01.ID))))
+20211012 08415844  "  -    			00.000.090
+20211012 08415844  "  -    		00.000.112
+20211012 08415844  "  -    	00.000.465
+20211012 08415844  "  +    	method(TubStorageMixin) uba_usergroup.select
+20211012 08415844  "  +    		DataStore.init(uba_usergroup)
+20211012 08415844  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08415844  " cust1 				{"P1":10}
+20211012 08415844  " SQL   				r=0 t=304 fr=288 c=0 q=SELECT A01.groupID  FROM uba_usergroup A01  WHERE A01.userID=?
+20211012 08415844  "  -    			00.000.040
+20211012 08415844  "  -    		00.000.049
+20211012 08415844  "  -    	00.000.110
+20211012 08415844  " auth  	New session admin/aca2e97d created at 127.0.0.1/0 using Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
+20211012 08415844  " debug 	Call JS method: UBA.onUserLogin
+20211012 08415844  "  +    	method(TubStorageMixin) uba_advSecurity.select
+20211012 08415844  "  +    		DataStore.init(uba_advSecurity)
+20211012 08415844  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08415844  " cust1 				{"P1":10}
+20211012 08415844  " SQL   				r=0 t=369 fr=355 c=0 q=SELECT A01.ID,A01.allowedIP,A01.refreshIP,A01.fp,A01.refreshFp,A01.keyMediaName,A01.refreshKeyMedia,A01.mi_modifyDate  FROM uba_advSecurity A01  WHERE A01.userID=?
+20211012 08415844  "  -    			00.000.047
+20211012 08415844  "  -    		00.000.059
+20211012 08415844  "  -    	00.000.174
+20211012 08415844  "  +    	method(TubStorageMixin) uba_audit.insert
+20211012 08415844  "  +    		DataStore.ParseInsertAndExec
+20211012 08415844  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08415844  "  +    				DataStore.Execute
+20211012 08415844  "  +    					App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08415844  " cust1 						{"P1s8":"uba_user", "P2":10, "P3s5":"LOGIN", "P4s5":"admin", "P5d":"2021-10-12T08:41:58", "P6s9":"127.0.0.1", "P7s5":"admin", "P8s0":"", "P9":335018810081281, "P10s512":"Host: localhost:8881\r\nConnection: keep-alive\r\nContent-Length: 0\r\nsec-ch-ua: \"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\"\r\nAccept: application/json, text/plain, */*\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nOrigin: http://localhost:8881\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: http://localhost:8881/models/adminui-vue/..."}
+20211012 08415844  " SQL   						r=1 t=532 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetUser,targetRole,ID,fromValue) VALUES (?,?,?,?,?,?,?,?,?,?)
+20211012 08415844  "  -    					00.000.056
+20211012 08415844  "  -    				00.000.071
+20211012 08415844  "  -    			00.000.252
+20211012 08415844  "  -    		00.000.267
+20211012 08415844  "  -    	00.000.298
+20211012 08415844  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211012 08415844  "  -    	00.000.002
+20211012 08415844  " DB    	Commit connection "main"
+20211012 08415844  " http  	127.0.0.1 <- 200
+20211012 08415844  "  -    00.006.442
+20211012 08415845  "  +    getDomainInfo?userName=admin&v=4
+20211012 08415845  " http  	127.0.0.1 -> GET getDomainInfo?userName=admin&v=4
+20211012 08415845  " info  	endpoint getDomainInfo
+20211012 08415845  " debug 	Auth: got token aca2e97d61654a56cda84f19
+20211012 08415845  " debug 	Server side session.fSessionID = aca2e97d, crc32(privKey + secretWord)=19139609 checkMonoliticTime=1, client time stamp=1634028118
+20211012 08415845  " auth  	admin/aca2e97d
+20211012 08415845  " http  	127.0.0.1 <- 200
+20211012 08415845  "  -    00.002.343
+20211012 08415846  "  +    adm
+20211012 08415846  " http  	127.0.0.1 -> GET adm
+20211012 08415846  " info  	endpoint adm
+20211012 08415846  " debug 	Compiled index.mustache is used
+20211012 08415846  " debug 	default-src 'self' https://localhost:8083 http://localhost:8081; connect-src 'self'  https://localhost:8083 http://localhost:8081 blob:; script-src 'self' 'nonce-b6ef5f63' 'unsafe-eval' https://localhost:8083 http://localhost:8081 resource://pdf.js/build/ resource://pdf.js/web/; object-src blob: https://localhost:8083 http://localhost:8081; base-uri resource:; style-src 'self' 'unsafe-inline' data: ; font-src 'self' data: ; frame-src 'self'  blob:; img-src 'self' https://unitybase.info  data: blob:; plugin-types application/pdf
+20211012 08415846  " http  	127.0.0.1 <- 200
+20211012 08415846  "  -    00.001.523
+20211012 08415848  "  +    models/adminui-pub/themes/UBGrayTheme/UBGrayTheme-all.css?ver=5.20.26
+20211012 08415848  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/UBGrayTheme-all.css?ver=5.20.26
+20211012 08415848  " info  	endpoint models
+20211012 08415848  " debug 	model file is resolved from cache
+20211012 08415848  " http  	127.0.0.1 <- 200
+20211012 08415848  "  -    00.000.821
+20211012 08415848  "  +    models/adminui-pub/ub-css-all.css?ver=5.20.26
+20211012 08415848  " http  	127.0.0.1 -> GET models/adminui-pub/ub-css-all.css?ver=5.20.26
+20211012 08415848  " info  	endpoint models
+20211012 08415848  " debug 	model file is resolved from cache
+20211012 08415848  " http  	127.0.0.1 <- 200
+20211012 08415848  "  -    00.000.590
+20211012 08415849  "  +    models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211012 08415849  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211012 08415849  " info  	endpoint models
+20211012 08415849  " debug 	model file is resolved from cache
+20211012 08415849  " http  	127.0.0.1 <- 200
+20211012 08415849  "  -    00.000.292
+20211012 08415849  "  +    models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211012 08415849  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211012 08415849  " info  	endpoint models
+20211012 08415849  " debug 	model file is resolved from cache
+20211012 08415849  " http  	127.0.0.1 <- 200
+20211012 08415849  "  -    00.000.514
+20211012 08415849  "  +    models/adminui-vue/dist/fonts/fa/css/regular.min.css
+20211012 08415849  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/regular.min.css
+20211012 08415849  " info  	endpoint models
+20211012 08415849  " debug 	model file is resolved from cache
+20211012 08415849  " http  	127.0.0.1 <- 200
+20211012 08415849  "  -    00.000.305
+20211012 08415849  "  +    models/adminui-vue/dist/fonts/fa/css/v4-shims.min.css
+20211012 08415849  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/v4-shims.min.css
+20211012 08415849  " info  	endpoint models
+20211012 08415849  " debug 	model file is resolved from cache
+20211012 08415849  " http  	127.0.0.1 <- 200
+20211012 08415849  "  -    00.000.327
+20211012 08415849  "  +    models/adminui-pub/themes/UBGrayTheme/ub.css?ver=5.20.26
+20211012 08415849  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/ub.css?ver=5.20.26
+20211012 08415849  " info  	endpoint models
+20211012 08415849  " debug 	model file is resolved from cache
+20211012 08415849  " http  	127.0.0.1 <- 200
+20211012 08415849  "  -    00.000.287
+20211012 08415849  "  +    models/adminui-vue/theme/el-theme-compiled.min.css
+20211012 08415849  " http  	127.0.0.1 -> GET models/adminui-vue/theme/el-theme-compiled.min.css
+20211012 08415849  " info  	endpoint models
+20211012 08415849  " debug 	model file is resolved from cache
+20211012 08415849  " http  	127.0.0.1 <- 200
+20211012 08415849  "  -    00.000.887
+20211012 08415850  "  +    clientRequire/systemjs/dist/system.js
+20211012 08415850  " http  	127.0.0.1 -> GET clientRequire/systemjs/dist/system.js
+20211012 08415850  " info  	endpoint clientRequire
+20211012 08415850  " debug 	Retrieve cached systemjs/dist/system.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/systemjs/dist/system.js
+20211012 08415850  " http  	127.0.0.1 <- 200
+20211012 08415850  "  -    00.000.240
+20211012 08415850  "  +    models/adminui-pub/dist/ext-all.min.js
+20211012 08415850  " http  	127.0.0.1 -> GET models/adminui-pub/dist/ext-all.min.js
+20211012 08415850  " info  	endpoint models
+20211012 08415850  " debug 	model file is resolved from cache
+20211012 08415850  " http  	127.0.0.1 <- 200
+20211012 08415850  "  -    00.000.272
+20211012 08415853  "  +    models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211012 08415853  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211012 08415853  " info  	endpoint models
+20211012 08415853  " debug 	model file is resolved from cache
+20211012 08415853  " http  	127.0.0.1 <- 200
+20211012 08415853  "  -    00.000.245
+20211012 08415903  "  +    clientRequire/@unitybase/adminui-pub/package.json
+20211012 08415903  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-pub/package.json
+20211012 08415903  " info  	endpoint clientRequire
+20211012 08415903  " debug 	Retrieve cached @unitybase/adminui-pub/package.json -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-pub/package.json
+20211012 08415903  " http  	127.0.0.1 <- 200
+20211012 08415903  "  -    00.000.260
+20211012 08415904  "  +    clientRequire/@unitybase/adminui-pub/dist/adminui.app.min.js
+20211012 08415904  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-pub/dist/adminui.app.min.js
+20211012 08415904  " info  	endpoint clientRequire
+20211012 08415904  " debug 	Retrieve cached @unitybase/adminui-pub/dist/adminui.app.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-pub/dist/adminui.app.min.js
+20211012 08415904  " http  	127.0.0.1 <- 200
+20211012 08415904  "  -    00.000.345
+20211012 08415911  "  +    getAppInfo
+20211012 08415911  " http  	127.0.0.1 -> GET getAppInfo
+20211012 08415911  " info  	endpoint getAppInfo
+20211012 08415911  " http  	127.0.0.1 <- 200
+20211012 08415911  "  -    00.002.041
+20211012 08415911  "  +    clientRequire/@unitybase/adminui-pub/themes/UBGrayTheme/UBGrayTheme.js
+20211012 08415911  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-pub/themes/UBGrayTheme/UBGrayTheme.js
+20211012 08415911  " info  	endpoint clientRequire
+20211012 08415911  " debug 	Retrieve cached @unitybase/adminui-pub/themes/UBGrayTheme/UBGrayTheme.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-pub/themes/UBGrayTheme/UBGrayTheme.js
+20211012 08415911  " http  	127.0.0.1 <- 200
+20211012 08415911  "  -    00.000.316
+20211012 08415912  "  +    getDomainInfo?userName=admin&v=4
+20211012 08415912  " http  	127.0.0.1 -> GET getDomainInfo?userName=admin&v=4
+20211012 08415912  " info  	endpoint getDomainInfo
+20211012 08415912  " debug 	Auth: got token aca2e97d61654a57baaf7f8f
+20211012 08415912  " debug 	Server side session.fSessionID = aca2e97d, crc32(privKey + secretWord)=19139609 checkMonoliticTime=1, client time stamp=1634028119
+20211012 08415912  " auth  	admin/aca2e97d
+20211012 08415912  " http  	127.0.0.1 <- 200
+20211012 08415912  "  -    00.001.392
+20211012 08415913  "  +    allLocales?lang=en&ubver=1132930129
+20211012 08415913  " http  	127.0.0.1 -> GET allLocales?lang=en&ubver=1132930129
+20211012 08415913  " info  	endpoint allLocales
+20211012 08415913  " http  	127.0.0.1 <- 200
+20211012 08415913  "  -    00.000.790
+20211012 08415914  "  +    clientRequire/@unitybase/ubs/package.json
+20211012 08415914  " http  	127.0.0.1 -> GET clientRequire/@unitybase/ubs/package.json
+20211012 08415914  " info  	endpoint clientRequire
+20211012 08415914  " debug 	Retrieve cached @unitybase/ubs/package.json -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ubs/package.json
+20211012 08415914  " http  	127.0.0.1 <- 200
+20211012 08415914  "  -    00.000.271
+20211012 08415914  "  +    clientRequire/@unitybase/ubs/public/dist/ubs.main.min.js
+20211012 08415914  " http  	127.0.0.1 -> GET clientRequire/@unitybase/ubs/public/dist/ubs.main.min.js
+20211012 08415914  " info  	endpoint clientRequire
+20211012 08415914  " debug 	Retrieve cached @unitybase/ubs/public/dist/ubs.main.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ubs/public/dist/ubs.main.min.js
+20211012 08415914  " http  	127.0.0.1 <- 200
+20211012 08415914  "  -    00.000.231
+20211012 08415917  "  +    ubql?rq=ubs_settings.select&uitag=
+20211012 08415917  " http  	127.0.0.1 -> POST ubql?rq=ubs_settings.select&uitag=
+20211012 08415917  " info  	endpoint ubql
+20211012 08415917  " info  	[{"entity":"ubs_settings","method":"select","fieldList":["ID","settingKey","name","description","type","settingValue","defaultValue"],"version":"1633965863"}]
+20211012 08415917  " debug 	Auth: got token aca2e97d61654a57baaf7f8f
+20211012 08415917  " debug 	Server side session.fSessionID = aca2e97d, crc32(privKey + secretWord)=19139609 checkMonoliticTime=1, client time stamp=1634028119
+20211012 08415917  " auth  	admin/aca2e97d
+20211012 08415917  "  +    	method(TubStorageMixin) ubs_settings.select
+20211012 08415917  "  +    		DataStore.init(ubs_settings)
+20211012 08415917  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08415917  " SQL   				r=1 t=834 fr=799 c=0 q=SELECT ( (SELECT COALESCE(strftime('%s',  MAX(mi_modifyDate)),1) FROM ubs_settings) ) AS dataVersion
+20211012 08415917  "  -    			00.000.063
+20211012 08415917  "  -    		00.000.074
+20211012 08415917  "  -    	00.000.180
+20211012 08415917  " http  	127.0.0.1 <- 200
+20211012 08415917  "  -    00.000.470
+20211012 08415917  "  +    clientRequire/@unitybase/adminui-vue/package.json
+20211012 08415917  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/package.json
+20211012 08415917  " info  	endpoint clientRequire
+20211012 08415917  " debug 	Retrieve cached @unitybase/adminui-vue/package.json -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/package.json
+20211012 08415917  " http  	127.0.0.1 <- 200
+20211012 08415917  "  -    00.000.750
+20211012 08415917  "  +    clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.js
+20211012 08415917  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.js
+20211012 08415917  " info  	endpoint clientRequire
+20211012 08415917  " debug 	Retrieve cached @unitybase/adminui-vue/dist/adminui-vue.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/adminui-vue.min.js
+20211012 08415917  " http  	127.0.0.1 <- 200
+20211012 08415917  "  -    00.000.257
+20211012 08415926  "  +    clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css?ubver=1132930129
+20211012 08415926  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css?ubver=1132930129
+20211012 08415926  " info  	endpoint clientRequire
+20211012 08415926  " debug 	Retrieve cached @unitybase/adminui-vue/dist/adminui-vue.min.css -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211012 08415926  " http  	127.0.0.1 <- 200
+20211012 08415926  "  -    00.000.224
+20211012 08415929  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211012 08415929  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211012 08415929  " info  	endpoint clientRequire
+20211012 08415929  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211012 08415929  " http  	127.0.0.1 <- 200
+20211012 08415929  "  -    00.000.221
+20211012 08415929  "  +    ubql?rq=ubm_form.select*ubm_enum.select&uitag=
+20211012 08415929  " http  	127.0.0.1 -> POST ubql?rq=ubm_form.select*ubm_enum.select&uitag=
+20211012 08415929  " info  	endpoint ubql
+20211012 08415929  " info  	[{"entity":"ubm_form","method":"select","fieldList":["ID","code","description","caption","formType","formDef","formCode","entity","model","isDefault"],"version":613096383},{"entity":"ubm_enum","method":"select","fieldList":["ID","eGroup","code","name","shortName","sortOrder","mi_modifyDate"],"version":"1633965863"}]
+20211012 08415929  " debug 	Auth: got token aca2e97d61654a57baaf7f8f
+20211012 08415929  " debug 	Server side session.fSessionID = aca2e97d, crc32(privKey + secretWord)=19139609 checkMonoliticTime=1, client time stamp=1634028119
+20211012 08415929  " auth  	admin/aca2e97d
+20211012 08415929  "  +    	method(fsStorage) ubm_form.select
+20211012 08415929  " debug 		return data from thread cache
+20211012 08415929  "  -    	00.000.106
+20211012 08415929  "  +    	method(TubStorageMixin) ubm_enum.select
+20211012 08415929  "  +    		DataStore.init(ubm_enum)
+20211012 08415929  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08415929  " SQL   				r=1 t=2323 fr=2280 c=0 q=SELECT ( (SELECT COALESCE(strftime('%s',  MAX(mi_modifyDate)),1) FROM ubm_enum) ) AS dataVersion
+20211012 08415929  "  -    			00.000.068
+20211012 08415929  "  -    		00.000.077
+20211012 08415929  "  -    	00.000.179
+20211012 08415929  " http  	127.0.0.1 <- 200
+20211012 08415929  "  -    00.000.696
+20211012 08415931  "  +    ubql?rq=ubm_navshortcut.select&uitag=
+20211012 08415931  " http  	127.0.0.1 -> POST ubql?rq=ubm_navshortcut.select&uitag=
+20211012 08415931  " info  	endpoint ubql
+20211012 08415931  " info  	[{"entity":"ubm_navshortcut","method":"select","fieldList":["ID","desktopID","parentID","code","isFolder","caption","inWindow","isCollapsed","displayOrder","iconCls","mi_modifyDate"],"orderList":{"0":{"expression":"desktopID","order":"asc"},"1":{"expression":"parentID","order":"asc"},"2":{"expression":"displayOrder","order":"asc"},"3":{"expression":"caption","order":"asc"}}}]
+20211012 08415931  " debug 	Auth: got token aca2e97d61654a57baaf7f8f
+20211012 08415931  " debug 	Server side session.fSessionID = aca2e97d, crc32(privKey + secretWord)=19139609 checkMonoliticTime=1, client time stamp=1634028119
+20211012 08415931  " auth  	admin/aca2e97d
+20211012 08415931  "  +    	method(TubRLSMixin) ubm_navshortcut.select
+20211012 08415931  " debug 		Call func RLS.allowForAdminOwnerAndAdmTable
+20211012 08415931  "  -    	00.000.197
+20211012 08415931  "  +    	method(TubStorageMixin) ubm_navshortcut.select
+20211012 08415931  "  +    		DataStore.init(ubm_navshortcut)
+20211012 08415931  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08415931  " cust1 				{"P1d":"9999-12-31"}
+20211012 08415931  " SQL   				r=40 t=2308 fr=2142 c=0 q=SELECT A01.ID,A01.desktopID,A01.parentID,A01.code,A01.isFolder,A01.caption,A01.inWindow,A01.isCollapsed,A01.displayOrder,A01.iconCls,A01.mi_modifyDate  FROM ubm_navshortcut A01  WHERE A01.mi_deleteDate>=? ORDER BY 2 ASC,3 ASC,9 ASC,6 ASC
+20211012 08415931  "  -    			00.000.223
+20211012 08415931  "  -    		00.000.263
+20211012 08415931  "  -    	00.000.466
+20211012 08415931  " http  	127.0.0.1 <- 200
+20211012 08415931  "  -    00.001.059
+20211012 08415939  "  +    clientRequire/jdenticon/dist/jdenticon.min.js
+20211012 08415939  " http  	127.0.0.1 -> GET clientRequire/jdenticon/dist/jdenticon.min.js
+20211012 08415939  " info  	endpoint clientRequire
+20211012 08415939  " debug 	Retrieve cached jdenticon/dist/jdenticon.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/jdenticon/dist/jdenticon.min.js
+20211012 08415939  " http  	127.0.0.1 <- 200
+20211012 08415939  "  -    00.000.219
+20211012 08415939  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211012 08415939  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211012 08415939  " info  	endpoint clientRequire
+20211012 08415939  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/ub-icons.woff2 -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211012 08415939  " http  	127.0.0.1 <- 200
+20211012 08415939  "  -    00.000.245
+20211012 08415940  "  +    ubql?rq=ubm_navshortcut.select*ubs_message.getCached&uitag=
+20211012 08415940  " http  	127.0.0.1 -> POST ubql?rq=ubm_navshortcut.select*ubs_message.getCached&uitag=
+20211012 08415940  " info  	endpoint ubql
+20211012 08415940  " info  	[{"entity":"ubm_navshortcut","method":"select","fieldList":["ID","desktopID","parentID","code","isFolder","caption","inWindow","isCollapsed","displayOrder","iconCls"],"orderList":{"0":{"expression":"desktopID","order":"asc"},"1":{"expression":"parentID","order":"asc"},"2":{"expression":"displayOrder","order":"asc"},"3":{"expression":"caption","order":"asc"}}},{"entity":"ubs_message","method":"getCached","fieldList":["ID","messageBody","messageType","startDate","expireDate","recipients.acceptDate"],"whereList":{"c1":{"expression":"[recipients.acceptDate]","condition":"isNull"}},"orderList":{"0":{"expression":"startDate","order":"desc"}}}]
+20211012 08415940  " debug 	Auth: got token aca2e97d61654a57baaf7f8f
+20211012 08415940  " debug 	Server side session.fSessionID = aca2e97d, crc32(privKey + secretWord)=19139609 checkMonoliticTime=1, client time stamp=1634028119
+20211012 08415940  " auth  	admin/aca2e97d
+20211012 08415940  "  +    	method(TubRLSMixin) ubm_navshortcut.select
+20211012 08415940  " debug 		Call func RLS.allowForAdminOwnerAndAdmTable
+20211012 08415940  "  -    	00.000.180
+20211012 08415940  "  +    	method(TubStorageMixin) ubm_navshortcut.select
+20211012 08415940  "  +    		DataStore.init(ubm_navshortcut)
+20211012 08415940  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08415940  " cust1 				{"P1d":"9999-12-31"}
+20211012 08415940  " SQL   				r=40 t=1874 fr=1719 c=0 q=SELECT A01.ID,A01.desktopID,A01.parentID,A01.code,A01.isFolder,A01.caption,A01.inWindow,A01.isCollapsed,A01.displayOrder,A01.iconCls  FROM ubm_navshortcut A01  WHERE A01.mi_deleteDate>=? ORDER BY 2 ASC,3 ASC,9 ASC,6 ASC
+20211012 08415940  "  -    			00.000.215
+20211012 08415940  "  -    		00.000.256
+20211012 08415940  "  -    	00.000.459
+20211012 08415940  "  +    	method(TubStorageMixin) ubs_message.select
+20211012 08415940  "  +    		DataStore.init(ubs_message)
+20211012 08415940  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08415940  " cust1 				{"P1":10, "P2":1, "P3d":"2021-10-12T08:41:59", "P4d":"9999-12-31"}
+20211012 08415940  " SQL   				r=0 t=496 fr=473 c=0 q=SELECT A01.ID,A01.messageBody,A01.messageType,A01.startDate,A01.expireDate,A02.acceptDate AS C1  FROM ubs_message A01  LEFT JOIN ubs_message_recipient A02 ON A02.messageID=A01.ID  WHERE A02.acceptDate IS NULL AND A02.userID=? AND A01.complete=? AND A01.startDate<? AND A01.mi_deleteDate>=? ORDER BY 4 DESC
+20211012 08415940  "  -    			00.000.074
+20211012 08415940  "  -    		00.000.095
+20211012 08415940  "  -    	00.000.358
+20211012 08415940  " http  	127.0.0.1 <- 200
+20211012 08415940  "  -    00.002.035
+20211012 08415941  "  +    ubql?rq=ubm_enum.select*ubm_desktop.select&uitag=
+20211012 08415941  " http  	127.0.0.1 -> POST ubql?rq=ubm_enum.select*ubm_desktop.select&uitag=
+20211012 08415941  " info  	endpoint ubql
+20211012 08415941  " info  	[{"entity":"ubm_enum","method":"select","fieldList":["ID","name","eGroup","code","sortOrder"],"version":"1633965863"},{"entity":"ubm_desktop","method":"select","fieldList":["ID","caption","isDefault","description","iconCls","displayOrder"],"version":"-1"}]
+20211012 08415941  " debug 	Auth: got token aca2e97d61654a57baaf7f8f
+20211012 08415941  " debug 	Server side session.fSessionID = aca2e97d, crc32(privKey + secretWord)=19139609 checkMonoliticTime=1, client time stamp=1634028119
+20211012 08415941  " auth  	admin/aca2e97d
+20211012 08415941  "  +    	method(TubStorageMixin) ubm_enum.select
+20211012 08415941  "  +    		DataStore.init(ubm_enum)
+20211012 08415941  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08415941  " SQL   				r=1 t=2361 fr=2323 c=0 q=SELECT ( (SELECT COALESCE(strftime('%s',  MAX(mi_modifyDate)),1) FROM ubm_enum) ) AS dataVersion
+20211012 08415941  "  -    			00.000.063
+20211012 08415941  "  -    		00.000.073
+20211012 08415941  "  -    	00.000.182
+20211012 08415941  "  +    	method(TubRLSMixin) ubm_desktop.select
+20211012 08415941  " debug 		Call func RLS.allowForAdminOwnerAndAdmTable
+20211012 08415941  "  -    	00.000.157
+20211012 08415941  "  +    	method(TubStorageMixin) ubm_desktop.select
+20211012 08415941  "  +    		DataStore.init(ubm_desktop)
+20211012 08415941  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08415941  " cust1 				{"P1d":"9999-12-31"}
+20211012 08415941  " SQL   				r=2 t=399 fr=385 c=0 q=SELECT A01.ID,A01.caption,A01.isDefault,A01.description,A01.iconCls,A01.displayOrder  FROM ubm_desktop A01  WHERE A01.mi_deleteDate>=?
+20211012 08415941  "  -    			00.000.046
+20211012 08415941  "  -    		00.000.059
+20211012 08415941  "  -    	00.000.166
+20211012 08415941  " http  	127.0.0.1 <- 200
+20211012 08415941  "  -    00.000.893
+20211012 08415944  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211012 08415944  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211012 08415944  " info  	endpoint clientRequire
+20211012 08415944  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211012 08415944  " http  	127.0.0.1 <- 200
+20211012 08415944  "  -    00.000.224
+20211012 08415944  "  +    models/adminui-vue/theme/fonts/element-icons.woff
+20211012 08415944  " http  	127.0.0.1 -> GET models/adminui-vue/theme/fonts/element-icons.woff
+20211012 08415944  " info  	endpoint models
+20211012 08415944  " debug 	model file is resolved from cache
+20211012 08415944  " http  	127.0.0.1 <- 200
+20211012 08415944  "  -    00.000.219
+20211012 08420236  "  +    ubql?rq=ubm_navshortcut.select&uitag=
+20211012 08420236  " http  	127.0.0.1 -> POST ubql?rq=ubm_navshortcut.select&uitag=
+20211012 08420236  " info  	endpoint ubql
+20211012 08420236  " info  	[{"entity":"ubm_navshortcut","method":"select","fieldList":["ID","cmdCode","caption","code"],"whereList":{"c1":{"expression":"[ID]","condition":"equal","value":335016770109447}}}]
+20211012 08420236  " debug 	Auth: got token aca2e97d61654a5a38a78b4e
+20211012 08420236  " debug 	Server side session.fSessionID = aca2e97d, crc32(privKey + secretWord)=19139609 checkMonoliticTime=1, client time stamp=1634028122
+20211012 08420236  " auth  	admin/aca2e97d
+20211012 08420236  "  +    	method(TubRLSMixin) ubm_navshortcut.select
+20211012 08420236  " debug 		Call func RLS.allowForAdminOwnerAndAdmTable
+20211012 08420236  "  -    	00.000.188
+20211012 08420236  "  +    	method(TubStorageMixin) ubm_navshortcut.select
+20211012 08420236  "  +    		DataStore.init(ubm_navshortcut)
+20211012 08420236  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08420236  " cust1 				{"P1":335016770109447, "P2d":"9999-12-31"}
+20211012 08420236  " SQL   				r=1 t=2154 fr=2103 c=0 q=SELECT A01.ID,A01.cmdCode,A01.caption,A01.code  FROM ubm_navshortcut A01  WHERE A01.ID=? AND A01.mi_deleteDate>=?
+20211012 08420236  "  -    			00.000.131
+20211012 08420236  "  -    		00.000.153
+20211012 08420236  "  -    	00.000.319
+20211012 08420236  " http  	127.0.0.1 <- 200
+20211012 08420236  "  -    00.000.967
+20211012 08420245  "  +    ubql?rq=uba_user.select&uitag=nsc-uba_user
+20211012 08420245  " http  	127.0.0.1 -> POST ubql?rq=uba_user.select&uitag=nsc-uba_user
+20211012 08420245  " info  	endpoint ubql
+20211012 08420245  " info  	[{"entity":"uba_user","method":"select","fieldList":["ID","name","disabled","isPending","firstName","lastName"],"options":{"start":0,"limit":101}}]
+20211012 08420245  " debug 	Auth: got token aca2e97d61654a5a38a78b4e
+20211012 08420245  " debug 	Server side session.fSessionID = aca2e97d, crc32(privKey + secretWord)=19139609 checkMonoliticTime=1, client time stamp=1634028122
+20211012 08420245  " auth  	admin/aca2e97d
+20211012 08420245  "  +    	method(TubStorageMixin) uba_user.select
+20211012 08420245  "  +    		DataStore.init(uba_user)
+20211012 08420245  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08420245  " SQL   				r=3 t=359 fr=331 c=0 q=SELECT A01.ID,A01.name,null AS C1,null AS C2,A01.firstName,A01.lastName  FROM uba_user A01  LIMIT 101 OFFSET 0 
+20211012 08420245  "  -    			00.000.074
+20211012 08420245  "  -    		00.000.091
+20211012 08420245  "  -    	00.000.229
+20211012 08420245  " http  	127.0.0.1 <- 200
+20211012 08420245  "  -    00.000.599
+20211012 08420344  "  +    clientRequire/@unitybase/uba/package.json
+20211012 08420344  " http  	127.0.0.1 -> GET clientRequire/@unitybase/uba/package.json
+20211012 08420344  " info  	endpoint clientRequire
+20211012 08420344  " debug 	Retrieve cached @unitybase/uba/package.json -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/uba/package.json
+20211012 08420344  " http  	127.0.0.1 <- 200
+20211012 08420344  "  -    00.000.263
+20211012 08420345  "  +    clientRequire/@unitybase/uba/public/forms/uba_user-fm.js
+20211012 08420345  " http  	127.0.0.1 -> GET clientRequire/@unitybase/uba/public/forms/uba_user-fm.js
+20211012 08420345  " info  	endpoint clientRequire
+20211012 08420345  " debug 	Retrieve cached @unitybase/uba/public/forms/uba_user-fm.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/uba/public/forms/uba_user-fm.js
+20211012 08420345  " http  	127.0.0.1 <- 200
+20211012 08420345  "  -    00.000.225
+20211012 08420345  "  +    clientRequire/@unitybase/uba/public/forms/uba_user-fm.def
+20211012 08420345  " http  	127.0.0.1 -> GET clientRequire/@unitybase/uba/public/forms/uba_user-fm.def
+20211012 08420345  " info  	endpoint clientRequire
+20211012 08420345  " debug 	Retrieve cached @unitybase/uba/public/forms/uba_user-fm.def -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/uba/public/forms/uba_user-fm.def
+20211012 08420345  " http  	127.0.0.1 <- 200
+20211012 08420345  "  -    00.000.197
+20211012 08420350  "  +    models/adminui-pub/themes/UBGrayTheme/images/form/trigger.png
+20211012 08420350  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/images/form/trigger.png
+20211012 08420350  " info  	endpoint models
+20211012 08420350  " debug 	model file is resolved from cache
+20211012 08420350  " http  	127.0.0.1 <- 200
+20211012 08420350  "  -    00.000.189
+20211012 08420350  "  +    models/adminui-pub/themes/UBGrayTheme/images/form/exclamation.png
+20211012 08420350  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/images/form/exclamation.png
+20211012 08420350  " info  	endpoint models
+20211012 08420350  " debug 	model file is resolved from cache
+20211012 08420350  " http  	127.0.0.1 <- 200
+20211012 08420350  "  -    00.000.215
+20211012 08420352  "  +    models/adminui-pub/themes/UBGrayTheme/images/button/default-toolbar-small-arrow.png
+20211012 08420352  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/images/button/default-toolbar-small-arrow.png
+20211012 08420352  " info  	endpoint models
+20211012 08420352  " debug 	model file is resolved from cache
+20211012 08420352  " http  	127.0.0.1 <- 200
+20211012 08420352  "  -    00.000.213
+20211012 08420352  "  +    models/adminui-pub/themes/UBGrayTheme/images/toolbar/more.png
+20211012 08420352  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/images/toolbar/more.png
+20211012 08420352  " info  	endpoint models
+20211012 08420352  " debug 	model file is resolved from cache
+20211012 08420352  " http  	127.0.0.1 <- 200
+20211012 08420352  "  -    00.000.223
+20211012 08420353  "  +    models/adminui-pub/themes/UBGrayTheme/images/form/checkbox.png
+20211012 08420353  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/images/form/checkbox.png
+20211012 08420353  " info  	endpoint models
+20211012 08420353  " debug 	model file is resolved from cache
+20211012 08420353  " http  	127.0.0.1 <- 200
+20211012 08420353  "  -    00.000.215
+20211012 08420353  "  +    models/adminui-pub/themes/UBGrayTheme/images/grid/hd-pop.png
+20211012 08420353  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/images/grid/hd-pop.png
+20211012 08420353  " info  	endpoint models
+20211012 08420353  " debug 	model file is resolved from cache
+20211012 08420353  " http  	127.0.0.1 <- 200
+20211012 08420353  "  -    00.000.215
+20211012 08420355  "  +    models/adminui-pub/themes/UBGrayTheme/images/loadmask/loading.gif
+20211012 08420355  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/images/loadmask/loading.gif
+20211012 08420355  " info  	endpoint models
+20211012 08420355  " debug 	model file is resolved from cache
+20211012 08420355  " http  	127.0.0.1 <- 200
+20211012 08420355  "  -    00.000.216
+20211012 08420357  "  +    ubql?rq=uba_user.addnew&uitag=frm-uba_user
+20211012 08420357  " http  	127.0.0.1 -> POST ubql?rq=uba_user.addnew&uitag=frm-uba_user
+20211012 08420357  " info  	endpoint ubql
+20211012 08420357  " info  	[{"entity":"uba_user","fieldList":["firstName","name","lastName","fullName","gender","email","phone","description","disabled","isPending","trustedIP","uData","avatar","ID","mi_modifyDate"],"method":"addnew"}]
+20211012 08420357  " debug 	Auth: got token aca2e97d61654a5ba1aedaf4
+20211012 08420357  " debug 	Server side session.fSessionID = aca2e97d, crc32(privKey + secretWord)=19139609 checkMonoliticTime=1, client time stamp=1634028123
+20211012 08420357  " auth  	admin/aca2e97d
+20211012 08420357  "  +    	method(TubStorageMixin) uba_user.addnew
+20211012 08420357  "  -    	00.000.053
+20211012 08420357  " http  	127.0.0.1 <- 200
+20211012 08420357  "  -    00.000.407
+20211012 08420401  "  +    ubql?rq=uba_role.select*ubm_enum.select&uitag=frm-uba_user
+20211012 08420401  " http  	127.0.0.1 -> POST ubql?rq=uba_role.select*ubm_enum.select&uitag=frm-uba_user
+20211012 08420401  " info  	endpoint ubql
+20211012 08420401  " info  	[{"entity":"uba_role","method":"select","fieldList":["ID","name","mi_modifyDate"],"options":{"limit":10000}},{"entity":"ubm_enum","method":"select","fieldList":["eGroup","code","name","shortName","sortOrder","ID","mi_modifyDate"],"idProperty":"code","version":"1633965863"}]
+20211012 08420401  " debug 	Auth: got token aca2e97d61654a5cd6a9ea62
+20211012 08420401  " debug 	Server side session.fSessionID = aca2e97d, crc32(privKey + secretWord)=19139609 checkMonoliticTime=1, client time stamp=1634028124
+20211012 08420401  " auth  	admin/aca2e97d
+20211012 08420401  "  +    	method(TubStorageMixin) uba_role.select
+20211012 08420401  "  +    		DataStore.init(uba_role)
+20211012 08420401  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08420401  " SQL   				r=8 t=1500 fr=1468 c=0 q=SELECT A01.ID,A01.name,A01.mi_modifyDate  FROM uba_role A01  LIMIT 10000 OFFSET 0 
+20211012 08420401  "  -    			00.000.064
+20211012 08420401  "  -    		00.000.080
+20211012 08420401  "  -    	00.000.160
+20211012 08420401  "  +    	method(TubStorageMixin) ubm_enum.select
+20211012 08420401  "  +    		DataStore.init(ubm_enum)
+20211012 08420401  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08420401  " SQL   				r=1 t=2388 fr=2362 c=0 q=SELECT ( (SELECT COALESCE(strftime('%s',  MAX(mi_modifyDate)),1) FROM ubm_enum) ) AS dataVersion
+20211012 08420401  "  -    			00.000.041
+20211012 08420401  "  -    		00.000.047
+20211012 08420401  "  -    	00.000.139
+20211012 08420401  " http  	127.0.0.1 <- 200
+20211012 08420401  "  -    00.000.764
+20211012 08420403  "  +    ubql?rq=uba_userrole.select&uitag=frm-uba_user
+20211012 08420403  " http  	127.0.0.1 -> POST ubql?rq=uba_userrole.select&uitag=frm-uba_user
+20211012 08420403  " info  	endpoint ubql
+20211012 08420403  " info  	[{"entity":"uba_userrole","method":"select","fieldList":["roleID","ID","mi_modifyDate"],"whereList":{"__MD0":{"expression":"[userID]","condition":"equal","value":335018810245121}},"options":{"limit":100,"start":0}}]
+20211012 08420403  " debug 	Auth: got token aca2e97d61654a5cd6a9ea62
+20211012 08420403  " debug 	Server side session.fSessionID = aca2e97d, crc32(privKey + secretWord)=19139609 checkMonoliticTime=1, client time stamp=1634028124
+20211012 08420403  " auth  	admin/aca2e97d
+20211012 08420403  "  +    	method(TubStorageMixin) uba_userrole.select
+20211012 08420403  "  +    		DataStore.init(uba_userrole)
+20211012 08420403  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08420403  " cust1 				{"P1":335018810245121}
+20211012 08420403  " SQL   				r=0 t=653 fr=633 c=0 q=SELECT A01.roleID,A01.ID,A01.mi_modifyDate  FROM uba_userrole A01  WHERE A01.userID=? LIMIT 100 OFFSET 0 
+20211012 08420403  "  -    			00.000.054
+20211012 08420403  "  -    		00.000.069
+20211012 08420403  "  -    	00.000.170
+20211012 08420403  " http  	127.0.0.1 <- 200
+20211012 08420403  "  -    00.000.518
+20211012 08421807  "  +    ubql?rq=uba_user.insert&uitag=frm-uba_user
+20211012 08421807  " http  	127.0.0.1 -> POST ubql?rq=uba_user.insert&uitag=frm-uba_user
+20211012 08421807  " info  	endpoint ubql
+20211012 08421807  " info  	[{"fieldList":["firstName","name","lastName","fullName","gender","email","phone","description","disabled","isPending","trustedIP","uData","avatar","ID","mi_modifyDate"],"entity":"uba_user","method":"insert","execParams":{"disabled":false,"isPending":false,"ID":335018810245121,"mi_modifyDate":"2021-10-12T08:42:03.000Z","name":"user1","firstName":"`12","fullName":"erwrw `12","description":"`12`12","lastName":"erwrw"}}]
+20211012 08421807  " debug 	Auth: got token aca2e97d61654a6a138ad88d
+20211012 08421807  " debug 	Server side session.fSessionID = aca2e97d, crc32(privKey + secretWord)=19139609 checkMonoliticTime=1, client time stamp=1634028138
+20211012 08421807  " auth  	admin/aca2e97d
+20211012 08421807  "  +    	method(TubStorageMixin) uba_user.select
+20211012 08421807  "  +    		DataStore.init(uba_user)
+20211012 08421807  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08421807  " cust1 				{"P1s5":"user1", "P2":335018810245121}
+20211012 08421807  " SQL   				r=0 t=486 fr=467 c=0 q=SELECT A01.ID  FROM uba_user A01  WHERE A01.name=? AND A01.ID<>?
+20211012 08421807  "  -    			00.000.058
+20211012 08421807  "  -    		00.000.075
+20211012 08421807  "  -    	00.000.183
+20211012 08421807  "  +    	method(TubUnityMixin) uba_user.insert
+20211012 08421807  "  +    		method(TubStorageMixin) uba_subject.insert
+20211012 08421807  "  +    			DataStore.ParseInsertAndExec
+20211012 08421807  "  +    				DataStore.BuildAndExecInsertSQL
+20211012 08421807  "  +    					DataStore.Execute
+20211012 08421807  "  +    						App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08421807  " cust1 							{"P1s5":"user1", "P2s9":"erwrw `12", "P3":335018810245121, "P4s8":"uba_user", "P5s1":"U", "P6s9":"erwrw `12"}
+20211012 08421807  " SQL   							r=1 t=268 c=0 q=INSERT INTO uba_subject (code,name,ID,mi_unityEntity,sType,name_uk) VALUES (?,?,?,?,?,?)
+20211012 08421807  "  -    						00.000.075
+20211012 08421807  "  -    					00.000.088
+20211012 08421807  "  -    				00.000.199
+20211012 08421807  "  -    			00.000.216
+20211012 08421807  "  -    		00.000.595
+20211012 08421807  "  +    		method(TubStorageMixin) uba_subject.afterinsert
+20211012 08421807  "  -    		00.000.003
+20211012 08421807  "  +    		method(TubAuditMixin) uba_subject.afterinsert
+20211012 08421807  " info  			requestID=335018810736642
+20211012 08421807  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08421807  "  +    				DataStore.Execute
+20211012 08421807  "  +    					App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08421807  " SQL   						r=1 t=752 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211012 08421807  "  -    					00.000.050
+20211012 08421807  "  -    				00.000.070
+20211012 08421807  "  -    			00.000.226
+20211012 08421807  "  -    		00.000.258
+20211012 08421807  "  -    	00.001.002
+20211012 08421807  "  +    	method(TubStorageMixin) uba_user.insert
+20211012 08421807  " debug 		Start processing documents for entity uba_user
+20211012 08421807  "  +    		DataStore.ParseInsertAndExec
+20211012 08421807  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08421807  " EXC   				ESecurityException SecurityException: insert into restricted attribute \"uba_user.disabled\" denied [] at   $00000000006FA5F6  $00000000006FD0C5  $00000000005DE5E6  $000000000058D2B4  $00000000005D93BE  $000000000085CB5C  $000024DD9AF7F17A  $00007F2E8C0B5F98  $000024DD9AF73888  $00007F2E9AD88C2A
+20211012 08421807  "  -    			00.002.616
+20211012 08421807  "  -    		00.002.664
+20211012 08421807  "  -    	00.002.767
+20211012 08421807  " DB    	Rollback connection "main"
+20211012 08421807  " EXC   	ESMException: SecurityException: insert into restricted attribute "uba_user.disabled" denied Stack: ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at 
+20211012 08421807  " ERROR 	POST ubql?rq=uba_user.insert&uitag=frm-uba_user ERROR=500 (ESMException: SecurityException: insert into restricted attribute "uba_user.disabled" denied Stack: ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at )
+20211012 08421807  " debug 	Call JS method: UBA.securityViolation
+20211012 08421807  "  +    	method(TubStorageMixin) uba_audit.insert
+20211012 08421807  "  +    		DataStore.ParseInsertAndExec
+20211012 08421807  "  +    			DataStore.BuildAndExecInsertSQL
+20211012 08421807  "  +    				DataStore.Execute
+20211012 08421807  "  +    					App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08421807  " cust1 						{"P1s8":"uba_user", "P2":10, "P3s18":"SECURITY_VIOLATION", "P4s2":"10", "P5s2":"10", "P6d":"2021-10-12T08:42:18", "P7s9":"127.0.0.1", "P8":335018810736643, "P9s78":"SecurityException: insert into restricted attribute \"uba_user.disabled\" denied"}
+20211012 08421807  " SQL   						r=1 t=602 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,targetUser,actionTime,remoteIP,ID,fromValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211012 08421807  "  -    					00.000.073
+20211012 08421807  "  -    				00.000.092
+20211012 08421807  "  -    			00.000.252
+20211012 08421807  "  -    		00.000.274
+20211012 08421807  "  -    	00.000.319
+20211012 08421807  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211012 08421807  "  -    	00.000.005
+20211012 08421807  " DB    	Commit connection "main"
+20211012 08421807  " http  	127.0.0.1 <- 500
+20211012 08421807  "  -    00.006.015
+20211012 08421809  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Bold.ttf
+20211012 08421809  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Bold.ttf
+20211012 08421809  " info  	endpoint clientRequire
+20211012 08421809  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Bold.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Bold.ttf
+20211012 08421809  " http  	127.0.0.1 <- 200
+20211012 08421809  "  -    00.000.251
+20211012 08422961  "  +    ubql?rq=ubm_navshortcut.select&uitag=frm-uba_user
+20211012 08422961  " http  	127.0.0.1 -> POST ubql?rq=ubm_navshortcut.select&uitag=frm-uba_user
+20211012 08422961  " info  	endpoint ubql
+20211012 08422961  " info  	[{"entity":"ubm_navshortcut","method":"select","fieldList":["ID","cmdCode","caption","code"],"whereList":{"c1":{"expression":"[ID]","condition":"equal","value":335016770109501}}}]
+20211012 08422961  " debug 	Auth: got token aca2e97d61654a7566977c21
+20211012 08422961  " debug 	Server side session.fSessionID = aca2e97d, crc32(privKey + secretWord)=19139609 checkMonoliticTime=1, client time stamp=1634028149
+20211012 08422961  " auth  	admin/aca2e97d
+20211012 08422961  "  +    	method(TubRLSMixin) ubm_navshortcut.select
+20211012 08422961  " debug 		Call func RLS.allowForAdminOwnerAndAdmTable
+20211012 08422961  "  -    	00.000.156
+20211012 08422961  "  +    	method(TubStorageMixin) ubm_navshortcut.select
+20211012 08422961  "  +    		DataStore.init(ubm_navshortcut)
+20211012 08422961  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08422961  " cust1 				{"P1":335016770109501, "P2d":"9999-12-31"}
+20211012 08422961  " SQL   				r=1 t=2183 fr=2154 c=0 q=SELECT A01.ID,A01.cmdCode,A01.caption,A01.code  FROM ubm_navshortcut A01  WHERE A01.ID=? AND A01.mi_deleteDate>=?
+20211012 08422961  "  -    			00.000.069
+20211012 08422961  "  -    		00.000.082
+20211012 08422961  "  -    	00.000.198
+20211012 08422961  " http  	127.0.0.1 <- 200
+20211012 08422961  "  -    00.000.696
+20211012 08423007  "  +    ubql?rq=uba_als.select&uitag=nsc-uba_als
+20211012 08423007  " http  	127.0.0.1 -> POST ubql?rq=uba_als.select&uitag=nsc-uba_als
+20211012 08423007  " info  	endpoint ubql
+20211012 08423007  " info  	[{"entity":"uba_als","method":"select","fieldList":["ID","entity","attribute","state","roleName","actions"],"options":{"start":0,"limit":101}}]
+20211012 08423007  " debug 	Auth: got token aca2e97d61654a76ff9e2d9b
+20211012 08423007  " debug 	Server side session.fSessionID = aca2e97d, crc32(privKey + secretWord)=19139609 checkMonoliticTime=1, client time stamp=1634028150
+20211012 08423007  " auth  	admin/aca2e97d
+20211012 08423007  "  +    	method(TubStorageMixin) uba_als.select
+20211012 08423007  "  +    		DataStore.init(uba_als)
+20211012 08423007  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 08423007  " SQL   				r=0 t=146 fr=129 c=0 q=SELECT A01.ID,A01.entity,A01.attribute,A01.state,A01.roleName,A01.actions  FROM uba_als A01  LIMIT 101 OFFSET 0 
+20211012 08423007  "  -    			00.000.059
+20211012 08423007  "  -    		00.000.072
+20211012 08423007  "  -    	00.000.214
+20211012 08423007  " http  	127.0.0.1 <- 200
+20211012 08423007  "  -    00.000.626
+20211012 08423155  "  +    clientRequire/@unitybase/systemjs-plugin-vue-ub/package.json
+20211012 08423155  " http  	127.0.0.1 -> GET clientRequire/@unitybase/systemjs-plugin-vue-ub/package.json
+20211012 08423155  " info  	endpoint clientRequire
+20211012 08423155  " debug 	Retrieve cached @unitybase/systemjs-plugin-vue-ub/package.json -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/systemjs-plugin-vue-ub/package.json
+20211012 08423155  " http  	127.0.0.1 <- 200
+20211012 08423155  "  -    00.000.350
+20211012 08423155  "  +    clientRequire/@unitybase/systemjs-plugin-vue-ub/dist/system_plugin_vue_ub.min.js
+20211012 08423155  " http  	127.0.0.1 -> GET clientRequire/@unitybase/systemjs-plugin-vue-ub/dist/system_plugin_vue_ub.min.js
+20211012 08423155  " info  	endpoint clientRequire
+20211012 08423155  " debug 	Retrieve cached @unitybase/systemjs-plugin-vue-ub/dist/system_plugin_vue_ub.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/systemjs-plugin-vue-ub/dist/system_plugin_vue_ub.min.js
+20211012 08423155  " http  	127.0.0.1 <- 200
+20211012 08423155  "  -    00.000.248
+20211012 08423157  "  +    clientRequire/@unitybase/uba/public/forms/uba_als-fm.vue
+20211012 08423157  " http  	127.0.0.1 -> GET clientRequire/@unitybase/uba/public/forms/uba_als-fm.vue
+20211012 08423157  " info  	endpoint clientRequire
+20211012 08423157  " debug 	Try to resolve @unitybase/uba/public/forms/uba_als-fm.vue
+20211012 08423157  " debug 	Resolve @unitybase/uba/public/forms/uba_als-fm.vue -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/uba/public/forms/uba_als-fm.vue
+20211012 08423157  " http  	127.0.0.1 <- 200
+20211012 08423157  "  -    00.001.792
+20211012 08423159  "  +    clientRequire/@unitybase/uba/public/components/RoleActionsComponent.vue
+20211012 08423159  " http  	127.0.0.1 -> GET clientRequire/@unitybase/uba/public/components/RoleActionsComponent.vue
+20211012 08423159  " info  	endpoint clientRequire
+20211012 08423159  " debug 	Try to resolve @unitybase/uba/public/components/RoleActionsComponent.vue
+20211012 08423159  " debug 	Resolve @unitybase/uba/public/components/RoleActionsComponent.vue -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/uba/public/components/RoleActionsComponent.vue
+20211012 08423159  " http  	127.0.0.1 <- 200
+20211012 08423159  "  -    00.000.689
+20211012 08461206  ! srvr  Terminating...
+20211012 08461206  ! mon   {"sessions_total":1,"threads_total":1,"incoming_bytes":1565934,"outcoming_bytes":5234849,"responses_total":[0,0,2083,0,7,28],"security_exception_count":18,"js_gc_count":67,"js_memory_bytes":3981312,"http_perning_request_count":0}
+20211012 08461213  ! EXC   EInOutError ("Disk Full") [] at   $000000000047A4A9

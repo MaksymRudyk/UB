@@ -1,0 +1,840 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-12T09:33:43
+
+20211012 09334321  ! srvr  StartupPath: '/home/admloc/Documents/ubProject/CityPortal/'; BinPath: '/opt/unitybase/server/'
+20211012 09334321  ! srvr  JS Engine params: engine-max-mem=512Mb, engine-lifetime=360sec, engine-full-gc=every 100 HTTP req
+20211012 09334321  ! warn  CPU support for AVX2 and SSE42 not available or can not be used
+20211012 09334321  ! srvr  FTS is disabled
+20211012 09334321  "  +    init
+20211012 09334321  " srvr  	Start application initialization...
+20211012 09334330  " info  	Loading domain models...
+20211012 09334330  " info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211012 09334330  " info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211012 09334331  " info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211012 09334331  " info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211012 09334331  " info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211012 09334331  " info  	"requests"(1.0.0) from "./models/requests"
+20211012 09334331  " info  	Loading meta files for 40 entities... 
+20211012 09334332  " info  	load domain: 38ms
+20211012 09334332  " info  	applying metadata transformation hook from UB
+20211012 09334332  " debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211012 09334333  " info  	applying hooks: 2ms
+20211012 09334333  " info  	native init: 4ms
+20211012 09334333  " srvr  	The domain loaded successfully with 40 entities
+20211012 09334342  "  +    	Init ELS
+20211012 09334342  "  +    		DataStore.init(uba_role)
+20211012 09334342  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 09334342  "  +    				
+20211012 09334342  "  -    				00.001.432
+20211012 09334342  " SQL   				r=7 t=1464 fr=1449 c=0 q=SELECT A01.ID,A01.name,A01.sessionTimeout,A01.allowedAppMethods  FROM uba_role A01 
+20211012 09334342  "  -    			00.001.502
+20211012 09334342  "  -    		00.001.515
+20211012 09334342  "  +    		DataStore.init(uba_els)
+20211012 09334342  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211012 09334342  " SQL   				r=1 t=28 fr=17 c=0 q=SELECT A01.ID,A01.entityMask,A01.methodMask,A01.ruleType,A01.ruleRole,A01.disabled  FROM uba_els A01 
+20211012 09334342  "  -    			00.000.046
+20211012 09334342  "  -    		00.000.052
+20211012 09334342  "  -    	00.001.882
+20211012 09334342  "  +    	DataStore.init(ubs_settings)
+20211012 09334342  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211012 09334342  " cust1 			{"P1s34":"UBA.passwordPolicy.maxDurationDays"}
+20211012 09334342  " SQL   			r=0 t=26 fr=16 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211012 09334342  "  -    		00.000.041
+20211012 09334342  "  -    	00.000.049
+20211012 09334342  "  +    	DataStore.init(ubs_settings)
+20211012 09334342  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211012 09334342  " cust1 			{"P1s37":"UBA.passwordPolicy.maxInvalidAttempts"}
+20211012 09334342  " SQL   			r=0 t=30 fr=26 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211012 09334342  "  -    		00.000.013
+20211012 09334342  "  -    	00.000.018
+20211012 09334342  "  -    00.333.724
+20211012 09334343  ! srvr  Enable zip compression
+20211012 09334343  ! srvr  Local IP addresses: 10.8.125.48;127.0.0.1
+20211012 09334343  ! srvr  Socket server URLs: http://localhost:8881/
+20211012 09334343  ! srvr  Started and ready to accept requests...
+20211012 09334344  "  +    getAppInfo
+20211012 09334344  " http  	127.0.0.1 -> GET getAppInfo
+20211012 09334344  " info  	endpoint getAppInfo
+20211012 09334344  " http  	127.0.0.1 <- 200
+20211012 09334344  "  -    00.005.033
+20211012 09334344  "  +    auth?AUTHTYPE=ROOT
+20211012 09334344  " http  	127.0.0.1 -> POST auth?AUTHTYPE=ROOT
+20211012 09334344  " info  	endpoint auth
+20211012 09334344  " http  	127.0.0.1 <- 200
+20211012 09334344  "  -    00.000.278
+20211012 09334345  "  +    getDomainInfo?extended=true&userName=root&v=4
+20211012 09334345  " http  	127.0.0.1 -> GET getDomainInfo?extended=true&userName=root&v=4
+20211012 09334345  " info  	endpoint getDomainInfo
+20211012 09334345  " auth  	root/00000002
+20211012 09334345  " http  	127.0.0.1 <- 200
+20211012 09334345  "  -    00.004.517
+20211012 09334352  "  +    runSQL?CONNECTION=main
+20211012 09334352  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334352  " info  	endpoint runSQL
+20211012 09334352  " info  	select name, tbl_name as caption from sqlite_master where type='table' and name not like 'sqlite_%'
+20211012 09334352  " auth  	root/00000002
+20211012 09334352  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334352  " SQL   		r=9 t=123 fr=75 c=0 q=select name, tbl_name as caption from sqlite_master where type='table' and name not like 'sqlite_%'
+20211012 09334352  "  -    	00.000.167
+20211012 09334352  " http  	127.0.0.1 <- 200
+20211012 09334352  "  -    00.002.430
+20211012 09334352  "  +    runSQL?CONNECTION=main
+20211012 09334352  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334352  " info  	endpoint runSQL
+20211012 09334352  " info  	PRAGMA table_info('uba_user')
+20211012 09334352  " auth  	root/00000002
+20211012 09334352  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334352  " SQL   		r=14 t=77 fr=34 c=0 q=PRAGMA table_info('uba_user')
+20211012 09334352  "  -    	00.000.120
+20211012 09334352  " http  	127.0.0.1 <- 200
+20211012 09334352  "  -    00.001.055
+20211012 09334352  "  +    runSQL?CONNECTION=main
+20211012 09334352  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334352  " info  	endpoint runSQL
+20211012 09334352  " info  	PRAGMA foreign_key_list('uba_user')
+20211012 09334352  " auth  	root/00000002
+20211012 09334353  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334353  " SQL   		r=3 t=56 fr=25 c=0 q=PRAGMA foreign_key_list('uba_user')
+20211012 09334353  "  -    	00.000.101
+20211012 09334353  " http  	127.0.0.1 <- 200
+20211012 09334353  "  -    00.000.749
+20211012 09334353  "  +    runSQL?CONNECTION=main
+20211012 09334353  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334353  " info  	endpoint runSQL
+20211012 09334353  " info  	PRAGMA index_list('uba_user')
+20211012 09334353  " auth  	root/00000002
+20211012 09334353  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334353  " SQL   		r=1 t=45 fr=20 c=0 q=PRAGMA index_list('uba_user')
+20211012 09334353  "  -    	00.000.084
+20211012 09334353  " http  	127.0.0.1 <- 200
+20211012 09334353  "  -    00.000.882
+20211012 09334353  "  +    runSQL?CONNECTION=main
+20211012 09334353  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334353  " info  	endpoint runSQL
+20211012 09334353  " info  	PRAGMA table_info('uba_role')
+20211012 09334353  " auth  	root/00000002
+20211012 09334353  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334353  " SQL   		r=10 t=54 fr=26 c=0 q=PRAGMA table_info('uba_role')
+20211012 09334353  "  -    	00.000.084
+20211012 09334353  " http  	127.0.0.1 <- 200
+20211012 09334353  "  -    00.000.406
+20211012 09334353  "  +    runSQL?CONNECTION=main
+20211012 09334353  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334353  " info  	endpoint runSQL
+20211012 09334353  " info  	PRAGMA foreign_key_list('uba_role')
+20211012 09334353  " auth  	root/00000002
+20211012 09334353  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334353  " SQL   		r=3 t=47 fr=21 c=0 q=PRAGMA foreign_key_list('uba_role')
+20211012 09334353  "  -    	00.000.080
+20211012 09334353  " http  	127.0.0.1 <- 200
+20211012 09334353  "  -    00.000.549
+20211012 09334353  "  +    runSQL?CONNECTION=main
+20211012 09334353  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334353  " info  	endpoint runSQL
+20211012 09334353  " info  	PRAGMA index_list('uba_role')
+20211012 09334353  " auth  	root/00000002
+20211012 09334353  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334353  " SQL   		r=1 t=51 fr=24 c=0 q=PRAGMA index_list('uba_role')
+20211012 09334353  "  -    	00.000.089
+20211012 09334353  " http  	127.0.0.1 <- 200
+20211012 09334353  "  -    00.000.503
+20211012 09334353  "  +    runSQL?CONNECTION=main
+20211012 09334353  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334353  " info  	endpoint runSQL
+20211012 09334353  " info  	PRAGMA table_info('uba_els')
+20211012 09334353  " auth  	root/00000002
+20211012 09334353  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334353  " SQL   		r=13 t=59 fr=27 c=0 q=PRAGMA table_info('uba_els')
+20211012 09334353  "  -    	00.000.094
+20211012 09334353  " http  	127.0.0.1 <- 200
+20211012 09334353  "  -    00.000.958
+20211012 09334353  "  +    runSQL?CONNECTION=main
+20211012 09334353  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334353  " info  	endpoint runSQL
+20211012 09334353  " info  	PRAGMA foreign_key_list('uba_els')
+20211012 09334353  " auth  	root/00000002
+20211012 09334353  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334353  " SQL   		r=3 t=46 fr=21 c=0 q=PRAGMA foreign_key_list('uba_els')
+20211012 09334353  "  -    	00.000.076
+20211012 09334353  " http  	127.0.0.1 <- 200
+20211012 09334353  "  -    00.000.459
+20211012 09334353  "  +    runSQL?CONNECTION=main
+20211012 09334353  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334353  " info  	endpoint runSQL
+20211012 09334353  " info  	PRAGMA index_list('uba_els')
+20211012 09334353  " auth  	root/00000002
+20211012 09334353  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334353  " SQL   		r=1 t=43 fr=20 c=0 q=PRAGMA index_list('uba_els')
+20211012 09334353  "  -    	00.000.081
+20211012 09334353  " http  	127.0.0.1 <- 200
+20211012 09334353  "  -    00.000.665
+20211012 09334353  "  +    runSQL?CONNECTION=main
+20211012 09334353  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334353  " info  	endpoint runSQL
+20211012 09334353  " info  	PRAGMA table_info('uba_subject')
+20211012 09334353  " auth  	root/00000002
+20211012 09334354  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334354  " SQL   		r=5 t=69 fr=38 c=0 q=PRAGMA table_info('uba_subject')
+20211012 09334354  "  -    	00.000.121
+20211012 09334354  " http  	127.0.0.1 <- 200
+20211012 09334354  "  -    00.001.283
+20211012 09334354  "  +    runSQL?CONNECTION=main
+20211012 09334354  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334354  " info  	endpoint runSQL
+20211012 09334354  " info  	PRAGMA foreign_key_list('uba_subject')
+20211012 09334354  " auth  	root/00000002
+20211012 09334354  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334354  " SQL   		r=0 t=18 fr=15 c=0 q=PRAGMA foreign_key_list('uba_subject')
+20211012 09334354  "  -    	00.000.043
+20211012 09334354  " http  	127.0.0.1 <- 200
+20211012 09334354  "  -    00.000.254
+20211012 09334354  "  +    runSQL?CONNECTION=main
+20211012 09334354  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334354  " info  	endpoint runSQL
+20211012 09334354  " info  	PRAGMA index_list('uba_subject')
+20211012 09334354  " auth  	root/00000002
+20211012 09334354  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334354  " SQL   		r=1 t=34 fr=14 c=0 q=PRAGMA index_list('uba_subject')
+20211012 09334354  "  -    	00.000.056
+20211012 09334354  " http  	127.0.0.1 <- 200
+20211012 09334354  "  -    00.000.237
+20211012 09334354  "  +    runSQL?CONNECTION=main
+20211012 09334354  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334354  " info  	endpoint runSQL
+20211012 09334354  " info  	PRAGMA table_info('uba_userrole')
+20211012 09334354  " auth  	root/00000002
+20211012 09334354  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334354  " SQL   		r=8 t=28 fr=14 c=0 q=PRAGMA table_info('uba_userrole')
+20211012 09334354  "  -    	00.000.048
+20211012 09334354  " http  	127.0.0.1 <- 200
+20211012 09334354  "  -    00.000.181
+20211012 09334354  "  +    runSQL?CONNECTION=main
+20211012 09334354  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334354  " info  	endpoint runSQL
+20211012 09334354  " info  	PRAGMA foreign_key_list('uba_userrole')
+20211012 09334354  " auth  	root/00000002
+20211012 09334354  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334354  " SQL   		r=5 t=27 fr=13 c=0 q=PRAGMA foreign_key_list('uba_userrole')
+20211012 09334354  "  -    	00.000.047
+20211012 09334354  " http  	127.0.0.1 <- 200
+20211012 09334354  "  -    00.000.193
+20211012 09334354  "  +    runSQL?CONNECTION=main
+20211012 09334354  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334354  " info  	endpoint runSQL
+20211012 09334354  " info  	PRAGMA index_list('uba_userrole')
+20211012 09334354  " auth  	root/00000002
+20211012 09334354  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334354  " SQL   		r=1 t=25 fr=13 c=0 q=PRAGMA index_list('uba_userrole')
+20211012 09334354  "  -    	00.000.042
+20211012 09334354  " http  	127.0.0.1 <- 200
+20211012 09334354  "  -    00.000.195
+20211012 09334354  "  +    runSQL?CONNECTION=main
+20211012 09334354  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334354  " info  	endpoint runSQL
+20211012 09334354  " info  	PRAGMA table_info('uba_als')
+20211012 09334354  " auth  	root/00000002
+20211012 09334354  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334354  " SQL   		r=6 t=27 fr=13 c=0 q=PRAGMA table_info('uba_als')
+20211012 09334354  "  -    	00.000.044
+20211012 09334354  " http  	127.0.0.1 <- 200
+20211012 09334354  "  -    00.000.178
+20211012 09334354  "  +    runSQL?CONNECTION=main
+20211012 09334354  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334354  " info  	endpoint runSQL
+20211012 09334354  " info  	PRAGMA foreign_key_list('uba_als')
+20211012 09334354  " auth  	root/00000002
+20211012 09334354  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334354  " SQL   		r=0 t=17 fr=14 c=0 q=PRAGMA foreign_key_list('uba_als')
+20211012 09334354  "  -    	00.000.049
+20211012 09334354  " http  	127.0.0.1 <- 200
+20211012 09334354  "  -    00.000.320
+20211012 09334354  "  +    runSQL?CONNECTION=main
+20211012 09334354  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334354  " info  	endpoint runSQL
+20211012 09334354  " info  	PRAGMA index_list('uba_als')
+20211012 09334354  " auth  	root/00000002
+20211012 09334354  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334354  " SQL   		r=1 t=34 fr=15 c=0 q=PRAGMA index_list('uba_als')
+20211012 09334354  "  -    	00.000.055
+20211012 09334354  " http  	127.0.0.1 <- 200
+20211012 09334354  "  -    00.000.247
+20211012 09334354  "  +    runSQL?CONNECTION=main
+20211012 09334354  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334354  " info  	endpoint runSQL
+20211012 09334354  " info  	PRAGMA table_info('uba_audit')
+20211012 09334354  " auth  	root/00000002
+20211012 09334354  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334354  " SQL   		r=11 t=32 fr=15 c=0 q=PRAGMA table_info('uba_audit')
+20211012 09334354  "  -    	00.000.052
+20211012 09334354  " http  	127.0.0.1 <- 200
+20211012 09334354  "  -    00.000.212
+20211012 09334354  "  +    runSQL?CONNECTION=main
+20211012 09334354  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334354  " info  	endpoint runSQL
+20211012 09334354  " info  	PRAGMA foreign_key_list('uba_audit')
+20211012 09334354  " auth  	root/00000002
+20211012 09334354  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334354  " SQL   		r=0 t=17 fr=14 c=0 q=PRAGMA foreign_key_list('uba_audit')
+20211012 09334354  "  -    	00.000.044
+20211012 09334354  " http  	127.0.0.1 <- 200
+20211012 09334354  "  -    00.000.278
+20211012 09334354  "  +    runSQL?CONNECTION=main
+20211012 09334354  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334354  " info  	endpoint runSQL
+20211012 09334354  " info  	PRAGMA index_list('uba_audit')
+20211012 09334354  " auth  	root/00000002
+20211012 09334354  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334354  " SQL   		r=1 t=30 fr=12 c=0 q=PRAGMA index_list('uba_audit')
+20211012 09334354  "  -    	00.000.046
+20211012 09334354  " http  	127.0.0.1 <- 200
+20211012 09334354  "  -    00.000.178
+20211012 09334354  "  +    runSQL?CONNECTION=main
+20211012 09334354  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334354  " info  	endpoint runSQL
+20211012 09334354  " info  	PRAGMA table_info('ubs_settings')
+20211012 09334354  " auth  	root/00000002
+20211012 09334354  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334354  " SQL   		r=12 t=31 fr=15 c=0 q=PRAGMA table_info('ubs_settings')
+20211012 09334354  "  -    	00.000.094
+20211012 09334354  " http  	127.0.0.1 <- 200
+20211012 09334354  "  -    00.000.220
+20211012 09334354  "  +    runSQL?CONNECTION=main
+20211012 09334354  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334354  " info  	endpoint runSQL
+20211012 09334354  " info  	PRAGMA foreign_key_list('ubs_settings')
+20211012 09334354  " auth  	root/00000002
+20211012 09334354  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334354  " SQL   		r=3 t=30 fr=14 c=0 q=PRAGMA foreign_key_list('ubs_settings')
+20211012 09334354  "  -    	00.000.052
+20211012 09334354  " http  	127.0.0.1 <- 200
+20211012 09334354  "  -    00.000.196
+20211012 09334354  "  +    runSQL?CONNECTION=main
+20211012 09334354  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211012 09334354  " info  	endpoint runSQL
+20211012 09334354  " info  	PRAGMA index_list('ubs_settings')
+20211012 09334354  " auth  	root/00000002
+20211012 09334354  "  +    	NDBExecute(conn=main/SQLite3)
+20211012 09334354  " SQL   		r=1 t=24 fr=11 c=0 q=PRAGMA index_list('ubs_settings')
+20211012 09334354  "  -    	00.000.051
+20211012 09334354  " http  	127.0.0.1 <- 200
+20211012 09334354  "  -    00.000.195
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  !  +    	
+20211012 09334356  !  -    	00.000.603
+20211012 09334356  ! SQL   	r=0 t=712 c=0 q=--############## start script for connection "main" ####### /*  $$$$$$$$$$$ Attantion! Achtung! Vnimanie!   Attempt to alter a column uba_subject.name as (typeChanged: false, sizeChanged: true, allowNullChanged: false Attempt to alter a column uba_user.trustedIP as (typeChanged: false, sizeChanged: true, allowNullChanged: false   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */    -- Create tables --###################################### CREATE TABLE req_depart (  ID BIGINT NOT NULL PRIMARY KEY,  name VARCHAR(255) NOT NULL, --Department Name  postAddr VARCHAR(255) NOT NULL, --Department Address  phoneNum VARCHAR(255) NOT NULL, --Department Phone  roleInSystem BIGINT NULL --Role in System  , CONSTRAINT FK_REQ_DEPART_ROLEINSYSTEM_REF_ROLE FOREIGN KEY (ROLEINSYSTEM) REFERENCES uba_role(ID)  ); 
+20211012 09334356  !  -    00.000.742
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=119 c=0 q= CREATE TABLE req_reqList (  ID BIGINT NOT NULL PRIMARY KEY,  reqDate DATETIME NOT NULL, --Request Date  applicantPhone VARCHAR(255) NOT NULL, --Applicant`s phone  applicantInfo VARCHAR(255) NOT NULL, --Applicant`s contact info  department BIGINT NOT NULL, --Department  subDepartment BIGINT NULL, --SubDepartment  reqText TEXT NOT NULL, --Text of request  reqDoc VARCHAR(4000) NULL, --doc  answer TEXT NULL, --Request answer  status VARCHAR(32) NOT NULL, --Status  mi_owner BIGINT NOT NULL, --Row owner  mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date  mi_createUser BIGINT NOT NULL, --User who create row  mi_modifyDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Modification date  mi_modifyUser BIGINT NOT NULL --User who modify row  , CONSTRAINT FK_REQ_DEPARTMENT_REF_REQ_DEPART FOREIGN KEY (DEPARTMENT) REFERENCES req_depart(ID)   , CONSTRAINT FK_REQ_SUBDEPARTMENT_REF_REQ_SUBDEPART FOREIGN KEY (SUBDEPARTMENT) REFERENCES req_subDepart(ID)   , CONSTRAINT FK_REQ_MI_OWNER_REF_USR FOREIGN KEY (MI_OWNER) REFERENCES uba_user(ID)   , CONSTRAINT FK_REQ_MI_CREATEUSER_REF_USR FOREIGN KEY (MI_CREATEUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_REQ_MI_MODIFYUSER_REF_USR FOREIGN KEY (MI_MODIFYUSER) REFERENCES uba_user(ID)  ); 
+20211012 09334356  !  -    00.000.135
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=77 c=0 q= CREATE TABLE req_subDepart (  ID BIGINT NOT NULL PRIMARY KEY,  name VARCHAR(255) NOT NULL, --Department Name  department BIGINT NOT NULL --department  , CONSTRAINT FK_REQ_SUBDEPART_DEPARTMENT_REF_REQ_DEPART FOREIGN KEY (DEPARTMENT) REFERENCES req_depart(ID)  ); 
+20211012 09334356  !  -    00.000.089
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=86 c=0 q= CREATE TABLE ub_blobHistory (  ID BIGINT NOT NULL PRIMARY KEY,  instance BIGINT NOT NULL, --InstanceID  entity VARCHAR(40) NULL, --Entity  attribute VARCHAR(20) NULL, --Attribute  revision INTEGER DEFAULT (1) NOT NULL, --Revision  permanent SMALLINT(1) DEFAULT (0) NOT NULL CHECK (permanent IN (0,1) ), --isPermanent  createdAt DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NULL, --Created at  blobInfo VARCHAR(2000) NOT NULL --blobInfo ); 
+20211012 09334356  !  -    00.000.098
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=75 c=0 q= CREATE TABLE ub_migration (  ID BIGINT NOT NULL PRIMARY KEY,  modelName VARCHAR(32) NOT NULL, --Model code  filePath VARCHAR(256) NOT NULL, --file path (relative to model _migrate folder)  fileSha VARCHAR(64) NOT NULL, --SHA256 of file  appliedAt DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL --Applied at ); 
+20211012 09334356  !  -    00.000.087
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=78 c=0 q= CREATE TABLE ub_version (  ID BIGINT NOT NULL PRIMARY KEY,  modelName VARCHAR(32) NOT NULL, --Model code  version VARCHAR(12) NOT NULL, --model version as a string in format XXXYYYZZZ where: XXX-major, YYY-minor ZZZ-patch. All parts are padded by 0 to be a three letter; Example: 2.15.1 = 002015001  appliedAt DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL --Applied at ); 
+20211012 09334356  !  -    00.000.092
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=137 c=0 q= CREATE TABLE uba_advSecurity (  ID BIGINT NOT NULL PRIMARY KEY,  userID BIGINT NOT NULL, --User  editCause VARCHAR(2000) NOT NULL, --Cause of change  allowedIP VARCHAR(256) NULL, --Allowed IP address  refreshIP SMALLINT(1) DEFAULT (0) NOT NULL CHECK (refreshIP IN (0,1) ), --Refresh allowed IP  fp VARCHAR(256) NULL, --Fingerprint  refreshFp SMALLINT(1) DEFAULT (0) NOT NULL CHECK (refreshFp IN (0,1) ), --Refresh fingerprint  keyMediaName VARCHAR(32) NULL, --Key media name  refreshKeyMedia SMALLINT(1) DEFAULT (0) NOT NULL CHECK (refreshKeyMedia IN (0,1) ), --Refresh key media name  additional VARCHAR(2000) NULL, --JSON with advanced settings  mi_owner BIGINT NOT NULL, --Row owner  mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date  mi_createUser BIGINT NOT NULL, --User who create row  mi_modifyDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Modification date  mi_modifyUser BIGINT NOT NULL --User who modify row  , CONSTRAINT FK_UBA_ADVSECURITY_USERID_REF_USR FOREIGN KEY (USERID) REFERENCES uba_user(ID)   , CONSTRAINT FK_UBA_ADVSECURITY_MI_OWNER_REF_USR FOREIGN KEY (MI_OWNER) REFERENCES uba_user(ID)   , CONSTRAINT FK_UBA_ADVSECURITY_MI_CREATEUSER_REF_USR FOREIGN KEY (MI_CREATEUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_UBA_ADVSECURITY_MI_MODIFYUSER_REF_USR FOREIGN KEY (MI_MODIFYUSER) REFERENCES uba_user(ID)  ); 
+20211012 09334356  !  -    00.000.152
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=85 c=0 q= CREATE TABLE uba_auditTrail (  ID BIGINT NOT NULL PRIMARY KEY,  entity VARCHAR(32) NOT NULL, --Entity  entityinfo_id BIGINT NOT NULL, --Instance ID  actionType VARCHAR(32) NOT NULL, --Action  actionUser BIGINT NOT NULL, --User  actionUserName VARCHAR(128) NULL, --Login  actionTime DATETIME NOT NULL, --Action time  remoteIP VARCHAR(40) NULL, --Remote IP  parentEntity VARCHAR(32) NULL, --Parent entity name  parentEntityInfo_id BIGINT NULL, --Parent instance ID  request_id BIGINT NULL, --Request ID  fromValue TEXT NULL, --Old values  toValue TEXT NULL --New values ); 
+20211012 09334356  !  -    00.000.100
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=107 c=0 q= CREATE TABLE uba_group (  ID BIGINT NOT NULL PRIMARY KEY,  code VARCHAR(50) NOT NULL, --Group code  name VARCHAR(128) NOT NULL, --Name  name_uk VARCHAR(128) NOT NULL, --Name  description VARCHAR(256) NULL, --Description  mi_owner BIGINT NOT NULL, --Row owner  mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date  mi_createUser BIGINT NOT NULL, --User who create row  mi_modifyDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Modification date  mi_modifyUser BIGINT NOT NULL --User who modify row  , CONSTRAINT FK_GR_MI_OWNER_REF_USR FOREIGN KEY (MI_OWNER) REFERENCES uba_user(ID)   , CONSTRAINT FK_GR_MI_CREATEUSER_REF_USR FOREIGN KEY (MI_CREATEUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_GR_MI_MODIFYUSER_REF_USR FOREIGN KEY (MI_MODIFYUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_GR_ID_REF_SUBJ FOREIGN KEY (ID) REFERENCES uba_subject(ID)  ); 
+20211012 09334356  !  -    00.000.143
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=98 c=0 q= CREATE TABLE uba_grouprole (  ID BIGINT NOT NULL PRIMARY KEY,  groupID BIGINT NOT NULL, --Group  roleID BIGINT NOT NULL, --Role  mi_owner BIGINT NOT NULL, --Row owner  mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date  mi_createUser BIGINT NOT NULL, --User who create row  mi_modifyDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Modification date  mi_modifyUser BIGINT NOT NULL --User who modify row  , CONSTRAINT FK_UBA_GROUPROLE_GROUPID_REF_GR FOREIGN KEY (GROUPID) REFERENCES uba_group(ID)   , CONSTRAINT FK_UBA_GROUPROLE_ROLEID_REF_ROLE FOREIGN KEY (ROLEID) REFERENCES uba_role(ID)   , CONSTRAINT FK_UBA_GROUPROLE_MI_OWNER_REF_USR FOREIGN KEY (MI_OWNER) REFERENCES uba_user(ID)   , CONSTRAINT FK_UBA_GROUPROLE_MI_CREATEUSER_REF_USR FOREIGN KEY (MI_CREATEUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_UBA_GROUPROLE_MI_MODIFYUSER_REF_USR FOREIGN KEY (MI_MODIFYUSER) REFERENCES uba_user(ID)  ); 
+20211012 09334356  !  -    00.000.113
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=115 c=0 q= CREATE TABLE uba_otp (  ID BIGINT NOT NULL PRIMARY KEY,  otp VARCHAR(40) NOT NULL, --Generated one time password  userID BIGINT NOT NULL, --User for which password was generated  uData VARCHAR(2000) NULL, --Additional  data  expiredDate DATETIME NOT NULL, --Expired date  otpKind VARCHAR(32) NOT NULL, --Kind of otp(Email, SMS etc)  mi_owner BIGINT NOT NULL, --Row owner  mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date  mi_createUser BIGINT NOT NULL, --User who create row  mi_modifyDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Modification date  mi_modifyUser BIGINT NOT NULL --User who modify row  , CONSTRAINT FK_OTP_USERID_REF_USR FOREIGN KEY (USERID) REFERENCES uba_user(ID)   , CONSTRAINT FK_OTP_MI_OWNER_REF_USR FOREIGN KEY (MI_OWNER) REFERENCES uba_user(ID)   , CONSTRAINT FK_OTP_MI_CREATEUSER_REF_USR FOREIGN KEY (MI_CREATEUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_OTP_MI_MODIFYUSER_REF_USR FOREIGN KEY (MI_MODIFYUSER) REFERENCES uba_user(ID)  ); 
+20211012 09334356  !  -    00.000.131
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=108 c=0 q= CREATE TABLE uba_prevPasswordsHash (  ID BIGINT NOT NULL PRIMARY KEY,  userID BIGINT NOT NULL, --User  uPasswordHashHexa VARCHAR(64) NULL, --Password hash  mi_owner BIGINT NOT NULL, --Row owner  mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date  mi_createUser BIGINT NOT NULL, --User who create row  mi_modifyDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Modification date  mi_modifyUser BIGINT NOT NULL --User who modify row  , CONSTRAINT FK_PREVP_USERID_REF_USR FOREIGN KEY (USERID) REFERENCES uba_user(ID)   , CONSTRAINT FK_PREVP_MI_OWNER_REF_USR FOREIGN KEY (MI_OWNER) REFERENCES uba_user(ID)   , CONSTRAINT FK_PREVP_MI_CREATEUSER_REF_USR FOREIGN KEY (MI_CREATEUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_PREVP_MI_MODIFYUSER_REF_USR FOREIGN KEY (MI_MODIFYUSER) REFERENCES uba_user(ID)  ); 
+20211012 09334356  !  -    00.000.121
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=121 c=0 q= CREATE TABLE uba_usercertificate (  ID BIGINT NOT NULL PRIMARY KEY,  userID BIGINT NOT NULL, --User  issuer_serial VARCHAR(512) NOT NULL, --Issuer tag of certificate  issuer_cn VARCHAR(512) NULL, --Issuer caption  serial VARCHAR(100) NOT NULL, --Certificate serial number  certificate BLOB NOT NULL, --Certificate binary data  certParsed JSON(4000) NULL, --Parsed certificate in JSON format  isForSigning SMALLINT(1) DEFAULT (0) NOT NULL CHECK (isForSigning IN (0,1) ), --Is this certificate applicable for signing operations  description VARCHAR(512) NULL, --Description  disabled SMALLINT(1) DEFAULT (0) NOT NULL CHECK (disabled IN (0,1) ), --disabled  revoked SMALLINT(1) DEFAULT (0) NOT NULL CHECK (revoked IN (0,1) ), --Revoked  revocationDate DATETIME NULL, --Revocation date  mi_owner BIGINT NOT NULL, --Row owner  mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date  mi_createUser BIGINT NOT NULL, --User who create row  mi_modifyDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Modification date  mi_modifyUser BIGINT NOT NULL --User who modify row  , CONSTRAINT FK_USRCER_USERID_REF_USR FOREIGN KEY (USERID) REFERENCES uba_user(ID)   , CONSTRAINT FK_USRCER_MI_OWNER_REF_USR FOREIGN KEY (MI_OWNER) REFERENCES uba_user(ID)   , CONSTRAINT FK_USRCER_MI_CREATEUSER_REF_USR FOREIGN KEY (MI_CREATEUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_USRCER_MI_MODIFYUSER_REF_USR FOREIGN KEY (MI_MODIFYUSER) REFERENCES uba_user(ID)  ); 
+20211012 09334356  !  -    00.000.135
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=93 c=0 q= CREATE TABLE uba_usergroup (  ID BIGINT NOT NULL PRIMARY KEY,  userID BIGINT NOT NULL, --User  groupID BIGINT NOT NULL, --Group  mi_owner BIGINT NOT NULL, --Row owner  mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date  mi_createUser BIGINT NOT NULL, --User who create row  mi_modifyDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Modification date  mi_modifyUser BIGINT NOT NULL --User who modify row  , CONSTRAINT FK_USRGROUP_USERID_REF_USR FOREIGN KEY (USERID) REFERENCES uba_user(ID)   , CONSTRAINT FK_USRGROUP_GROUPID_REF_GR FOREIGN KEY (GROUPID) REFERENCES uba_group(ID)   , CONSTRAINT FK_USRGROUP_MI_OWNER_REF_USR FOREIGN KEY (MI_OWNER) REFERENCES uba_user(ID)   , CONSTRAINT FK_USRGROUP_MI_CREATEUSER_REF_USR FOREIGN KEY (MI_CREATEUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_USRGROUP_MI_MODIFYUSER_REF_USR FOREIGN KEY (MI_MODIFYUSER) REFERENCES uba_user(ID)  ); 
+20211012 09334356  !  -    00.000.106
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=129 c=0 q= CREATE TABLE ubm_desktop (  ID BIGINT NOT NULL PRIMARY KEY,  caption VARCHAR(255) NOT NULL, --Desktop name  caption_uk VARCHAR(255) NOT NULL, --Desktop name  code VARCHAR(50) NOT NULL, --Code  description VARCHAR(255) NULL, --Desktop description  description_uk VARCHAR(255) NULL, --Desktop description  iconCls VARCHAR(255) DEFAULT ('u-icon-desktop') NOT NULL, --Desktop icon  url VARCHAR(255) NULL, --Static server page URL which is displayed in screen centre of selected desktop  isDefault SMALLINT(1) DEFAULT (0) NOT NULL CHECK (isDefault IN (0,1) ), --By default?  displayOrder INTEGER DEFAULT (1000) NOT NULL, --Display order  mi_owner BIGINT NOT NULL, --Row owner  mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date  mi_createUser BIGINT NOT NULL, --User who create row  mi_modifyDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Modification date  mi_modifyUser BIGINT NOT NULL, --User who modify row  mi_deleteDate DATETIME DEFAULT ('9999-12-31') NOT NULL, --Deletion date  mi_deleteUser BIGINT NULL --User who delete row  , CONSTRAINT FK_DESK_MI_OWNER_REF_USR FOREIGN KEY (MI_OWNER) REFERENCES uba_user(ID)   , CONSTRAINT FK_DESK_MI_CREATEUSER_REF_USR FOREIGN KEY (MI_CREATEUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_DESK_MI_MODIFYUSER_REF_USR FOREIGN KEY (MI_MODIFYUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_DESK_MI_DELETEUSER_REF_USR FOREIGN KEY (MI_DELETEUSER) REFERENCES uba_user(ID)  ); 
+20211012 09334356  !  -    00.000.175
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=125 c=0 q= CREATE TABLE ubm_desktop_adm (  ID BIGINT NOT NULL PRIMARY KEY,  instanceID BIGINT NOT NULL, --Desktop  admSubjID BIGINT NOT NULL --Admin subject  , CONSTRAINT FK_ADMDESK_INSTANCEID_REF_DESK FOREIGN KEY (INSTANCEID) REFERENCES ubm_desktop(ID)   , CONSTRAINT FK_ADMDESK_ADMSUBJID_REF_SUBJ FOREIGN KEY (ADMSUBJID) REFERENCES uba_subject(ID)  ); 
+20211012 09334356  !  -    00.000.143
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=186 c=0 q= CREATE TABLE ubm_enum (  ID BIGINT NOT NULL PRIMARY KEY,  eGroup VARCHAR(32) NOT NULL, --Group  code VARCHAR(32) NOT NULL, --Value code  shortName VARCHAR(128) NULL, --Short name  shortName_uk VARCHAR(128) NULL, --Short name  name VARCHAR(255) NOT NULL, --Value name  name_uk VARCHAR(255) NOT NULL, --Value name  sortOrder INTEGER DEFAULT (100) NOT NULL, --Order #  mi_owner BIGINT NOT NULL, --Row owner  mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date  mi_createUser BIGINT NOT NULL, --User who create row  mi_modifyDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Modification date  mi_modifyUser BIGINT NOT NULL, --User who modify row  mi_deleteDate DATETIME DEFAULT ('9999-12-31') NOT NULL, --Deletion date  mi_deleteUser BIGINT NULL --User who delete row  , CONSTRAINT FK_ENU_MI_OWNER_REF_USR FOREIGN KEY (MI_OWNER) REFERENCES uba_user(ID)   , CONSTRAINT FK_ENU_MI_CREATEUSER_REF_USR FOREIGN KEY (MI_CREATEUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_ENU_MI_MODIFYUSER_REF_USR FOREIGN KEY (MI_MODIFYUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_ENU_MI_DELETEUSER_REF_USR FOREIGN KEY (MI_DELETEUSER) REFERENCES uba_user(ID)  ); 
+20211012 09334356  !  -    00.000.208
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=252 c=0 q= CREATE TABLE ubm_navshortcut (  ID BIGINT NOT NULL PRIMARY KEY,  desktopID BIGINT NOT NULL, --Desktop  parentID BIGINT NULL, --Shortcut folder  code VARCHAR(50) NOT NULL, --Code  isFolder SMALLINT(1) DEFAULT (0) NOT NULL CHECK (isFolder IN (0,1) ), --Is folder?  caption VARCHAR(255) NOT NULL, --Shortcut caption  caption_uk VARCHAR(255) NOT NULL, --Shortcut caption  cmdCode TEXT NULL, --Command code  inWindow SMALLINT(1) DEFAULT (0) NOT NULL CHECK (inWindow IN (0,1) ), --Display in new window  isCollapsed SMALLINT(1) DEFAULT (0) NOT NULL CHECK (isCollapsed IN (0,1) ), --Show collapsed at the first start  displayOrder INTEGER DEFAULT (1000) NOT NULL, --Display order (in current node)  iconCls VARCHAR(50) NULL, --Icon (CSS class)  description VARCHAR(256) NULL, --Shortcut description  description_uk VARCHAR(256) NULL, --Shortcut description  keywords VARCHAR(512) NULL, --Search keywords  keywords_uk VARCHAR(512) NULL, --Search keywords  mi_treePath VARCHAR(450) NOT NULL,  mi_owner BIGINT NOT NULL, --Row owner  mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date  mi_createUser BIGINT NOT NULL, --User who create row  mi_modifyDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Modification date  mi_modifyUser BIGINT NOT NULL, --User who modify row  mi_deleteDate DATETIME DEFAULT ('9999-12-31') NOT NULL, --Deletion date  mi_deleteUser BIGINT NULL --User who delete row  , CONSTRAINT FK_NAVSH_DESKTOPID_REF_DESK FOREIGN KEY (DESKTOPID) REFERENCES ubm_desktop(ID)   , CONSTRAINT FK_NAVSH_PARENTID_REF_NAVSH FOREIGN KEY (PARENTID) REFERENCES ubm_navshortcut(ID)   , CONSTRAINT FK_NAVSH_MI_OWNER_REF_USR FOREIGN KEY (MI_OWNER) REFERENCES uba_user(ID)   , CONSTRAINT FK_NAVSH_MI_CREATEUSER_REF_USR FOREIGN KEY (MI_CREATEUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_NAVSH_MI_MODIFYUSER_REF_USR FOREIGN KEY (MI_MODIFYUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_NAVSH_MI_DELETEUSER_REF_USR FOREIGN KEY (MI_DELETEUSER) REFERENCES uba_user(ID)  ); 
+20211012 09334356  !  -    00.000.279
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=126 c=0 q= CREATE TABLE ubm_navshortcut_adm (  ID BIGINT NOT NULL PRIMARY KEY,  instanceID BIGINT NOT NULL, --Shortcut  admSubjID BIGINT NOT NULL --Subject of administration  , CONSTRAINT FK_ADMNAV_INSTANCEID_REF_NAVSH FOREIGN KEY (INSTANCEID) REFERENCES ubm_navshortcut(ID)   , CONSTRAINT FK_ADMNAV_ADMSUBJID_REF_SUBJ FOREIGN KEY (ADMSUBJID) REFERENCES uba_subject(ID)  ); 
+20211012 09334356  !  -    00.000.144
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=180 c=0 q= CREATE TABLE ubm_query (  ID BIGINT NOT NULL PRIMARY KEY,  code VARCHAR(50) NOT NULL, --Code  name VARCHAR(256) NOT NULL, --Name  name_uk VARCHAR(256) NOT NULL, --Name  ubql JSON(4000) NOT NULL, --UBQL (JSON)  type VARCHAR(32) NOT NULL, --Type  mi_unityEntity VARCHAR(64) NOT NULL,  mi_owner BIGINT NOT NULL, --Row owner  mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date  mi_createUser BIGINT NOT NULL, --User who create row  mi_modifyDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Modification date  mi_modifyUser BIGINT NOT NULL, --User who modify row  mi_deleteDate DATETIME DEFAULT ('9999-12-31') NOT NULL, --Deletion date  mi_deleteUser BIGINT NULL --User who delete row  , CONSTRAINT FK_UBMQR_MI_OWNER_REF_USR FOREIGN KEY (MI_OWNER) REFERENCES uba_user(ID)   , CONSTRAINT FK_UBMQR_MI_CREATEUSER_REF_USR FOREIGN KEY (MI_CREATEUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_UBMQR_MI_MODIFYUSER_REF_USR FOREIGN KEY (MI_MODIFYUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_UBMQR_MI_DELETEUSER_REF_USR FOREIGN KEY (MI_DELETEUSER) REFERENCES uba_user(ID)  ); 
+20211012 09334356  !  -    00.000.203
+20211012 09334356  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334356  ! SQL   	r=0 t=190 c=0 q= CREATE TABLE ubm_sysdictionary (  ID BIGINT NOT NULL PRIMARY KEY,  code VARCHAR(50) NOT NULL, --Code  name VARCHAR(256) NOT NULL, --Name  name_uk VARCHAR(256) NOT NULL, --Name  ubql JSON(4000) NOT NULL, --UBQL (JSON)  mi_owner BIGINT NOT NULL, --Row owner  mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date  mi_createUser BIGINT NOT NULL, --User who create row  mi_modifyDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Modification date  mi_modifyUser BIGINT NOT NULL, --User who modify row  mi_deleteDate DATETIME DEFAULT ('9999-12-31') NOT NULL, --Deletion date  mi_deleteUser BIGINT NULL --User who delete row  , CONSTRAINT FK_UBMSD_MI_OWNER_REF_USR FOREIGN KEY (MI_OWNER) REFERENCES uba_user(ID)   , CONSTRAINT FK_UBMSD_MI_CREATEUSER_REF_USR FOREIGN KEY (MI_CREATEUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_UBMSD_MI_MODIFYUSER_REF_USR FOREIGN KEY (MI_MODIFYUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_UBMSD_MI_DELETEUSER_REF_USR FOREIGN KEY (MI_DELETEUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_UBMSD_ID_REF_UBMQR FOREIGN KEY (ID) REFERENCES ubm_query(ID)  ); 
+20211012 09334356  !  -    00.000.213
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=114 c=0 q= CREATE TABLE ubs_filter (  ID BIGINT NOT NULL PRIMARY KEY,  code VARCHAR(100) NOT NULL, --Code of filter group  name VARCHAR(250) NOT NULL, --Filter name  filter TEXT NOT NULL, --filter  isGlobal SMALLINT(1) NOT NULL CHECK (isGlobal IN (0,1) ), --Is this filter accessible for all users  owner BIGINT NOT NULL, --Filter owner  mi_owner BIGINT NOT NULL, --Row owner  mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date  mi_createUser BIGINT NOT NULL, --User who create row  mi_modifyDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Modification date  mi_modifyUser BIGINT NOT NULL --User who modify row  , CONSTRAINT FK_SFILTER_OWNER_REF_USR FOREIGN KEY (OWNER) REFERENCES uba_user(ID)   , CONSTRAINT FK_SFILTER_MI_OWNER_REF_USR FOREIGN KEY (MI_OWNER) REFERENCES uba_user(ID)   , CONSTRAINT FK_SFILTER_MI_CREATEUSER_REF_USR FOREIGN KEY (MI_CREATEUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_SFILTER_MI_MODIFYUSER_REF_USR FOREIGN KEY (MI_MODIFYUSER) REFERENCES uba_user(ID)  ); 
+20211012 09334357  !  -    00.000.131
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=120 c=0 q= CREATE TABLE ubs_message (  ID BIGINT NOT NULL PRIMARY KEY,  messageBody TEXT NULL, --Message  complete SMALLINT(1) DEFAULT (0) NOT NULL CHECK (complete IN (0,1) ), --Submitted  messageType VARCHAR(32) NOT NULL, --Type  startDate DATETIME NOT NULL, --Valid from  expireDate DATETIME NOT NULL, --Valid to  mi_owner BIGINT NOT NULL, --Row owner  mi_createDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Creation date  mi_createUser BIGINT NOT NULL, --User who create row  mi_modifyDate DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) NOT NULL, --Modification date  mi_modifyUser BIGINT NOT NULL, --User who modify row  mi_deleteDate DATETIME DEFAULT ('9999-12-31') NOT NULL, --Deletion date  mi_deleteUser BIGINT NULL --User who delete row  , CONSTRAINT FK_MSG_MI_OWNER_REF_USR FOREIGN KEY (MI_OWNER) REFERENCES uba_user(ID)   , CONSTRAINT FK_MSG_MI_CREATEUSER_REF_USR FOREIGN KEY (MI_CREATEUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_MSG_MI_MODIFYUSER_REF_USR FOREIGN KEY (MI_MODIFYUSER) REFERENCES uba_user(ID)   , CONSTRAINT FK_MSG_MI_DELETEUSER_REF_USR FOREIGN KEY (MI_DELETEUSER) REFERENCES uba_user(ID)  ); 
+20211012 09334357  !  -    00.000.134
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=92 c=0 q= CREATE TABLE ubs_message_recipient (  ID BIGINT NOT NULL PRIMARY KEY,  messageID BIGINT NOT NULL, --Message  userID BIGINT NOT NULL, --User  acceptDate DATETIME NULL --Accept date  , CONSTRAINT FK_MSG_RC_MESSAGEID_REF_MSG FOREIGN KEY (MESSAGEID) REFERENCES ubs_message(ID)   , CONSTRAINT FK_MSG_RC_USERID_REF_USR FOREIGN KEY (USERID) REFERENCES uba_user(ID)  ); 
+20211012 09334357  !  -    00.000.104
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=77 c=0 q= CREATE TABLE ubs_numcounter (  ID BIGINT NOT NULL PRIMARY KEY,  regKey VARCHAR(255) NOT NULL, --Registration key  counter BIGINT NOT NULL, --Counter  fakeLock INTEGER NULL --Used internally ); 
+20211012 09334357  !  -    00.000.087
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=73 c=0 q= CREATE TABLE ubs_numcounterreserv (  ID BIGINT NOT NULL PRIMARY KEY,  regKey VARCHAR(255) NOT NULL, --Registration key  counter BIGINT NOT NULL, --Counter  reservedDate VARCHAR(255) NULL, --Reserved date for document  note VARCHAR(255) NULL --Description of reserved number (Department name, etc) ); 
+20211012 09334357  !  -    00.000.084
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=80 c=0 q= CREATE TABLE ubs_softLock (  ID BIGINT NOT NULL PRIMARY KEY,  entity VARCHAR(32) NOT NULL, --Entity  lockID BIGINT NOT NULL, --Instance ID  lockUser BIGINT NOT NULL, --User, who locking record  lockType VARCHAR(32) NOT NULL, --Lock type  lockTime DATETIME NOT NULL --Lock time  , CONSTRAINT FK_SLOCK_LOCKUSER_REF_USR FOREIGN KEY (LOCKUSER) REFERENCES uba_user(ID)  ); 
+20211012 09334357  !  -    00.000.091
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=753 c=0 q=   -- Add columns --###################################### ALTER TABLE uba_audit ADD targetGroup VARCHAR(128) NULL; 
+20211012 09334357  !  -    00.000.767
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=585 c=0 q= ALTER TABLE uba_role ADD description_uk VARCHAR(256) NULL; 
+20211012 09334357  !  -    00.000.598
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=590 c=0 q= ALTER TABLE uba_subject ADD name_uk VARCHAR(256) NULL; 
+20211012 09334357  !  -    00.000.605
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=948 c=0 q= ALTER TABLE uba_user ADD firstName VARCHAR(64) NULL; 
+20211012 09334357  !  -    00.000.973
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=739 c=0 q= ALTER TABLE uba_user ADD lastName VARCHAR(64) NULL; 
+20211012 09334357  !  -    00.000.767
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=598 c=0 q= ALTER TABLE uba_user ADD fullName VARCHAR(128) NULL; 
+20211012 09334357  !  -    00.000.612
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=606 c=0 q= ALTER TABLE uba_user ADD gender VARCHAR(32) NULL; 
+20211012 09334357  !  -    00.000.618
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=790 c=0 q= ALTER TABLE uba_user ADD email VARCHAR(64) NULL; 
+20211012 09334357  !  -    00.000.809
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=675 c=0 q= ALTER TABLE uba_user ADD phone VARCHAR(32) NULL; 
+20211012 09334357  !  -    00.000.703
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=802 c=0 q= ALTER TABLE uba_user ADD avatar VARCHAR(4000) NULL; 
+20211012 09334357  !  -    00.000.824
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=704 c=0 q= ALTER TABLE ubs_settings ADD name_uk VARCHAR(150) NULL; 
+20211012 09334357  !  -    00.000.729
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=595 c=0 q= ALTER TABLE ubs_settings ADD description_uk VARCHAR(1024) NULL; 
+20211012 09334357  !  -    00.000.609
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=562 c=0 q= ALTER TABLE ubs_settings ADD settingValue_uk VARCHAR(2000) NULL; 
+20211012 09334357  !  -    00.000.575
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=564 c=0 q= ALTER TABLE ubs_settings ADD defaultValue_uk VARCHAR(150) NULL; 
+20211012 09334357  !  -    00.000.575
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=7 t=33 c=0 q=   -- ! update values for known or estimated changes --###################################### UPDATE uba_role SET description_uk = description WHERE (1 = 1); 
+20211012 09334357  !  -    00.000.045
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=10 t=24 c=0 q= UPDATE uba_subject SET name_uk = name WHERE (1 = 1); 
+20211012 09334357  !  -    00.000.034
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=18 c=0 q= UPDATE ubs_settings SET name_uk = name WHERE (1 = 1); 
+20211012 09334357  !  -    00.000.026
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=11 c=0 q= UPDATE ubs_settings SET description_uk = description WHERE (1 = 1); 
+20211012 09334357  !  -    00.000.019
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=11 c=0 q= UPDATE ubs_settings SET settingValue_uk = settingValue WHERE (1 = 1); 
+20211012 09334357  !  -    00.000.017
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=10 c=0 q= UPDATE ubs_settings SET defaultValue_uk = defaultValue WHERE (1 = 1); 
+20211012 09334357  !  -    00.000.017
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=64 c=0 q=   -- Create indexes --###################################### CREATE UNIQUE INDEX UIDX_REQ_DEPART_NAME ON req_depart(NAME) ; 
+20211012 09334357  !  -    00.000.073
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=58 c=0 q= CREATE INDEX IDX_REQ_DEPART_ROLEINSYSTEM ON req_depart(ROLEINSYSTEM) ; 
+20211012 09334357  !  -    00.000.066
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=54 c=0 q= CREATE INDEX IDX_REQ_DEPARTMENT ON req_reqList(DEPARTMENT) ; 
+20211012 09334357  !  -    00.000.092
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=50 c=0 q= CREATE INDEX IDX_REQ_SUBDEPARTMENT ON req_reqList(SUBDEPARTMENT) ; 
+20211012 09334357  !  -    00.000.059
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=52 c=0 q= CREATE INDEX IDX_REQ_MI_OWNER ON req_reqList(MI_OWNER) ; 
+20211012 09334357  !  -    00.000.061
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=51 c=0 q= CREATE INDEX IDX_REQ_MI_CREATEUSER ON req_reqList(MI_CREATEUSER) ; 
+20211012 09334357  !  -    00.000.060
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=47 c=0 q= CREATE INDEX IDX_REQ_MI_MODIFYUSER ON req_reqList(MI_MODIFYUSER) ; 
+20211012 09334357  !  -    00.000.056
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=49 c=0 q= CREATE INDEX IDX_REQ_SUBDEPART_DEPARTMENT ON req_subDepart(DEPARTMENT) ; 
+20211012 09334357  !  -    00.000.058
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=51 c=0 q= CREATE UNIQUE INDEX UIDX_BHIST_IAR ON ub_blobHistory(INSTANCE,ATTRIBUTE,REVISION) ; 
+20211012 09334357  !  -    00.000.060
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=62 c=0 q= CREATE UNIQUE INDEX UIDX_UBA_ADVSECURITY_USERID ON uba_advSecurity(USERID) ; 
+20211012 09334357  !  -    00.000.071
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=49 c=0 q= CREATE INDEX IDX_UBA_ADVSECURITY_MI_OWNER ON uba_advSecurity(MI_OWNER) ; 
+20211012 09334357  !  -    00.000.058
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=49 c=0 q= CREATE INDEX IDX_UBA_ADVSECURITY_MI_CREATEUSER ON uba_advSecurity(MI_CREATEUSER) ; 
+20211012 09334357  !  -    00.000.058
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=47 c=0 q= CREATE INDEX IDX_UBA_ADVSECURITY_MI_MODIFYUSER ON uba_advSecurity(MI_MODIFYUSER) ; 
+20211012 09334357  !  -    00.000.056
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=59 c=0 q= CREATE UNIQUE INDEX UK_UBA_ALS_EASR ON uba_als(ENTITY,ATTRIBUTE,STATE,ROLENAME) ; 
+20211012 09334357  !  -    00.000.067
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=56 c=0 q= CREATE INDEX idx_saud_targetUser ON uba_audit(TARGETUSER) ; 
+20211012 09334357  !  -    00.000.066
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=51 c=0 q= CREATE INDEX idx_audtr_entity ON uba_auditTrail(ENTITYINFO_ID) ; 
+20211012 09334357  !  -    00.000.059
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=52 c=0 q= CREATE INDEX idx_audtr_parententinfoid ON uba_auditTrail(PARENTENTITYINFO_ID) ; 
+20211012 09334357  !  -    00.000.061
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=57 c=0 q= CREATE INDEX IDX_ELS_RULEROLE ON uba_els(RULEROLE) ; 
+20211012 09334357  !  -    00.000.066
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=50 c=0 q= CREATE INDEX IDX_ELS_MI_OWNER ON uba_els(MI_OWNER) ; 
+20211012 09334357  !  -    00.000.059
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=61 c=0 q= CREATE INDEX IDX_ELS_MI_CREATEUSER ON uba_els(MI_CREATEUSER) ; 
+20211012 09334357  !  -    00.000.069
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=53 c=0 q= CREATE INDEX IDX_ELS_MI_MODIFYUSER ON uba_els(MI_MODIFYUSER) ; 
+20211012 09334357  !  -    00.000.062
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=46 c=0 q= CREATE UNIQUE INDEX UIDX_GR_CODE ON uba_group(CODE) ; 
+20211012 09334357  !  -    00.000.056
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=76 c=0 q= CREATE UNIQUE INDEX UIDX_GR_NAME ON uba_group(NAME) ; 
+20211012 09334357  !  -    00.000.090
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=50 c=0 q= CREATE UNIQUE INDEX UIDX_GR_NAME_UK ON uba_group(NAME_UK) ; 
+20211012 09334357  !  -    00.000.060
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=62 c=0 q= CREATE INDEX IDX_GR_MI_OWNER ON uba_group(MI_OWNER) ; 
+20211012 09334357  !  -    00.000.071
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=49 c=0 q= CREATE INDEX IDX_GR_MI_CREATEUSER ON uba_group(MI_CREATEUSER) ; 
+20211012 09334357  !  -    00.000.060
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=50 c=0 q= CREATE INDEX IDX_GR_MI_MODIFYUSER ON uba_group(MI_MODIFYUSER) ; 
+20211012 09334357  !  -    00.000.060
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=51 c=0 q= CREATE INDEX IDX_UBA_GROUPROLE_GROUPID ON uba_grouprole(GROUPID) ; 
+20211012 09334357  !  -    00.000.060
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=47 c=0 q= CREATE INDEX IDX_UBA_GROUPROLE_ROLEID ON uba_grouprole(ROLEID) ; 
+20211012 09334357  !  -    00.000.057
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=51 c=0 q= CREATE INDEX IDX_UBA_GROUPROLE_MI_OWNER ON uba_grouprole(MI_OWNER) ; 
+20211012 09334357  !  -    00.000.060
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=52 c=0 q= CREATE INDEX IDX_UBA_GROUPROLE_MI_CREATEUSER ON uba_grouprole(MI_CREATEUSER) ; 
+20211012 09334357  !  -    00.000.061
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=51 c=0 q= CREATE INDEX IDX_UBA_GROUPROLE_MI_MODIFYUSER ON uba_grouprole(MI_MODIFYUSER) ; 
+20211012 09334357  !  -    00.000.060
+20211012 09334357  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334357  ! SQL   	r=0 t=53 c=0 q= CREATE UNIQUE INDEX UK_GRPROLE_USER_ROLE ON uba_grouprole(GROUPID,ROLEID) ; 
+20211012 09334357  !  -    00.000.062
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=52 c=0 q= CREATE INDEX IDX_OTP_USERID ON uba_otp(USERID) ; 
+20211012 09334358  !  -    00.000.062
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=50 c=0 q= CREATE INDEX IDX_OTP_MI_OWNER ON uba_otp(MI_OWNER) ; 
+20211012 09334358  !  -    00.000.060
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=52 c=0 q= CREATE INDEX IDX_OTP_MI_CREATEUSER ON uba_otp(MI_CREATEUSER) ; 
+20211012 09334358  !  -    00.000.060
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=59 c=0 q= CREATE INDEX IDX_OTP_MI_MODIFYUSER ON uba_otp(MI_MODIFYUSER) ; 
+20211012 09334358  !  -    00.000.067
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=52 c=0 q= CREATE UNIQUE INDEX uidx_otp ON uba_otp(OTP) ; 
+20211012 09334358  !  -    00.000.061
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=54 c=0 q= CREATE INDEX IDX_PREVP_USERID ON uba_prevPasswordsHash(USERID) ; 
+20211012 09334358  !  -    00.000.063
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=51 c=0 q= CREATE INDEX IDX_PREVP_MI_OWNER ON uba_prevPasswordsHash(MI_OWNER) ; 
+20211012 09334358  !  -    00.000.060
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=52 c=0 q= CREATE INDEX IDX_PREVP_MI_CREATEUSER ON uba_prevPasswordsHash(MI_CREATEUSER) ; 
+20211012 09334358  !  -    00.000.062
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=51 c=0 q= CREATE INDEX IDX_PREVP_MI_MODIFYUSER ON uba_prevPasswordsHash(MI_MODIFYUSER) ; 
+20211012 09334358  !  -    00.000.060
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=65 c=0 q= CREATE UNIQUE INDEX UIDX_ROLE_NAME ON uba_role(NAME) ; 
+20211012 09334358  !  -    00.000.074
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=83 c=0 q= CREATE INDEX IDX_ROLE_MI_OWNER ON uba_role(MI_OWNER) ; 
+20211012 09334358  !  -    00.000.094
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=70 c=0 q= CREATE INDEX IDX_ROLE_MI_CREATEUSER ON uba_role(MI_CREATEUSER) ; 
+20211012 09334358  !  -    00.000.083
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=84 c=0 q= CREATE INDEX IDX_ROLE_MI_MODIFYUSER ON uba_role(MI_MODIFYUSER) ; 
+20211012 09334358  !  -    00.000.097
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=85 c=0 q= CREATE INDEX IDX_SUBJ_NAME ON uba_subject(NAME) ; 
+20211012 09334358  !  -    00.000.099
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=91 c=0 q= CREATE UNIQUE INDEX UIDX_USR_NAME ON uba_user(NAME) ; 
+20211012 09334358  !  -    00.000.106
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=87 c=0 q= CREATE INDEX IDX_USR_MI_OWNER ON uba_user(MI_OWNER) ; 
+20211012 09334358  !  -    00.000.102
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=83 c=0 q= CREATE INDEX IDX_USR_MI_CREATEUSER ON uba_user(MI_CREATEUSER) ; 
+20211012 09334358  !  -    00.000.096
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=62 c=0 q= CREATE INDEX IDX_USR_MI_MODIFYUSER ON uba_user(MI_MODIFYUSER) ; 
+20211012 09334358  !  -    00.000.071
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=88 c=0 q= CREATE INDEX IDX_USRCER_USERID ON uba_usercertificate(USERID) ; 
+20211012 09334358  !  -    00.000.102
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=75 c=0 q= CREATE UNIQUE INDEX UIDX_USRCER_SERIAL ON uba_usercertificate(SERIAL) ; 
+20211012 09334358  !  -    00.000.088
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=54 c=0 q= CREATE INDEX IDX_USRCER_MI_OWNER ON uba_usercertificate(MI_OWNER) ; 
+20211012 09334358  !  -    00.000.065
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=58 c=0 q= CREATE INDEX IDX_USRCER_MI_CREATEUSER ON uba_usercertificate(MI_CREATEUSER) ; 
+20211012 09334358  !  -    00.000.068
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=52 c=0 q= CREATE INDEX IDX_USRCER_MI_MODIFYUSER ON uba_usercertificate(MI_MODIFYUSER) ; 
+20211012 09334358  !  -    00.000.061
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=61 c=0 q= CREATE UNIQUE INDEX uidx_usercert ON uba_usercertificate(SERIAL,ISSUER_SERIAL,USERID) ; 
+20211012 09334358  !  -    00.000.071
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=52 c=0 q= CREATE INDEX IDX_USRGROUP_USERID ON uba_usergroup(USERID) ; 
+20211012 09334358  !  -    00.000.061
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=79 c=0 q= CREATE INDEX IDX_USRGROUP_GROUPID ON uba_usergroup(GROUPID) ; 
+20211012 09334358  !  -    00.000.090
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=52 c=0 q= CREATE INDEX IDX_USRGROUP_MI_OWNER ON uba_usergroup(MI_OWNER) ; 
+20211012 09334358  !  -    00.000.061
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=52 c=0 q= CREATE INDEX IDX_USRGROUP_MI_CREATEUSER ON uba_usergroup(MI_CREATEUSER) ; 
+20211012 09334358  !  -    00.000.060
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=51 c=0 q= CREATE INDEX IDX_USRGROUP_MI_MODIFYUSER ON uba_usergroup(MI_MODIFYUSER) ; 
+20211012 09334358  !  -    00.000.060
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=53 c=0 q= CREATE UNIQUE INDEX UK_USRGROUP_USER_GROUP ON uba_usergroup(USERID,GROUPID) ; 
+20211012 09334358  !  -    00.000.061
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=66 c=0 q= CREATE INDEX IDX_USROLE_USERID ON uba_userrole(USERID) ; 
+20211012 09334358  !  -    00.000.075
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=56 c=0 q= CREATE INDEX IDX_USROLE_ROLEID ON uba_userrole(ROLEID) ; 
+20211012 09334358  !  -    00.000.064
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=56 c=0 q= CREATE INDEX IDX_USROLE_MI_OWNER ON uba_userrole(MI_OWNER) ; 
+20211012 09334358  !  -    00.000.064
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=57 c=0 q= CREATE INDEX IDX_USROLE_MI_CREATEUSER ON uba_userrole(MI_CREATEUSER) ; 
+20211012 09334358  !  -    00.000.065
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=54 c=0 q= CREATE INDEX IDX_USROLE_MI_MODIFYUSER ON uba_userrole(MI_MODIFYUSER) ; 
+20211012 09334358  !  -    00.000.064
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=57 c=0 q= CREATE UNIQUE INDEX UK_USRROLE_USER_ROLE ON uba_userrole(USERID,ROLEID) ; 
+20211012 09334358  !  -    00.000.066
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=59 c=0 q= CREATE UNIQUE INDEX UIDX_DESK_CODE ON ubm_desktop(CODE,MI_DELETEDATE) ; 
+20211012 09334358  !  -    00.000.069
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=54 c=0 q= CREATE INDEX IDX_DESK_MI_OWNER ON ubm_desktop(MI_OWNER) ; 
+20211012 09334358  !  -    00.000.062
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=53 c=0 q= CREATE INDEX IDX_DESK_MI_CREATEUSER ON ubm_desktop(MI_CREATEUSER) ; 
+20211012 09334358  !  -    00.000.063
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=54 c=0 q= CREATE INDEX IDX_DESK_MI_MODIFYUSER ON ubm_desktop(MI_MODIFYUSER) ; 
+20211012 09334358  !  -    00.000.063
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=54 c=0 q= CREATE INDEX IDX_DESK_MI_DELETEUSER ON ubm_desktop(MI_DELETEUSER) ; 
+20211012 09334358  !  -    00.000.062
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=54 c=0 q= CREATE INDEX IDX_ADMDESK_INSTANCEID ON ubm_desktop_adm(INSTANCEID) ; 
+20211012 09334358  !  -    00.000.062
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=62 c=0 q= CREATE INDEX IDX_ADMDESK_ADMSUBJID ON ubm_desktop_adm(ADMSUBJID) ; 
+20211012 09334358  !  -    00.000.071
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=59 c=0 q= CREATE UNIQUE INDEX UK_ADMDESC_INST_ADMSUBJ ON ubm_desktop_adm(INSTANCEID,ADMSUBJID) ; 
+20211012 09334358  !  -    00.000.067
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=50 c=0 q= CREATE INDEX IDX_ENU_MI_OWNER ON ubm_enum(MI_OWNER) ; 
+20211012 09334358  !  -    00.000.060
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=54 c=0 q= CREATE INDEX IDX_ENU_MI_CREATEUSER ON ubm_enum(MI_CREATEUSER) ; 
+20211012 09334358  !  -    00.000.063
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=54 c=0 q= CREATE INDEX IDX_ENU_MI_MODIFYUSER ON ubm_enum(MI_MODIFYUSER) ; 
+20211012 09334358  !  -    00.000.062
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=53 c=0 q= CREATE INDEX IDX_ENU_MI_DELETEUSER ON ubm_enum(MI_DELETEUSER) ; 
+20211012 09334358  !  -    00.000.062
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=58 c=0 q= CREATE UNIQUE INDEX UK_UBM_ENUM_GROUPCODE ON ubm_enum(EGROUP,CODE,MI_DELETEDATE) ; 
+20211012 09334358  !  -    00.000.095
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=62 c=0 q= CREATE INDEX IDX_NAVSH_DESKTOPID ON ubm_navshortcut(DESKTOPID) ; 
+20211012 09334358  !  -    00.000.071
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=64 c=0 q= CREATE INDEX IDX_NAVSH_PARENTID ON ubm_navshortcut(PARENTID) ; 
+20211012 09334358  !  -    00.000.073
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=55 c=0 q= CREATE UNIQUE INDEX UIDX_NAVSH_CODE ON ubm_navshortcut(CODE,MI_DELETEDATE) ; 
+20211012 09334358  !  -    00.000.064
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=55 c=0 q= CREATE INDEX IDX_NAVSH_MI_OWNER ON ubm_navshortcut(MI_OWNER) ; 
+20211012 09334358  !  -    00.000.065
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=53 c=0 q= CREATE INDEX IDX_NAVSH_MI_CREATEUSER ON ubm_navshortcut(MI_CREATEUSER) ; 
+20211012 09334358  !  -    00.000.061
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=53 c=0 q= CREATE INDEX IDX_NAVSH_MI_MODIFYUSER ON ubm_navshortcut(MI_MODIFYUSER) ; 
+20211012 09334358  !  -    00.000.061
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=63 c=0 q= CREATE INDEX IDX_NAVSH_MI_DELETEUSER ON ubm_navshortcut(MI_DELETEUSER) ; 
+20211012 09334358  !  -    00.000.071
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=54 c=0 q= CREATE INDEX IDX_NAVSH_TREEPATH ON ubm_navshortcut(MI_TREEPATH) ; 
+20211012 09334358  !  -    00.000.063
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=62 c=0 q= CREATE INDEX IDX_ADMNAV_INSTANCEID ON ubm_navshortcut_adm(INSTANCEID) ; 
+20211012 09334358  !  -    00.000.070
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=55 c=0 q= CREATE INDEX IDX_ADMNAV_ADMSUBJID ON ubm_navshortcut_adm(ADMSUBJID) ; 
+20211012 09334358  !  -    00.000.064
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=58 c=0 q= CREATE UNIQUE INDEX UK_ADMNAV_INST_ADMSUBJ ON ubm_navshortcut_adm(INSTANCEID,ADMSUBJID) ; 
+20211012 09334358  !  -    00.000.067
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=65 c=0 q= CREATE UNIQUE INDEX UIDX_UBMQR_CODE ON ubm_query(CODE,MI_DELETEDATE) ; 
+20211012 09334358  !  -    00.000.082
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=53 c=0 q= CREATE INDEX IDX_UBMQR_MI_OWNER ON ubm_query(MI_OWNER) ; 
+20211012 09334358  !  -    00.000.062
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=55 c=0 q= CREATE INDEX IDX_UBMQR_MI_CREATEUSER ON ubm_query(MI_CREATEUSER) ; 
+20211012 09334358  !  -    00.000.064
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=55 c=0 q= CREATE INDEX IDX_UBMQR_MI_MODIFYUSER ON ubm_query(MI_MODIFYUSER) ; 
+20211012 09334358  !  -    00.000.064
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=55 c=0 q= CREATE INDEX IDX_UBMQR_MI_DELETEUSER ON ubm_query(MI_DELETEUSER) ; 
+20211012 09334358  !  -    00.000.063
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=60 c=0 q= CREATE UNIQUE INDEX UIDX_UBMSD_CODE ON ubm_sysdictionary(CODE,MI_DELETEDATE) ; 
+20211012 09334358  !  -    00.000.069
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=55 c=0 q= CREATE INDEX IDX_UBMSD_MI_OWNER ON ubm_sysdictionary(MI_OWNER) ; 
+20211012 09334358  !  -    00.000.064
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=55 c=0 q= CREATE INDEX IDX_UBMSD_MI_CREATEUSER ON ubm_sysdictionary(MI_CREATEUSER) ; 
+20211012 09334358  !  -    00.000.064
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=55 c=0 q= CREATE INDEX IDX_UBMSD_MI_MODIFYUSER ON ubm_sysdictionary(MI_MODIFYUSER) ; 
+20211012 09334358  !  -    00.000.064
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=55 c=0 q= CREATE INDEX IDX_UBMSD_MI_DELETEUSER ON ubm_sysdictionary(MI_DELETEUSER) ; 
+20211012 09334358  !  -    00.000.064
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=55 c=0 q= CREATE INDEX IDX_SFILTER_OWNER ON ubs_filter(OWNER) ; 
+20211012 09334358  !  -    00.000.063
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=106 c=0 q= CREATE INDEX IDX_SFILTER_MI_OWNER ON ubs_filter(MI_OWNER) ; 
+20211012 09334358  !  -    00.000.120
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=107 c=0 q= CREATE INDEX IDX_SFILTER_MI_CREATEUSER ON ubs_filter(MI_CREATEUSER) ; 
+20211012 09334358  !  -    00.000.122
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=72 c=0 q= CREATE INDEX IDX_SFILTER_MI_MODIFYUSER ON ubs_filter(MI_MODIFYUSER) ; 
+20211012 09334358  !  -    00.000.082
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=62 c=0 q= CREATE UNIQUE INDEX uix_ubs_filter ON ubs_filter(CODE,OWNER,NAME) ; 
+20211012 09334358  !  -    00.000.071
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=67 c=0 q= CREATE INDEX ix_ubs_filter_code ON ubs_filter(CODE) ; 
+20211012 09334358  !  -    00.000.077
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=57 c=0 q= CREATE INDEX IDX_MSG_MI_OWNER ON ubs_message(MI_OWNER) ; 
+20211012 09334358  !  -    00.000.066
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=58 c=0 q= CREATE INDEX IDX_MSG_MI_CREATEUSER ON ubs_message(MI_CREATEUSER) ; 
+20211012 09334358  !  -    00.000.066
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=56 c=0 q= CREATE INDEX IDX_MSG_MI_MODIFYUSER ON ubs_message(MI_MODIFYUSER) ; 
+20211012 09334358  !  -    00.000.065
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=54 c=0 q= CREATE INDEX IDX_MSG_MI_DELETEUSER ON ubs_message(MI_DELETEUSER) ; 
+20211012 09334358  !  -    00.000.062
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=57 c=0 q= CREATE INDEX idx_ubsmsg_period ON ubs_message(STARTDATE,EXPIREDATE) ; 
+20211012 09334358  !  -    00.000.066
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=55 c=0 q= CREATE INDEX IDX_MSG_RC_MESSAGEID ON ubs_message_recipient(MESSAGEID) ; 
+20211012 09334358  !  -    00.000.063
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=70 c=0 q= CREATE INDEX IDX_MSG_RC_USERID ON ubs_message_recipient(USERID) ; 
+20211012 09334358  !  -    00.000.080
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=57 c=0 q= CREATE INDEX uidx_ubsmsg_rc ON ubs_message_recipient(MESSAGEID,USERID) ; 
+20211012 09334358  !  -    00.000.066
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=57 c=0 q= CREATE UNIQUE INDEX UIDX_NUCO_REGKEY ON ubs_numcounter(REGKEY) ; 
+20211012 09334358  !  -    00.000.066
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=70 c=0 q= CREATE UNIQUE INDEX UK_UBS_NUMCOUNT_RKC ON ubs_numcounterreserv(REGKEY,COUNTER) ; 
+20211012 09334358  !  -    00.000.079
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=58 c=0 q= CREATE UNIQUE INDEX UIDX_STNGS_SETTINGKEY ON ubs_settings(SETTINGKEY) ; 
+20211012 09334358  !  -    00.000.067
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=67 c=0 q= CREATE INDEX IDX_STNGS_MI_OWNER ON ubs_settings(MI_OWNER) ; 
+20211012 09334358  !  -    00.000.076
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=54 c=0 q= CREATE INDEX IDX_STNGS_MI_CREATEUSER ON ubs_settings(MI_CREATEUSER) ; 
+20211012 09334358  !  -    00.000.064
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=57 c=0 q= CREATE INDEX IDX_STNGS_MI_MODIFYUSER ON ubs_settings(MI_MODIFYUSER) ; 
+20211012 09334358  !  -    00.000.066
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=54 c=0 q= CREATE INDEX IDX_SLOCK_LOCKUSER ON ubs_softLock(LOCKUSER) ; 
+20211012 09334358  !  -    00.000.063
+20211012 09334358  !  +    NDBExecute(conn=main/SQLite3)
+20211012 09334358  ! SQL   	r=0 t=61 c=0 q= CREATE UNIQUE INDEX UIDX_SOFTLOCK_LOENT ON ubs_softLock(LOCKID,ENTITY) ; 
+20211012 09334358  !  -    00.000.070
+20211012 09334358  ! mon   {"sessions_total":0,"threads_total":4,"incoming_bytes":8332,"outcoming_bytes":211958,"responses_total":[0,0,28,0,0,0],"security_exception_count":0,"js_gc_count":7,"js_memory_bytes":3702784,"http_perning_request_count":0}
