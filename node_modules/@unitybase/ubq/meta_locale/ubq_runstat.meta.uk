@@ -1,0 +1,34 @@
+﻿{
+    "caption": "Статистика",
+    "description": "",
+    "attributes": [
+        {
+            "name": "appName",
+            "caption": "Ім'я додатка"
+        },
+        {
+            "name": "schedulerName",
+            "caption": "Ім'я планувальника"
+        },
+        {
+            "name": "startTime",
+            "caption": "Дата старту"
+        },
+        {
+            "name": "endTime",
+            "caption": "Дата завершення"
+        },
+        {
+            "name": "logText",
+            "caption": "Записувати всі дії з виконаного скрипта"
+        },
+        {
+            "name": "resultError",
+            "caption": "Код помилки. 0=не має помилки"
+        },
+        {
+            "name": "resultErrorMsg",
+            "caption": "Текст помилки якщо код помилки>0"
+        }
+    ]
+}

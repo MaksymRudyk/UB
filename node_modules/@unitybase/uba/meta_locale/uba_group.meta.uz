@@ -1,0 +1,18 @@
+{
+  "caption": "Foydalanuvchilar guruhi",
+  "description": "Foydalanuvchilar guruhi",
+  "attributes": [
+    {
+      "name": "code",
+      "caption": "Kod"
+    },
+    {
+      "name": "name",
+      "caption": "Ism"
+    },
+    {
+      "name": "description",
+      "caption": "Tavsif"
+    }
+  ]
+}

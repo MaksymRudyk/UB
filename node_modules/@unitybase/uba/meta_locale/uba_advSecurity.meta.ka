@@ -1,0 +1,42 @@
+﻿{
+    "caption": "მოწინავე უსაფრთხოება",
+    "description": "",
+    "attributes": [
+        {
+            "name": "userID",
+            "caption": "მომხმარებელი"
+        },
+        {
+            "name": "editCause",
+            "caption": "ცვლილების მიზეზი"
+        },
+        {
+            "name": "allowedIP",
+            "caption": "ნებადართული IP მისამართი"
+        },
+        {
+            "name": "refreshIP",
+            "caption": "IP განახლების უფლება "
+        },
+        {
+            "name": "fp",
+            "caption": "თითის ანაბეჭდი"
+        },
+        {
+            "name": "refreshFp",
+            "caption": "თითის ანაბეჭდის განახლების უფლება "
+        },
+        {
+            "name": "keyMediaName",
+            "caption": "ძირითადი შუამავლის დასახელება"
+        },
+        {
+            "name": "refreshKeyMedia",
+            "caption": "განახლებული ძირითადი შუამავლის დასახელება"
+        },
+        {
+            "name": "additional",
+            "caption": "დამატებითი"
+        }
+    ]
+}

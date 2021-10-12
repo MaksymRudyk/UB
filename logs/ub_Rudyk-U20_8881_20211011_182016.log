@@ -1,0 +1,1353 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-11T15:20:16
+
+20211011 15201636  ! srvr  StartupPath: '/home/admloc/Documents/ubProject/CityPortal/'; BinPath: '/opt/unitybase/server/'
+20211011 15201636  ! srvr  JS Engine params: engine-max-mem=512Mb, engine-lifetime=360sec, engine-full-gc=every 100 HTTP req
+20211011 15201636  ! warn  CPU support for AVX2 and SSE42 not available or can not be used
+20211011 15201636  ! srvr  FTS is disabled
+20211011 15201636  "  +    init
+20211011 15201636  " srvr  	Start application initialization...
+20211011 15201644  " info  	Loading domain models...
+20211011 15201644  " info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211011 15201644  " info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211011 15201645  " info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211011 15201645  " info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211011 15201645  " info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211011 15201645  " info  	"requests"(1.0.0) from "./models/requests"
+20211011 15201645  " info  	Loading meta files for 40 entities... 
+20211011 15201647  " info  	load domain: 38ms
+20211011 15201647  " info  	applying metadata transformation hook from UB
+20211011 15201647  " debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211011 15201647  " info  	applying hooks: 4ms
+20211011 15201647  " info  	native init: 4ms
+20211011 15201647  " srvr  	The domain loaded successfully with 40 entities
+20211011 15201658  "  +    	Init ELS
+20211011 15201658  "  +    		DataStore.init(uba_role)
+20211011 15201658  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15201658  "  +    				
+20211011 15201658  "  -    				00.002.396
+20211011 15201658  " SQL   				r=7 t=2428 fr=2413 c=0 q=SELECT A01.ID,A01.name,A01.sessionTimeout,A01.allowedAppMethods  FROM uba_role A01 
+20211011 15201658  "  -    			00.002.467
+20211011 15201658  "  -    		00.002.478
+20211011 15201658  "  +    		DataStore.init(uba_els)
+20211011 15201658  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15201658  " SQL   				r=1 t=29 fr=18 c=0 q=SELECT A01.ID,A01.entityMask,A01.methodMask,A01.ruleType,A01.ruleRole,A01.disabled  FROM uba_els A01 
+20211011 15201658  "  -    			00.000.045
+20211011 15201658  "  -    		00.000.052
+20211011 15201658  "  -    	00.002.853
+20211011 15201658  "  +    	DataStore.init(ubs_settings)
+20211011 15201658  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15201658  " cust1 			{"P1s34":"UBA.passwordPolicy.maxDurationDays"}
+20211011 15201658  " SQL   			r=0 t=27 fr=16 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211011 15201658  "  -    		00.000.042
+20211011 15201658  "  -    	00.000.050
+20211011 15201658  "  +    	DataStore.init(ubs_settings)
+20211011 15201658  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15201658  " cust1 			{"P1s37":"UBA.passwordPolicy.maxInvalidAttempts"}
+20211011 15201658  " SQL   			r=0 t=32 fr=27 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211011 15201658  "  -    		00.000.014
+20211011 15201658  "  -    	00.000.020
+20211011 15201658  "  -    00.358.727
+20211011 15201658  ! srvr  Enable zip compression
+20211011 15201658  ! srvr  Local IP addresses: 10.8.125.48;127.0.0.1
+20211011 15201658  ! srvr  Socket server URLs: http://localhost:8881/
+20211011 15201658  ! srvr  Started and ready to accept requests...
+20211011 15201960  "  +    models/adminui-vue/views/ub-auth.html?returnUrl=http%3A%2F%2Flocalhost%3A8881%2Fadm
+20211011 15201960  " http  	127.0.0.1 -> GET models/adminui-vue/views/ub-auth.html?returnUrl=http%3A%2F%2Flocalhost%3A8881%2Fadm
+20211011 15201960  " info  	endpoint models
+20211011 15201960  " http  	127.0.0.1 <- 200
+20211011 15201960  "  -    00.002.045
+20211011 15201961  #  +    models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211011 15201961  # http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211011 15201962  "  +    models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211011 15201962  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211011 15201962  $  +    models/adminui-vue/theme/el-theme-compiled.min.css
+20211011 15201962  %  +    clientRequire/lodash/lodash.min.js
+20211011 15201962  $ http  	127.0.0.1 -> GET models/adminui-vue/theme/el-theme-compiled.min.css
+20211011 15201962  % http  	127.0.0.1 -> GET clientRequire/lodash/lodash.min.js
+20211011 15202000  " info  	endpoint models
+20211011 15202000  " http  	127.0.0.1 <- 200
+20211011 15202000  "  -    00.021.786
+20211011 15202000  "  +    clientRequire/@unitybase/ub-pub/dist/ub-pub.min.js
+20211011 15202000  " http  	127.0.0.1 -> GET clientRequire/@unitybase/ub-pub/dist/ub-pub.min.js
+20211011 15202005  " info  	endpoint clientRequire
+20211011 15202005  " debug 	Try to resolve @unitybase/ub-pub/dist/ub-pub.min.js
+20211011 15202005  " debug 	Resolve @unitybase/ub-pub/dist/ub-pub.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211011 15202005  " http  	127.0.0.1 <- 200
+20211011 15202005  "  -    00.076.493
+20211011 15202006  "  +    models/adminui-vue/dist/adminui-vue.min.js
+20211011 15202006  " http  	127.0.0.1 -> GET models/adminui-vue/dist/adminui-vue.min.js
+20211011 15202006  " info  	endpoint models
+20211011 15202006  " http  	127.0.0.1 <- 200
+20211011 15202006  "  -    00.001.049
+20211011 15202026  # debug 	Scripting engine is already set to the same value
+20211011 15202026  # info  	endpoint models
+20211011 15202026  # http  	127.0.0.1 <- 200
+20211011 15202026  #  -    00.436.722
+20211011 15202027  $ debug 	Scripting engine is already set to the same value
+20211011 15202027  $ info  	endpoint models
+20211011 15202027  $ http  	127.0.0.1 <- 200
+20211011 15202027  $  -    00.443.108
+20211011 15202030  % debug 	Scripting engine is already set to the same value
+20211011 15202030  % info  	endpoint clientRequire
+20211011 15202030  % debug 	Try to resolve lodash/lodash.min.js
+20211011 15202030  % debug 	Resolve lodash/lodash.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/lodash/lodash.min.js
+20211011 15202030  % http  	127.0.0.1 <- 200
+20211011 15202030  %  -    00.495.079
+20211011 15202035  "  +    clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211011 15202035  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211011 15202035  " info  	endpoint clientRequire
+20211011 15202035  " debug 	Try to resolve @unitybase/adminui-vue/dist/adminui-vue.min.css
+20211011 15202035  " debug 	Resolve @unitybase/adminui-vue/dist/adminui-vue.min.css -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211011 15202035  " http  	127.0.0.1 <- 200
+20211011 15202035  "  -    00.000.707
+20211011 15202037  "  +    getAppInfo
+20211011 15202037  " http  	127.0.0.1 -> GET getAppInfo
+20211011 15202037  " info  	endpoint getAppInfo
+20211011 15202037  " http  	127.0.0.1 <- 200
+20211011 15202037  "  -    00.003.099
+20211011 15202037  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15202037  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15202037  " info  	endpoint clientRequire
+20211011 15202037  " debug 	Try to resolve @unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15202037  " debug 	Resolve @unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15202037  " http  	127.0.0.1 <- 200
+20211011 15202037  "  -    00.000.794
+20211011 15202037  "  +    models/ub-pub/locale/lang-en.json
+20211011 15202037  " http  	127.0.0.1 -> GET models/ub-pub/locale/lang-en.json
+20211011 15202037  " info  	endpoint models
+20211011 15202037  " http  	127.0.0.1 <- 200
+20211011 15202037  "  -    00.000.544
+20211011 15202038  "  +    models/ub-pub/img/login-logo.svg
+20211011 15202038  " http  	127.0.0.1 -> GET models/ub-pub/img/login-logo.svg
+20211011 15202038  " info  	endpoint models
+20211011 15202038  " http  	127.0.0.1 <- 200
+20211011 15202038  "  -    00.001.112
+20211011 15202040  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211011 15202040  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211011 15202040  " info  	endpoint clientRequire
+20211011 15202040  #  +    clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15202040  # http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15202040  # info  	endpoint clientRequire
+20211011 15202040  " debug 	Try to resolve @unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211011 15202040  " debug 	Resolve @unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211011 15202040  " http  	127.0.0.1 <- 200
+20211011 15202040  "  -    00.000.615
+20211011 15202040  # debug 	Try to resolve @unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15202040  # debug 	Resolve @unitybase/adminui-vue/dist/fonts/ub-icons.woff2 -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15202040  # http  	127.0.0.1 <- 200
+20211011 15202040  #  -    00.001.839
+20211011 15202040  $  +    models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211011 15202040  $ http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211011 15202040  $ info  	endpoint models
+20211011 15202040  %  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15202040  % http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15202040  % info  	endpoint clientRequire
+20211011 15202040  % debug 	Try to resolve @unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15202040  $ http  	127.0.0.1 <- 200
+20211011 15202040  $  -    00.000.904
+20211011 15202040  % debug 	Resolve @unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15202040  % http  	127.0.0.1 <- 200
+20211011 15202040  %  -    00.001.652
+20211011 15202132  "  +    auth?AUTHTYPE=UB&userName=admin
+20211011 15202132  " http  	127.0.0.1 -> POST auth?AUTHTYPE=UB&userName=admin
+20211011 15202132  " info  	endpoint auth
+20211011 15202132  " http  	127.0.0.1 <- 200
+20211011 15202132  "  -    00.000.792
+20211011 15202132  "  +    auth?AUTHTYPE=UB&clientNonce=c6fbcfd4ab0f19dc2a1be58194ebc2974401d4bdedda9c2f5dd232e357c558b2&password=9ad683ae031c8b615d672655c90704b2c189f9cd4cd76e810ccc1497a1c1b3a3&userName=admin
+20211011 15202132  " http  	127.0.0.1 -> POST auth?AUTHTYPE=UB&clientNonce=c6fbcfd4ab0f19dc2a1be58194ebc2974401d4bdedda9c2f5dd232e357c558b2&password=9ad683ae031c8b615d672655c90704b2c189f9cd4cd76e810ccc1497a1c1b3a3&userName=admin
+20211011 15202132  " info  	endpoint auth
+20211011 15202132  "  +    	DataStore.init(uba_user)
+20211011 15202132  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15202132  " cust1 			{"P1s5":"admin"}
+20211011 15202132  " SQL   			r=1 t=104 fr=61 c=0 q=select id, name, uPasswordHashHexa, uData, isPending, trustedIP from UBA_USER where name=? and disabled=0
+20211011 15202132  "  -    		00.000.141
+20211011 15202132  "  -    	00.000.159
+20211011 15202132  "  +    	method(TubStorageMixin) uba_user.select
+20211011 15202132  "  +    		DataStore.init(uba_user)
+20211011 15202132  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15202132  " cust1 				{"P1":10}
+20211011 15202132  " SQL   				r=1 t=97 fr=57 c=0 q=SELECT A01.name,A01.uData,A01.uPasswordHashHexa,A01.lastPasswordChangeDate,A01.firstName,A01.lastName,A01.fullName  FROM uba_user A01  WHERE A01.ID=?
+20211011 15202132  "  -    			00.000.130
+20211011 15202132  "  -    		00.000.141
+20211011 15202132  "  -    	00.000.245
+20211011 15202132  "  +    	method(TubStorageMixin) uba_role.select
+20211011 15202132  "  +    		DataStore.init(uba_role)
+20211011 15202132  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15202132  " cust1 				{"P1":10, "P2":10}
+20211011 15202132  " SQL   				r=1 t=162 fr=120 c=0 q=SELECT A01.ID,A01.name  FROM uba_role A01  WHERE (((EXISTS (SELECT 1  FROM uba_userrole A02  WHERE A02.userID=? AND A02.roleID=A01.ID)) OR (EXISTS (SELECT 1  FROM uba_grouprole A03  WHERE EXISTS (SELECT 1  FROM uba_usergroup A04  WHERE A04.userID=? AND A04.groupID=A03.groupID) AND A03.roleID=A01.ID))))
+20211011 15202132  "  -    			00.000.197
+20211011 15202132  "  -    		00.000.269
+20211011 15202132  "  -    	00.000.430
+20211011 15202132  "  +    	method(TubStorageMixin) uba_usergroup.select
+20211011 15202132  "  +    		DataStore.init(uba_usergroup)
+20211011 15202132  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15202132  " cust1 				{"P1":10}
+20211011 15202132  " SQL   				r=0 t=56 fr=35 c=0 q=SELECT A01.groupID  FROM uba_usergroup A01  WHERE A01.userID=?
+20211011 15202132  "  -    			00.000.075
+20211011 15202132  "  -    		00.000.083
+20211011 15202132  "  -    	00.000.133
+20211011 15202132  " auth  	New session admin/36a59986 created at 127.0.0.1/0 using Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
+20211011 15202132  " debug 	Call JS method: UBA.onUserLogin
+20211011 15202132  "  +    	method(TubStorageMixin) uba_advSecurity.select
+20211011 15202132  "  +    		DataStore.init(uba_advSecurity)
+20211011 15202132  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15202132  " cust1 				{"P1":10}
+20211011 15202132  " SQL   				r=0 t=72 fr=46 c=0 q=SELECT A01.ID,A01.allowedIP,A01.refreshIP,A01.fp,A01.refreshFp,A01.keyMediaName,A01.refreshKeyMedia,A01.mi_modifyDate  FROM uba_advSecurity A01  WHERE A01.userID=?
+20211011 15202132  "  -    			00.000.104
+20211011 15202132  "  -    		00.000.113
+20211011 15202132  "  -    	00.000.210
+20211011 15202132  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 15202132  "  +    		DataStore.ParseInsertAndExec
+20211011 15202132  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 15202132  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15202132  " cust1 					{"P1s8":"uba_user", "P2":10, "P3s5":"LOGIN", "P4s5":"admin", "P5d":"2021-10-11T15:20:21", "P6s9":"127.0.0.1", "P7s5":"admin", "P8s0":"", "P9":335016762179585, "P10s512":"Host: localhost:8881\r\nConnection: keep-alive\r\nCont..."}
+20211011 15202132  " SQL   					r=1 t=79 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetUser,targetRole,ID,fromValue) VALUES (?,?,?,?,?,?,?,?,?,?)
+20211011 15202132  "  -    				00.000.109
+20211011 15202132  "  -    			00.000.208
+20211011 15202132  "  -    		00.000.222
+20211011 15202132  "  -    	00.000.431
+20211011 15202132  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 15202132  "  -    	00.000.003
+20211011 15202132  " DB    	Commit connection "main"
+20211011 15202132  " http  	127.0.0.1 <- 200
+20211011 15202132  "  -    00.007.815
+20211011 15202133  "  +    getDomainInfo?userName=admin&v=4
+20211011 15202133  " http  	127.0.0.1 -> GET getDomainInfo?userName=admin&v=4
+20211011 15202133  " info  	endpoint getDomainInfo
+20211011 15202133  " auth  	admin/36a59986
+20211011 15202133  " http  	127.0.0.1 <- 200
+20211011 15202133  "  -    00.001.649
+20211011 15202135  "  +    adm
+20211011 15202135  " http  	127.0.0.1 -> GET adm
+20211011 15202135  " info  	endpoint adm
+20211011 15202137  " info  	index.mustache is generated from template /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-pub/index.mustache
+20211011 15202137  " debug 	default-src 'self' https://localhost:8083 http://localhost:8081; connect-src 'self'  https://localhost:8083 http://localhost:8081 blob:; script-src 'self' 'nonce-2ce3def4' 'unsafe-eval' https://localhost:8083 http://localhost:8081 resource://pdf.js/build/ resource://pdf.js/web/; object-src blob: https://localhost:8083 http://localhost:8081; base-uri resource:; style-src 'self' 'unsafe-inline' data: ; font-src 'self' data: ; frame-src 'self'  blob:; img-src 'self' https://unitybase.info  data: blob:; plugin-types application/pdf
+20211011 15202137  " http  	127.0.0.1 <- 200
+20211011 15202137  "  -    00.024.424
+20211011 15202138  #  +    models/adminui-pub/themes/UBGrayTheme/UBGrayTheme-all.css?ver=5.20.26
+20211011 15202138  # http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/UBGrayTheme-all.css?ver=5.20.26
+20211011 15202138  # info  	endpoint models
+20211011 15202138  "  +    models/adminui-pub/ub-css-all.css?ver=5.20.26
+20211011 15202138  " http  	127.0.0.1 -> GET models/adminui-pub/ub-css-all.css?ver=5.20.26
+20211011 15202138  " info  	endpoint models
+20211011 15202138  " http  	127.0.0.1 <- 200
+20211011 15202138  "  -    00.000.439
+20211011 15202138  # http  	127.0.0.1 <- 200
+20211011 15202138  #  -    00.001.256
+20211011 15202139  $  +    models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211011 15202139  $ http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211011 15202139  $ info  	endpoint models
+20211011 15202139  %  +    models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211011 15202139  % http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211011 15202139  % info  	endpoint models
+20211011 15202139  $ debug 	model file is resolved from cache
+20211011 15202139  #  +    models/adminui-vue/dist/fonts/fa/css/regular.min.css
+20211011 15202139  # http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/regular.min.css
+20211011 15202139  # info  	endpoint models
+20211011 15202139  $ http  	127.0.0.1 <- 200
+20211011 15202139  $  -    00.001.529
+20211011 15202139  "  +    models/adminui-vue/dist/fonts/fa/css/v4-shims.min.css
+20211011 15202139  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/v4-shims.min.css
+20211011 15202139  " info  	endpoint models
+20211011 15202139  % debug 	model file is resolved from cache
+20211011 15202139  % http  	127.0.0.1 <- 200
+20211011 15202139  %  -    00.000.867
+20211011 15202139  " http  	127.0.0.1 <- 200
+20211011 15202139  "  -    00.001.206
+20211011 15202139  # http  	127.0.0.1 <- 200
+20211011 15202139  #  -    00.001.648
+20211011 15202139  %  +    models/adminui-pub/themes/UBGrayTheme/ub.css?ver=5.20.26
+20211011 15202139  % http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/ub.css?ver=5.20.26
+20211011 15202139  % info  	endpoint models
+20211011 15202139  % http  	127.0.0.1 <- 200
+20211011 15202139  %  -    00.000.975
+20211011 15202140  #  +    models/adminui-vue/theme/el-theme-compiled.min.css
+20211011 15202140  # http  	127.0.0.1 -> GET models/adminui-vue/theme/el-theme-compiled.min.css
+20211011 15202140  # info  	endpoint models
+20211011 15202140  # debug 	model file is resolved from cache
+20211011 15202140  # http  	127.0.0.1 <- 200
+20211011 15202140  #  -    00.000.644
+20211011 15202140  $  +    clientRequire/systemjs/dist/system.js
+20211011 15202140  $ http  	127.0.0.1 -> GET clientRequire/systemjs/dist/system.js
+20211011 15202140  $ info  	endpoint clientRequire
+20211011 15202140  $ debug 	Try to resolve systemjs/dist/system.js
+20211011 15202140  "  +    models/adminui-pub/dist/ext-all.min.js
+20211011 15202140  " http  	127.0.0.1 -> GET models/adminui-pub/dist/ext-all.min.js
+20211011 15202140  " info  	endpoint models
+20211011 15202140  $ debug 	Resolve systemjs/dist/system.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/systemjs/dist/system.js
+20211011 15202140  $ http  	127.0.0.1 <- 200
+20211011 15202140  " http  	127.0.0.1 <- 200
+20211011 15202140  $  -    00.001.122
+20211011 15202140  "  -    00.000.412
+20211011 15202143  "  +    models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211011 15202143  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211011 15202143  " info  	endpoint models
+20211011 15202143  " debug 	model file is resolved from cache
+20211011 15202143  " http  	127.0.0.1 <- 200
+20211011 15202143  "  -    00.000.361
+20211011 15202158  "  +    clientRequire/@unitybase/adminui-pub/package.json
+20211011 15202158  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-pub/package.json
+20211011 15202158  " info  	endpoint clientRequire
+20211011 15202158  " debug 	Try to resolve @unitybase/adminui-pub/package.json
+20211011 15202158  " debug 	Resolve @unitybase/adminui-pub/package.json -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-pub/package.json
+20211011 15202158  " http  	127.0.0.1 <- 200
+20211011 15202158  "  -    00.000.496
+20211011 15202159  "  +    clientRequire/@unitybase/adminui-pub/dist/adminui.app.min.js
+20211011 15202159  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-pub/dist/adminui.app.min.js
+20211011 15202159  " info  	endpoint clientRequire
+20211011 15202159  " debug 	Try to resolve @unitybase/adminui-pub/dist/adminui.app.min.js
+20211011 15202159  " debug 	Resolve @unitybase/adminui-pub/dist/adminui.app.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-pub/dist/adminui.app.min.js
+20211011 15202159  " http  	127.0.0.1 <- 200
+20211011 15202159  "  -    00.000.566
+20211011 15202204  "  +    getAppInfo
+20211011 15202204  " http  	127.0.0.1 -> GET getAppInfo
+20211011 15202204  " info  	endpoint getAppInfo
+20211011 15202204  #  +    clientRequire/@unitybase/adminui-pub/themes/UBGrayTheme/UBGrayTheme.js
+20211011 15202204  # http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-pub/themes/UBGrayTheme/UBGrayTheme.js
+20211011 15202204  # info  	endpoint clientRequire
+20211011 15202204  # debug 	Try to resolve @unitybase/adminui-pub/themes/UBGrayTheme/UBGrayTheme.js
+20211011 15202204  # debug 	Resolve @unitybase/adminui-pub/themes/UBGrayTheme/UBGrayTheme.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-pub/themes/UBGrayTheme/UBGrayTheme.js
+20211011 15202204  # http  	127.0.0.1 <- 200
+20211011 15202204  #  -    00.001.214
+20211011 15202204  " http  	127.0.0.1 <- 200
+20211011 15202204  "  -    00.003.832
+20211011 15202205  "  +    getDomainInfo?userName=admin&v=4
+20211011 15202205  " http  	127.0.0.1 -> GET getDomainInfo?userName=admin&v=4
+20211011 15202205  " info  	endpoint getDomainInfo
+20211011 15202205  " auth  	admin/36a59986
+20211011 15202205  " http  	127.0.0.1 <- 200
+20211011 15202205  "  -    00.002.121
+20211011 15202206  "  +    allLocales?lang=en&ubver=2758035300
+20211011 15202206  " http  	127.0.0.1 -> GET allLocales?lang=en&ubver=2758035300
+20211011 15202206  " info  	endpoint allLocales
+20211011 15202206  " http  	127.0.0.1 <- 200
+20211011 15202206  "  -    00.008.947
+20211011 15202207  "  +    clientRequire/@unitybase/ubs/package.json
+20211011 15202207  " http  	127.0.0.1 -> GET clientRequire/@unitybase/ubs/package.json
+20211011 15202207  " info  	endpoint clientRequire
+20211011 15202207  " debug 	Try to resolve @unitybase/ubs/package.json
+20211011 15202207  " debug 	Resolve @unitybase/ubs/package.json -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ubs/package.json
+20211011 15202207  " http  	127.0.0.1 <- 200
+20211011 15202207  "  -    00.000.753
+20211011 15202208  "  +    clientRequire/@unitybase/ubs/public/dist/ubs.main.min.js
+20211011 15202208  " http  	127.0.0.1 -> GET clientRequire/@unitybase/ubs/public/dist/ubs.main.min.js
+20211011 15202208  " info  	endpoint clientRequire
+20211011 15202208  " debug 	Try to resolve @unitybase/ubs/public/dist/ubs.main.min.js
+20211011 15202208  " debug 	Resolve @unitybase/ubs/public/dist/ubs.main.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ubs/public/dist/ubs.main.min.js
+20211011 15202208  " http  	127.0.0.1 <- 200
+20211011 15202208  "  -    00.000.609
+20211011 15202210  "  +    ubql?rq=ubs_settings.select&uitag=
+20211011 15202210  " http  	127.0.0.1 -> POST ubql?rq=ubs_settings.select&uitag=
+20211011 15202210  " info  	endpoint ubql
+20211011 15202210  " info  	[{"entity":"ubs_settings","method":"select","fieldList":["ID","settingKey","name","description","type","settingValue","defaultValue"],"version":"1633954630"}]
+20211011 15202210  " auth  	admin/36a59986
+20211011 15202210  "  +    	method(TubStorageMixin) ubs_settings.select
+20211011 15202210  "  +    		DataStore.init(ubs_settings)
+20211011 15202210  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15202210  " SQL   				r=1 t=121 fr=84 c=0 q=SELECT ( (SELECT COALESCE(strftime('%s',  MAX(mi_modifyDate)),1) FROM ubs_settings) ) AS dataVersion
+20211011 15202210  "  -    			00.000.156
+20211011 15202210  "  -    		00.000.169
+20211011 15202210  "  +    		DataStore.init(ubs_settings)
+20211011 15202210  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15202210  " SQL   				r=0 t=50 fr=43 c=0 q=SELECT A01.ID,A01.settingKey,A01.name,A01.description,A01.type,A01.settingValue,A01.defaultValue  FROM ubs_settings A01 
+20211011 15202210  "  -    			00.000.083
+20211011 15202210  "  -    		00.000.096
+20211011 15202210  "  -    	00.000.551
+20211011 15202210  " http  	127.0.0.1 <- 200
+20211011 15202210  "  -    00.001.231
+20211011 15202211  "  +    clientRequire/@unitybase/adminui-vue/package.json
+20211011 15202211  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/package.json
+20211011 15202211  " info  	endpoint clientRequire
+20211011 15202211  " debug 	Try to resolve @unitybase/adminui-vue/package.json
+20211011 15202211  " debug 	Resolve @unitybase/adminui-vue/package.json -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/package.json
+20211011 15202211  " http  	127.0.0.1 <- 200
+20211011 15202211  "  -    00.000.503
+20211011 15202211  "  +    clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.js
+20211011 15202211  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.js
+20211011 15202211  " info  	endpoint clientRequire
+20211011 15202211  " debug 	Try to resolve @unitybase/adminui-vue/dist/adminui-vue.min.js
+20211011 15202211  " debug 	Resolve @unitybase/adminui-vue/dist/adminui-vue.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/adminui-vue.min.js
+20211011 15202211  " http  	127.0.0.1 <- 200
+20211011 15202211  "  -    00.000.558
+20211011 15202220  "  +    clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css?ubver=2758035300
+20211011 15202220  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css?ubver=2758035300
+20211011 15202220  " info  	endpoint clientRequire
+20211011 15202220  " debug 	Retrieve cached @unitybase/adminui-vue/dist/adminui-vue.min.css -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211011 15202220  " http  	127.0.0.1 <- 200
+20211011 15202220  "  -    00.000.606
+20211011 15202222  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15202222  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15202222  " info  	endpoint clientRequire
+20211011 15202222  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15202222  " http  	127.0.0.1 <- 200
+20211011 15202222  "  -    00.000.262
+20211011 15202223  "  +    ubql?rq=ubm_form.select*ubm_enum.select&uitag=
+20211011 15202223  " http  	127.0.0.1 -> POST ubql?rq=ubm_form.select*ubm_enum.select&uitag=
+20211011 15202223  " info  	endpoint ubql
+20211011 15202223  " info  	[{"entity":"ubm_form","method":"select","fieldList":["ID","code","description","caption","formType","formDef","formCode","entity","model","isDefault"],"version":613096383},{"entity":"ubm_enum","method":"select","fieldList":["ID","eGroup","code","name","shortName","sortOrder","mi_modifyDate"],"version":"1633959826"}]
+20211011 15202223  " auth  	admin/36a59986
+20211011 15202223  "  +    	method(fsStorage) ubm_form.select
+20211011 15202223  " debug 		loading from fs...
+20211011 15202224  " debug 		loaded in 18 ms
+20211011 15202224  " debug 		put 9025 bytes to global cache key fsStorage.ubm_form.data
+20211011 15202224  "  -    	00.017.680
+20211011 15202224  "  +    	method(TubStorageMixin) ubm_enum.select
+20211011 15202224  "  +    		DataStore.init(ubm_enum)
+20211011 15202224  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15202224  " SQL   				r=1 t=108 fr=68 c=0 q=SELECT ( (SELECT COALESCE(strftime('%s',  MAX(mi_modifyDate)),1) FROM ubm_enum) ) AS dataVersion
+20211011 15202224  "  -    			00.000.138
+20211011 15202224  "  -    		00.000.150
+20211011 15202224  "  +    		DataStore.init(ubm_enum)
+20211011 15202224  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15202224  " cust1 				{"P1d":"9999-12-31"}
+20211011 15202224  " SQL   				r=4 t=53 fr=39 c=0 q=SELECT A01.ID,A01.eGroup,A01.code,A01.name,A01.shortName,A01.sortOrder,A01.mi_modifyDate  FROM ubm_enum A01  WHERE A01.mi_deleteDate>=?
+20211011 15202224  "  -    			00.000.083
+20211011 15202224  "  -    		00.000.099
+20211011 15202224  "  -    	00.000.468
+20211011 15202224  " http  	127.0.0.1 <- 200
+20211011 15202224  "  -    00.018.857
+20211011 15202226  "  +    ubql?rq=ubm_navshortcut.select&uitag=
+20211011 15202226  " http  	127.0.0.1 -> POST ubql?rq=ubm_navshortcut.select&uitag=
+20211011 15202226  " info  	endpoint ubql
+20211011 15202226  " info  	[{"entity":"ubm_navshortcut","method":"select","fieldList":["ID","desktopID","parentID","code","isFolder","caption","inWindow","isCollapsed","displayOrder","iconCls","mi_modifyDate"],"orderList":{"0":{"expression":"desktopID","order":"asc"},"1":{"expression":"parentID","order":"asc"},"2":{"expression":"displayOrder","order":"asc"},"3":{"expression":"caption","order":"asc"}}}]
+20211011 15202226  " auth  	admin/36a59986
+20211011 15202226  "  +    	method(TubRLSMixin) ubm_navshortcut.select
+20211011 15202226  " debug 		Call func RLS.allowForAdminOwnerAndAdmTable
+20211011 15202226  "  -    	00.000.602
+20211011 15202226  "  +    	method(TubStorageMixin) ubm_navshortcut.select
+20211011 15202226  "  +    		DataStore.init(ubm_navshortcut)
+20211011 15202226  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15202226  " cust1 				{"P1d":"9999-12-31"}
+20211011 15202226  " SQL   				r=5 t=175 fr=103 c=0 q=SELECT A01.ID,A01.desktopID,A01.parentID,A01.code,A01.isFolder,A01.caption,A01.inWindow,A01.isCollapsed,A01.displayOrder,A01.iconCls,A01.mi_modifyDate  FROM ubm_navshortcut A01  WHERE A01.mi_deleteDate>=? ORDER BY 2 ASC,3 ASC,9 ASC,6 ASC
+20211011 15202226  "  -    			00.000.233
+20211011 15202226  "  -    		00.000.255
+20211011 15202226  "  -    	00.000.445
+20211011 15202226  " http  	127.0.0.1 <- 200
+20211011 15202226  "  -    00.001.533
+20211011 15202232  "  +    clientRequire/jdenticon/dist/jdenticon.min.js
+20211011 15202232  " http  	127.0.0.1 -> GET clientRequire/jdenticon/dist/jdenticon.min.js
+20211011 15202232  " info  	endpoint clientRequire
+20211011 15202232  " debug 	Try to resolve jdenticon/dist/jdenticon.min.js
+20211011 15202232  " debug 	Resolve jdenticon/dist/jdenticon.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/jdenticon/dist/jdenticon.min.js
+20211011 15202232  " http  	127.0.0.1 <- 200
+20211011 15202232  "  -    00.000.490
+20211011 15202233  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15202233  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15202233  " info  	endpoint clientRequire
+20211011 15202233  #  +    ubql?rq=ubm_navshortcut.select*ubs_message.getCached&uitag=
+20211011 15202233  # http  	127.0.0.1 -> POST ubql?rq=ubm_navshortcut.select*ubs_message.getCached&uitag=
+20211011 15202233  # info  	endpoint ubql
+20211011 15202233  # info  	[{"entity":"ubm_navshortcut","method":"select","fieldList":["ID","desktopID","parentID","code","isFolder","caption","inWindow","isCollapsed","displayOrder","iconCls"],"orderList":{"0":{"expression":"desktopID","order":"asc"},"1":{"expression":"parentID","order":"asc"},"2":{"expression":"displayOrder","order":"asc"},"3":{"expression":"caption","order":"asc"}}},{"entity":"ubs_message","method":"getCached","fieldList":["ID","messageBody","messageType","startDate","expireDate","recipients.acceptDate"],"whereList":{"c1":{"expression":"[recipients.acceptDate]","condition":"isNull"}},"orderList":{"0":{"expression":"startDate","order":"desc"}}}]
+20211011 15202233  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/ub-icons.woff2 -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15202233  # auth  	admin/36a59986
+20211011 15202233  " http  	127.0.0.1 <- 200
+20211011 15202233  "  -    00.000.278
+20211011 15202233  #  +    	method(TubRLSMixin) ubm_navshortcut.select
+20211011 15202233  # debug 		Call func RLS.allowForAdminOwnerAndAdmTable
+20211011 15202233  #  -    	00.000.923
+20211011 15202233  #  +    	method(TubStorageMixin) ubm_navshortcut.select
+20211011 15202233  #  +    		DataStore.init(ubm_navshortcut)
+20211011 15202233  #  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15202233  #  +    				
+20211011 15202233  #  -    				00.002.735
+20211011 15202233  # cust1 				{"P1d":"9999-12-31"}
+20211011 15202233  # SQL   				r=5 t=2860 fr=2807 c=0 q=SELECT A01.ID,A01.desktopID,A01.parentID,A01.code,A01.isFolder,A01.caption,A01.inWindow,A01.isCollapsed,A01.displayOrder,A01.iconCls  FROM ubm_navshortcut A01  WHERE A01.mi_deleteDate>=? ORDER BY 2 ASC,3 ASC,9 ASC,6 ASC
+20211011 15202233  #  -    			00.002.929
+20211011 15202233  #  -    		00.002.954
+20211011 15202233  #  -    	00.003.151
+20211011 15202233  #  +    	method(TubStorageMixin) ubs_message.select
+20211011 15202233  #  +    		DataStore.init(ubs_message)
+20211011 15202233  #  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15202233  # cust1 				{"P1":10, "P2":1, "P3d":"2021-10-11T15:20:22", "P4d":"9999-12-31"}
+20211011 15202233  # SQL   				r=0 t=150 fr=118 c=0 q=SELECT A01.ID,A01.messageBody,A01.messageType,A01.startDate,A01.expireDate,A02.acceptDate AS C1  FROM ubs_message A01  LEFT JOIN ubs_message_recipient A02 ON A02.messageID=A01.ID  WHERE A02.acceptDate IS NULL AND A02.userID=? AND A01.complete=? AND A01.startDate<? AND A01.mi_deleteDate>=? ORDER BY 4 DESC
+20211011 15202233  #  -    			00.000.203
+20211011 15202233  #  -    		00.000.223
+20211011 15202233  #  -    	00.000.450
+20211011 15202233  # http  	127.0.0.1 <- 200
+20211011 15202233  #  -    00.006.057
+20211011 15202235  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15202235  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15202235  " info  	endpoint clientRequire
+20211011 15202235  #  +    ubql?rq=ubm_enum.select*ubm_desktop.select&uitag=
+20211011 15202235  # http  	127.0.0.1 -> POST ubql?rq=ubm_enum.select*ubm_desktop.select&uitag=
+20211011 15202235  # info  	endpoint ubql
+20211011 15202235  # info  	[{"entity":"ubm_enum","method":"select","fieldList":["ID","name","eGroup","code","sortOrder"],"version":"1633959826"},{"entity":"ubm_desktop","method":"select","fieldList":["ID","caption","isDefault","description","iconCls","displayOrder"],"version":"-1"}]
+20211011 15202235  # auth  	admin/36a59986
+20211011 15202235  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15202235  " http  	127.0.0.1 <- 200
+20211011 15202235  "  -    00.000.275
+20211011 15202235  #  +    	method(TubStorageMixin) ubm_enum.select
+20211011 15202235  #  +    		DataStore.init(ubm_enum)
+20211011 15202235  #  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15202235  # SQL   				r=1 t=260 fr=146 c=0 q=SELECT ( (SELECT COALESCE(strftime('%s',  MAX(mi_modifyDate)),1) FROM ubm_enum) ) AS dataVersion
+20211011 15202235  #  -    			00.000.340
+20211011 15202235  #  -    		00.000.360
+20211011 15202235  #  +    		DataStore.init(ubm_enum)
+20211011 15202235  #  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15202235  # cust1 				{"P1d":"9999-12-31"}
+20211011 15202235  # SQL   				r=4 t=94 fr=71 c=0 q=SELECT A01.ID,A01.name,A01.eGroup,A01.code,A01.sortOrder  FROM ubm_enum A01  WHERE A01.mi_deleteDate>=?
+20211011 15202235  #  -    			00.000.137
+20211011 15202235  #  -    		00.000.169
+20211011 15202235  #  -    	00.000.823
+20211011 15202235  #  +    	method(TubRLSMixin) ubm_desktop.select
+20211011 15202235  # debug 		Call func RLS.allowForAdminOwnerAndAdmTable
+20211011 15202235  #  -    	00.000.325
+20211011 15202235  #  +    	method(TubStorageMixin) ubm_desktop.select
+20211011 15202235  #  +    		DataStore.init(ubm_desktop)
+20211011 15202235  #  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15202235  # cust1 				{"P1d":"9999-12-31"}
+20211011 15202235  # SQL   				r=1 t=143 fr=92 c=0 q=SELECT A01.ID,A01.caption,A01.isDefault,A01.description,A01.iconCls,A01.displayOrder  FROM ubm_desktop A01  WHERE A01.mi_deleteDate>=?
+20211011 15202235  #  -    			00.000.193
+20211011 15202235  #  -    		00.000.215
+20211011 15202235  #  -    	00.000.361
+20211011 15202235  # http  	127.0.0.1 <- 200
+20211011 15202235  #  -    00.002.286
+20211011 15202237  "  +    models/adminui-vue/dist/fonts/fa/webfonts/fa-regular-400.woff2
+20211011 15202237  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/webfonts/fa-regular-400.woff2
+20211011 15202237  " info  	endpoint models
+20211011 15202237  #  +    models/adminui-vue/theme/fonts/element-icons.woff
+20211011 15202237  # http  	127.0.0.1 -> GET models/adminui-vue/theme/fonts/element-icons.woff
+20211011 15202237  # info  	endpoint models
+20211011 15202237  # http  	127.0.0.1 <- 200
+20211011 15202237  #  -    00.000.569
+20211011 15202237  " http  	127.0.0.1 <- 200
+20211011 15202237  "  -    00.001.232
+20211011 15202451  "  +    ubql?rq=ubm_navshortcut.select&uitag=
+20211011 15202451  " http  	127.0.0.1 -> POST ubql?rq=ubm_navshortcut.select&uitag=
+20211011 15202451  " info  	endpoint ubql
+20211011 15202451  " info  	[{"entity":"ubm_navshortcut","method":"select","fieldList":["ID","cmdCode","caption","code"],"whereList":{"c1":{"expression":"[ID]","condition":"equal","value":335016761753608}}}]
+20211011 15202451  " auth  	admin/36a59986
+20211011 15202451  "  +    	method(TubRLSMixin) ubm_navshortcut.select
+20211011 15202451  " debug 		Call func RLS.allowForAdminOwnerAndAdmTable
+20211011 15202451  "  -    	00.000.234
+20211011 15202451  "  +    	method(TubStorageMixin) ubm_navshortcut.select
+20211011 15202451  "  +    		DataStore.init(ubm_navshortcut)
+20211011 15202451  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15202451  " cust1 				{"P1":335016761753608, "P2d":"9999-12-31"}
+20211011 15202451  " SQL   				r=1 t=126 fr=80 c=0 q=SELECT A01.ID,A01.cmdCode,A01.caption,A01.code  FROM ubm_navshortcut A01  WHERE A01.ID=? AND A01.mi_deleteDate>=?
+20211011 15202451  "  -    			00.000.177
+20211011 15202451  "  -    		00.000.196
+20211011 15202451  "  -    	00.000.334
+20211011 15202451  " http  	127.0.0.1 <- 200
+20211011 15202451  "  -    00.000.983
+20211011 15202454  "  +    models/adminui-pub/themes/UBGrayTheme/images/grid/hd-pop.png
+20211011 15202454  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/images/grid/hd-pop.png
+20211011 15202454  " info  	endpoint models
+20211011 15202454  " http  	127.0.0.1 <- 200
+20211011 15202454  "  -    00.001.020
+20211011 15202456  "  +    models/adminui-pub/themes/UBGrayTheme/images/loadmask/loading.gif
+20211011 15202456  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/images/loadmask/loading.gif
+20211011 15202456  " info  	endpoint models
+20211011 15202456  " http  	127.0.0.1 <- 200
+20211011 15202456  "  -    00.000.381
+20211011 15202457  "  +    ubql?rq=req_depart.select&uitag=nsc-req_depart
+20211011 15202457  " http  	127.0.0.1 -> POST ubql?rq=req_depart.select&uitag=nsc-req_depart
+20211011 15202457  " info  	endpoint ubql
+20211011 15202457  " info  	[{"entity":"req_depart","method":"select","fieldList":["name","postAddr","phoneNum","ID"],"options":{"limit":100,"start":0}}]
+20211011 15202457  " auth  	admin/36a59986
+20211011 15202457  "  +    	method(TubStorageMixin) req_depart.select
+20211011 15202457  "  +    		DataStore.init(req_depart)
+20211011 15202457  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15202457  " SQL   				r=2 t=137 fr=95 c=0 q=SELECT A01.name,A01.postAddr,A01.phoneNum,A01.ID  FROM req_depart A01  LIMIT 100 OFFSET 0 
+20211011 15202457  "  -    			00.000.187
+20211011 15202457  "  -    		00.000.204
+20211011 15202457  "  -    	00.000.315
+20211011 15202457  " http  	127.0.0.1 <- 200
+20211011 15202457  "  -    00.000.856
+20211011 15203110  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Bold.ttf
+20211011 15203110  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Bold.ttf
+20211011 15203110  " info  	endpoint clientRequire
+20211011 15203110  " debug 	Try to resolve @unitybase/adminui-vue/dist/fonts/Roboto-Bold.ttf
+20211011 15203110  " debug 	Resolve @unitybase/adminui-vue/dist/fonts/Roboto-Bold.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Bold.ttf
+20211011 15203110  " http  	127.0.0.1 <- 200
+20211011 15203110  "  -    00.000.478
+20211011 15203221  "  +    ubql?rq=uba_user.changeLanguage&uitag=nsc-req_depart
+20211011 15203221  " http  	127.0.0.1 -> POST ubql?rq=uba_user.changeLanguage&uitag=nsc-req_depart
+20211011 15203221  " info  	endpoint ubql
+20211011 15203221  " info  	[{"entity":"uba_user","method":"changeLanguage","newLang":"uk"}]
+20211011 15203221  " auth  	admin/36a59986
+20211011 15203221  "  +    	method(TubStorageMixin) uba_user.select
+20211011 15203221  "  +    		DataStore.init(uba_user)
+20211011 15203221  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203221  " cust1 				{"P1":10}
+20211011 15203221  " SQL   				r=1 t=96 fr=60 c=0 q=SELECT A01.name,A01.uData,A01.mi_modifyDate  FROM uba_user A01  WHERE A01.ID=?
+20211011 15203221  "  -    			00.000.142
+20211011 15203221  "  -    		00.000.155
+20211011 15203221  "  -    	00.000.259
+20211011 15203221  "  +    	method(TubStorageMixin) uba_user.beforeupdate
+20211011 15203221  "  +    		method(TubStorageMixin) uba_user.select
+20211011 15203221  "  +    			DataStore.init(uba_user)->selectBeforeUpdate
+20211011 15203221  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203221  " cust1 					{"P1":10}
+20211011 15203221  " SQL   					r=1 t=143 fr=114 c=0 q=SELECT A01.ID,A01.name,A01.firstName,A01.lastName,A01.fullName,A01.gender,A01.email,A01.phone,A01.avatar,A01.description,A01.uData,A01.disabled,A01.isPending,A01.trustedIP,A01.uPasswordHashHexa,A01.lastPasswordChangeDate,A01.mi_owner,A01.mi_createDate,A01.mi_createUser,A01.mi_modifyDate,A01.mi_modifyUser  FROM uba_user A01  WHERE A01.ID=?
+20211011 15203221  "  -    				00.000.218
+20211011 15203221  "  -    			00.000.249
+20211011 15203221  "  -    		00.000.532
+20211011 15203221  "  -    	00.000.727
+20211011 15203221  "  +    	method(TubStorageMixin) uba_user.update
+20211011 15203221  " debug 		Start processing documents for entity uba_user
+20211011 15203221  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203221  " cust1 			{"P1s13":"{\"lang\":\"uk\"}", "P2d":"2021-10-11T15:20:32", "P3":10, "P4":10}
+20211011 15203221  " SQL   			r=1 t=241 c=0 q=UPDATE uba_user SET uData=?,mi_modifyDate=?,mi_modifyUser=? WHERE ID= ?
+20211011 15203221  "  -    		00.000.304
+20211011 15203221  "  -    	00.000.593
+20211011 15203221  "  +    	method(TubUnityMixin) uba_user.update
+20211011 15203221  "  +    		method(TubStorageMixin) uba_subject.beforeupdate
+20211011 15203221  "  +    			method(TubStorageMixin) uba_subject.select
+20211011 15203221  "  +    				DataStore.init(uba_subject)->selectBeforeUpdate
+20211011 15203221  "  +    					App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203221  " cust1 						{"P1":10}
+20211011 15203221  " SQL   						r=1 t=134 fr=107 c=0 q=SELECT A01.ID,A01.code,A01.name,A01.sType,A01.mi_unityEntity  FROM uba_subject A01  WHERE A01.ID=?
+20211011 15203221  "  -    					00.000.183
+20211011 15203221  "  -    				00.000.202
+20211011 15203221  "  -    			00.000.313
+20211011 15203221  "  -    		00.000.481
+20211011 15203221  "  +    		method(TubStorageMixin) uba_subject.update
+20211011 15203221  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203221  " cust1 				{"P1s8":"uba_user", "P2s1":"U", "P3":10}
+20211011 15203221  " SQL   				r=1 t=58 c=0 q=UPDATE uba_subject SET mi_unityEntity=?,sType=? WHERE ID= ?
+20211011 15203221  "  -    			00.000.085
+20211011 15203221  "  -    		00.000.263
+20211011 15203221  "  +    		method(TubStorageMixin) uba_subject.afterupdate
+20211011 15203221  " debug 			Skipped...
+20211011 15203221  "  -    		00.000.005
+20211011 15203221  "  +    		method(TubAuditMixin) uba_subject.afterupdate
+20211011 15203221  " info  			requestID=335016762540034
+20211011 15203221  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 15203221  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203221  " SQL   					r=1 t=115 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,fromValue,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 15203221  "  -    				00.000.139
+20211011 15203221  "  -    			00.000.319
+20211011 15203221  "  -    		00.000.362
+20211011 15203221  "  -    	00.001.438
+20211011 15203221  "  +    	method(TubStorageMixin) uba_user.afterupdate
+20211011 15203221  " debug 		Skipped...
+20211011 15203221  "  -    	00.000.003
+20211011 15203221  "  +    	method(TubAuditMixin) uba_user.afterupdate
+20211011 15203221  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 15203221  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203221  " SQL   				r=1 t=136 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,fromValue,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 15203221  "  -    			00.000.038
+20211011 15203221  "  -    		00.000.210
+20211011 15203221  "  -    	00.000.272
+20211011 15203221  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 15203221  "  +    		DataStore.ParseInsertAndExec
+20211011 15203221  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 15203221  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203221  " cust1 					{"P1s8":"uba_user", "P2":10, "P3s6":"UPDATE", "P4s5":"admin", "P5d":"2021-10-11T15:20:32", "P6s9":"127.0.0.1", "P7s5":"admin", "P8":335016762540036, "P9s471":"[{\"ID\":10,\"name\":\"admin\",\"firstName\":null,\"lastNam...", "P10s99":"{\"ID\":10,\"uData\":\"{\\\"lang\\\":\\\"uk\\\"}\",\"mi_modifyDat..."}
+20211011 15203221  " SQL   					r=1 t=69 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetUser,ID,fromValue,toValue) VALUES (?,?,?,?,?,?,?,?,?,?)
+20211011 15203221  "  -    				00.000.103
+20211011 15203221  "  -    			00.000.256
+20211011 15203221  "  -    		00.000.273
+20211011 15203221  "  -    	00.000.320
+20211011 15203221  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 15203221  "  -    	00.000.004
+20211011 15203222  " DB    	Commit connection "main" in 306us
+20211011 15203222  " http  	127.0.0.1 <- 200
+20211011 15203222  "  -    00.006.786
+20211011 15203222  "  +    logout
+20211011 15203222  " http  	127.0.0.1 -> POST logout
+20211011 15203222  " info  	endpoint logout
+20211011 15203222  " info  	{}
+20211011 15203222  " auth  	admin/36a59986
+20211011 15203222  " http  	127.0.0.1 <- 200
+20211011 15203222  "  -    00.000.191
+20211011 15203223  "  +    adm
+20211011 15203223  " http  	127.0.0.1 -> GET adm
+20211011 15203223  " info  	endpoint adm
+20211011 15203223  " debug 	Compiled index.mustache is used
+20211011 15203223  " debug 	default-src 'self' https://localhost:8083 http://localhost:8081; connect-src 'self'  https://localhost:8083 http://localhost:8081 blob:; script-src 'self' 'nonce-2ce3def4' 'unsafe-eval' https://localhost:8083 http://localhost:8081 resource://pdf.js/build/ resource://pdf.js/web/; object-src blob: https://localhost:8083 http://localhost:8081; base-uri resource:; style-src 'self' 'unsafe-inline' data: ; font-src 'self' data: ; frame-src 'self'  blob:; img-src 'self' https://unitybase.info  data: blob:; plugin-types application/pdf
+20211011 15203223  " http  	127.0.0.1 <- 200
+20211011 15203223  "  -    00.000.934
+20211011 15203225  #  +    models/adminui-pub/themes/UBGrayTheme/UBGrayTheme-all.css?ver=5.20.26
+20211011 15203225  # http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/UBGrayTheme-all.css?ver=5.20.26
+20211011 15203225  # info  	endpoint models
+20211011 15203225  # debug 	model file is resolved from cache
+20211011 15203225  # http  	127.0.0.1 <- 200
+20211011 15203225  #  -    00.000.319
+20211011 15203225  "  +    models/adminui-pub/ub-css-all.css?ver=5.20.26
+20211011 15203225  " http  	127.0.0.1 -> GET models/adminui-pub/ub-css-all.css?ver=5.20.26
+20211011 15203225  " info  	endpoint models
+20211011 15203225  $  +    models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211011 15203225  $ http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211011 15203225  $ info  	endpoint models
+20211011 15203225  " debug 	model file is resolved from cache
+20211011 15203225  $ debug 	model file is resolved from cache
+20211011 15203225  " http  	127.0.0.1 <- 200
+20211011 15203225  "  -    00.000.312
+20211011 15203225  $ http  	127.0.0.1 <- 200
+20211011 15203225  $  -    00.000.594
+20211011 15203225  %  +    models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211011 15203225  % http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211011 15203225  % info  	endpoint models
+20211011 15203225  % debug 	model file is resolved from cache
+20211011 15203225  % http  	127.0.0.1 <- 200
+20211011 15203225  %  -    00.000.474
+20211011 15203225  #  +    models/adminui-vue/dist/fonts/fa/css/regular.min.css
+20211011 15203225  # http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/regular.min.css
+20211011 15203225  # info  	endpoint models
+20211011 15203225  # debug 	model file is resolved from cache
+20211011 15203225  # http  	127.0.0.1 <- 200
+20211011 15203225  #  -    00.000.788
+20211011 15203225  "  +    models/adminui-vue/dist/fonts/fa/css/v4-shims.min.css
+20211011 15203225  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/v4-shims.min.css
+20211011 15203225  " info  	endpoint models
+20211011 15203225  " debug 	model file is resolved from cache
+20211011 15203225  " http  	127.0.0.1 <- 200
+20211011 15203225  "  -    00.000.253
+20211011 15203226  $  +    models/adminui-pub/themes/UBGrayTheme/ub.css?ver=5.20.26
+20211011 15203226  $ http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/ub.css?ver=5.20.26
+20211011 15203226  $ info  	endpoint models
+20211011 15203226  $ debug 	model file is resolved from cache
+20211011 15203226  $ http  	127.0.0.1 <- 200
+20211011 15203226  %  +    models/adminui-vue/theme/el-theme-compiled.min.css
+20211011 15203226  % http  	127.0.0.1 -> GET models/adminui-vue/theme/el-theme-compiled.min.css
+20211011 15203226  % info  	endpoint models
+20211011 15203226  $  -    00.000.441
+20211011 15203226  % debug 	model file is resolved from cache
+20211011 15203226  #  +    clientRequire/systemjs/dist/system.js
+20211011 15203226  # http  	127.0.0.1 -> GET clientRequire/systemjs/dist/system.js
+20211011 15203226  # info  	endpoint clientRequire
+20211011 15203226  # debug 	Retrieve cached systemjs/dist/system.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/systemjs/dist/system.js
+20211011 15203226  # http  	127.0.0.1 <- 200
+20211011 15203226  % http  	127.0.0.1 <- 200
+20211011 15203226  %  -    00.000.439
+20211011 15203226  #  -    00.000.262
+20211011 15203226  "  +    models/adminui-pub/dist/ext-all.min.js
+20211011 15203226  " http  	127.0.0.1 -> GET models/adminui-pub/dist/ext-all.min.js
+20211011 15203226  " info  	endpoint models
+20211011 15203226  " debug 	model file is resolved from cache
+20211011 15203226  " http  	127.0.0.1 <- 200
+20211011 15203226  "  -    00.000.285
+20211011 15203226  $  +    models/adminui-vue/views/ub-auth.html?returnUrl=http%3A%2F%2Flocalhost%3A8881%2Fadm
+20211011 15203226  $ http  	127.0.0.1 -> GET models/adminui-vue/views/ub-auth.html?returnUrl=http%3A%2F%2Flocalhost%3A8881%2Fadm
+20211011 15203226  $ info  	endpoint models
+20211011 15203226  $ debug 	model file is resolved from cache
+20211011 15203226  $ http  	127.0.0.1 <- 200
+20211011 15203226  $  -    00.000.375
+20211011 15203228  " EXC   ECrtSocket ("SndLow() len=498099 [32  Broken pipe]") [] at   $000000000046BBBD  $000000000046BB11
+20211011 15203229  "  +    models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211011 15203229  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211011 15203229  " info  	endpoint models
+20211011 15203229  #  +    models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211011 15203229  # http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211011 15203229  # info  	endpoint models
+20211011 15203229  $  +    models/adminui-vue/theme/el-theme-compiled.min.css
+20211011 15203229  " debug 	model file is resolved from cache
+20211011 15203229  $ http  	127.0.0.1 -> GET models/adminui-vue/theme/el-theme-compiled.min.css
+20211011 15203229  $ info  	endpoint models
+20211011 15203229  %  +    clientRequire/lodash/lodash.min.js
+20211011 15203229  % http  	127.0.0.1 -> GET clientRequire/lodash/lodash.min.js
+20211011 15203229  " http  	127.0.0.1 <- 200
+20211011 15203229  % info  	endpoint clientRequire
+20211011 15203229  "  -    00.000.340
+20211011 15203229  $ debug 	model file is resolved from cache
+20211011 15203229  % debug 	Retrieve cached lodash/lodash.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/lodash/lodash.min.js
+20211011 15203229  $ http  	127.0.0.1 <- 200
+20211011 15203229  % http  	127.0.0.1 <- 200
+20211011 15203229  $  -    00.000.314
+20211011 15203229  %  -    00.000.277
+20211011 15203229  # debug 	model file is resolved from cache
+20211011 15203229  "  +    clientRequire/@unitybase/ub-pub/dist/ub-pub.min.js
+20211011 15203229  " http  	127.0.0.1 -> GET clientRequire/@unitybase/ub-pub/dist/ub-pub.min.js
+20211011 15203229  " info  	endpoint clientRequire
+20211011 15203229  " debug 	Retrieve cached @unitybase/ub-pub/dist/ub-pub.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211011 15203229  " http  	127.0.0.1 <- 200
+20211011 15203229  "  -    00.000.281
+20211011 15203229  %  +    models/adminui-vue/dist/adminui-vue.min.js
+20211011 15203229  % http  	127.0.0.1 -> GET models/adminui-vue/dist/adminui-vue.min.js
+20211011 15203229  % info  	endpoint models
+20211011 15203229  % debug 	model file is resolved from cache
+20211011 15203229  % http  	127.0.0.1 <- 200
+20211011 15203229  %  -    00.000.331
+20211011 15203230  # http  	127.0.0.1 <- 200
+20211011 15203230  #  -    00.014.628
+20211011 15203238  "  +    clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211011 15203238  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211011 15203238  " info  	endpoint clientRequire
+20211011 15203238  " debug 	Retrieve cached @unitybase/adminui-vue/dist/adminui-vue.min.css -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211011 15203238  " http  	127.0.0.1 <- 200
+20211011 15203238  "  -    00.000.247
+20211011 15203240  "  +    getAppInfo
+20211011 15203240  " http  	127.0.0.1 -> GET getAppInfo
+20211011 15203240  " info  	endpoint getAppInfo
+20211011 15203240  " http  	127.0.0.1 <- 200
+20211011 15203240  "  -    00.001.103
+20211011 15203241  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15203241  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15203241  " info  	endpoint clientRequire
+20211011 15203241  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15203241  " http  	127.0.0.1 <- 200
+20211011 15203241  "  -    00.000.249
+20211011 15203241  #  +    models/ub-pub/locale/lang-uk.json
+20211011 15203241  # http  	127.0.0.1 -> GET models/ub-pub/locale/lang-uk.json
+20211011 15203241  # info  	endpoint models
+20211011 15203241  # http  	127.0.0.1 <- 200
+20211011 15203241  #  -    00.000.608
+20211011 15203242  "  +    models/ub-pub/img/login-logo.svg
+20211011 15203242  " http  	127.0.0.1 -> GET models/ub-pub/img/login-logo.svg
+20211011 15203242  " info  	endpoint models
+20211011 15203242  " debug 	model file is resolved from cache
+20211011 15203242  " http  	127.0.0.1 <- 200
+20211011 15203242  "  -    00.000.182
+20211011 15203243  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211011 15203243  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211011 15203243  " info  	endpoint clientRequire
+20211011 15203243  $  +    models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211011 15203243  $ http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211011 15203243  $ info  	endpoint models
+20211011 15203243  %  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15203243  % http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15203243  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211011 15203243  % info  	endpoint clientRequire
+20211011 15203243  " http  	127.0.0.1 <- 200
+20211011 15203243  "  -    00.000.251
+20211011 15203243  $ debug 	model file is resolved from cache
+20211011 15203243  % debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15203243  $ http  	127.0.0.1 <- 200
+20211011 15203243  % http  	127.0.0.1 <- 200
+20211011 15203243  $  -    00.000.254
+20211011 15203243  %  -    00.000.234
+20211011 15203243  #  +    clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15203243  # http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15203243  # info  	endpoint clientRequire
+20211011 15203243  # debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/ub-icons.woff2 -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15203243  # http  	127.0.0.1 <- 200
+20211011 15203243  #  -    00.000.476
+20211011 15203343  "  +    auth?AUTHTYPE=UB&userName=admin
+20211011 15203343  " http  	127.0.0.1 -> POST auth?AUTHTYPE=UB&userName=admin
+20211011 15203343  " info  	endpoint auth
+20211011 15203343  " http  	127.0.0.1 <- 200
+20211011 15203343  "  -    00.000.184
+20211011 15203343  "  +    auth?AUTHTYPE=UB&clientNonce=c6fbcfd4ab0f19dc2a1be58194ebc2974401d4bdedda9c2f5dd232e357c558b2&password=9ad683ae031c8b615d672655c90704b2c189f9cd4cd76e810ccc1497a1c1b3a3&userName=admin
+20211011 15203343  " http  	127.0.0.1 -> POST auth?AUTHTYPE=UB&clientNonce=c6fbcfd4ab0f19dc2a1be58194ebc2974401d4bdedda9c2f5dd232e357c558b2&password=9ad683ae031c8b615d672655c90704b2c189f9cd4cd76e810ccc1497a1c1b3a3&userName=admin
+20211011 15203343  " info  	endpoint auth
+20211011 15203343  "  +    	DataStore.init(uba_user)
+20211011 15203343  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203343  " cust1 			{"P1s5":"admin"}
+20211011 15203343  " SQL   			r=1 t=132 fr=104 c=0 q=select id, name, uPasswordHashHexa, uData, isPending, trustedIP from UBA_USER where name=? and disabled=0
+20211011 15203343  "  -    		00.000.071
+20211011 15203343  "  -    	00.000.090
+20211011 15203343  "  +    	method(TubStorageMixin) uba_user.select
+20211011 15203343  "  +    		DataStore.init(uba_user)
+20211011 15203343  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203343  " cust1 				{"P1":10}
+20211011 15203343  " SQL   				r=1 t=118 fr=98 c=0 q=SELECT A01.name,A01.uData,A01.uPasswordHashHexa,A01.lastPasswordChangeDate,A01.firstName,A01.lastName,A01.fullName  FROM uba_user A01  WHERE A01.ID=?
+20211011 15203343  "  -    			00.000.054
+20211011 15203343  "  -    		00.000.068
+20211011 15203343  "  -    	00.000.184
+20211011 15203343  "  +    	method(TubStorageMixin) uba_role.select
+20211011 15203343  "  +    		DataStore.init(uba_role)
+20211011 15203343  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203343  " cust1 				{"P1":10, "P2":10}
+20211011 15203343  " SQL   				r=1 t=211 fr=162 c=0 q=SELECT A01.ID,A01.name  FROM uba_role A01  WHERE (((EXISTS (SELECT 1  FROM uba_userrole A02  WHERE A02.userID=? AND A02.roleID=A01.ID)) OR (EXISTS (SELECT 1  FROM uba_grouprole A03  WHERE EXISTS (SELECT 1  FROM uba_usergroup A04  WHERE A04.userID=? AND A04.groupID=A03.groupID) AND A03.roleID=A01.ID))))
+20211011 15203343  "  -    			00.000.102
+20211011 15203343  "  -    		00.000.126
+20211011 15203343  "  -    	00.000.438
+20211011 15203343  "  +    	method(TubStorageMixin) uba_usergroup.select
+20211011 15203343  "  +    		DataStore.init(uba_usergroup)
+20211011 15203343  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203343  " cust1 				{"P1":10}
+20211011 15203343  " SQL   				r=0 t=75 fr=56 c=0 q=SELECT A01.groupID  FROM uba_usergroup A01  WHERE A01.userID=?
+20211011 15203343  "  -    			00.000.048
+20211011 15203343  "  -    		00.000.060
+20211011 15203343  "  -    	00.000.145
+20211011 15203343  " auth  	New session admin/eeb3a772 created at 127.0.0.1/0 using Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
+20211011 15203343  " debug 	Call JS method: UBA.onUserLogin
+20211011 15203343  "  +    	method(TubStorageMixin) uba_advSecurity.select
+20211011 15203343  "  +    		DataStore.init(uba_advSecurity)
+20211011 15203343  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203343  " cust1 				{"P1":10}
+20211011 15203343  " SQL   				r=0 t=81 fr=72 c=0 q=SELECT A01.ID,A01.allowedIP,A01.refreshIP,A01.fp,A01.refreshFp,A01.keyMediaName,A01.refreshKeyMedia,A01.mi_modifyDate  FROM uba_advSecurity A01  WHERE A01.userID=?
+20211011 15203343  "  -    			00.000.037
+20211011 15203343  "  -    		00.000.048
+20211011 15203343  "  -    	00.000.147
+20211011 15203343  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 15203343  "  +    		DataStore.ParseInsertAndExec
+20211011 15203343  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 15203343  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203343  " cust1 					{"P1s8":"uba_user", "P2":10, "P3s5":"LOGIN", "P4s5":"admin", "P5d":"2021-10-11T15:20:33", "P6s9":"127.0.0.1", "P7s5":"admin", "P8s0":"", "P9":335016762572801, "P10s512":"Host: localhost:8881\r\nConnection: keep-alive\r\nCont..."}
+20211011 15203343  " SQL   					r=1 t=97 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetUser,targetRole,ID,fromValue) VALUES (?,?,?,?,?,?,?,?,?,?)
+20211011 15203343  "  -    				00.000.054
+20211011 15203343  "  -    			00.000.166
+20211011 15203343  "  -    		00.000.181
+20211011 15203343  "  -    	00.000.211
+20211011 15203343  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 15203343  "  -    	00.000.004
+20211011 15203344  " DB    	Commit connection "main"
+20211011 15203344  " http  	127.0.0.1 <- 200
+20211011 15203344  "  -    00.005.703
+20211011 15203345  "  +    getDomainInfo?userName=admin&v=4
+20211011 15203345  " http  	127.0.0.1 -> GET getDomainInfo?userName=admin&v=4
+20211011 15203345  " info  	endpoint getDomainInfo
+20211011 15203345  " auth  	admin/eeb3a772
+20211011 15203345  " http  	127.0.0.1 <- 200
+20211011 15203345  "  -    00.001.896
+20211011 15203346  "  +    adm
+20211011 15203346  " http  	127.0.0.1 -> GET adm
+20211011 15203346  " info  	endpoint adm
+20211011 15203346  " debug 	Compiled index.mustache is used
+20211011 15203346  " debug 	default-src 'self' https://localhost:8083 http://localhost:8081; connect-src 'self'  https://localhost:8083 http://localhost:8081 blob:; script-src 'self' 'nonce-2ce3def4' 'unsafe-eval' https://localhost:8083 http://localhost:8081 resource://pdf.js/build/ resource://pdf.js/web/; object-src blob: https://localhost:8083 http://localhost:8081; base-uri resource:; style-src 'self' 'unsafe-inline' data: ; font-src 'self' data: ; frame-src 'self'  blob:; img-src 'self' https://unitybase.info  data: blob:; plugin-types application/pdf
+20211011 15203346  " http  	127.0.0.1 <- 200
+20211011 15203346  "  -    00.000.623
+20211011 15203347  #  +    models/adminui-pub/themes/UBGrayTheme/UBGrayTheme-all.css?ver=5.20.26
+20211011 15203347  # http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/UBGrayTheme-all.css?ver=5.20.26
+20211011 15203347  # info  	endpoint models
+20211011 15203347  # debug 	model file is resolved from cache
+20211011 15203347  # http  	127.0.0.1 <- 200
+20211011 15203347  #  -    00.000.327
+20211011 15203347  "  +    models/adminui-pub/ub-css-all.css?ver=5.20.26
+20211011 15203347  " http  	127.0.0.1 -> GET models/adminui-pub/ub-css-all.css?ver=5.20.26
+20211011 15203347  " info  	endpoint models
+20211011 15203347  $  +    models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211011 15203347  $ http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211011 15203347  $ info  	endpoint models
+20211011 15203347  " debug 	model file is resolved from cache
+20211011 15203347  " http  	127.0.0.1 <- 200
+20211011 15203347  $ debug 	model file is resolved from cache
+20211011 15203347  "  -    00.000.291
+20211011 15203347  $ http  	127.0.0.1 <- 200
+20211011 15203347  $  -    00.000.279
+20211011 15203347  %  +    models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211011 15203347  % http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211011 15203347  % info  	endpoint models
+20211011 15203348  % debug 	model file is resolved from cache
+20211011 15203348  % http  	127.0.0.1 <- 200
+20211011 15203348  %  -    00.001.218
+20211011 15203348  "  +    models/adminui-vue/dist/fonts/fa/css/regular.min.css
+20211011 15203348  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/regular.min.css
+20211011 15203348  " info  	endpoint models
+20211011 15203348  " debug 	model file is resolved from cache
+20211011 15203348  " http  	127.0.0.1 <- 200
+20211011 15203348  "  -    00.000.230
+20211011 15203348  #  +    models/adminui-vue/dist/fonts/fa/css/v4-shims.min.css
+20211011 15203348  # http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/v4-shims.min.css
+20211011 15203348  # info  	endpoint models
+20211011 15203348  # debug 	model file is resolved from cache
+20211011 15203348  # http  	127.0.0.1 <- 200
+20211011 15203348  #  -    00.001.079
+20211011 15203348  %  +    models/adminui-pub/themes/UBGrayTheme/ub.css?ver=5.20.26
+20211011 15203348  % http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/ub.css?ver=5.20.26
+20211011 15203348  % info  	endpoint models
+20211011 15203348  % debug 	model file is resolved from cache
+20211011 15203348  % http  	127.0.0.1 <- 200
+20211011 15203348  %  -    00.001.182
+20211011 15203348  "  +    models/adminui-vue/theme/el-theme-compiled.min.css
+20211011 15203348  " http  	127.0.0.1 -> GET models/adminui-vue/theme/el-theme-compiled.min.css
+20211011 15203348  " info  	endpoint models
+20211011 15203348  " debug 	model file is resolved from cache
+20211011 15203348  " http  	127.0.0.1 <- 200
+20211011 15203348  "  -    00.000.186
+20211011 15203348  $  +    clientRequire/systemjs/dist/system.js
+20211011 15203348  $ http  	127.0.0.1 -> GET clientRequire/systemjs/dist/system.js
+20211011 15203348  $ info  	endpoint clientRequire
+20211011 15203348  #  +    models/adminui-pub/dist/ext-all.min.js
+20211011 15203348  # http  	127.0.0.1 -> GET models/adminui-pub/dist/ext-all.min.js
+20211011 15203348  # info  	endpoint models
+20211011 15203348  # debug 	model file is resolved from cache
+20211011 15203348  # http  	127.0.0.1 <- 200
+20211011 15203348  #  -    00.000.241
+20211011 15203348  $ debug 	Retrieve cached systemjs/dist/system.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/systemjs/dist/system.js
+20211011 15203348  $ http  	127.0.0.1 <- 200
+20211011 15203348  $  -    00.001.195
+20211011 15203352  "  +    models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211011 15203352  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211011 15203352  " info  	endpoint models
+20211011 15203352  " debug 	model file is resolved from cache
+20211011 15203352  " http  	127.0.0.1 <- 200
+20211011 15203352  "  -    00.000.283
+20211011 15203362  "  +    clientRequire/@unitybase/adminui-pub/package.json
+20211011 15203362  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-pub/package.json
+20211011 15203362  " info  	endpoint clientRequire
+20211011 15203362  " debug 	Retrieve cached @unitybase/adminui-pub/package.json -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-pub/package.json
+20211011 15203362  " http  	127.0.0.1 <- 200
+20211011 15203362  "  -    00.000.315
+20211011 15203400  "  +    clientRequire/@unitybase/adminui-pub/dist/adminui.app.min.js
+20211011 15203400  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-pub/dist/adminui.app.min.js
+20211011 15203400  " info  	endpoint clientRequire
+20211011 15203400  " debug 	Retrieve cached @unitybase/adminui-pub/dist/adminui.app.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-pub/dist/adminui.app.min.js
+20211011 15203400  " http  	127.0.0.1 <- 200
+20211011 15203400  "  -    00.000.292
+20211011 15203407  "  +    getAppInfo
+20211011 15203407  " http  	127.0.0.1 -> GET getAppInfo
+20211011 15203407  " info  	endpoint getAppInfo
+20211011 15203407  #  +    clientRequire/@unitybase/adminui-pub/themes/UBGrayTheme/UBGrayTheme.js
+20211011 15203407  # http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-pub/themes/UBGrayTheme/UBGrayTheme.js
+20211011 15203407  # info  	endpoint clientRequire
+20211011 15203407  # debug 	Retrieve cached @unitybase/adminui-pub/themes/UBGrayTheme/UBGrayTheme.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-pub/themes/UBGrayTheme/UBGrayTheme.js
+20211011 15203407  # http  	127.0.0.1 <- 200
+20211011 15203407  #  -    00.000.301
+20211011 15203407  " http  	127.0.0.1 <- 200
+20211011 15203407  "  -    00.003.840
+20211011 15203408  "  +    getDomainInfo?userName=admin&v=4
+20211011 15203408  " http  	127.0.0.1 -> GET getDomainInfo?userName=admin&v=4
+20211011 15203408  " info  	endpoint getDomainInfo
+20211011 15203408  " auth  	admin/eeb3a772
+20211011 15203408  " http  	127.0.0.1 <- 200
+20211011 15203408  "  -    00.001.534
+20211011 15203409  "  +    allLocales?lang=uk&ubver=2758035300
+20211011 15203409  " http  	127.0.0.1 -> GET allLocales?lang=uk&ubver=2758035300
+20211011 15203409  " info  	endpoint allLocales
+20211011 15203410  " http  	127.0.0.1 <- 200
+20211011 15203410  "  -    00.011.278
+20211011 15203411  "  +    clientRequire/@unitybase/ubs/package.json
+20211011 15203411  " http  	127.0.0.1 -> GET clientRequire/@unitybase/ubs/package.json
+20211011 15203411  " info  	endpoint clientRequire
+20211011 15203411  " debug 	Retrieve cached @unitybase/ubs/package.json -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ubs/package.json
+20211011 15203411  " http  	127.0.0.1 <- 200
+20211011 15203411  "  -    00.000.317
+20211011 15203411  "  +    clientRequire/@unitybase/ubs/public/dist/ubs.main.min.js
+20211011 15203411  " http  	127.0.0.1 -> GET clientRequire/@unitybase/ubs/public/dist/ubs.main.min.js
+20211011 15203411  " info  	endpoint clientRequire
+20211011 15203411  " debug 	Retrieve cached @unitybase/ubs/public/dist/ubs.main.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ubs/public/dist/ubs.main.min.js
+20211011 15203411  " http  	127.0.0.1 <- 200
+20211011 15203411  "  -    00.000.295
+20211011 15203413  "  +    ubql?rq=ubs_settings.select&uitag=
+20211011 15203413  " http  	127.0.0.1 -> POST ubql?rq=ubs_settings.select&uitag=
+20211011 15203413  " info  	endpoint ubql
+20211011 15203413  " info  	[{"entity":"ubs_settings","method":"select","fieldList":["ID","settingKey","name","description","type","settingValue","defaultValue"],"version":"-1"}]
+20211011 15203413  " auth  	admin/eeb3a772
+20211011 15203413  "  +    	method(TubStorageMixin) ubs_settings.select
+20211011 15203413  "  +    		DataStore.init(ubs_settings)
+20211011 15203413  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203413  " SQL   				r=1 t=145 fr=121 c=0 q=SELECT ( (SELECT COALESCE(strftime('%s',  MAX(mi_modifyDate)),1) FROM ubs_settings) ) AS dataVersion
+20211011 15203413  "  -    			00.000.053
+20211011 15203413  "  -    		00.000.065
+20211011 15203413  "  +    		DataStore.init(ubs_settings)
+20211011 15203413  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203413  " SQL   				r=0 t=73 fr=66 c=0 q=SELECT A01.ID,A01.settingKey,A01.name_uk,A01.description_uk,A01.type,A01.settingValue_uk,A01.defaultValue_uk  FROM ubs_settings A01 
+20211011 15203413  "  -    			00.000.103
+20211011 15203413  "  -    		00.000.115
+20211011 15203413  "  -    	00.000.391
+20211011 15203413  " http  	127.0.0.1 <- 200
+20211011 15203413  "  -    00.000.768
+20211011 15203414  "  +    clientRequire/@unitybase/adminui-vue/package.json
+20211011 15203414  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/package.json
+20211011 15203414  " info  	endpoint clientRequire
+20211011 15203414  " debug 	Retrieve cached @unitybase/adminui-vue/package.json -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/package.json
+20211011 15203414  " http  	127.0.0.1 <- 200
+20211011 15203414  "  -    00.000.241
+20211011 15203414  "  +    clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.js
+20211011 15203414  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.js
+20211011 15203414  " info  	endpoint clientRequire
+20211011 15203414  " debug 	Retrieve cached @unitybase/adminui-vue/dist/adminui-vue.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/adminui-vue.min.js
+20211011 15203414  " http  	127.0.0.1 <- 200
+20211011 15203414  "  -    00.000.521
+20211011 15203423  "  +    clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css?ubver=2758035300
+20211011 15203423  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css?ubver=2758035300
+20211011 15203423  " info  	endpoint clientRequire
+20211011 15203423  " debug 	Retrieve cached @unitybase/adminui-vue/dist/adminui-vue.min.css -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211011 15203423  " http  	127.0.0.1 <- 200
+20211011 15203423  "  -    00.000.227
+20211011 15203424  "  +    clientRequire/moment/locale/uk.js?ubver=2758035300
+20211011 15203424  " http  	127.0.0.1 -> GET clientRequire/moment/locale/uk.js?ubver=2758035300
+20211011 15203424  " info  	endpoint clientRequire
+20211011 15203424  " debug 	Try to resolve moment/locale/uk.js
+20211011 15203424  " debug 	Resolve moment/locale/uk.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/moment/locale/uk.js
+20211011 15203424  " http  	127.0.0.1 <- 200
+20211011 15203424  "  -    00.000.434
+20211011 15203425  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15203425  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15203425  " info  	endpoint clientRequire
+20211011 15203425  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15203425  " http  	127.0.0.1 <- 200
+20211011 15203425  "  -    00.000.232
+20211011 15203425  "  +    ubql?rq=ubm_form.select*ubm_enum.select&uitag=
+20211011 15203425  " http  	127.0.0.1 -> POST ubql?rq=ubm_form.select*ubm_enum.select&uitag=
+20211011 15203425  " info  	endpoint ubql
+20211011 15203425  " info  	[{"entity":"ubm_form","method":"select","fieldList":["ID","code","description","caption","formType","formDef","formCode","entity","model","isDefault"],"version":"-1"},{"entity":"ubm_enum","method":"select","fieldList":["ID","eGroup","code","name","shortName","sortOrder","mi_modifyDate"],"version":"-1"}]
+20211011 15203425  " auth  	admin/eeb3a772
+20211011 15203425  "  +    	method(fsStorage) ubm_form.select
+20211011 15203425  " debug 		return data from thread cache
+20211011 15203426  "  -    	00.001.610
+20211011 15203426  "  +    	method(TubStorageMixin) ubm_enum.select
+20211011 15203426  "  +    		DataStore.init(ubm_enum)
+20211011 15203426  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203426  " SQL   				r=1 t=143 fr=108 c=0 q=SELECT ( (SELECT COALESCE(strftime('%s',  MAX(mi_modifyDate)),1) FROM ubm_enum) ) AS dataVersion
+20211011 15203426  "  -    			00.000.063
+20211011 15203426  "  -    		00.000.071
+20211011 15203426  "  +    		DataStore.init(ubm_enum)
+20211011 15203426  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203426  " cust1 				{"P1d":"9999-12-31"}
+20211011 15203426  " SQL   				r=4 t=87 fr=72 c=0 q=SELECT A01.ID,A01.eGroup,A01.code,A01.name_uk,A01.shortName_uk,A01.sortOrder,A01.mi_modifyDate  FROM ubm_enum A01  WHERE A01.mi_deleteDate>=?
+20211011 15203426  "  -    			00.000.121
+20211011 15203426  "  -    		00.000.134
+20211011 15203426  "  -    	00.000.393
+20211011 15203426  " http  	127.0.0.1 <- 200
+20211011 15203426  "  -    00.002.530
+20211011 15203428  "  +    ubql?rq=ubm_navshortcut.select&uitag=
+20211011 15203428  " http  	127.0.0.1 -> POST ubql?rq=ubm_navshortcut.select&uitag=
+20211011 15203428  " info  	endpoint ubql
+20211011 15203428  " info  	[{"entity":"ubm_navshortcut","method":"select","fieldList":["ID","desktopID","parentID","code","isFolder","caption","inWindow","isCollapsed","displayOrder","iconCls","mi_modifyDate"],"orderList":{"0":{"expression":"desktopID","order":"asc"},"1":{"expression":"parentID","order":"asc"},"2":{"expression":"displayOrder","order":"asc"},"3":{"expression":"caption","order":"asc"}}}]
+20211011 15203428  " auth  	admin/eeb3a772
+20211011 15203428  "  +    	method(TubRLSMixin) ubm_navshortcut.select
+20211011 15203428  " debug 		Call func RLS.allowForAdminOwnerAndAdmTable
+20211011 15203428  "  -    	00.000.203
+20211011 15203428  "  +    	method(TubStorageMixin) ubm_navshortcut.select
+20211011 15203428  "  +    		DataStore.init(ubm_navshortcut)
+20211011 15203428  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203428  " cust1 				{"P1d":"9999-12-31"}
+20211011 15203428  " SQL   				r=5 t=175 fr=112 c=0 q=SELECT A01.ID,A01.desktopID,A01.parentID,A01.code,A01.isFolder,A01.caption_uk,A01.inWindow,A01.isCollapsed,A01.displayOrder,A01.iconCls,A01.mi_modifyDate  FROM ubm_navshortcut A01  WHERE A01.mi_deleteDate>=? ORDER BY 2 ASC,3 ASC,9 ASC,6 ASC
+20211011 15203428  "  -    			00.000.254
+20211011 15203428  "  -    		00.000.281
+20211011 15203428  "  -    	00.000.496
+20211011 15203428  " http  	127.0.0.1 <- 200
+20211011 15203428  "  -    00.001.217
+20211011 15203434  "  +    clientRequire/jdenticon/dist/jdenticon.min.js
+20211011 15203434  " http  	127.0.0.1 -> GET clientRequire/jdenticon/dist/jdenticon.min.js
+20211011 15203434  " info  	endpoint clientRequire
+20211011 15203434  " debug 	Retrieve cached jdenticon/dist/jdenticon.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/jdenticon/dist/jdenticon.min.js
+20211011 15203434  " http  	127.0.0.1 <- 200
+20211011 15203434  "  -    00.000.224
+20211011 15203434  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15203434  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15203434  " info  	endpoint clientRequire
+20211011 15203434  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/ub-icons.woff2 -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15203434  " http  	127.0.0.1 <- 200
+20211011 15203434  "  -    00.000.264
+20211011 15203434  #  +    ubql?rq=ubm_navshortcut.select*ubs_message.getCached&uitag=
+20211011 15203434  # http  	127.0.0.1 -> POST ubql?rq=ubm_navshortcut.select*ubs_message.getCached&uitag=
+20211011 15203434  # info  	endpoint ubql
+20211011 15203434  # info  	[{"entity":"ubm_navshortcut","method":"select","fieldList":["ID","desktopID","parentID","code","isFolder","caption","inWindow","isCollapsed","displayOrder","iconCls"],"orderList":{"0":{"expression":"desktopID","order":"asc"},"1":{"expression":"parentID","order":"asc"},"2":{"expression":"displayOrder","order":"asc"},"3":{"expression":"caption","order":"asc"}}},{"entity":"ubs_message","method":"getCached","fieldList":["ID","messageBody","messageType","startDate","expireDate","recipients.acceptDate"],"whereList":{"c1":{"expression":"[recipients.acceptDate]","condition":"isNull"}},"orderList":{"0":{"expression":"startDate","order":"desc"}}}]
+20211011 15203434  # auth  	admin/eeb3a772
+20211011 15203434  #  +    	method(TubRLSMixin) ubm_navshortcut.select
+20211011 15203434  # debug 		Call func RLS.allowForAdminOwnerAndAdmTable
+20211011 15203434  #  -    	00.000.199
+20211011 15203434  #  +    	method(TubStorageMixin) ubm_navshortcut.select
+20211011 15203434  #  +    		DataStore.init(ubm_navshortcut)
+20211011 15203434  #  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203434  # cust1 				{"P1d":"9999-12-31"}
+20211011 15203434  # SQL   				r=5 t=180 fr=100 c=0 q=SELECT A01.ID,A01.desktopID,A01.parentID,A01.code,A01.isFolder,A01.caption_uk,A01.inWindow,A01.isCollapsed,A01.displayOrder,A01.iconCls  FROM ubm_navshortcut A01  WHERE A01.mi_deleteDate>=? ORDER BY 2 ASC,3 ASC,9 ASC,6 ASC
+20211011 15203434  #  -    			00.000.235
+20211011 15203434  #  -    		00.000.257
+20211011 15203434  #  -    	00.000.443
+20211011 15203434  #  +    	method(TubStorageMixin) ubs_message.select
+20211011 15203434  #  +    		DataStore.init(ubs_message)
+20211011 15203434  #  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203434  # cust1 				{"P1":10, "P2":1, "P3d":"2021-10-11T15:20:34", "P4d":"9999-12-31"}
+20211011 15203434  # SQL   				r=0 t=186 fr=150 c=0 q=SELECT A01.ID,A01.messageBody,A01.messageType,A01.startDate,A01.expireDate,A02.acceptDate AS C1  FROM ubs_message A01  LEFT JOIN ubs_message_recipient A02 ON A02.messageID=A01.ID  WHERE A02.acceptDate IS NULL AND A02.userID=? AND A01.complete=? AND A01.startDate<? AND A01.mi_deleteDate>=? ORDER BY 4 DESC
+20211011 15203434  #  -    			00.000.086
+20211011 15203434  #  -    		00.000.104
+20211011 15203434  #  -    	00.000.330
+20211011 15203434  # http  	127.0.0.1 <- 200
+20211011 15203434  #  -    00.001.908
+20211011 15203436  "  +    ubql?rq=ubm_enum.select*ubm_desktop.select&uitag=
+20211011 15203436  " http  	127.0.0.1 -> POST ubql?rq=ubm_enum.select*ubm_desktop.select&uitag=
+20211011 15203436  " info  	endpoint ubql
+20211011 15203436  " info  	[{"entity":"ubm_enum","method":"select","fieldList":["ID","name","eGroup","code","sortOrder"],"version":"-1"},{"entity":"ubm_desktop","method":"select","fieldList":["ID","caption","isDefault","description","iconCls","displayOrder"],"version":"-1"}]
+20211011 15203436  " auth  	admin/eeb3a772
+20211011 15203436  #  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15203436  # http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15203436  # info  	endpoint clientRequire
+20211011 15203436  "  +    	method(TubStorageMixin) ubm_enum.select
+20211011 15203436  "  +    		DataStore.init(ubm_enum)
+20211011 15203436  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203436  # debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15203436  # http  	127.0.0.1 <- 200
+20211011 15203436  #  -    00.000.382
+20211011 15203436  " SQL   				r=1 t=186 fr=143 c=0 q=SELECT ( (SELECT COALESCE(strftime('%s',  MAX(mi_modifyDate)),1) FROM ubm_enum) ) AS dataVersion
+20211011 15203436  "  -    			00.000.299
+20211011 15203436  "  -    		00.000.317
+20211011 15203436  "  +    		DataStore.init(ubm_enum)
+20211011 15203436  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203436  " cust1 				{"P1d":"9999-12-31"}
+20211011 15203436  " SQL   				r=4 t=109 fr=87 c=0 q=SELECT A01.ID,A01.name_uk,A01.eGroup,A01.code,A01.sortOrder  FROM ubm_enum A01  WHERE A01.mi_deleteDate>=?
+20211011 15203436  "  -    			00.000.165
+20211011 15203436  "  -    		00.000.187
+20211011 15203436  "  -    	00.001.064
+20211011 15203436  "  +    	method(TubRLSMixin) ubm_desktop.select
+20211011 15203436  " debug 		Call func RLS.allowForAdminOwnerAndAdmTable
+20211011 15203436  "  -    	00.000.367
+20211011 15203436  "  +    	method(TubStorageMixin) ubm_desktop.select
+20211011 15203436  "  +    		DataStore.init(ubm_desktop)
+20211011 15203436  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203436  " cust1 				{"P1d":"9999-12-31"}
+20211011 15203436  " SQL   				r=1 t=142 fr=92 c=0 q=SELECT A01.ID,A01.caption_uk,A01.isDefault,A01.description_uk,A01.iconCls,A01.displayOrder  FROM ubm_desktop A01  WHERE A01.mi_deleteDate>=?
+20211011 15203436  "  -    			00.000.216
+20211011 15203436  "  -    		00.000.256
+20211011 15203436  "  -    	00.000.446
+20211011 15203436  " http  	127.0.0.1 <- 200
+20211011 15203436  "  -    00.002.456
+20211011 15203438  #  +    models/adminui-vue/theme/fonts/element-icons.woff
+20211011 15203438  # http  	127.0.0.1 -> GET models/adminui-vue/theme/fonts/element-icons.woff
+20211011 15203438  # info  	endpoint models
+20211011 15203438  "  +    models/adminui-vue/dist/fonts/fa/webfonts/fa-regular-400.woff2
+20211011 15203438  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/webfonts/fa-regular-400.woff2
+20211011 15203438  " info  	endpoint models
+20211011 15203438  # debug 	model file is resolved from cache
+20211011 15203438  " debug 	model file is resolved from cache
+20211011 15203438  # http  	127.0.0.1 <- 200
+20211011 15203438  " http  	127.0.0.1 <- 200
+20211011 15203438  #  -    00.000.349
+20211011 15203438  "  -    00.000.211
+20211011 15203616  "  +    ubql?rq=ubm_navshortcut.select&uitag=
+20211011 15203616  " http  	127.0.0.1 -> POST ubql?rq=ubm_navshortcut.select&uitag=
+20211011 15203616  " info  	endpoint ubql
+20211011 15203616  " info  	[{"entity":"ubm_navshortcut","method":"select","fieldList":["ID","cmdCode","caption","code"],"whereList":{"c1":{"expression":"[ID]","condition":"equal","value":335016761753608}}}]
+20211011 15203616  " auth  	admin/eeb3a772
+20211011 15203616  "  +    	method(TubRLSMixin) ubm_navshortcut.select
+20211011 15203616  " debug 		Call func RLS.allowForAdminOwnerAndAdmTable
+20211011 15203616  "  -    	00.000.127
+20211011 15203616  "  +    	method(TubStorageMixin) ubm_navshortcut.select
+20211011 15203616  "  +    		DataStore.init(ubm_navshortcut)
+20211011 15203616  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203616  " cust1 				{"P1":335016761753608, "P2d":"9999-12-31"}
+20211011 15203616  " SQL   				r=1 t=90 fr=65 c=0 q=SELECT A01.ID,A01.cmdCode,A01.caption_uk,A01.code  FROM ubm_navshortcut A01  WHERE A01.ID=? AND A01.mi_deleteDate>=?
+20211011 15203616  "  -    			00.000.128
+20211011 15203616  "  -    		00.000.143
+20211011 15203616  "  -    	00.000.246
+20211011 15203616  " http  	127.0.0.1 <- 200
+20211011 15203616  "  -    00.000.667
+20211011 15203619  "  +    models/adminui-pub/themes/UBGrayTheme/images/grid/hd-pop.png
+20211011 15203619  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/images/grid/hd-pop.png
+20211011 15203619  " info  	endpoint models
+20211011 15203619  " debug 	model file is resolved from cache
+20211011 15203619  " http  	127.0.0.1 <- 200
+20211011 15203619  "  -    00.000.224
+20211011 15203621  "  +    models/adminui-pub/themes/UBGrayTheme/images/loadmask/loading.gif
+20211011 15203621  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/images/loadmask/loading.gif
+20211011 15203621  " info  	endpoint models
+20211011 15203621  " debug 	model file is resolved from cache
+20211011 15203621  " http  	127.0.0.1 <- 200
+20211011 15203621  "  -    00.000.216
+20211011 15203622  "  +    ubql?rq=req_depart.select&uitag=nsc-req_depart
+20211011 15203622  " http  	127.0.0.1 -> POST ubql?rq=req_depart.select&uitag=nsc-req_depart
+20211011 15203622  " info  	endpoint ubql
+20211011 15203622  " info  	[{"entity":"req_depart","method":"select","fieldList":["name","postAddr","phoneNum","ID"],"options":{"limit":100,"start":0}}]
+20211011 15203622  " auth  	admin/eeb3a772
+20211011 15203622  "  +    	method(TubStorageMixin) req_depart.select
+20211011 15203622  "  +    		DataStore.init(req_depart)
+20211011 15203622  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15203622  " SQL   				r=2 t=163 fr=137 c=0 q=SELECT A01.name,A01.postAddr,A01.phoneNum,A01.ID  FROM req_depart A01  LIMIT 100 OFFSET 0 
+20211011 15203622  "  -    			00.000.060
+20211011 15203622  "  -    		00.000.073
+20211011 15203622  "  -    	00.000.165
+20211011 15203622  " http  	127.0.0.1 <- 200
+20211011 15203622  "  -    00.000.493
+20211011 15213840  "  +    ubql?rq=ubm_navshortcut.select&uitag=nsc-req_depart
+20211011 15213840  " http  	127.0.0.1 -> POST ubql?rq=ubm_navshortcut.select&uitag=nsc-req_depart
+20211011 15213840  " info  	endpoint ubql
+20211011 15213840  " info  	[{"entity":"ubm_navshortcut","method":"select","fieldList":["ID","cmdCode","caption","code"],"whereList":{"c1":{"expression":"[ID]","condition":"equal","value":335016761753614}}}]
+20211011 15213840  " auth  	admin/eeb3a772
+20211011 15213840  "  +    	method(TubRLSMixin) ubm_navshortcut.select
+20211011 15213840  " debug 		Call func RLS.allowForAdminOwnerAndAdmTable
+20211011 15213840  "  -    	00.000.161
+20211011 15213840  "  +    	method(TubStorageMixin) ubm_navshortcut.select
+20211011 15213840  "  +    		DataStore.init(ubm_navshortcut)
+20211011 15213840  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15213840  " cust1 				{"P1":335016761753614, "P2d":"9999-12-31"}
+20211011 15213840  " SQL   				r=1 t=123 fr=90 c=0 q=SELECT A01.ID,A01.cmdCode,A01.caption_uk,A01.code  FROM ubm_navshortcut A01  WHERE A01.ID=? AND A01.mi_deleteDate>=?
+20211011 15213840  "  -    			00.000.082
+20211011 15213840  "  -    		00.000.101
+20211011 15213840  "  -    	00.000.247
+20211011 15213840  " http  	127.0.0.1 <- 200
+20211011 15213840  "  -    00.000.789
+20211011 15213846  "  +    ubql?rq=req_depart.select*req_subDepart.select&uitag=nsc-req_reqList
+20211011 15213846  " http  	127.0.0.1 -> POST ubql?rq=req_depart.select*req_subDepart.select&uitag=nsc-req_reqList
+20211011 15213846  " info  	endpoint ubql
+20211011 15213846  " info  	[{"entity":"req_depart","method":"select","fieldList":["ID","name"],"options":{"limit":10000}},{"entity":"req_subDepart","method":"select","fieldList":["ID","name"],"options":{"limit":10000}}]
+20211011 15213846  " auth  	admin/eeb3a772
+20211011 15213846  "  +    	method(TubStorageMixin) req_depart.select
+20211011 15213846  "  +    		DataStore.init(req_depart)
+20211011 15213846  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15213846  " SQL   				r=2 t=75 fr=53 c=0 q=SELECT A01.ID,A01.name  FROM req_depart A01  LIMIT 10000 OFFSET 0 
+20211011 15213846  "  -    			00.000.109
+20211011 15213846  "  -    		00.000.121
+20211011 15213846  "  -    	00.000.194
+20211011 15213846  "  +    	method(TubStorageMixin) req_subDepart.select
+20211011 15213846  "  +    		DataStore.init(req_subDepart)
+20211011 15213846  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15213846  " SQL   				r=0 t=42 fr=24 c=0 q=SELECT A01.ID,A01.name  FROM req_subDepart A01  LIMIT 10000 OFFSET 0 
+20211011 15213846  "  -    			00.000.063
+20211011 15213846  "  -    		00.000.071
+20211011 15213846  "  -    	00.000.120
+20211011 15213846  " http  	127.0.0.1 <- 200
+20211011 15213846  "  -    00.000.840
+20211011 15213848  "  +    ubql?rq=req_reqList.select&uitag=nsc-req_reqList
+20211011 15213848  " http  	127.0.0.1 -> POST ubql?rq=req_reqList.select&uitag=nsc-req_reqList
+20211011 15213848  " info  	endpoint ubql
+20211011 15213848  " info  	[{"entity":"req_reqList","method":"select","fieldList":["reqDate","applicantPhone","applicantInfo","department","subDepartment","reqText","reqDoc","answer","status","ID"],"options":{"limit":100,"start":0}}]
+20211011 15213848  " auth  	admin/eeb3a772
+20211011 15213848  "  +    	method(TubStorageMixin) req_reqList.select
+20211011 15213848  "  +    		DataStore.init(req_reqList)
+20211011 15213848  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15213848  " SQL   				r=0 t=102 fr=68 c=0 q=SELECT A01.reqDate,A01.applicantPhone,A01.applicantInfo,A01.department,A01.subDepartment,A01.reqText,A01.reqDoc,A01.answer,A01.status,A01.ID  FROM req_reqList A01  LIMIT 100 OFFSET 0 
+20211011 15213848  "  -    			00.000.138
+20211011 15213848  "  -    		00.000.150
+20211011 15213848  "  -    	00.000.256
+20211011 15213848  " http  	127.0.0.1 <- 200
+20211011 15213848  "  -    00.000.615
+20211011 15213924  "  +    ubql?rq=ubm_navshortcut.select&uitag=nsc-req_reqList
+20211011 15213924  " http  	127.0.0.1 -> POST ubql?rq=ubm_navshortcut.select&uitag=nsc-req_reqList
+20211011 15213924  " info  	endpoint ubql
+20211011 15213924  " info  	[{"entity":"ubm_navshortcut","method":"select","fieldList":["ID","cmdCode","caption","code"],"whereList":{"c1":{"expression":"[ID]","condition":"equal","value":335016761753617}}}]
+20211011 15213924  " auth  	admin/eeb3a772
+20211011 15213924  "  +    	method(TubRLSMixin) ubm_navshortcut.select
+20211011 15213924  " debug 		Call func RLS.allowForAdminOwnerAndAdmTable
+20211011 15213924  "  -    	00.000.593
+20211011 15213924  "  +    	method(TubStorageMixin) ubm_navshortcut.select
+20211011 15213924  "  +    		DataStore.init(ubm_navshortcut)
+20211011 15213924  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15213924  " cust1 				{"P1":335016761753617, "P2d":"9999-12-31"}
+20211011 15213924  " SQL   				r=1 t=160 fr=123 c=0 q=SELECT A01.ID,A01.cmdCode,A01.caption_uk,A01.code  FROM ubm_navshortcut A01  WHERE A01.ID=? AND A01.mi_deleteDate>=?
+20211011 15213924  "  -    			00.000.087
+20211011 15213924  "  -    		00.000.105
+20211011 15213924  "  -    	00.000.263
+20211011 15213924  " http  	127.0.0.1 <- 200
+20211011 15213924  "  -    00.001.260
+20211011 15213927  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Bold.ttf
+20211011 15213927  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Bold.ttf
+20211011 15213927  " info  	endpoint clientRequire
+20211011 15213927  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Bold.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Bold.ttf
+20211011 15213927  " http  	127.0.0.1 <- 200
+20211011 15213927  "  -    00.000.237
+20211011 15213961  "  +    ubql?rq=ubm_navshortcut.select&uitag=nsc-req_reqList
+20211011 15213961  " http  	127.0.0.1 -> POST ubql?rq=ubm_navshortcut.select&uitag=nsc-req_reqList
+20211011 15213961  " info  	endpoint ubql
+20211011 15213961  " info  	[{"entity":"ubm_navshortcut","method":"select","fieldList":["ID","cmdCode","caption","code"],"whereList":{"c1":{"expression":"[ID]","condition":"equal","value":335016761753611}}}]
+20211011 15213961  " auth  	admin/eeb3a772
+20211011 15213961  "  +    	method(TubRLSMixin) ubm_navshortcut.select
+20211011 15213961  " debug 		Call func RLS.allowForAdminOwnerAndAdmTable
+20211011 15213961  "  -    	00.000.206
+20211011 15213961  "  +    	method(TubStorageMixin) ubm_navshortcut.select
+20211011 15213961  "  +    		DataStore.init(ubm_navshortcut)
+20211011 15213961  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15213961  " cust1 				{"P1":335016761753611, "P2d":"9999-12-31"}
+20211011 15213961  " SQL   				r=1 t=198 fr=160 c=0 q=SELECT A01.ID,A01.cmdCode,A01.caption_uk,A01.code  FROM ubm_navshortcut A01  WHERE A01.ID=? AND A01.mi_deleteDate>=?
+20211011 15213961  "  -    			00.000.098
+20211011 15213961  "  -    		00.000.121
+20211011 15213961  "  -    	00.000.325
+20211011 15213961  " http  	127.0.0.1 <- 200
+20211011 15213961  "  -    00.001.025
+20211011 15214003  "  +    ubql?rq=req_depart.select&uitag=nsc-req_Subdepart
+20211011 15214003  " http  	127.0.0.1 -> POST ubql?rq=req_depart.select&uitag=nsc-req_Subdepart
+20211011 15214003  " info  	endpoint ubql
+20211011 15214003  " info  	[{"entity":"req_depart","method":"select","fieldList":["ID","name"],"options":{"limit":10000}}]
+20211011 15214003  " auth  	admin/eeb3a772
+20211011 15214003  "  +    	method(TubStorageMixin) req_depart.select
+20211011 15214003  "  +    		DataStore.init(req_depart)
+20211011 15214003  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15214003  " SQL   				r=2 t=103 fr=75 c=0 q=SELECT A01.ID,A01.name  FROM req_depart A01  LIMIT 10000 OFFSET 0 
+20211011 15214003  "  -    			00.000.063
+20211011 15214003  "  -    		00.000.075
+20211011 15214003  "  -    	00.000.185
+20211011 15214003  " http  	127.0.0.1 <- 200
+20211011 15214003  "  -    00.000.562
+20211011 15214005  "  +    ubql?rq=req_subDepart.select&uitag=nsc-req_Subdepart
+20211011 15214005  " http  	127.0.0.1 -> POST ubql?rq=req_subDepart.select&uitag=nsc-req_Subdepart
+20211011 15214005  " info  	endpoint ubql
+20211011 15214005  " info  	[{"entity":"req_subDepart","method":"select","fieldList":["name","department","ID"],"options":{"limit":100,"start":0}}]
+20211011 15214005  " auth  	admin/eeb3a772
+20211011 15214005  "  +    	method(TubStorageMixin) req_subDepart.select
+20211011 15214005  "  +    		DataStore.init(req_subDepart)
+20211011 15214005  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15214005  " SQL   				r=0 t=75 fr=58 c=0 q=SELECT A01.name,A01.department,A01.ID  FROM req_subDepart A01  LIMIT 100 OFFSET 0 
+20211011 15214005  "  -    			00.000.114
+20211011 15214005  "  -    		00.000.125
+20211011 15214005  "  -    	00.000.212
+20211011 15214005  " http  	127.0.0.1 <- 200
+20211011 15214005  "  -    00.000.556
+20211011 15241856  ! srvr  Terminating...
+20211011 15241856  ! mon   {"sessions_total":1,"threads_total":4,"incoming_bytes":96674,"outcoming_bytes":546813,"responses_total":[0,0,137,0,0,0],"security_exception_count":0,"js_gc_count":28,"js_memory_bytes":13680640,"http_perning_request_count":0}

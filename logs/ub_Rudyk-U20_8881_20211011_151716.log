@@ -1,0 +1,65 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-11T12:17:16
+
+20211011 12171656  ! srvr  StartupPath: '/home/admloc/Documents/ubProject/CityPortal/'; BinPath: '/opt/unitybase/server/'
+20211011 12171656  ! srvr  JS Engine params: engine-max-mem=512Mb, engine-lifetime=360sec, engine-full-gc=every 100 HTTP req
+20211011 12171656  ! warn  CPU support for AVX2 and SSE42 not available or can not be used
+20211011 12171656  ! srvr  FTS is disabled
+20211011 12171656  "  +    init
+20211011 12171656  " srvr  	Start application initialization...
+20211011 12171701  " info  	Loading domain models...
+20211011 12171701  " info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211011 12171701  " info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211011 12171702  " info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211011 12171702  " info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211011 12171702  " info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211011 12171702  " info  	"requests"(1.0.0) from "./models/requests"
+20211011 12171702  " info  	Loading meta files for 40 entities... 
+20211011 12171703  " info  	load domain: 42ms
+20211011 12171703  " info  	applying metadata transformation hook from UB
+20211011 12171704  " debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211011 12171704  " info  	applying hooks: 6ms
+20211011 12171704  " info  	native init: 4ms
+20211011 12171704  " srvr  	The domain loaded successfully with 40 entities
+20211011 12171714  "  +    	Init ELS
+20211011 12171714  "  +    		DataStore.init(uba_role)
+20211011 12171714  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 12171714  "  +    				
+20211011 12171714  "  -    				00.008.166
+20211011 12171714  " SQL   				r=7 t=8213 fr=8195 c=0 q=SELECT A01.ID,A01.name,A01.sessionTimeout,A01.allowedAppMethods  FROM uba_role A01 
+20211011 12171714  "  -    			00.008.260
+20211011 12171714  "  -    		00.008.275
+20211011 12171714  "  +    		DataStore.init(uba_els)
+20211011 12171714  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 12171714  " SQL   				r=33 t=59 fr=20 c=0 q=SELECT A01.ID,A01.entityMask,A01.methodMask,A01.ruleType,A01.ruleRole,A01.disabled  FROM uba_els A01 
+20211011 12171714  "  -    			00.000.082
+20211011 12171714  "  -    		00.000.097
+20211011 12171715  "  -    	00.008.961
+20211011 12171715  "  +    	DataStore.init(ubs_settings)
+20211011 12171715  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 12171715  " cust1 			{"P1s34":"UBA.passwordPolicy.maxDurationDays"}
+20211011 12171715  " SQL   			r=1 t=42 fr=21 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211011 12171715  "  -    		00.000.064
+20211011 12171715  "  -    	00.000.075
+20211011 12171715  "  +    	DataStore.init(ubs_settings)
+20211011 12171715  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 12171715  " cust1 			{"P1s37":"UBA.passwordPolicy.maxInvalidAttempts"}
+20211011 12171715  " SQL   			r=1 t=49 fr=42 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211011 12171715  "  -    		00.000.020
+20211011 12171715  "  -    	00.000.027
+20211011 12171715  "  -    00.334.823
+20211011 12171715  ! srvr  Enable zip compression
+20211011 12171715  ! srvr  Local IP addresses: 10.8.125.48;127.0.0.1
+20211011 12171715  ! srvr  Socket server URLs: http://localhost:8881/
+20211011 12171715  ! srvr  InetPub: /home/admloc/Documents/ubProject/CityPortal/logs/
+20211011 12171715  ! srvr  Started and ready to accept requests...
+20211011 12172019  "  +    internalCall
+20211011 12172019  " http  	127.0.0.1 -> GET 
+20211011 12172019  " info  	endpoint statics
+20211011 12172019  " info  	reqPath index.html
+20211011 12172019  " ERROR 	Not found "/home/admloc/Documents/ubProject/CityPortal/logs/index.html"
+20211011 12172019  " http  	127.0.0.1 <- 404
+20211011 12172019  "  -    00.001.053
+20211011 12175104  ! srvr  Terminating...
+20211011 12175104  ! mon   {"sessions_total":0,"threads_total":4,"incoming_bytes":675,"outcoming_bytes":64,"responses_total":[0,0,0,0,1,0],"security_exception_count":0,"js_gc_count":7,"js_memory_bytes":3649536,"http_perning_request_count":0}

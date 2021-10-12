@@ -1,0 +1,8 @@
+{
+ "isDefault": true,
+ "entity": "ubm_navshortcut",
+ "formType": "vue",
+ "caption": "Shortcut editor",
+ "description": "Shortcut editor",
+ "formCode": "{\"fName\":\"ubm_navshortcut-fm.vue\",\"origName\":\"ubm_navshortcut-fm.vue\",\"ct\":\"script/x-vue\",\"size\":2915,\"md5\":\"da8aa468aa30dd4f7cc3c2dab0ea773a\"}"
+}

@@ -1,0 +1,5 @@
+{
+ "name": "rep_clickSample",
+ "template": "{\"fName\":\"click_sample.template\",\"origName\":\"click_sample.template\",\"ct\":\"application/ubreport\",\"size\":6283,\"md5\":\"fd188b2397ed9a1ee1402fe62b230ad4\"}",
+ "code": "{\"fName\":\"click_sample.js\",\"origName\":\"click_sample.js\",\"ct\":\"application/def\",\"size\":3467,\"md5\":\"e0b0af9f0635fc56b869c56341c41c51\"}"
+}

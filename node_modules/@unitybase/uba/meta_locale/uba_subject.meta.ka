@@ -1,0 +1,18 @@
+﻿{
+    "caption": "ადმინისტრაციული თემა",
+    "description": "",
+    "attributes": [
+        {
+            "name": "code",
+            "caption": "თემის კოდი"
+        },
+        {
+            "name": "name",
+            "caption": "შესვლა"
+        },
+        {
+            "name": "sType",
+            "caption": "თემის ტიპი"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+  "caption": "Enumerated Values",
+  "description": "Enumerated values",
+  "attributes": [
+    {
+      "name": "eGroup",
+      "caption": "Group",
+      "description": ""
+    },
+    {
+      "name": "code",
+      "caption": "Code",
+      "description": "Value code"
+    },
+    {
+      "name": "shortName",
+      "caption": "Short name"
+    },
+    {
+      "name": "name",
+      "caption": "Value name"
+    },
+    {
+      "name": "sortOrder",
+      "caption": "Order #"
+    }
+  ]
+}

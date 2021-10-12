@@ -1,0 +1,20 @@
+{
+  "caption": "Групи користувачів",
+  "description": "Групи користувачів",
+  "attributes": [
+    {
+      "name": "code",
+      "caption": "Код",
+      "description": "Код групи",
+      "documentation": "Унікальний код групи. Використовувається у API та скриптах"
+    },
+    {
+      "name": "name",
+      "caption": "Найменування"
+    },
+    {
+      "name": "description",
+      "caption": "Опис"
+    }
+  ]
+}

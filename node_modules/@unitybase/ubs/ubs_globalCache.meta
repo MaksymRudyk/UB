@@ -1,0 +1,28 @@
+﻿{
+	"caption": "GlobalCache",
+	"description": "Server-side global cache",
+	"dsType": "Virtual",
+	"documentation": "Read-only access to server-side global cache (for developers)",
+	"attributes": [
+		{
+			"name": "ID",
+			"caption": "ID",
+			"dataType": "ID",
+			"allowNull": false,
+			"isUnique": true
+		},
+		{
+			"name": "key",
+			"dataType": "Text",
+			"allowNull": false,
+			"caption": "key"
+		},
+		{
+			"name": "value",
+			"dataType": "Text",
+			"caption": "Value"
+		}
+	],
+	"mixins": {
+	}
+}

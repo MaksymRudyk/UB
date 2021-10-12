@@ -1,0 +1,49 @@
+{
+  "targetRole": "Maqsadli rol",
+  "changedImageAttachment": "Hujjat rasmini o'zgartirish",
+  "auditImageSize": "Rasm hajmi (bayt)",
+  "uba": {
+      "changePassword": {
+          "newPassword": {
+              "fieldRequirementsError": "Talablarga javob bermaydi",
+              "matchWithLoginError": "Parol login bilan mos keladi"
+          },
+          "retypePassword": {
+              "errorText": "Parollarning mos kelmasligi"
+          }
+      }
+  },
+  "auditImageVersion": "Versiya",
+  "User": "Foydalanuvchi",
+  "changePassword": "Parolni o'zgartirish",
+  "changeLanguage": "Tilni o'zgartirish",
+  "changeLanguageRequireRestart": "Ilova yopiladi, saqlanmagan barcha ma'lumotlar yo'qoladi. Davom etasizmi?",
+  "noMoreLanguages": "(ko'p tilli qo'llab-quvvatlash o'chirilgan)",
+  "entity": "Tashkilot",
+  "actionType": "Amal",
+  "actionUser": "Foydalanuvchi",
+  "actionTime": "Vaqt",
+  "remoteIP": "IP-manzil",
+  "entityinfo_id": "Korxonaning identifikatori",
+  "targetUser": "Maqsadli foydalanuvchi",
+  "nameAttr": "Xususiyat nomi",
+  "fromValue": "Eski qiymat",
+  "toValue": "Yangi qiymat",
+  "changedAttributes": "O'zgartirilgan atributlar",
+  "clarifyingEvent": "Hodisa aniqlandi",
+  "attachedDocumentImage": "Biriktirilgan hujjat rasmi",
+  "editedImageDocument": "Hujjat tasviri tahrirlangan",
+  "removedDocumentImage": "Hujjat tasviri olib tashlandi",
+  "auditImageStore": "Store",
+  "auditImageFName": "Fayl nomi",
+  "auditImageOrigName": "Rasmning asl ismi",
+  "auditImageRelPath": "Yo'l",
+  "auditImageCT": "Tarkib turi",
+  "auditImageMD5": "Tekshirish summasi (MD5)",
+  "auditImageRevision": "Qayta ko'rib chiqish",
+  "SecurityAudit": "Xavfsizlik auditi",
+  "Record modified by another user": "Yozuv boshqa foydalanuvchi tomonidan o'zgartirilgan",
+  "needChangePassword": "Keyingi kirishda foydalanuvchi parolini o'zgartirishi kerak",
+  "checkAll": "Barchasini tekshiring",
+  "roles": "Rollar"
+}

@@ -1,0 +1,26 @@
+﻿{
+    "caption": "Черга",
+    "description": "",
+    "attributes": [
+        {
+            "name": "queueCode",
+            "caption": "Код черги"
+        },
+        {
+            "name": "msgCmd",
+            "caption": "Команда"
+        },
+        {
+            "name": "msgData",
+            "caption": "Дані повідомлення"
+        },
+        {
+            "name": "msgPriority",
+            "caption": "Пріорітет"
+        },
+        {
+            "name": "completeDate",
+            "caption": "Дата завершення"
+        }
+    ]
+}

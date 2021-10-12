@@ -1,0 +1,1106 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-11T11:45:07
+
+20211011 11450710  ! srvr  StartupPath: '/home/admloc/Documents/ubProject/CityPortal/'; BinPath: '/opt/unitybase/server/'
+20211011 11450710  ! srvr  JS Engine params: engine-max-mem=512Mb, engine-lifetime=360sec, engine-full-gc=every 100 HTTP req
+20211011 11450710  ! warn  CPU support for AVX2 and SSE42 not available or can not be used
+20211011 11450710  ! srvr  FTS is disabled
+20211011 11450710  "  +    init
+20211011 11450710  " srvr  	Start application initialization...
+20211011 11450717  " info  	Loading domain models...
+20211011 11450717  " info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211011 11450717  " info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211011 11450718  " info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211011 11450718  " info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211011 11450718  " info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211011 11450718  " info  	"requests"(1.0.0) from "./models/requests"
+20211011 11450718  " info  	Loading meta files for 40 entities... 
+20211011 11450719  " info  	load domain: 40ms
+20211011 11450719  " info  	applying metadata transformation hook from UB
+20211011 11450720  " debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211011 11450720  " info  	applying hooks: 4ms
+20211011 11450720  " info  	native init: 4ms
+20211011 11450720  " srvr  	The domain loaded successfully with 40 entities
+20211011 11450729  "  +    	Init ELS
+20211011 11450729  "  +    		DataStore.init(uba_role)
+20211011 11450729  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450729  "  +    				
+20211011 11450730  "  -    				00.006.199
+20211011 11450730  " SQL   				r=7 t=6255 fr=6230 c=0 q=SELECT A01.ID,A01.name,A01.sessionTimeout,A01.allowedAppMethods  FROM uba_role A01 
+20211011 11450730  "  -    			00.006.307
+20211011 11450730  "  -    		00.006.324
+20211011 11450730  "  +    		DataStore.init(uba_els)
+20211011 11450730  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450730  " SQL   				r=24 t=78 fr=29 c=0 q=SELECT A01.ID,A01.entityMask,A01.methodMask,A01.ruleType,A01.ruleRole,A01.disabled  FROM uba_els A01 
+20211011 11450730  "  -    			00.000.107
+20211011 11450730  "  -    		00.000.126
+20211011 11450730  "  -    	00.006.939
+20211011 11450730  "  +    	DataStore.init(ubs_settings)
+20211011 11450730  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450730  " cust1 			{"P1s34":"UBA.passwordPolicy.maxDurationDays"}
+20211011 11450730  " SQL   			r=0 t=87 fr=70 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211011 11450730  "  -    		00.000.110
+20211011 11450730  "  -    	00.000.120
+20211011 11450730  "  +    	DataStore.init(ubs_settings)
+20211011 11450730  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450730  " cust1 			{"P1s37":"UBA.passwordPolicy.maxInvalidAttempts"}
+20211011 11450730  " SQL   			r=0 t=93 fr=87 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211011 11450730  "  -    		00.000.019
+20211011 11450730  "  -    	00.000.026
+20211011 11450730  "  -    00.317.619
+20211011 11450730  ! srvr  Enable zip compression
+20211011 11450730  ! srvr  Local IP addresses: 10.8.125.48;127.0.0.1
+20211011 11450730  ! srvr  Socket server URLs: http://localhost:8881/
+20211011 11450730  ! srvr  Started and ready to accept requests...
+20211011 11450730  "  +    getAppInfo
+20211011 11450730  " http  	127.0.0.1 -> GET getAppInfo
+20211011 11450730  " info  	endpoint getAppInfo
+20211011 11450730  " http  	127.0.0.1 <- 200
+20211011 11450731  "  -    00.003.602
+20211011 11450731  "  +    auth?AUTHTYPE=UB&userName=admin
+20211011 11450731  " http  	127.0.0.1 -> GET auth?AUTHTYPE=UB&userName=admin
+20211011 11450731  " info  	endpoint auth
+20211011 11450731  " http  	127.0.0.1 <- 200
+20211011 11450731  "  -    00.000.222
+20211011 11450732  "  +    auth?AUTHTYPE=UB&clientNonce=ae49e7ac3e864df749bf7a28cdd6881a1c6499d600dcd6075b9f9f7d294d2fcb&password=0344c3043100ce3a1074e7a6c36464933b5e1e796e88c4a203bf072272a77ccd&userName=admin
+20211011 11450732  " http  	127.0.0.1 -> GET auth?AUTHTYPE=UB&clientNonce=ae49e7ac3e864df749bf7a28cdd6881a1c6499d600dcd6075b9f9f7d294d2fcb&password=0344c3043100ce3a1074e7a6c36464933b5e1e796e88c4a203bf072272a77ccd&userName=admin
+20211011 11450732  " info  	endpoint auth
+20211011 11450732  "  +    	DataStore.init(uba_user)
+20211011 11450732  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450732  " cust1 			{"P1s5":"admin"}
+20211011 11450732  " SQL   			r=1 t=127 fr=81 c=0 q=select id, name, uPasswordHashHexa, uData, isPending, trustedIP from UBA_USER where name=? and disabled=0
+20211011 11450732  "  -    		00.000.176
+20211011 11450732  "  -    	00.000.197
+20211011 11450732  "  +    	method(TubStorageMixin) uba_user.select
+20211011 11450732  "  +    		DataStore.init(uba_user)
+20211011 11450732  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450732  " cust1 				{"P1":10}
+20211011 11450732  " SQL   				r=1 t=79 fr=46 c=0 q=SELECT A01.name,A01.uData,A01.uPasswordHashHexa,A01.lastPasswordChangeDate,A01.firstName,A01.lastName,A01.fullName  FROM uba_user A01  WHERE A01.ID=?
+20211011 11450732  "  -    			00.000.107
+20211011 11450732  "  -    		00.000.118
+20211011 11450732  "  -    	00.000.210
+20211011 11450732  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450732  "  +    		DataStore.init(uba_role)
+20211011 11450732  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450732  " cust1 				{"P1":10, "P2":10}
+20211011 11450732  " SQL   				r=1 t=101 fr=69 c=0 q=SELECT A01.ID,A01.name  FROM uba_role A01  WHERE (((EXISTS (SELECT 1  FROM uba_userrole A02  WHERE A02.userID=? AND A02.roleID=A01.ID)) OR (EXISTS (SELECT 1  FROM uba_grouprole A03  WHERE EXISTS (SELECT 1  FROM uba_usergroup A04  WHERE A04.userID=? AND A04.groupID=A03.groupID) AND A03.roleID=A01.ID))))
+20211011 11450732  "  -    			00.000.125
+20211011 11450732  "  -    		00.000.134
+20211011 11450732  "  -    	00.000.274
+20211011 11450732  "  +    	method(TubStorageMixin) uba_usergroup.select
+20211011 11450732  "  +    		DataStore.init(uba_usergroup)
+20211011 11450732  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450732  " cust1 				{"P1":10}
+20211011 11450732  " SQL   				r=0 t=41 fr=25 c=0 q=SELECT A01.groupID  FROM uba_usergroup A01  WHERE A01.userID=?
+20211011 11450732  "  -    			00.000.058
+20211011 11450732  "  -    		00.000.064
+20211011 11450732  "  -    	00.000.102
+20211011 11450732  " auth  	New session admin/cb91dbcc created at 127.0.0.1/0 using Mozilla/5.0 (Linux; mORMot 1.18 TCurlHTTP)
+20211011 11450732  " debug 	Call JS method: UBA.onUserLogin
+20211011 11450732  "  +    	method(TubStorageMixin) uba_advSecurity.select
+20211011 11450732  "  +    		DataStore.init(uba_advSecurity)
+20211011 11450732  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450732  " cust1 				{"P1":10}
+20211011 11450732  " SQL   				r=0 t=86 fr=58 c=0 q=SELECT A01.ID,A01.allowedIP,A01.refreshIP,A01.fp,A01.refreshFp,A01.keyMediaName,A01.refreshKeyMedia,A01.mi_modifyDate  FROM uba_advSecurity A01  WHERE A01.userID=?
+20211011 11450732  "  -    			00.000.123
+20211011 11450732  "  -    		00.000.136
+20211011 11450732  "  -    	00.000.261
+20211011 11450732  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450732  "  +    		DataStore.ParseInsertAndExec
+20211011 11450732  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450732  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450732  " cust1 					{"P1s8":"uba_user", "P2":10, "P3s5":"LOGIN", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s5":"admin", "P8s0":"", "P9":335016339013633, "P10s203":"Host: localhost:8881\r\nUser-Agent: Mozilla/5.0 (Lin..."}
+20211011 11450732  " SQL   					r=1 t=114 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetUser,targetRole,ID,fromValue) VALUES (?,?,?,?,?,?,?,?,?,?)
+20211011 11450732  "  -    				00.000.157
+20211011 11450732  "  -    			00.000.302
+20211011 11450732  "  -    		00.000.319
+20211011 11450732  "  -    	00.000.616
+20211011 11450732  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450732  "  -    	00.000.007
+20211011 11450732  " DB    	Commit connection "main"
+20211011 11450732  " http  	127.0.0.1 <- 200
+20211011 11450732  "  -    00.008.430
+20211011 11450732  "  +    ubql
+20211011 11450732  " http  	127.0.0.1 -> POST ubql
+20211011 11450732  " info  	endpoint ubql
+20211011 11450732  " info  	[{"entity":"uba_els","method":"addnew","fieldList":["ID"],"__nativeDatasetFormat":true},{"entity":"uba_els","method":"addnew","fieldList":["ID"],"__nativeDatasetFormat":true},{"entity":"uba_els","method":"addnew","fieldList":["ID"],"__nativeDatasetFormat":true},{"entity":"uba_els","method":"addnew","fieldList":["ID"],"__nativeDatasetFormat":true},{"entity":"uba_els","method":"addnew","fieldList":["ID"],"__nativeDatasetFormat":true},{"entity":"uba_els","method":"addnew","fieldList":["ID"],"__nativeDatasetFormat":true},{"entity":"uba_els","method":"addnew","fieldList":["ID"],"__nativeDatasetFormat":true},{"entity":"uba_els","method":"addnew","fieldList":["ID"],"__nativeDatasetFormat":true},{"entity":"uba_els","method":"addnew","fieldList":["ID"],"__nativeDatasetFormat":true},{"entity":"uba_els","method":"addnew","fieldList":["ID"],"__nativeDatasetFormat":true},{"entity":"uba_els","method":"addnew","fieldList":["ID"],"__nativeDatasetFormat":true},{"entity":"uba_els","method":"addnew","fieldList":["ID"],"__native... (truncated) length=2002
+20211011 11450732  " auth  	admin/cb91dbcc
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.024
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.014
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.011
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.012
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.011
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.010
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.010
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.010
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.011
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.010
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.011
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.010
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.010
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.011
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.010
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.008
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.011
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.027
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.010
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.010
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.011
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.011
+20211011 11450732  "  +    	method(TubStorageMixin) uba_els.addnew
+20211011 11450732  "  -    	00.000.011
+20211011 11450732  " http  	127.0.0.1 <- 200
+20211011 11450732  "  -    00.002.506
+20211011 11450732  "  +    ubql
+20211011 11450732  " http  	127.0.0.1 -> POST ubql
+20211011 11450732  " info  	endpoint ubql
+20211011 11450732  " info  	[{"entity":"uba_role","method":"select","fieldList":["ID"],"options":{"limit":1},"whereList":{"lookup":{"expression":"name","condition":"equal","values":{"name":"User"}}}}]
+20211011 11450732  " auth  	admin/cb91dbcc
+20211011 11450732  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450732  "  +    		DataStore.init(uba_role)
+20211011 11450732  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450732  " cust1 				{"P1s4":"User"}
+20211011 11450732  " SQL   				r=1 t=94 fr=59 c=0 q=SELECT A01.ID  FROM uba_role A01  WHERE name=? LIMIT 1 OFFSET 0 
+20211011 11450732  "  -    			00.000.133
+20211011 11450732  "  -    		00.000.147
+20211011 11450732  "  -    	00.000.224
+20211011 11450732  " http  	127.0.0.1 <- 200
+20211011 11450732  "  -    00.000.647
+20211011 11450733  "  +    ubql
+20211011 11450733  " http  	127.0.0.1 -> POST ubql
+20211011 11450733  " info  	endpoint ubql
+20211011 11450733  " info  	[{"entity":"uba_role","method":"select","fieldList":["ID"],"options":{"limit":1},"whereList":{"lookup":{"expression":"name","condition":"equal","values":{"name":"Supervisor"}}}}]
+20211011 11450733  " auth  	admin/cb91dbcc
+20211011 11450733  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450733  "  +    		DataStore.init(uba_role)
+20211011 11450733  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 				{"P1s10":"Supervisor"}
+20211011 11450733  " SQL   				r=1 t=117 fr=94 c=0 q=SELECT A01.ID  FROM uba_role A01  WHERE name=? LIMIT 1 OFFSET 0 
+20211011 11450733  "  -    			00.000.052
+20211011 11450733  "  -    		00.000.062
+20211011 11450733  "  -    	00.000.127
+20211011 11450733  " http  	127.0.0.1 <- 200
+20211011 11450733  "  -    00.000.428
+20211011 11450733  "  +    ubql
+20211011 11450733  " http  	127.0.0.1 -> POST ubql
+20211011 11450733  " info  	endpoint ubql
+20211011 11450733  " info  	[{"entity":"uba_role","method":"select","fieldList":["ID"],"options":{"limit":1},"whereList":{"lookup":{"expression":"name","condition":"equal","values":{"name":"Everyone"}}}}]
+20211011 11450733  " auth  	admin/cb91dbcc
+20211011 11450733  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450733  "  +    		DataStore.init(uba_role)
+20211011 11450733  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 				{"P1s8":"Everyone"}
+20211011 11450733  " SQL   				r=1 t=138 fr=117 c=0 q=SELECT A01.ID  FROM uba_role A01  WHERE name=? LIMIT 1 OFFSET 0 
+20211011 11450733  "  -    			00.000.049
+20211011 11450733  "  -    		00.000.058
+20211011 11450733  "  -    	00.000.119
+20211011 11450733  " http  	127.0.0.1 <- 200
+20211011 11450733  "  -    00.000.415
+20211011 11450733  "  +    ubql
+20211011 11450733  " http  	127.0.0.1 -> POST ubql
+20211011 11450733  " info  	endpoint ubql
+20211011 11450733  " info  	[{"entity":"uba_els","method":"insert","execParams":{"ID":335016339013634,"code":"UBA_USER_LANGCH_EVERYONE","entityMask":"uba_user","methodMask":"changeLanguage","ruleType":"A","ruleRole":3,"description":"Allow change language for Everyone"}},{"entity":"uba_els","method":"insert","execParams":{"ID":335016339013635,"code":"UBA_USER_UDATACH_USERS","entityMask":"uba_user","methodMask":"setUDataKey","ruleType":"A","ruleRole":3,"description":"Allow set uData key for user"}},{"entity":"uba_els","method":"insert","execParams":{"ID":335016339013636,"code":"UBA_USER_READ_USERS","entityMask":"uba_user","methodMask":"select","ruleType":"A","ruleRole":3,"description":"Allow read users for registered user"}},{"entity":"uba_els","method":"insert","execParams":{"ID":335016339013637,"code":"UBA_USER_READ_GROUPS","entityMask":"uba_group","methodMask":"select","ruleType":"A","ruleRole":3,"description":"Allow read groups for registered user"}},{"entity":"uba_els","method":"insert","execParams":{"ID":335016339013638,"code":"UBA_... (truncated) length=5729
+20211011 11450733  " auth  	admin/cb91dbcc
+20211011 11450733  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450733  "  +    		DataStore.ParseInsertAndExec
+20211011 11450733  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450733  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 					{"P1":335016339013634, "P2s24":"UBA_USER_LANGCH_EVERYONE", "P3s8":"uba_user", "P4s14":"changeLanguage", "P5s1":"A", "P6":3, "P7s34":"Allow change language for Everyone", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450733  " SQL   					r=1 t=113 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450733  "  -    				00.000.156
+20211011 11450733  "  -    			00.000.288
+20211011 11450733  "  -    		00.000.306
+20211011 11450733  "  -    	00.000.387
+20211011 11450733  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450733  "  -    	00.000.005
+20211011 11450733  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450733  " info  		requestID=335016339013658
+20211011 11450733  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450733  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " SQL   				r=1 t=105 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450733  "  -    			00.000.120
+20211011 11450733  "  -    		00.000.221
+20211011 11450733  "  -    	00.000.246
+20211011 11450733  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450733  "  +    		DataStore.init(uba_role)
+20211011 11450733  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 				{"P1":3}
+20211011 11450733  " SQL   				r=1 t=91 fr=55 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450733  "  -    			00.000.126
+20211011 11450733  "  -    		00.000.139
+20211011 11450733  "  -    	00.000.211
+20211011 11450733  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450733  "  +    		DataStore.ParseInsertAndExec
+20211011 11450733  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450733  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 					{"P1s7":"uba_els", "P2":335016339013634, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s4":"User", "P8":335016339013659, "P9s327":"{\"ID\":335016339013634,\"code\":\"UBA_USER_LANGCH_EVER..."}
+20211011 11450733  " SQL   					r=1 t=56 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450733  "  -    				00.000.081
+20211011 11450733  "  -    			00.000.229
+20211011 11450733  "  -    		00.000.241
+20211011 11450733  "  -    	00.000.288
+20211011 11450733  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450733  "  -    	00.000.003
+20211011 11450733  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450733  "  +    		DataStore.ParseInsertAndExec
+20211011 11450733  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450733  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 					{"P1":335016339013635, "P2s22":"UBA_USER_UDATACH_USERS", "P3s8":"uba_user", "P4s11":"setUDataKey", "P5s1":"A", "P6":3, "P7s28":"Allow set uData key for user", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450733  " SQL   					r=1 t=130 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450733  "  -    				00.000.035
+20211011 11450733  "  -    			00.000.164
+20211011 11450733  "  -    		00.000.179
+20211011 11450733  "  -    	00.000.208
+20211011 11450733  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450733  "  -    	00.000.003
+20211011 11450733  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450733  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450733  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " SQL   				r=1 t=116 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450733  "  -    			00.000.020
+20211011 11450733  "  -    		00.000.133
+20211011 11450733  "  -    	00.000.158
+20211011 11450733  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450733  "  +    		DataStore.init(uba_role)
+20211011 11450733  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 				{"P1":3}
+20211011 11450733  " SQL   				r=1 t=99 fr=91 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450733  "  -    			00.000.028
+20211011 11450733  "  -    		00.000.037
+20211011 11450733  "  -    	00.000.088
+20211011 11450733  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450733  "  +    		DataStore.ParseInsertAndExec
+20211011 11450733  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450733  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 					{"P1s7":"uba_els", "P2":335016339013635, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s4":"User", "P8":335016339013661, "P9s316":"{\"ID\":335016339013635,\"code\":\"UBA_USER_UDATACH_USE..."}
+20211011 11450733  " SQL   					r=1 t=67 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450733  "  -    				00.000.027
+20211011 11450733  "  -    			00.000.121
+20211011 11450733  "  -    		00.000.133
+20211011 11450733  "  -    	00.000.158
+20211011 11450733  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450733  "  -    	00.000.002
+20211011 11450733  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450733  "  +    		DataStore.ParseInsertAndExec
+20211011 11450733  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450733  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 					{"P1":335016339013636, "P2s19":"UBA_USER_READ_USERS", "P3s8":"uba_user", "P4s6":"select", "P5s1":"A", "P6":3, "P7s36":"Allow read users for registered user", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450733  " SQL   					r=1 t=163 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450733  "  -    				00.000.048
+20211011 11450733  "  -    			00.000.158
+20211011 11450733  "  -    		00.000.170
+20211011 11450733  "  -    	00.000.194
+20211011 11450733  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450733  "  -    	00.000.002
+20211011 11450733  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450733  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450733  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " SQL   				r=1 t=126 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450733  "  -    			00.000.019
+20211011 11450733  "  -    		00.000.132
+20211011 11450733  "  -    	00.000.152
+20211011 11450733  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450733  "  +    		DataStore.init(uba_role)
+20211011 11450733  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 				{"P1":3}
+20211011 11450733  " SQL   				r=1 t=107 fr=99 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450733  "  -    			00.000.025
+20211011 11450733  "  -    		00.000.035
+20211011 11450733  "  -    	00.000.083
+20211011 11450733  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450733  "  +    		DataStore.ParseInsertAndExec
+20211011 11450733  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450733  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 					{"P1s7":"uba_els", "P2":335016339013636, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s4":"User", "P8":335016339013663, "P9s316":"{\"ID\":335016339013636,\"code\":\"UBA_USER_READ_USERS\"..."}
+20211011 11450733  " SQL   					r=1 t=77 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450733  "  -    				00.000.024
+20211011 11450733  "  -    			00.000.130
+20211011 11450733  "  -    		00.000.198
+20211011 11450733  "  -    	00.000.222
+20211011 11450733  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450733  "  -    	00.000.002
+20211011 11450733  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450733  "  +    		DataStore.ParseInsertAndExec
+20211011 11450733  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450733  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 					{"P1":335016339013637, "P2s20":"UBA_USER_READ_GROUPS", "P3s9":"uba_group", "P4s6":"select", "P5s1":"A", "P6":3, "P7s37":"Allow read groups for registered user", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450733  " SQL   					r=1 t=185 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450733  "  -    				00.000.042
+20211011 11450733  "  -    			00.000.184
+20211011 11450733  "  -    		00.000.202
+20211011 11450733  "  -    	00.000.234
+20211011 11450733  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450733  "  -    	00.000.003
+20211011 11450733  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450733  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450733  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " SQL   				r=1 t=136 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450733  "  -    			00.000.020
+20211011 11450733  "  -    		00.000.139
+20211011 11450733  "  -    	00.000.164
+20211011 11450733  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450733  "  +    		DataStore.init(uba_role)
+20211011 11450733  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 				{"P1":3}
+20211011 11450733  " SQL   				r=1 t=119 fr=108 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450733  "  -    			00.000.033
+20211011 11450733  "  -    		00.000.044
+20211011 11450733  "  -    	00.000.098
+20211011 11450733  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450733  "  +    		DataStore.ParseInsertAndExec
+20211011 11450733  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450733  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 					{"P1s7":"uba_els", "P2":335016339013637, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s4":"User", "P8":335016339013665, "P9s319":"{\"ID\":335016339013637,\"code\":\"UBA_USER_READ_GROUPS..."}
+20211011 11450733  " SQL   					r=1 t=89 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450733  "  -    				00.000.030
+20211011 11450733  "  -    			00.000.126
+20211011 11450733  "  -    		00.000.138
+20211011 11450733  "  -    	00.000.166
+20211011 11450733  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450733  "  -    	00.000.002
+20211011 11450733  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450733  "  +    		DataStore.ParseInsertAndExec
+20211011 11450733  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450733  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 					{"P1":335016339013638, "P2s24":"UBA_USER_EDIT_SUPERVISOR", "P3s8":"uba_user", "P4s7":"[iuda]*", "P5s1":"A", "P6":4, "P7s44":"Allow CUD operations on users for supervisor", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450733  " SQL   					r=1 t=201 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450733  "  -    				00.000.032
+20211011 11450733  "  -    			00.000.152
+20211011 11450733  "  -    		00.000.167
+20211011 11450733  "  -    	00.000.383
+20211011 11450733  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450733  "  -    	00.000.002
+20211011 11450733  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450733  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450733  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " SQL   				r=1 t=150 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450733  "  -    			00.000.023
+20211011 11450733  "  -    		00.000.132
+20211011 11450733  "  -    	00.000.154
+20211011 11450733  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450733  "  +    		DataStore.init(uba_role)
+20211011 11450733  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 				{"P1":4}
+20211011 11450733  " SQL   				r=1 t=127 fr=119 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450733  "  -    			00.000.024
+20211011 11450733  "  -    		00.000.034
+20211011 11450733  "  -    	00.000.086
+20211011 11450733  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450733  "  +    		DataStore.ParseInsertAndExec
+20211011 11450733  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450733  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 					{"P1s7":"uba_els", "P2":335016339013638, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s10":"Supervisor", "P8":335016339013667, "P9s330":"{\"ID\":335016339013638,\"code\":\"UBA_USER_EDIT_SUPERV..."}
+20211011 11450733  " SQL   					r=1 t=104 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450733  "  -    				00.000.032
+20211011 11450733  "  -    			00.000.111
+20211011 11450733  "  -    		00.000.124
+20211011 11450733  "  -    	00.000.617
+20211011 11450733  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450733  "  -    	00.000.003
+20211011 11450733  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450733  "  +    		DataStore.ParseInsertAndExec
+20211011 11450733  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450733  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 					{"P1":335016339013639, "P2s25":"UBA_USER_CHPWD_SUPERVISOR", "P3s8":"uba_user", "P4s23":"changeOtherUserPassword", "P5s1":"A", "P6":4, "P7s49":"Allow change password for any user for supervisor", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450733  " SQL   					r=1 t=218 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450733  "  -    				00.000.035
+20211011 11450733  "  -    			00.000.157
+20211011 11450733  "  -    		00.000.168
+20211011 11450733  "  -    	00.000.190
+20211011 11450733  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450733  "  -    	00.000.003
+20211011 11450733  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450733  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450733  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " SQL   				r=1 t=159 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450733  "  -    			00.000.076
+20211011 11450733  "  -    		00.000.185
+20211011 11450733  "  -    	00.000.210
+20211011 11450733  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450733  "  +    		DataStore.init(uba_role)
+20211011 11450733  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450733  " cust1 				{"P1":4}
+20211011 11450733  " SQL   				r=1 t=143 fr=128 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450733  "  -    			00.000.042
+20211011 11450733  "  -    		00.000.055
+20211011 11450733  "  -    	00.000.126
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1s7":"uba_els", "P2":335016339013639, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s10":"Supervisor", "P8":335016339013669, "P9s352":"{\"ID\":335016339013639,\"code\":\"UBA_USER_CHPWD_SUPER..."}
+20211011 11450734  " SQL   					r=1 t=122 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.040
+20211011 11450734  "  -    			00.000.170
+20211011 11450734  "  -    		00.000.186
+20211011 11450734  "  -    	00.000.222
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450734  "  -    	00.000.003
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1":335016339013640, "P2s25":"UBA_GROUP_EDIT_SUPERVISOR", "P3s9":"uba_group", "P4s7":"[iuda]*", "P5s1":"A", "P6":4, "P7s54":"Allow CUD operations on security groups for superv...", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450734  " SQL   					r=1 t=237 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.039
+20211011 11450734  "  -    			00.000.187
+20211011 11450734  "  -    		00.000.205
+20211011 11450734  "  -    	00.000.228
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450734  "  -    	00.000.003
+20211011 11450734  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450734  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " SQL   				r=1 t=172 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    			00.000.025
+20211011 11450734  "  -    		00.000.165
+20211011 11450734  "  -    	00.000.194
+20211011 11450734  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450734  "  +    		DataStore.init(uba_role)
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 				{"P1":4}
+20211011 11450734  " SQL   				r=1 t=151 fr=143 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450734  "  -    			00.000.029
+20211011 11450734  "  -    		00.000.040
+20211011 11450734  "  -    	00.000.099
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1s7":"uba_els", "P2":335016339013640, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s10":"Supervisor", "P8":335016339013671, "P9s342":"{\"ID\":335016339013640,\"code\":\"UBA_GROUP_EDIT_SUPER..."}
+20211011 11450734  " SQL   					r=1 t=133 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.025
+20211011 11450734  "  -    			00.000.104
+20211011 11450734  "  -    		00.000.114
+20211011 11450734  "  -    	00.000.335
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450734  "  -    	00.000.002
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1":335016339013641, "P2s24":"UBA_ROLE_READ_SUPERVISOR", "P3s8":"uba_role", "P4s6":"select", "P5s1":"A", "P6":4, "P7s30":"Allow supervisor to read roles", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450734  " SQL   					r=1 t=249 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.025
+20211011 11450734  "  -    			00.000.115
+20211011 11450734  "  -    		00.000.125
+20211011 11450734  "  -    	00.000.147
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450734  "  -    	00.000.002
+20211011 11450734  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450734  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " SQL   				r=1 t=180 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    			00.000.015
+20211011 11450734  "  -    		00.000.096
+20211011 11450734  "  -    	00.000.112
+20211011 11450734  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450734  "  +    		DataStore.init(uba_role)
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 				{"P1":4}
+20211011 11450734  " SQL   				r=1 t=158 fr=151 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450734  "  -    			00.000.022
+20211011 11450734  "  -    		00.000.029
+20211011 11450734  "  -    	00.000.077
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1s7":"uba_els", "P2":335016339013641, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s10":"Supervisor", "P8":335016339013673, "P9s315":"{\"ID\":335016339013641,\"code\":\"UBA_ROLE_READ_SUPERV..."}
+20211011 11450734  " SQL   					r=1 t=142 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.022
+20211011 11450734  "  -    			00.000.102
+20211011 11450734  "  -    		00.000.110
+20211011 11450734  "  -    	00.000.125
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450734  "  -    	00.000.002
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1":335016339013642, "P2s29":"UBA_USER_ROLE_EDIT_SUPERVISOR", "P3s12":"uba_userrole", "P4s7":"[iuda]*", "P5s1":"A", "P6":4, "P7s41":"Allow grant a role to user for supervisor", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450734  " SQL   					r=1 t=261 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.024
+20211011 11450734  "  -    			00.000.116
+20211011 11450734  "  -    		00.000.127
+20211011 11450734  "  -    	00.000.139
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450734  "  -    	00.000.002
+20211011 11450734  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450734  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " SQL   				r=1 t=188 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    			00.000.014
+20211011 11450734  "  -    		00.000.092
+20211011 11450734  "  -    	00.000.110
+20211011 11450734  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450734  "  +    		DataStore.init(uba_role)
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 				{"P1":4}
+20211011 11450734  " SQL   				r=1 t=164 fr=158 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450734  "  -    			00.000.018
+20211011 11450734  "  -    		00.000.024
+20211011 11450734  "  -    	00.000.060
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1s7":"uba_els", "P2":335016339013642, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s10":"Supervisor", "P8":335016339013675, "P9s336":"{\"ID\":335016339013642,\"code\":\"UBA_USER_ROLE_EDIT_S..."}
+20211011 11450734  " SQL   					r=1 t=150 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.020
+20211011 11450734  "  -    			00.000.096
+20211011 11450734  "  -    		00.000.105
+20211011 11450734  "  -    	00.000.117
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450734  "  -    	00.000.002
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1":335016339013643, "P2s30":"UBA_USER_GROUP_EDIT_SUPERVISOR", "P3s13":"uba_usergroup", "P4s7":"[iuda]*", "P5s1":"A", "P6":4, "P7s42":"Allow grant a group to user for supervisor", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450734  " SQL   					r=1 t=270 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.021
+20211011 11450734  "  -    			00.000.108
+20211011 11450734  "  -    		00.000.118
+20211011 11450734  "  -    	00.000.132
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450734  "  -    	00.000.001
+20211011 11450734  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450734  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " SQL   				r=1 t=195 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    			00.000.013
+20211011 11450734  "  -    		00.000.090
+20211011 11450734  "  -    	00.000.106
+20211011 11450734  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450734  "  +    		DataStore.init(uba_role)
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 				{"P1":4}
+20211011 11450734  " SQL   				r=1 t=169 fr=164 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450734  "  -    			00.000.021
+20211011 11450734  "  -    		00.000.027
+20211011 11450734  "  -    	00.000.065
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1s7":"uba_els", "P2":335016339013643, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s10":"Supervisor", "P8":335016339013677, "P9s339":"{\"ID\":335016339013643,\"code\":\"UBA_USER_GROUP_EDIT_..."}
+20211011 11450734  " SQL   					r=1 t=158 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.020
+20211011 11450734  "  -    			00.000.092
+20211011 11450734  "  -    		00.000.101
+20211011 11450734  "  -    	00.000.114
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450734  "  -    	00.000.002
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1":335016339013644, "P2s29":"UBA_GROUPROLE_EDIT_SUPERVISOR", "P3s13":"uba_grouprole", "P4s7":"[iuda]*", "P5s1":"A", "P6":4, "P7s42":"Allow grant a role to group for supervisor", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450734  " SQL   					r=1 t=281 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.023
+20211011 11450734  "  -    			00.000.114
+20211011 11450734  "  -    		00.000.125
+20211011 11450734  "  -    	00.000.137
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450734  "  -    	00.000.002
+20211011 11450734  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450734  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " SQL   				r=1 t=202 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    			00.000.014
+20211011 11450734  "  -    		00.000.092
+20211011 11450734  "  -    	00.000.108
+20211011 11450734  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450734  "  +    		DataStore.init(uba_role)
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 				{"P1":4}
+20211011 11450734  " SQL   				r=1 t=175 fr=169 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450734  "  -    			00.000.019
+20211011 11450734  "  -    		00.000.026
+20211011 11450734  "  -    	00.000.063
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1s7":"uba_els", "P2":335016339013644, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s10":"Supervisor", "P8":335016339013679, "P9s338":"{\"ID\":335016339013644,\"code\":\"UBA_GROUPROLE_EDIT_S..."}
+20211011 11450734  " SQL   					r=1 t=170 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.080
+20211011 11450734  "  -    			00.000.161
+20211011 11450734  "  -    		00.000.173
+20211011 11450734  "  -    	00.000.185
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450734  "  -    	00.000.003
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1":335016339013645, "P2s29":"UBA_GROUPROLE_READ_SUPERVISOR", "P3s13":"uba_grouprole", "P4s6":"select", "P5s1":"A", "P6":4, "P7s37":"Allow supervisor to read groups roles", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450734  " SQL   					r=1 t=298 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.036
+20211011 11450734  "  -    			00.000.186
+20211011 11450734  "  -    		00.000.204
+20211011 11450734  "  -    	00.000.226
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450734  "  -    	00.000.003
+20211011 11450734  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450734  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " SQL   				r=1 t=214 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    			00.000.023
+20211011 11450734  "  -    		00.000.159
+20211011 11450734  "  -    	00.000.186
+20211011 11450734  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450734  "  +    		DataStore.init(uba_role)
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 				{"P1":4}
+20211011 11450734  " SQL   				r=1 t=184 fr=176 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450734  "  -    			00.000.030
+20211011 11450734  "  -    		00.000.041
+20211011 11450734  "  -    	00.000.097
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1s7":"uba_els", "P2":335016339013645, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s10":"Supervisor", "P8":335016339013681, "P9s332":"{\"ID\":335016339013645,\"code\":\"UBA_GROUPROLE_READ_S..."}
+20211011 11450734  " SQL   					r=1 t=182 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.032
+20211011 11450734  "  -    			00.000.156
+20211011 11450734  "  -    		00.000.172
+20211011 11450734  "  -    	00.000.192
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450734  "  -    	00.000.004
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1":335016339013646, "P2s28":"UBA_USERROLE_READ_SUPERVISOR", "P3s12":"uba_userrole", "P4s6":"select", "P5s1":"A", "P6":4, "P7s35":"Allow supervisor to read user roles", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450734  " SQL   					r=1 t=315 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.034
+20211011 11450734  "  -    			00.000.223
+20211011 11450734  "  -    		00.000.241
+20211011 11450734  "  -    	00.000.263
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450734  "  -    	00.000.003
+20211011 11450734  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450734  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " SQL   				r=1 t=225 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    			00.000.021
+20211011 11450734  "  -    		00.000.142
+20211011 11450734  "  -    	00.000.165
+20211011 11450734  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450734  "  +    		DataStore.init(uba_role)
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 				{"P1":4}
+20211011 11450734  " SQL   				r=1 t=190 fr=184 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450734  "  -    			00.000.021
+20211011 11450734  "  -    		00.000.027
+20211011 11450734  "  -    	00.000.064
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1s7":"uba_els", "P2":335016339013646, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s10":"Supervisor", "P8":335016339013683, "P9s328":"{\"ID\":335016339013646,\"code\":\"UBA_USERROLE_READ_SU..."}
+20211011 11450734  " SQL   					r=1 t=190 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.020
+20211011 11450734  "  -    			00.000.092
+20211011 11450734  "  -    		00.000.101
+20211011 11450734  "  -    	00.000.113
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450734  "  -    	00.000.002
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1":335016339013647, "P2s29":"UBA_USERGROUP_READ_SUPERVISOR", "P3s13":"uba_usergroup", "P4s6":"select", "P5s1":"A", "P6":4, "P7s36":"Allow supervisor to read user groups", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450734  " SQL   					r=1 t=324 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.020
+20211011 11450734  "  -    			00.000.103
+20211011 11450734  "  -    		00.000.112
+20211011 11450734  "  -    	00.000.124
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450734  "  -    	00.000.002
+20211011 11450734  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450734  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " SQL   				r=1 t=234 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    			00.000.016
+20211011 11450734  "  -    		00.000.088
+20211011 11450734  "  -    	00.000.104
+20211011 11450734  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450734  "  +    		DataStore.init(uba_role)
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 				{"P1":4}
+20211011 11450734  " SQL   				r=1 t=195 fr=190 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450734  "  -    			00.000.016
+20211011 11450734  "  -    		00.000.023
+20211011 11450734  "  -    	00.000.055
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1s7":"uba_els", "P2":335016339013647, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s10":"Supervisor", "P8":335016339013685, "P9s331":"{\"ID\":335016339013647,\"code\":\"UBA_USERGROUP_READ_S..."}
+20211011 11450734  " SQL   					r=1 t=199 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.021
+20211011 11450734  "  -    			00.000.094
+20211011 11450734  "  -    		00.000.102
+20211011 11450734  "  -    	00.000.113
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450734  "  -    	00.000.002
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1":335016339013648, "P2s25":"UBA_AUDIT_READ_SUPERVISOR", "P3s9":"uba_audit", "P4s6":"select", "P5s1":"A", "P6":4, "P7s39":"Allow supervisor to read security audit", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450734  " SQL   					r=1 t=333 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.019
+20211011 11450734  "  -    			00.000.107
+20211011 11450734  "  -    		00.000.115
+20211011 11450734  "  -    	00.000.128
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450734  "  -    	00.000.001
+20211011 11450734  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450734  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " SQL   				r=1 t=240 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    			00.000.013
+20211011 11450734  "  -    		00.000.084
+20211011 11450734  "  -    	00.000.099
+20211011 11450734  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450734  "  +    		DataStore.init(uba_role)
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 				{"P1":4}
+20211011 11450734  " SQL   				r=1 t=199 fr=195 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450734  "  -    			00.000.016
+20211011 11450734  "  -    		00.000.021
+20211011 11450734  "  -    	00.000.053
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1s7":"uba_els", "P2":335016339013648, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s10":"Supervisor", "P8":335016339013687, "P9s326":"{\"ID\":335016339013648,\"code\":\"UBA_AUDIT_READ_SUPER..."}
+20211011 11450734  " SQL   					r=1 t=206 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.016
+20211011 11450734  "  -    			00.000.089
+20211011 11450734  "  -    		00.000.098
+20211011 11450734  "  -    	00.000.108
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450734  "  -    	00.000.001
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1":335016339013649, "P2s30":"UBA_AUDITTRAIL_READ_SUPERVISOR", "P3s14":"uba_auditTrail", "P4s6":"select", "P5s1":"A", "P6":4, "P7s36":"Allow supervisor to read audit trail", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450734  " SQL   					r=1 t=342 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.019
+20211011 11450734  "  -    			00.000.106
+20211011 11450734  "  -    		00.000.115
+20211011 11450734  "  -    	00.000.127
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450734  "  -    	00.000.002
+20211011 11450734  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450734  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " SQL   				r=1 t=246 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    			00.000.012
+20211011 11450734  "  -    		00.000.084
+20211011 11450734  "  -    	00.000.098
+20211011 11450734  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450734  "  +    		DataStore.init(uba_role)
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 				{"P1":4}
+20211011 11450734  " SQL   				r=1 t=203 fr=199 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450734  "  -    			00.000.015
+20211011 11450734  "  -    		00.000.020
+20211011 11450734  "  -    	00.000.052
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1s7":"uba_els", "P2":335016339013649, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s10":"Supervisor", "P8":335016339013689, "P9s333":"{\"ID\":335016339013649,\"code\":\"UBA_AUDITTRAIL_READ_..."}
+20211011 11450734  " SQL   					r=1 t=213 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.017
+20211011 11450734  "  -    			00.000.085
+20211011 11450734  "  -    		00.000.094
+20211011 11450734  "  -    	00.000.106
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450734  "  -    	00.000.003
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1":335016339013650, "P2s21":"UBA_AUDIT_SELECT_ONLY", "P3s9":"uba_audit", "P4s5":"[^s]*", "P5s1":"D", "P6":0, "P7s55":"Deny direct security audit operation even for all ...", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450734  " SQL   					r=1 t=351 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.078
+20211011 11450734  "  -    			00.000.173
+20211011 11450734  "  -    		00.000.184
+20211011 11450734  "  -    	00.000.197
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450734  "  -    	00.000.003
+20211011 11450734  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450734  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " SQL   				r=1 t=255 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    			00.000.020
+20211011 11450734  "  -    		00.000.137
+20211011 11450734  "  -    	00.000.159
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1s7":"uba_els", "P2":335016339013650, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7":0, "P8":335016339013691, "P9s337":"{\"ID\":335016339013650,\"code\":\"UBA_AUDIT_SELECT_ONL..."}
+20211011 11450734  " SQL   					r=1 t=224 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.029
+20211011 11450734  "  -    			00.000.142
+20211011 11450734  "  -    		00.000.158
+20211011 11450734  "  -    	00.000.178
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450734  "  -    	00.000.003
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1":335016339013651, "P2s22":"UBA_AUDIT_SECURE_EVENT", "P3s9":"uba_audit", "P4s18":"secureBrowserEvent", "P5s1":"A", "P6":3, "P7s51":"Allow insert secureBrowserEvent for authorized use...", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450734  " SQL   					r=1 t=368 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.034
+20211011 11450734  "  -    			00.000.170
+20211011 11450734  "  -    		00.000.187
+20211011 11450734  "  -    	00.000.208
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450734  "  -    	00.000.003
+20211011 11450734  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450734  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " SQL   				r=1 t=265 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    			00.000.019
+20211011 11450734  "  -    		00.000.141
+20211011 11450734  "  -    	00.000.166
+20211011 11450734  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450734  "  +    		DataStore.init(uba_role)
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 				{"P1":3}
+20211011 11450734  " SQL   				r=1 t=211 fr=203 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450734  "  -    			00.000.029
+20211011 11450734  "  -    		00.000.039
+20211011 11450734  "  -    	00.000.092
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1s7":"uba_els", "P2":335016339013651, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s4":"User", "P8":335016339013693, "P9s347":"{\"ID\":335016339013651,\"code\":\"UBA_AUDIT_SECURE_EVE..."}
+20211011 11450734  " SQL   					r=1 t=234 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.026
+20211011 11450734  "  -    			00.000.139
+20211011 11450734  "  -    		00.000.152
+20211011 11450734  "  -    	00.000.171
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450734  "  -    	00.000.002
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1":335016339013652, "P2s16":"UBA_SUBJECT_DENY", "P3s11":"uba_subject", "P4s7":"[iuda]*", "P5s1":"D", "P6":0, "P7s45":"Deny direct modification of UNITY uba_subject", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450734  " SQL   					r=1 t=379 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.021
+20211011 11450734  "  -    			00.000.104
+20211011 11450734  "  -    		00.000.113
+20211011 11450734  "  -    	00.000.126
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450734  "  -    	00.000.002
+20211011 11450734  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450734  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " SQL   				r=1 t=272 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    			00.000.013
+20211011 11450734  "  -    		00.000.087
+20211011 11450734  "  -    	00.000.102
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1s7":"uba_els", "P2":335016339013652, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7":0, "P8":335016339013695, "P9s326":"{\"ID\":335016339013652,\"code\":\"UBA_SUBJECT_DENY\",\"e..."}
+20211011 11450734  " SQL   					r=1 t=241 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.017
+20211011 11450734  "  -    			00.000.081
+20211011 11450734  "  -    		00.000.089
+20211011 11450734  "  -    	00.000.100
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450734  "  -    	00.000.002
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1":335016339013653, "P2s23":"UBA_AUDITTRAIL_SEL_ONLY", "P3s14":"uba_auditTrail", "P4s7":"[iuda]*", "P5s1":"D", "P6":0, "P7s46":"Deny direct audit operation even for all roles", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450734  " SQL   					r=1 t=388 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.019
+20211011 11450734  "  -    			00.000.100
+20211011 11450734  "  -    		00.000.109
+20211011 11450734  "  -    	00.000.121
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450734  "  -    	00.000.002
+20211011 11450734  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450734  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " SQL   				r=1 t=277 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    			00.000.012
+20211011 11450734  "  -    		00.000.083
+20211011 11450734  "  -    	00.000.098
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1s7":"uba_els", "P2":335016339013653, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7":0, "P8":335016339013697, "P9s337":"{\"ID\":335016339013653,\"code\":\"UBA_AUDITTRAIL_SEL_O..."}
+20211011 11450734  " SQL   					r=1 t=249 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.018
+20211011 11450734  "  -    			00.000.095
+20211011 11450734  "  -    		00.000.108
+20211011 11450734  "  -    	00.000.124
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450734  "  -    	00.000.003
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1":335016339013654, "P2s26":"UBA_ADVSEC_EDIT_SUPERVISOR", "P3s15":"uba_advSecurity", "P4s7":"[iuda]*", "P5s1":"A", "P6":4, "P7s56":"Allow CUD operations on advanced security for supe...", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450734  " SQL   					r=1 t=397 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.021
+20211011 11450734  "  -    			00.000.101
+20211011 11450734  "  -    		00.000.111
+20211011 11450734  "  -    	00.000.123
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450734  "  -    	00.000.002
+20211011 11450734  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450734  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " SQL   				r=1 t=283 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    			00.000.012
+20211011 11450734  "  -    		00.000.083
+20211011 11450734  "  -    	00.000.098
+20211011 11450734  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450734  "  +    		DataStore.init(uba_role)
+20211011 11450734  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 				{"P1":4}
+20211011 11450734  " SQL   				r=1 t=217 fr=211 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450734  "  -    			00.000.021
+20211011 11450734  "  -    		00.000.028
+20211011 11450734  "  -    	00.000.071
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1s7":"uba_els", "P2":335016339013654, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s10":"Supervisor", "P8":335016339013699, "P9s351":"{\"ID\":335016339013654,\"code\":\"UBA_ADVSEC_EDIT_SUPE..."}
+20211011 11450734  " SQL   					r=1 t=256 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.019
+20211011 11450734  "  -    			00.000.094
+20211011 11450734  "  -    		00.000.103
+20211011 11450734  "  -    	00.000.114
+20211011 11450734  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450734  "  -    	00.000.002
+20211011 11450734  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450734  "  +    		DataStore.ParseInsertAndExec
+20211011 11450734  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450734  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450734  " cust1 					{"P1":335016339013655, "P2s17":"UBA_USERCERT_READ", "P3s19":"uba_usercertificate", "P4s6":"select", "P5s1":"A", "P6":3, "P7s49":"Allow read user certificates for registered users", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450734  " SQL   					r=1 t=407 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450734  "  -    				00.000.022
+20211011 11450734  "  -    			00.000.108
+20211011 11450734  "  -    		00.000.119
+20211011 11450734  "  -    	00.000.131
+20211011 11450735  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450735  "  -    	00.000.002
+20211011 11450735  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450735  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450735  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450735  " SQL   				r=1 t=292 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450735  "  -    			00.000.019
+20211011 11450735  "  -    		00.000.127
+20211011 11450735  "  -    	00.000.149
+20211011 11450735  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450735  "  +    		DataStore.init(uba_role)
+20211011 11450735  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450735  " cust1 				{"P1":3}
+20211011 11450735  " SQL   				r=1 t=225 fr=218 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450735  "  -    			00.000.023
+20211011 11450735  "  -    		00.000.032
+20211011 11450735  "  -    	00.000.085
+20211011 11450735  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450735  "  +    		DataStore.ParseInsertAndExec
+20211011 11450735  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450735  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450735  " cust1 					{"P1s7":"uba_els", "P2":335016339013655, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s4":"User", "P8":335016339013701, "P9s338":"{\"ID\":335016339013655,\"code\":\"UBA_USERCERT_READ\",\"..."}
+20211011 11450735  " SQL   					r=1 t=265 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450735  "  -    				00.000.021
+20211011 11450735  "  -    			00.000.092
+20211011 11450735  "  -    		00.000.100
+20211011 11450735  "  -    	00.000.123
+20211011 11450735  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450735  "  -    	00.000.002
+20211011 11450735  "  +    	method(TubStorageMixin) uba_els.insert
+20211011 11450735  "  +    		DataStore.ParseInsertAndExec
+20211011 11450735  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450735  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450735  " cust1 					{"P1":335016339013656, "P2s26":"UBA_USERCERT_READ_CERT_BIN", "P3s19":"uba_usercertificate", "P4s14":"getCertificate", "P5s1":"A", "P6":3, "P7s61":"Allow read base64 representation of cert for regis...", "P8":10, "P9d":"2021-10-11T11:45:07", "P10":10, "P11d":"2021-10-11T11:45:07", "P12":10}
+20211011 11450735  " SQL   					r=1 t=418 c=0 q=INSERT INTO uba_els (ID,code,entityMask,methodMask,ruleType,ruleRole,description,mi_owner,mi_createDate,mi_createUser,mi_modifyDate,mi_modifyUser) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450735  "  -    				00.000.022
+20211011 11450735  "  -    			00.000.114
+20211011 11450735  "  -    		00.000.123
+20211011 11450735  "  -    	00.000.135
+20211011 11450735  "  +    	method(TubStorageMixin) uba_els.afterinsert
+20211011 11450735  "  -    	00.000.001
+20211011 11450735  "  +    	method(TubAuditMixin) uba_els.afterinsert
+20211011 11450735  "  +    		DataStore.BuildAndExecInsertSQL
+20211011 11450735  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450735  " SQL   				r=1 t=302 c=0 q=INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,request_id,actionUserName,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+20211011 11450735  "  -    			00.000.017
+20211011 11450735  "  -    		00.000.096
+20211011 11450735  "  -    	00.000.111
+20211011 11450735  "  +    	method(TubStorageMixin) uba_role.select
+20211011 11450735  "  +    		DataStore.init(uba_role)
+20211011 11450735  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450735  " cust1 				{"P1":3}
+20211011 11450735  " SQL   				r=1 t=231 fr=225 c=0 q=SELECT A01.name  FROM uba_role A01  WHERE A01.ID=?
+20211011 11450735  "  -    			00.000.017
+20211011 11450735  "  -    		00.000.027
+20211011 11450735  "  -    	00.000.061
+20211011 11450735  "  +    	method(TubStorageMixin) uba_audit.insert
+20211011 11450735  "  +    		DataStore.ParseInsertAndExec
+20211011 11450735  "  +    			DataStore.BuildAndExecInsertSQL
+20211011 11450735  "  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11450735  " cust1 					{"P1s7":"uba_els", "P2":335016339013656, "P3s6":"INSERT", "P4s5":"admin", "P5d":"2021-10-11T11:45:07", "P6s9":"127.0.0.1", "P7s4":"User", "P8":335016339013703, "P9s367":"{\"ID\":335016339013656,\"code\":\"UBA_USERCERT_READ_CE..."}
+20211011 11450735  " SQL   					r=1 t=273 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,targetRole,ID,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211011 11450735  "  -    				00.000.019
+20211011 11450735  "  -    			00.000.089
+20211011 11450735  "  -    		00.000.098
+20211011 11450735  "  -    	00.000.108
+20211011 11450735  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211011 11450735  "  -    	00.000.002
+20211011 11450735  " DB    	Commit connection "main" in 509us
+20211011 11450735  " http  	127.0.0.1 <- 200
+20211011 11450735  "  -    00.029.214
+20211011 11450735  ! mon   {"sessions_total":1,"threads_total":4,"incoming_bytes":10466,"outcoming_bytes":13413,"responses_total":[0,0,8,0,0,0],"security_exception_count":0,"js_gc_count":7,"js_memory_bytes":3719168,"http_perning_request_count":0}
+20211011 11450742  ! EXC   module.js:542\n\nError: Cannot find module '@unitybase/ub-migrate' required by '/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/uba/_initialData/015_call_migrate.js'\nModule._resolveFilename@module.js:542:15
+20211011 11450742  ! mon   {"sessions_total":0,"threads_total":0,"incoming_bytes":10466,"outcoming_bytes":13413,"responses_total":[0,0,8,0,0,0],"security_exception_count":0,"js_gc_count":0,"js_memory_bytes":0,"http_perning_request_count":0}

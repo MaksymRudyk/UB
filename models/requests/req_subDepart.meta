@@ -1,0 +1,27 @@
+{
+  "caption": "subDepartment",
+  "description": "subDepartment",
+  "descriptionAttribute": "name",
+  "attributes": [
+    {
+      "name": "name",
+      "dataType": "String",
+      "size": 255,
+      "caption": "Name",
+      "description": "Department Name",
+      "allowNull": false,
+      "isMultiLang": false
+    },
+    {
+      "name": "department",
+      "dataType": "Entity",
+      "associatedEntity": "req_depart",
+      "caption": "department",
+      "allowNull": false
+    }
+  ],
+  "mixins": {
+    "mStorage": {
+    }
+  }
+}

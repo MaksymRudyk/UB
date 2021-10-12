@@ -1,0 +1,8 @@
+{
+ "isDefault": false,
+ "entity": "ubs_message_edit",
+ "formType": "vue",
+ "caption": "Message send",
+ "description": "",
+ "formCode": "{\"fName\":\"ubs_message_edit-fm.vue\",\"origName\":\"ubs_message_edit-fm.vue\",\"ct\":\"script/x-vue\",\"size\":10432,\"md5\":\"56df5233d51bc18493325560eb7f8e75\"}"
+}

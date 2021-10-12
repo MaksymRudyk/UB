@@ -1,0 +1,26 @@
+{
+  "caption": "Xabarlar",
+  "description": "Tizim xabarlari",
+  "attributes": [
+    {
+      "name": "messageBody",
+      "caption": "Xabar"
+    },
+    {
+      "name": "complete",
+      "caption": "Jo'natishga tayyor"
+    },
+    {
+      "name": "messageType",
+      "caption": "Turi"
+    },
+    {
+      "name": "startDate",
+      "caption": "Yaroqliligi"
+    },
+    {
+      "name": "expireDate",
+      "caption": "Yaroqlilik muddati"
+    }
+  ]
+}

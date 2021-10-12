@@ -1,0 +1,26 @@
+﻿{
+    "caption": "შენახული UI ფილტრები",
+    "description": "",
+    "attributes": [
+        {
+            "name": "code",
+            "caption": "კოდი"
+        },
+        {
+            "name": "name",
+            "caption": "სახელი"
+        },
+        {
+            "name": "filter",
+            "caption": "ფილტრის განმარტება"
+        },
+        {
+            "name": "isGlobal",
+            "caption": "არის გლობალური?"
+        },
+        {
+            "name": "owner",
+            "caption": "ფილტრის მესაკუთრე"
+        }
+    ]
+}

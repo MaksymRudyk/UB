@@ -1,0 +1,34 @@
+﻿{
+    "caption": "დაგეგმილი სტატისტიკა",
+    "description": "",
+    "attributes": [
+        {
+            "name": "appName",
+            "caption": "აპლიკაციის სახელი"
+        },
+        {
+            "name": "schedulerName",
+            "caption": "გეგმის სახელი"
+        },
+        {
+            "name": "startTime",
+            "caption": "გეგმის დაწყების დრო"
+        },
+        {
+            "name": "endTime",
+            "caption": "გეგმის დასასრული დრო"
+        },
+        {
+            "name": "logText",
+            "caption": "შესვლა შესრულებული სკრიპტის შესახებ ყველა ქმედებაზე"
+        },
+        {
+            "name": "resultError",
+            "caption": "შედეგი შეცდომის კოდი. 0 = შეცდომა არ არის"
+        },
+        {
+            "name": "resultErrorMsg",
+            "caption": "ტექსტური შეტყობინება თუ შეცდომის რეზულტატი   > 0"
+        }
+    ]
+}

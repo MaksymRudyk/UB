@@ -1,0 +1,8 @@
+{
+ "isDefault": false,
+ "entity": "uba_audit",
+ "formType": "custom",
+ "caption": "Security dashboard",
+ "description": "Supervisor security dashboard",
+ "formDef": "{\"fName\":\"uba_audit-securityDashboard-fm.def\",\"origName\":\"uba_audit-securityDashboard-fm.def\",\"ct\":\"text/javascript; charset=UTF-8\",\"size\":5305,\"md5\":\"ff32553779f801851c0ba122ce36ae72\"}"
+}

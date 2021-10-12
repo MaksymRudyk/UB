@@ -1,0 +1,8 @@
+{
+ "isDefault": false,
+ "entity": "ubm_sysdictionary",
+ "formType": "vue",
+ "caption": "ubm_sysdictionary",
+ "description": "ubm_sysdictionary",
+ "formCode": "ubm_sysdictionary-fm.vue"
+}

@@ -1,0 +1,8 @@
+{
+ "isDefault": false,
+ "entity": "ubm_form",
+ "formType": "vue",
+ "caption": "Metadata editor",
+ "description": "Entity metadata editor",
+ "formCode": "{\"fName\":\"ubm_form-entityEdit-fm.vue\",\"origName\":\"ubm_form-entityEdit-fm.vue\",\"ct\":\"script/x-vue\",\"size\":773,\"md5\":\"024bf6c5cc90c92fa2c6b264140521dd\"}"
+}

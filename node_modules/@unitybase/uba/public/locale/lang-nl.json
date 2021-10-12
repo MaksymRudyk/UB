@@ -1,0 +1,49 @@
+{
+  "User": "Gebruiker",
+  "changePassword": "Wachtwoord wijzigen",
+  "changeLanguage": "Taal wijzigen",
+  "changeLanguageRequireRestart": "De applicatie wordt gesloten, alle niet-opgeslagen gegevens gaan verloren. Doorgaan?",
+  "noMoreLanguages": "(ondersteuning voor meerdere talen is uitgeschakeld)",
+  "entity": "Entiteit",
+  "actionType": "Actie",
+  "actionUser": "Gebruiker",
+  "actionTime": "Tijd",
+  "remoteIP": "IP adres",
+  "entityinfo_id": "ID of entiteit",
+  "targetUser": "Doelgebruiker",
+  "targetRole": "Doelrol",
+  "nameAttr": "Attribuut naam",
+  "fromValue": "Oude waarde",
+  "toValue": "Nieuwe waarde",
+  "changedAttributes": "Gewijzigde attributen",
+  "changedImageAttachment": "Wijzigen van de documentafbeelding",
+  "clarifyingEvent": "Verduidelijkt evenement",
+  "attachedDocumentImage": "Afbeelding van het bijgevoegde document",
+  "editedImageDocument": "Bewerkte documentafbeelding",
+  "removedDocumentImage": "Documentafbeelding verwijderd",
+  "auditImageStore": "Bewaren",
+  "auditImageFName": "Bestandsnaam",
+  "auditImageOrigName": "Oorspronkelijke naam van de afbeelding",
+  "auditImageRelPath": "Pad",
+  "auditImageCT": "Inhoudstype",
+  "auditImageSize": "Afbeeldingsgrootte (bytes)",
+  "auditImageMD5": "Controlesom (MD5)",
+  "auditImageRevision": "Herziening",
+  "auditImageVersion": "Versie",
+  "SecurityAudit": "Veiligheidsaudit",
+  "Record gewijzigd door een andere gebruiker": "Record gewijzigd door een andere gebruiker",
+  "needChangePassword": "Gebruiker moet wachtwoord wijzigen bij volgende aanmelding",
+  "checkAll": "Alles controleren",
+  "roles": "Rollen",
+  "uba": {
+    "changePassword": {
+      "newPassword": {
+        "matchWithLoginError": "Wachtwoord komt overeen met de login",
+        "fieldRequirementsError": "Voldoet niet aan de eisen"
+      },
+      "retypePassword": {
+        "errorText": "Wachtwoorden komen niet overeen"
+      }
+    }
+  }
+}

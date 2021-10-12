@@ -1,0 +1,22 @@
+﻿{
+    "caption": "სისტემის როლი",
+    "description": "",
+    "attributes": [
+        {
+            "name": "name",
+            "caption": "როლი"
+        },
+        {
+            "name": "sessionTimeout",
+            "caption": "სესიის ხანგრძლივობა"
+        },
+        {
+            "name": "allowedAppMethods",
+            "caption": "რომელი აპლიკაციის დონის მეთოდები დაშვებულია (მძიმით გამოყოფილი სია)"
+        },
+        {
+            "name": "description",
+            "caption": "აღწერა"
+        }
+    ]
+}

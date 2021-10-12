@@ -1,0 +1,66 @@
+{
+  "caption": "Foydalanuvchilar",
+  "description": "Foydalanuvchilar",
+  "attributes": [
+    {
+      "name": "name",
+      "caption": "Kirish"
+    },
+    {
+      "name": "description",
+      "caption": "Tavsif"
+    },
+    {
+      "name": "firstName",
+      "caption": "Ism"
+    },
+    {
+      "name": "lastName",
+      "caption": "Familiya"
+    },
+    {
+      "name": "fullName",
+      "caption": "To'liq ism"
+    },
+    {
+      "name": "gender",
+      "caption": "Jins"
+    },
+    {
+      "name": "email",
+      "caption": "Elektron pochta"
+    },
+    {
+      "name": "phone",
+      "caption": "Telefon"
+    },
+    {
+      "name": "avatar",
+      "caption": "Avatar"
+    },
+    {
+      "name": "uPasswordHashHexa",
+      "caption": "Hash paroli"
+    },
+    {
+      "name": "disabled",
+      "caption": "Nogiron"
+    },
+    {
+      "name": "isPending",
+      "caption": "Tasdiqlashni kutish"
+    },
+    {
+      "name": "uData",
+      "caption": "Qo'shimcha ma'lumotlar"
+    },
+    {
+      "name": "lastPasswordChangeDate",
+      "caption": "Oxirgi parolni o'zgartirish sanasi"
+    },
+    {
+      "name": "trustedIP",
+      "caption": "Ishonchli IP."
+    }
+  ]
+}

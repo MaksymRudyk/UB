@@ -1,0 +1,11 @@
+alreadyConnected=Knooppunten al verbonden
+containsValidationErrors=Bevat validatiefouten
+updatingDocument=Document aan het bijwerken. Even wachten...
+updatingSelection=Selectie aan het bijwerken. Even wachten...
+collapse-expand=Samenvouwen/Uitvouwen
+doubleClickOrientation=Dubbelklik om de oriëntatie te wijzigen
+close=Sluiten
+error=Fout
+done=Klaar
+cancel=Annuleren
+ok=OK

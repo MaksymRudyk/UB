@@ -1,0 +1,9 @@
+{
+ "description": "reqList",
+ "caption": "My request List",
+ "formType": "auto",
+ "formDef": "req_reqList-fm.def",
+ "formCode": "req_reqList-fm.js",
+ "entity": "req_reqList",
+ "isDefault": false
+}

@@ -1,0 +1,14 @@
+﻿{
+    "caption": "ჯგუფის როლი",
+    "description": "",
+    "attributes": [
+        {
+            "name": "groupID",
+            "caption": "ჯგუფი "
+        },
+        {
+            "name": "roleID",
+            "caption": "როლი"
+        }
+    ]
+}

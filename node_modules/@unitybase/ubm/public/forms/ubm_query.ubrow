@@ -1,0 +1,8 @@
+{
+ "isDefault": false,
+ "entity": "ubm_query",
+ "formType": "vue",
+ "caption": "ubm_query",
+ "description": "ubm_query",
+ "formCode": "ubm_query-fm.vue"
+}

@@ -1,0 +1,9 @@
+{
+ "isDefault": true,
+ "entity": "ubm_diagram",
+ "formType": "auto",
+ "caption": "ER diagram",
+ "description": "ER diagram",
+ "formDef": "{\"fName\":\"ubm_diagram-fm.def\",\"origName\":\"ubm_diagram-fm.def\",\"ct\":\"text/javascript; charset=UTF-8\",\"size\":697,\"md5\":\"5fcf94fb145188be76d20f591301aa2b\"}",
+ "formCode": "{\"fName\":\"ubm_diagram-fm.js\",\"origName\":\"ubm_diagram-fm.js\",\"ct\":\"text/javascript; charset=UTF-8\",\"size\":427,\"md5\":\"aa8beebf73cee4e045eda69ab8e74aa9\"}"
+}

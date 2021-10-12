@@ -1,0 +1,26 @@
+{
+  "caption": "Saqlangan filtrlar",
+  "description": "Saqlangan filtrlar",
+  "attributes": [
+    {
+      "name": "code",
+      "caption": "Kod"
+    },
+    {
+      "name": "name",
+      "caption": "Filtr nomi"
+    },
+    {
+      "name": "filter",
+      "caption": "Filtr matn"
+    },
+    {
+      "name": "isGlobal",
+      "caption": "Umumiymi?"
+    },
+    {
+      "name": "owner",
+      "caption": "Egasi"
+    }
+  ]
+}

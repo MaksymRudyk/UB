@@ -1,0 +1,21 @@
+{
+  "caption": "Ma'lumotlar bo'yicha so'rovlar",
+  "attributes": [
+    {
+      "name": "code",
+      "caption": "Kod"
+    },
+    {
+      "name": "name",
+      "caption": "Ism"
+    },
+    {
+      "name": "ubql",
+      "caption": "Ubql (Json)"
+    },
+    {
+      "name": "type",
+      "caption": "Turi"
+    }
+  ]
+}

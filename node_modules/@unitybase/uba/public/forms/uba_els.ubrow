@@ -1,0 +1,9 @@
+{
+ "description": "Method rights",
+ "caption": "Method rights",
+ "formType": "auto",
+ "formDef": "{\"store\":\"mdb\",\"fName\":\"uba_els-fm.def\",\"origName\":\"uba_els-fm.def\",\"ct\":\"application/javascript; charset=utf-8\",\"size\":984,\"md5\":\"40d9b9c904298678f836f7651598c1b6\"}",
+ "formCode": "{\"store\":\"mdb\",\"fName\":\"uba_els-fm.js\",\"origName\":\"uba_els-fm.js\",\"ct\":\"application/javascript; charset=utf-8\",\"size\":83,\"md5\":\"0c92b5265f93f54b1d532a2c7bc140a3\"}",
+ "entity": "uba_els",
+ "isDefault": false
+}

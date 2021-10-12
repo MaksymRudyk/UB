@@ -1,0 +1,18 @@
+{
+  "caption": "Xabarlarni qabul qiluvchilar",
+  "description": "Xabarlarni qabul qiluvchilar",
+  "attributes": [
+    {
+      "name": "messageID",
+      "caption": "Xabar"
+    },
+    {
+      "name": "userID",
+      "caption": "Foydalanuvchi"
+    },
+    {
+      "name": "acceptDate",
+      "caption": "Tasdiqlash sanasi"
+    }
+  ]
+}

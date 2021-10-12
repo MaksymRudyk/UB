@@ -1,0 +1,113 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-11T12:02:51
+
+20211011 12025147  ! srvr  Used config: '/home/admloc/Documents/ubProject/CityPortal/ubConfig.json'
+20211011 12025147  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025147  !  +    	
+20211011 12025148  !  -    	00.014.265
+20211011 12025148  ! SQL   	r=0 t=14932 c=0 q=create table seq_ubmain (client_num INTEGER) /* generateID = clientNum+currentTimeUnixEpoch*100 + 1...99 */
+20211011 12025148  !  -    00.014.981
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=20 c=0 q=insert into seq_ubmain (client_num) values(30000000000)
+20211011 12025148  !  -    00.000.034
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=220 c=0 q=create table uba_user (  ID BIGINT not null PRIMARY KEY,  name VARCHAR(128) not null,  description VARCHAR(255) null,  uPasswordHashHexa VARCHAR(64) null,  disabled SMALLINT default 0 not null,  isPending SMALLINT default 0 not null,  trustedIP VARCHAR(255) null,  uData VARCHAR(2000) null,  lastPasswordChangeDate DATETIME default (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')) not null,  mi_owner bigint NOT NULL, -- Row owner     mi_createdate DATETIME NOT NULL, -- Creation date     mi_createuser bigint NOT NULL, -- User who create row     mi_modifydate DATETIME NOT NULL, -- Modification date     mi_modifyuser bigint NOT NULL, -- User who modify row     FOREIGN KEY(mi_owner) REFERENCES uba_user,     FOREIGN KEY(mi_createuser) REFERENCES uba_user,     FOREIGN KEY(mi_modifyuser) REFERENCES uba_user ); 
+20211011 12025148  !  -    00.000.256
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=144 c=0 q=create table uba_role (  ID BIGINT not null PRIMARY KEY,  name VARCHAR(128) not null, -- Role  description VARCHAR(256) not null, -- Description  sessionTimeout INTEGER default 30 not null, -- Time after which the session is deleted by timeout (in minutes)  allowedAppMethods VARCHAR(2000) null,  -- Which application level methods are allowed (comma separated list)     mi_owner bigint NOT NULL, -- Row owner     mi_createdate DATETIME NOT NULL, -- Creation date     mi_createuser bigint NOT NULL, -- User who create row     mi_modifydate DATETIME NOT NULL, -- Modification date     mi_modifyuser bigint NOT NULL, -- User who modify row     FOREIGN KEY(mi_owner) REFERENCES uba_user,     FOREIGN KEY(mi_createuser) REFERENCES uba_user,     FOREIGN KEY(mi_modifyuser) REFERENCES uba_user ); 
+20211011 12025148  !  -    00.000.159
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=196 c=0 q=create table uba_els (  ID BIGINT not null PRIMARY KEY,  code VARCHAR(128) null, -- Code for ELS rule  description VARCHAR(255) not null, -- Rule description  disabled SMALLINT default 0 not null, -- Rule is disabled  entityMask VARCHAR(128) not null, -- Entity mask  methodMask VARCHAR(128) not null, -- Method mask  ruleType VARCHAR(32) default 'A' not null, -- Is this ALLOW rule(A) or DENY rule(D) or Complements(C) rule  ruleRole BIGINT not null, -- Role for which the rule applies     mi_owner bigint NOT NULL, -- Row owner     mi_createdate DATETIME NOT NULL, -- Creation date     mi_createuser bigint NOT NULL, -- User who create row     mi_modifydate DATETIME NOT NULL, -- Modification date     mi_modifyuser bigint NOT NULL, -- User who modify row     CONSTRAINT FK_ELS_MI_OWNER_REF_USR FOREIGN KEY(mi_owner) REFERENCES uba_user,     CONSTRAINT FK_ELS_MI_CREATEUSER_REF_USR FOREIGN KEY(mi_createuser) REFERENCES uba_user,     CONSTRAINT FK_ELS_MI_MODIFYUSER_REF_USR FOREIGN KEY(mi_modifyuser) REFERENCES uba_user ); 
+20211011 12025148  !  -    00.000.212
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=125 c=0 q=create table uba_subject (  ID BIGINT not null PRIMARY KEY,  code VARCHAR(128) not null, -- Code  name VARCHAR(128) not null, -- Login  sType VARCHAR(1) not null, -- Subject type  mi_unityEntity VARCHAR(64) not null ); 
+20211011 12025148  !  -    00.000.139
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=519 c=0 q=create table uba_userrole (  ID BIGINT not null PRIMARY KEY,  userID BIGINT not null, -- User  roleID BIGINT not null, -- Role     mi_owner bigint NOT NULL, -- Row owner     mi_createdate DATETIME NOT NULL, -- Creation date     mi_createuser bigint NOT NULL, -- User who create row     mi_modifydate DATETIME NOT NULL, -- Modification date     mi_modifyuser bigint NOT NULL, -- User who modify row     FOREIGN KEY(userID) REFERENCES uba_user,     FOREIGN KEY(roleID) REFERENCES uba_role,     FOREIGN KEY(mi_owner) REFERENCES uba_user,     FOREIGN KEY(mi_createuser) REFERENCES uba_user,     FOREIGN KEY(mi_modifyuser) REFERENCES uba_user ); 
+20211011 12025148  !  -    00.000.590
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=136 c=0 q=create table uba_als (  ID BIGINT not null PRIMARY KEY,  entity VARCHAR(64) not null, -- Entity  attribute VARCHAR(32) not null, -- Attribute  state VARCHAR(32) not null, -- State code  roleName VARCHAR(32) not null, -- Role name  actions INTEGER not null -- Allow actions ); 
+20211011 12025148  !  -    00.000.150
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=146 c=0 q=create table uba_audit (  ID BIGINT not null PRIMARY KEY,  entity VARCHAR(32) not null, -- Entity code  entityinfo_id BIGINT not null, -- Instance ID  actionType VARCHAR(32) not null, -- Action  actionUser VARCHAR(128) not null, -- User, who perform the action  actionTime DATETIME not null, -- Action time  remoteIP VARCHAR(40) null, -- Caller remote IP address. NULL in case of localhost  targetUser VARCHAR(128) null, -- The user name for which the data has changed  targetRole VARCHAR(128) null, -- The role name for which the data has changed  fromValue TEXT null, -- Old values  toValue TEXT null -- New values ); 
+20211011 12025148  !  -    00.000.162
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=207 c=0 q=create table ubs_settings (  ID BIGINT not null PRIMARY KEY,  settingKey VARCHAR(150) not null, -- Setting key. To prevent key conflicts key name must start with a model code where key is used. `ubs.numcounter.autoRegWithDeletedNumber`  name VARCHAR(150) not null, -- Setting name  description VARCHAR(1024) null, -- Description  type VARCHAR(32) null, -- Value type  settingValue VARCHAR(2000) null, -- Value  defaultValue VARCHAR(150) null, -- Default value (setted by developer)     mi_owner bigint NOT NULL, -- Row owner     mi_createdate DATETIME NOT NULL, -- Creation date     mi_createuser bigint NOT NULL, -- User who create row     mi_modifydate DATETIME NOT NULL, -- Modification date     mi_modifyuser bigint NOT NULL, -- User who modify row     FOREIGN KEY(mi_owner) REFERENCES uba_user,     FOREIGN KEY(mi_createuser) REFERENCES uba_user,     FOREIGN KEY(mi_modifyuser) REFERENCES uba_user )
+20211011 12025148  !  -    00.000.221
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=19 c=0 q=PRAGMA foreign_keys = OFF
+20211011 12025148  !  -    00.000.079
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=50 c=0 q=insert into uba_subject (ID,code,name,sType,mi_unityentity) values(0, 'Everyone', 'Everyone build-in role', 'R', 'UBA_SUBJECT')
+20211011 12025148  !  -    00.000.061
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=28 c=0 q=insert into uba_role (ID,name,description,sessionTimeout,allowedAppMethods,mi_owner,mi_createdate,mi_createuser,mi_modifydate,mi_modifyuser)         values(0,'Everyone','Everyone build-in role',1000,'auth,timeStamp,statics,getAppInfo,models,getDomainInfo,ubql,rest',10,'2021-10-11T12:02:51Z',10,'2021-10-11T12:02:51Z',10)
+20211011 12025148  !  -    00.000.040
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=20 c=0 q=insert into uba_subject (ID,code,name,sType,mi_unityentity) values(1, 'Admin', 'Admin build-in role', 'R', 'UBA_SUBJECT')
+20211011 12025148  !  -    00.000.161
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=27 c=0 q=insert into uba_role (ID,name,description,sessionTimeout,allowedAppMethods,mi_owner,mi_createdate,mi_createuser,mi_modifydate,mi_modifyuser)         values(1,'Admin','Admin build-in role',10,'*',10,'2021-10-11T12:02:51Z',10,'2021-10-11T12:02:51Z',10)
+20211011 12025148  !  -    00.000.038
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=19 c=0 q=insert into uba_subject (ID,code,name,sType,mi_unityentity) values(2, 'Anonymous', 'Anonymous build-in role', 'R', 'UBA_SUBJECT')
+20211011 12025148  !  -    00.000.027
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=21 c=0 q=insert into uba_role (ID,name,description,sessionTimeout,allowedAppMethods,mi_owner,mi_createdate,mi_createuser,mi_modifydate,mi_modifyuser)         values(2,'Anonymous','Anonymous build-in role',1000,'',10,'2021-10-11T12:02:51Z',10,'2021-10-11T12:02:51Z',10)
+20211011 12025148  !  -    00.000.031
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=17 c=0 q=insert into uba_subject (ID,code,name,sType,mi_unityentity) values(3, 'User', 'User build-in role', 'R', 'UBA_SUBJECT')
+20211011 12025148  !  -    00.000.027
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=21 c=0 q=insert into uba_role (ID,name,description,sessionTimeout,allowedAppMethods,mi_owner,mi_createdate,mi_createuser,mi_modifydate,mi_modifyuser)         values(3,'User','User build-in role',30,'logout,changePassword,setDocument,getDocument,checkDocument',10,'2021-10-11T12:02:51Z',10,'2021-10-11T12:02:51Z',10)
+20211011 12025148  !  -    00.000.032
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=17 c=0 q=insert into uba_subject (ID,code,name,sType,mi_unityentity) values(4, 'Supervisor', 'Supervisor build-in role', 'R', 'UBA_SUBJECT')
+20211011 12025148  !  -    00.000.026
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=24 c=0 q=insert into uba_role (ID,name,description,sessionTimeout,allowedAppMethods,mi_owner,mi_createdate,mi_createuser,mi_modifydate,mi_modifyuser)         values(4,'Supervisor','Supervisor build-in role',10,'',10,'2021-10-11T12:02:51Z',10,'2021-10-11T12:02:51Z',10)
+20211011 12025148  !  -    00.000.036
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=18 c=0 q=insert into uba_subject (ID,code,name,sType,mi_unityentity) values(5, 'Developer', 'Developer build-in role', 'R', 'UBA_SUBJECT')
+20211011 12025148  !  -    00.000.027
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=21 c=0 q=insert into uba_role (ID,name,description,sessionTimeout,allowedAppMethods,mi_owner,mi_createdate,mi_createuser,mi_modifydate,mi_modifyuser)         values(5,'Developer','Developer build-in role',10,'',10,'2021-10-11T12:02:51Z',10,'2021-10-11T12:02:51Z',10)
+20211011 12025148  !  -    00.000.081
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=18 c=0 q=insert into uba_subject (ID,code,name,sType,mi_unityentity) values(6, 'Monitor', 'Monitor build-in role', 'R', 'UBA_SUBJECT')
+20211011 12025148  !  -    00.000.026
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=19 c=0 q=insert into uba_role (ID,name,description,sessionTimeout,allowedAppMethods,mi_owner,mi_createdate,mi_createuser,mi_modifydate,mi_modifyuser)         values(6,'Monitor','Monitor build-in role',100,'stat',10,'2021-10-11T12:02:51Z',10,'2021-10-11T12:02:51Z',10)
+20211011 12025148  !  -    00.000.029
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=16 c=0 q=insert into uba_subject (ID,code,name,sType,mi_unityentity) values(7, 'root', 'root', 'U', 'UBA_USER')
+20211011 12025148  !  -    00.000.025
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=45 c=0 q=insert into uba_user (ID, name, description, upasswordhashhexa, disabled, udata,mi_owner,mi_createdate,mi_createuser,mi_modifydate,mi_modifyuser)         values (7, 'root', 'root', '-', 0, '',10,'2021-10-11T12:02:51Z',10,'2021-10-11T12:02:51Z',10)
+20211011 12025148  !  -    00.000.095
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=63 c=0 q=insert into uba_subject (ID,code,name,sType,mi_unityentity) values(10, 'admin', 'admin', 'U', 'UBA_USER')
+20211011 12025148  !  -    00.000.087
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=30 c=0 q=insert into uba_user (ID, name, description, upasswordhashhexa, disabled, udata,mi_owner,mi_createdate,mi_createuser,mi_modifydate,mi_modifyuser)         values (10, 'admin', 'admin', '2bb7998496899acdd8137fad3a44faf96a84a03d7f230ce42e97cd17c7ae429e', 0, '',10,'2021-10-11T12:02:51Z',10,'2021-10-11T12:02:51Z',10)
+20211011 12025148  !  -    00.000.041
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=16 c=0 q=insert into uba_subject (ID,code,name,sType,mi_unityentity) values(20, 'anonymous', 'anonymous', 'U', 'UBA_USER')
+20211011 12025148  !  -    00.000.025
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=27 c=0 q=insert into uba_user (ID, name, description, upasswordhashhexa, disabled, udata,mi_owner,mi_createdate,mi_createuser,mi_modifydate,mi_modifyuser)         values (20, 'anonymous', 'anonymous', '-', 0, '',10,'2021-10-11T12:02:51Z',10,'2021-10-11T12:02:51Z',10)
+20211011 12025148  !  -    00.000.037
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=24 c=0 q=insert into uba_els (ID,code,description,disabled,entityMask,methodMask,ruleType,ruleRole,mi_owner,mi_createdate,mi_createuser,mi_modifydate,mi_modifyuser)       VALUES (200, 'UBA_ADMIN_ALL', 'Admins - enable all',0,'*','*','A',1,10,'2021-10-11T12:02:51Z',10,'2021-10-11T12:02:51Z',10)
+20211011 12025148  !  -    00.000.034
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=20 c=0 q=insert into uba_userrole (ID,userID, roleID,mi_owner,mi_createdate,mi_createuser,mi_modifydate,mi_modifyuser) values(800,10,1,10,'2021-10-11T12:02:51Z',10,'2021-10-11T12:02:51Z',10)
+20211011 12025148  !  -    00.000.030
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=18 c=0 q=insert into uba_userrole (ID,userID, roleID,mi_owner,mi_createdate,mi_createuser,mi_modifydate,mi_modifyuser) values(900,20,2,10,'2021-10-11T12:02:51Z',10,'2021-10-11T12:02:51Z',10)
+20211011 12025148  !  -    00.000.026
+20211011 12025148  !  +    NDBExecute(conn=main/SQLite3)
+20211011 12025148  ! SQL   	r=1 t=6 c=0 q=PRAGMA foreign_keys = ON
+20211011 12025148  !  -    00.000.014
+20211011 12025148  ! mon   {"sessions_total":0,"threads_total":0,"incoming_bytes":0,"outcoming_bytes":0,"responses_total":[0,0,0,0,0,0],"security_exception_count":0,"js_gc_count":0,"js_memory_bytes":0,"http_perning_request_count":0}

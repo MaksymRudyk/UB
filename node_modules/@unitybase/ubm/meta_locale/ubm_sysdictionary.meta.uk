@@ -1,0 +1,8 @@
+{
+  "caption": "Системні довідники",
+  "attributes": [
+    {"name": "code", "caption": "Код"},
+    {"name": "name", "caption": "Найменування"},
+    {"name": "ubql", "caption": "UBQL (JSON)"}
+  ]
+}

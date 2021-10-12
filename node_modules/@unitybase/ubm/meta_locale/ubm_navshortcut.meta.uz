@@ -1,0 +1,46 @@
+{
+  "caption": "Yorliq",
+  "description": "Ni boshlash uchun yorliq",
+  "attributes": [
+    {
+      "name": "desktopID",
+      "caption": "Ish stoli"
+    },
+    {
+      "name": "parentID",
+      "caption": "Yorliq papkasi"
+    },
+    {
+      "name": "code",
+      "caption": "Kod"
+    },
+    {
+      "name": "isFolder",
+      "caption": "Guruhmi?"
+    },
+    {
+      "name": "caption",
+      "caption": "Yorliq nomi"
+    },
+    {
+      "name": "cmdCode",
+      "caption": "Matn jamoasi"
+    },
+    {
+      "name": "inWindow",
+      "caption": "Alohida oynada"
+    },
+    {
+      "name": "isCollapsed",
+      "caption": "Burilmoq"
+    },
+    {
+      "name": "displayOrder",
+      "caption": "№"
+    },
+    {
+      "name": "iconCls",
+      "caption": "Belgisi (CSS-CLASS)"
+    }
+  ]
+}

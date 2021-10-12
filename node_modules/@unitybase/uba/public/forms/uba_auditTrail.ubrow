@@ -1,0 +1,8 @@
+{
+ "isDefault": true,
+ "entity": "uba_auditTrail",
+ "formType": "vue",
+ "caption": "Audit",
+ "description": "Audit",
+ "formCode": "{\"fName\":\"uba_auditTrail-fm.vue\",\"origName\":\"uba_auditTrail-fm.vue\",\"ct\":\"script/x-vue\",\"size\":732,\"md5\":\"17ee1b7e8f007ac1491c9b33deebae01\"}"
+}

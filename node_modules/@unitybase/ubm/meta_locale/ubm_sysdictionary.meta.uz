@@ -1,0 +1,17 @@
+{
+  "caption": "Tizim kataloglari",
+  "attributes": [
+    {
+      "name": "code",
+      "caption": "Kod"
+    },
+    {
+      "name": "name",
+      "caption": "Ism"
+    },
+    {
+      "name": "ubql",
+      "caption": "Ubql (Json)"
+    }
+  ]
+}

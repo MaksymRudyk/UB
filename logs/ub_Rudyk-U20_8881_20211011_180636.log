@@ -1,0 +1,41 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-11T15:06:36
+
+20211011 15063641  ! srvr  StartupPath: '/home/admloc/Documents/ubProject/CityPortal/'; BinPath: '/opt/unitybase/server/'
+20211011 15063641  ! srvr  JS Engine params: engine-max-mem=512Mb, engine-lifetime=360sec, engine-full-gc=every 100 HTTP req
+20211011 15063641  ! warn  CPU support for AVX2 and SSE42 not available or can not be used
+20211011 15063641  ! auth  Build-in session admin/00000000 created
+20211011 15063641  ! auth  Build-in session anonymous/00000001 created
+20211011 15063641  ! auth  Build-in session root/00000002 created
+20211011 15063641  ! srvr  FTS is disabled
+20211011 15063641  "  +    init
+20211011 15063641  " srvr  	Start application initialization...
+20211011 15063648  " info  	Loading domain models...
+20211011 15063648  " info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211011 15063648  " info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211011 15063649  " info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211011 15063649  " info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211011 15063649  " info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211011 15063649  " info  	"requests"(1.0.0) from "./models/requests"
+20211011 15063649  " info  	Loading meta files for 40 entities... 
+20211011 15063653  " info  	load domain: 68ms
+20211011 15063653  " info  	applying metadata transformation hook from UB
+20211011 15063653  " debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211011 15063653  " info  	applying hooks: 6ms
+20211011 15063653  " info  	native init: 4ms
+20211011 15063653  " srvr  	The domain loaded successfully with 40 entities
+20211011 15063701  "  +    	Init ELS
+20211011 15063701  "  +    		DataStore.init(uba_role)
+20211011 15063701  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15063701  "  +    				
+20211011 15063701  " EXC   					ESQLite3Exception Error SQLITE_NOTADB (26) [DBOpen] using 3.36.0 with aDB=nil [] at   $0000000000848848  $000000000075DB2E  $00000000005D28CE  $00000000005D3184  $00000000005DC776  $00000000005DCD12
+20211011 15063701  "  -    				00.001.137
+20211011 15063701  " ERROR 				q=SELECT A01.ID,A01.name,A01.sessionTimeout,A01.allowedAppMethods  FROM uba_role A01 
+20211011 15063701  "  -    			00.001.242
+20211011 15063701  "  -    		00.001.249
+20211011 15063701  "  -    	00.001.328
+20211011 15063701  " ERROR 	GET init ERROR=500 (Exception Error SQLITE_NOTADB (26) [DBOpen] using 3.36.0 with aDB=nil)
+20211011 15063701  "  -    00.363.336
+20211011 15063702  ! EXC   EMetabaseException Failed to start - exception during initialization [] at   $000000000073AB3C
+20211011 15063702  ! mon   {"sessions_total":0,"threads_total":1,"incoming_bytes":0,"outcoming_bytes":0,"responses_total":[0,0,0,0,0,0],"security_exception_count":0,"js_gc_count":7,"js_memory_bytes":3670016,"http_perning_request_count":0}

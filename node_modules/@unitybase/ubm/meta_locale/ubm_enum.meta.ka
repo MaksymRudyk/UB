@@ -1,0 +1,26 @@
+﻿{
+    "caption": "განსაზღვრული მნიშვნელობები",
+    "description": "",
+    "attributes": [
+        {
+            "name": "eGroup",
+            "caption": "ჯგუფი"
+        },
+        {
+            "name": "code",
+            "caption": "კოდი"
+        },
+        {
+            "name": "shortName",
+            "caption": "მოკლე სახელი"
+        },
+        {
+            "name": "name",
+            "caption": "ღირებულების სახელი"
+        },
+        {
+            "name": "sortOrder",
+            "caption": "ანმიმდევრობა"
+        }
+    ]
+}

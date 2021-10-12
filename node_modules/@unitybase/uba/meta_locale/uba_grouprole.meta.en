@@ -1,0 +1,14 @@
+{
+  "caption": "Group Roles",
+  "description": "Roles assigned to groups",
+  "attributes": [
+    {
+      "name": "groupID",
+      "caption": "Group"
+    },
+    {
+      "name": "roleID",
+      "caption": "Role"
+    }
+  ]
+}

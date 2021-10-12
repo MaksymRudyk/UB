@@ -1,0 +1,63 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-11T11:51:20
+
+20211011 11512060  ! srvr  StartupPath: '/home/admloc/Documents/ubProject/CityPortal/'; BinPath: '/opt/unitybase/server/'
+20211011 11512060  ! srvr  JS Engine params: engine-max-mem=512Mb, engine-lifetime=360sec, engine-full-gc=every 100 HTTP req
+20211011 11512060  ! warn  CPU support for AVX2 and SSE42 not available or can not be used
+20211011 11512060  ! srvr  FTS is disabled
+20211011 11512060  "  +    init
+20211011 11512060  " srvr  	Start application initialization...
+20211011 11512105  " info  	Loading domain models...
+20211011 11512105  " info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211011 11512105  " info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211011 11512106  " info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211011 11512106  " info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211011 11512106  " info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211011 11512106  " info  	"requests"(1.0.0) from "./models/requests"
+20211011 11512106  " info  	Loading meta files for 40 entities... 
+20211011 11512108  " info  	load domain: 46ms
+20211011 11512108  " info  	applying metadata transformation hook from UB
+20211011 11512108  " debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211011 11512108  " info  	applying hooks: 4ms
+20211011 11512108  " info  	native init: 4ms
+20211011 11512108  " srvr  	The domain loaded successfully with 40 entities
+20211011 11512118  "  +    	Init ELS
+20211011 11512118  "  +    		DataStore.init(uba_role)
+20211011 11512118  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11512118  "  +    				
+20211011 11512119  "  -    				00.003.684
+20211011 11512119  " SQL   				r=7 t=3724 fr=3707 c=0 q=SELECT A01.ID,A01.name,A01.sessionTimeout,A01.allowedAppMethods  FROM uba_role A01 
+20211011 11512119  "  -    			00.003.771
+20211011 11512119  "  -    		00.003.786
+20211011 11512119  "  +    		DataStore.init(uba_els)
+20211011 11512119  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11512119  " SQL   				r=79 t=96 fr=20 c=0 q=SELECT A01.ID,A01.entityMask,A01.methodMask,A01.ruleType,A01.ruleRole,A01.disabled  FROM uba_els A01 
+20211011 11512119  "  -    			00.000.115
+20211011 11512119  "  -    		00.000.137
+20211011 11512119  "  -    	00.004.588
+20211011 11512119  "  +    	DataStore.init(ubs_settings)
+20211011 11512119  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11512119  " cust1 			{"P1s34":"UBA.passwordPolicy.maxDurationDays"}
+20211011 11512119  " SQL   			r=1 t=40 fr=20 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211011 11512119  "  -    		00.000.059
+20211011 11512119  "  -    	00.000.069
+20211011 11512119  "  +    	DataStore.init(ubs_settings)
+20211011 11512119  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11512119  " cust1 			{"P1s37":"UBA.passwordPolicy.maxInvalidAttempts"}
+20211011 11512119  " SQL   			r=1 t=47 fr=40 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211011 11512119  "  -    		00.000.018
+20211011 11512119  "  -    	00.000.024
+20211011 11512119  "  -    00.343.159
+20211011 11512119  ! srvr  Enable zip compression
+20211011 11512119  ! srvr  Local IP addresses: 10.8.125.48;127.0.0.1
+20211011 11512119  ! srvr  Socket server URLs: http://localhost:8881/
+20211011 11512119  ! srvr  Started and ready to accept requests...
+20211011 11512523  "  +    internalCall
+20211011 11512523  " http  	127.0.0.1 -> GET 
+20211011 11512523  " info  	endpoint statics
+20211011 11512523  " ERROR 	Not found httpServer.inetPub is empty
+20211011 11512523  " http  	127.0.0.1 <- 404
+20211011 11512523  "  -    00.001.064
+20211011 11513227  ! srvr  Terminating...
+20211011 11513227  ! mon   {"sessions_total":0,"threads_total":4,"incoming_bytes":701,"outcoming_bytes":64,"responses_total":[0,0,0,0,1,0],"security_exception_count":0,"js_gc_count":7,"js_memory_bytes":3645440,"http_perning_request_count":0}

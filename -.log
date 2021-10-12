@@ -1,0 +1,10 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-12T08:10:06
+
+ EXC   ECrtSocket ("OpenBind(0.0.0.0:6000,bind) failed: Another process may be currently listening to this port! [98  Address already in use]") [] at   $000000000046B469  $000000000046AF2C
+ ERROR 
+JavaScript debugger port 6000 is busy. Debugger disabled.
+Configure a different port using 'serverConfig.javascript.debuggerListenOn' parameter
+20211012 08100633  ! srvr  Override thread pool size to 1 (dev mode)
+20211012 08100633  ! srvr  Used config: '/home/admloc/Documents/ubProject/CityPortal/ubConfig.json'

@@ -1,0 +1,14 @@
+﻿{
+    "caption": "მომხმარებლის როლი",
+    "description": "",
+    "attributes": [
+        {
+            "name": "userID",
+            "caption": "მომხმარებელი"
+        },
+        {
+            "name": "roleID",
+            "caption": "როლი"
+        }
+    ]
+}

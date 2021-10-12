@@ -1,0 +1,26 @@
+{
+  "caption": "Atributlar darajasi xavfsizligi (ALS)",
+  "description": "Xavfsizlik darajasini belgilash",
+  "attributes": [
+    {
+      "name": "entity",
+      "caption": "Mohiyat"
+    },
+    {
+      "name": "attribute",
+      "caption": "Atributlar"
+    },
+    {
+      "name": "state",
+      "caption": "Holat kodi"
+    },
+    {
+      "name": "roleName",
+      "caption": "Rol nomi"
+    },
+    {
+      "name": "actions",
+      "caption": "Ruxsat berilgan harakatlar"
+    }
+  ]
+}

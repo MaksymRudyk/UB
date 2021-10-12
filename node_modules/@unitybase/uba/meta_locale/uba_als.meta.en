@@ -1,0 +1,27 @@
+{
+  "caption": "Attribute Level Security (ALS)",
+  "description": "Attribute level security",
+  "documentation": "",
+  "attributes": [
+    {
+      "name": "entity",
+      "caption": "Entity"
+    },
+    {
+      "name": "attribute",
+      "caption": "Attribute"
+    },
+    {
+      "name": "state",
+      "caption": "State code"
+    },
+    {
+      "name": "roleName",
+      "caption": "Role name"
+    },
+    {
+      "name": "actions",
+      "caption": "Allow actions"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "caption": "Sozlash",
+  "description": "Axborotni tizim sozlamalari bilan saqlaydigan tashkilot",
+  "attributes": [
+    {
+      "name": "settingKey",
+      "caption": "Kalit"
+    },
+    {
+      "name": "name",
+      "caption": "Ism"
+    },
+    {
+      "name": "description",
+      "caption": "Tavsif"
+    },
+    {
+      "name": "type",
+      "caption": "Turi"
+    },
+    {
+      "name": "settingValue",
+      "caption": "Qiymati"
+    },
+    {
+      "name": "defaultValue",
+      "caption": "Standart qiymat"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "caption": "Ma'muriyat fanlari",
+  "description": "Ma'muriyat mavzulari - Rollar va foydalanuvchilar",
+  "attributes": [
+    {
+      "name": "code",
+      "caption": "Kod"
+    },
+    {
+      "name": "name",
+      "caption": "Kirish"
+    },
+    {
+      "name": "sType",
+      "caption": "Mavzu turi"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "caption": "User Certificates",
+  "description": "User certificates",
+  "attributes": [
+    {
+      "name": "userID",
+      "caption": "User"
+    },
+    {
+      "name": "issuer_serial",
+      "caption": "Issuer serial number"
+    },
+    {
+      "name": "issuer_cn",
+      "caption": "Issuer caption"
+    },
+    {
+      "name": "serial",
+      "caption": "Serial number"
+    },
+    {
+      "name": "certificate",
+      "caption": "Certificate"
+    },
+    {
+      "name": "description",
+      "caption": "Description"
+    },
+    {
+      "name": "disabled",
+      "caption": "Disabled"
+    },
+    {
+      "name": "revoked",
+      "caption": "Revoked"
+    }
+  ]
+}

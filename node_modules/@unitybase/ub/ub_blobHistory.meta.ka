@@ -1,0 +1,26 @@
+﻿{
+    "caption": "BLOB ისტორია",
+    "description": "",
+    "attributes": [
+        {
+            "name": "instance",
+            "caption": "მაგალითი ID "
+        },
+        {
+            "name": "attribute",
+            "caption": "ატრიბუტები"
+        },
+        {
+            "name": "revision",
+            "caption": "შემოწმება"
+        },
+        {
+            "name": "permanent",
+            "caption": "მუდმივი"
+        },
+        {
+            "name": "blobInfo",
+            "caption": "BLOB ინფორმაცია"
+        }
+    ]
+}

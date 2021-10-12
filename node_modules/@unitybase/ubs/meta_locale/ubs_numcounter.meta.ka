@@ -1,0 +1,14 @@
+﻿{
+    "caption": "რეგისტრაციის ძირითადი მრიცხველი",
+    "description": "",
+    "attributes": [
+        {
+            "name": "regKey",
+            "caption": "რეგისტრაციის მრიცხველი"
+        },
+        {
+            "name": "counter",
+            "caption": "ქვეყანა"
+        }
+    ]
+}

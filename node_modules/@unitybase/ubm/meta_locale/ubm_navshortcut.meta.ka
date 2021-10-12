@@ -1,0 +1,46 @@
+﻿{
+    "caption": "მოკლე გზა",
+    "description": "",
+    "attributes": [
+        {
+            "name": "desktopID",
+            "caption": "კომპიუტერი"
+        },
+        {
+            "name": "parentID",
+            "caption": "Shortcut საქაღალდე"
+        },
+        {
+            "name": "code",
+            "caption": "კოდი"
+        },
+        {
+            "name": "isFolder",
+            "caption": "არის ეს საქაღალდე?"
+        },
+        {
+            "name": "caption",
+            "caption": "საქაღალდეს სათაური"
+        },
+        {
+            "name": "cmdCode",
+            "caption": "ბრძანების კოდი"
+        },
+        {
+            "name": "inWindow",
+            "caption": "ახალ ფანჯარაში"
+        },
+        {
+            "name": "isCollapsed",
+            "caption": "დაშლა/წაშლა"
+        },
+        {
+            "name": "displayOrder",
+            "caption": "№ ბრძანება"
+        },
+        {
+            "name": "iconCls",
+            "caption": "გამოსახულების css კლასის სახელი"
+        }
+    ]
+}

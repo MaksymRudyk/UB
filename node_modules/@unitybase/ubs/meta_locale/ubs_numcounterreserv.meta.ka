@@ -1,0 +1,22 @@
+﻿{
+    "caption": "სარეზერვო მრიცხველები რეგისტრაციის გასაღებებისთვის",
+    "description": "",
+    "attributes": [
+        {
+            "name": "regKey",
+            "caption": "რეგიონის მრიცხველი"
+        },
+        {
+            "name": "counter",
+            "caption": "მრიცხველი"
+        },
+        {
+            "name": "reservedDate",
+            "caption": "შენახვის თარიღი"
+        },
+        {
+            "name": "note",
+            "caption": "შენიშვნა"
+        }
+    ]
+}

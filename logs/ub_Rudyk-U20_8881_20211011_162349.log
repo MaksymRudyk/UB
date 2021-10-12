@@ -1,0 +1,63 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-11T13:23:49
+
+20211011 13234942  ! srvr  StartupPath: '/home/admloc/Documents/ubProject/CityPortal/'; BinPath: '/opt/unitybase/server/'
+20211011 13234942  ! srvr  JS Engine params: engine-max-mem=512Mb, engine-lifetime=360sec, engine-full-gc=every 100 HTTP req
+20211011 13234942  ! warn  CPU support for AVX2 and SSE42 not available or can not be used
+20211011 13234942  ! srvr  FTS is disabled
+20211011 13234942  "  +    init
+20211011 13234942  " srvr  	Start application initialization...
+20211011 13234950  " info  	Loading domain models...
+20211011 13234950  " info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211011 13234950  " info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211011 13234951  " info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211011 13234951  " info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211011 13234951  " info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211011 13234951  " info  	"requests"(1.0.0) from "./models/requests"
+20211011 13234951  " info  	Loading meta files for 40 entities... 
+20211011 13234952  " info  	load domain: 46ms
+20211011 13234952  " info  	applying metadata transformation hook from UB
+20211011 13234953  " debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211011 13234953  " info  	applying hooks: 4ms
+20211011 13234953  " info  	native init: 4ms
+20211011 13234953  " srvr  	The domain loaded successfully with 40 entities
+20211011 13235002  "  +    	Init ELS
+20211011 13235002  "  +    		DataStore.init(uba_role)
+20211011 13235002  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 13235002  "  +    				
+20211011 13235002  "  -    				00.003.312
+20211011 13235002  " SQL   				r=7 t=3364 fr=3340 c=0 q=SELECT A01.ID,A01.name,A01.sessionTimeout,A01.allowedAppMethods  FROM uba_role A01 
+20211011 13235002  "  -    			00.003.418
+20211011 13235002  "  -    		00.003.444
+20211011 13235002  "  +    		DataStore.init(uba_els)
+20211011 13235002  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 13235002  " SQL   				r=33 t=85 fr=30 c=0 q=SELECT A01.ID,A01.entityMask,A01.methodMask,A01.ruleType,A01.ruleRole,A01.disabled  FROM uba_els A01 
+20211011 13235002  "  -    			00.000.113
+20211011 13235002  "  -    		00.000.134
+20211011 13235002  "  -    	00.004.227
+20211011 13235002  "  +    	DataStore.init(ubs_settings)
+20211011 13235002  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 13235002  " cust1 			{"P1s34":"UBA.passwordPolicy.maxDurationDays"}
+20211011 13235002  " SQL   			r=1 t=64 fr=34 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211011 13235002  "  -    		00.000.095
+20211011 13235002  "  -    	00.000.110
+20211011 13235002  "  +    	DataStore.init(ubs_settings)
+20211011 13235002  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 13235002  " cust1 			{"P1s37":"UBA.passwordPolicy.maxInvalidAttempts"}
+20211011 13235002  " SQL   			r=1 t=75 fr=64 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211011 13235002  "  -    		00.000.029
+20211011 13235002  "  -    	00.000.039
+20211011 13235002  "  -    00.367.934
+20211011 13235002  ! srvr  Enable zip compression
+20211011 13235002  ! srvr  Local IP addresses: 10.8.125.48;127.0.0.1
+20211011 13235002  ! srvr  Socket server URLs: http://localhost:8881/
+20211011 13235002  ! srvr  Started and ready to accept requests...
+20211011 13235003  "  +    getAppInfo
+20211011 13235003  " http  	127.0.0.1 -> GET getAppInfo
+20211011 13235003  " info  	endpoint getAppInfo
+20211011 13235003  " http  	127.0.0.1 <- 200
+20211011 13235003  "  -    00.004.068
+20211011 13235003  ! mon   {"sessions_total":0,"threads_total":4,"incoming_bytes":228,"outcoming_bytes":345,"responses_total":[0,0,1,0,0,0],"security_exception_count":0,"js_gc_count":7,"js_memory_bytes":3653632,"http_perning_request_count":0}
+20211011 13235010  ! EXC   /home/admloc/Documents/ubProject/CityPortal/models/requests/_initialData/010_create_navshortcuts.js:28\n\nError: connection is not defined\n@/home/admloc/Documents/ubProject/CityPortal/models/requests/_initialData/010_create_navshortcuts.js:28:5
+20211011 13235010  ! mon   {"sessions_total":0,"threads_total":0,"incoming_bytes":228,"outcoming_bytes":345,"responses_total":[0,0,1,0,0,0],"security_exception_count":0,"js_gc_count":0,"js_memory_bytes":0,"http_perning_request_count":0}

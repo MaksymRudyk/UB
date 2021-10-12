@@ -1,0 +1,26 @@
+﻿{
+    "caption": "ერთჯერადი პაროლი",
+    "description": "",
+    "attributes": [
+        {
+            "name": "otp",
+            "caption": "ერთჯერადი პაროლი OTP"
+        },
+        {
+            "name": "userID",
+            "caption": "მომხმარებელი"
+        },
+        {
+            "name": "uData",
+            "caption": "მონაცემები"
+        },
+        {
+            "name": "expiredDate",
+            "caption": "ვადის გასვლის თარიღი"
+        },
+        {
+            "name": "otpKind",
+            "caption": "ერთჯერადი პაროლი სახეობა"
+        }
+    ]
+}

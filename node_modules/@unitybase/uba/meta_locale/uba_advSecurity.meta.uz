@@ -1,0 +1,42 @@
+{
+  "caption": "Kengaytirilgan xavfsizlik",
+  "description": "Kengaytirilgan xavfsizlik sozlamalari",
+  "attributes": [
+    {
+      "name": "userID",
+      "caption": "Foydalanuvchi"
+    },
+    {
+      "name": "editCause",
+      "caption": "O'zgarishlar sababi"
+    },
+    {
+      "name": "allowedIP",
+      "caption": "Ruxsat etilgan IP manzillari"
+    },
+    {
+      "name": "refreshIP",
+      "caption": "Ruxsat berilgan IP manzillarini yangilash"
+    },
+    {
+      "name": "fp",
+      "caption": "Imprint"
+    },
+    {
+      "name": "refreshFp",
+      "caption": "Yangilash Chop etish"
+    },
+    {
+      "name": "keyMediaName",
+      "caption": "Kalit tashuvchi nomi"
+    },
+    {
+      "name": "refreshKeyMedia",
+      "caption": "Kaliti tashuvchi nomini yangilang"
+    },
+    {
+      "name": "additional",
+      "caption": "Qo'shimcha"
+    }
+  ]
+}

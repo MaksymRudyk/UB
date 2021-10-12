@@ -1,0 +1,6 @@
+{
+ "formType": "vue",
+ "isDefault": false,
+ "entity": "uba_usercertificate",
+ "formCode": "uba_usercertificate-fm.vue"
+}

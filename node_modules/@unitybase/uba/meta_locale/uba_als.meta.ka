@@ -1,0 +1,26 @@
+﻿{
+    "caption": "ატრიბუტების დონის უსაფრთხოება",
+    "description": "",
+    "attributes": [
+        {
+            "name": "entity",
+            "caption": "პირი"
+        },
+        {
+            "name": "attribute",
+            "caption": "ატრიბუტი"
+        },
+        {
+            "name": "state",
+            "caption": "სახელმწიფო კოდი"
+        },
+        {
+            "name": "roleName",
+            "caption": "როლის სახელი"
+        },
+        {
+            "name": "actions",
+            "caption": "ქმედებების დაშვება"
+        }
+    ]
+}

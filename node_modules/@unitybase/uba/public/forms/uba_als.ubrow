@@ -1,0 +1,8 @@
+{
+ "isDefault": false,
+ "entity": "uba_als",
+ "formType": "vue",
+ "caption": "Entity attributes rights",
+ "description": "Entity attributes rights",
+ "formCode": "{\"fName\":\"uba_als-fm.vue\",\"origName\":\"uba_als-fm.vue\",\"ct\":\"script/x-vue\",\"size\":13105,\"md5\":\"4de2959b803da6cdfbb3080f6376dbc9\"}"
+}

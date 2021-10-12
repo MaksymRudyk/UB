@@ -1,0 +1,30 @@
+﻿{
+    "caption": "პარამეტრები",
+    "description": "",
+    "attributes": [
+        {
+            "name": "settingKey",
+            "caption": "გასაღები"
+        },
+        {
+            "name": "name",
+            "caption": "სახელი"
+        },
+        {
+            "name": "type",
+            "caption": "ტიპი"
+        },
+        {
+            "name": "settingValue",
+            "caption": "მოცულობა"
+        },
+        {
+            "name": "defaultValue",
+            "caption": "ნაგულისხმევი მნიშვნელობა"
+        },
+        {
+            "name": "description",
+            "caption": "აღწერა"
+        }
+    ]
+}

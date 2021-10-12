@@ -1,0 +1,54 @@
+﻿{
+    "caption": "გეგმა",
+    "description": "",
+    "attributes": [
+        {
+            "name": "ID",
+            "caption": "ID"
+        },
+        {
+            "name": "name",
+            "caption": "სამუშაოს დასახელება"
+        },
+        {
+            "name": "schedulingCondition",
+            "caption": "სამუშაოს გეგმის მდგომარეობა"
+        },
+        {
+            "name": "cron",
+            "caption": "Cron ჩანაწერი"
+        },
+        {
+            "name": "command",
+            "caption": "ბრძანება"
+        },
+        {
+            "name": "module",
+            "caption": "მოდული"
+        },
+        {
+            "name": "singleton",
+            "caption": "ერთეული"
+        },
+        {
+            "name": "runAs",
+            "caption": "გატარება როგორც"
+        },
+        {
+            "name": "logSuccessful",
+            "caption": "წარმატებული აღწერის ჩაწერა"
+        },
+        {
+            "name": "overridden",
+            "caption": "ჩანაცვლების"
+        },
+        {
+            "name": "originalModel",
+            "caption": "ორიგინალური მოდელი"
+        },
+        {
+            "name": "actualModel",
+            "caption": "აქტუალური მოდელი"
+        }
+    ]
+}

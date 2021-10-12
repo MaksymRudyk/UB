@@ -1,0 +1,14 @@
+{
+  "caption": "User Roles",
+  "description": "Roles assigned to user",
+  "attributes": [
+    {
+      "name": "userID",
+      "caption": "User"
+    },
+    {
+      "name": "roleID",
+      "caption": "Role"
+    }
+  ]
+}

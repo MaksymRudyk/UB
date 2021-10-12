@@ -1,0 +1,29 @@
+{
+  "caption": "Rejalashtiruvchi ishga tushirish statistikasi",
+  "description": "Rejalashtiruvchi ishga tushirish statistikasi",
+  "attributes": [
+    {
+      "name": "appName",
+      "caption": "Ilova nomi"
+    },
+    {
+      "name": "startTime"
+    },
+    {
+      "name": "endTime",
+      "caption": "Rejalashtirish elementini tugatish vaqti"
+    },
+    {
+      "name": "logText",
+      "caption": "Barcha harakatlar haqida qatl etilgan ssenariydan jurnal"
+    },
+    {
+      "name": "resultError",
+      "caption": "Natijada xato kodi. 0 = Xatolar yo'q"
+    },
+    {
+      "name": "resultErrorMsg",
+      "caption": "Agar natija> 0 bo'lsa, matnli xabar xatosi"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Misconfiguration app</title>
+</head>
+<body>
+<h1>Missed initial login page</h1>
+<p>
+  Starting from <strong>@unitybase/adminui-pub@5.10</strong> application should either adds an <strong>adminui-vue</strong>
+  model into domain in the ubConfig:
+
+  <pre>
+    "application": {
+      "domain": {
+        "models": [
+          ...
+          {
+            "path": "./node_modules/@unitybase/adminui-pub"
+          },
+          {
+            "path": "./node_modules/@unitybase/adminui-reg"
+          },
+          {
+            "path": "./node_modules/@unitybase/adminui-vue"
+          }
+  </pre>
+
+  or implement his own login page and specify it URL in the
+  <strong>uiSettings.adminUI.loginURL</strong> configuration key.
+  See <strong>adminui-vue/views/ub-auth.html</strong> for custom login page implementation example.
+</p>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+ "isDefault": true,
+ "entity": "ubm_form",
+ "formType": "auto",
+ "caption": "Form editor",
+ "description": "Form editor",
+ "formDef": "{\"fName\":\"ubm_form-fm.def\",\"origName\":\"ubm_form-fm.def\",\"ct\":\"text/javascript; charset=UTF-8\",\"size\":4441,\"md5\":\"bd5860eb8edcfd3e82b1afe8a65a6937\"}",
+ "formCode": "{\"fName\":\"ubm_form-fm.js\",\"origName\":\"ubm_form-fm.js\",\"ct\":\"text/javascript; charset=UTF-8\",\"size\":8466,\"md5\":\"4fe7ab0c77bdb3eb972fb934e30181be\"}"
+}

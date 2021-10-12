@@ -1,0 +1,8 @@
+{
+ "isDefault": false,
+ "entity": "ubm_desktop",
+ "formType": "vue",
+ "caption": "scannerSettings",
+ "description": "scannerSettings",
+ "formCode": "{\"fName\":\"ubm_desktop-scanerSettings-fm.vue\",\"origName\":\"ubm_desktop-scanerSettings-fm.vue\",\"ct\":\"script/x-vue\",\"size\":14475,\"md5\":\"18320d6cc392d552d4caf0da6481fcfb\"}"
+}

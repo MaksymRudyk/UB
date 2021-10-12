@@ -1,0 +1,26 @@
+{
+  "caption": "Xabar navbati",
+  "description": "Xabar navbati",
+  "attributes": [
+    {
+      "name": "queueCode",
+      "caption": "Navbat kodi"
+    },
+    {
+      "name": "msgCmd",
+      "caption": "Jamoa"
+    },
+    {
+      "name": "msgData",
+      "caption": "Ma'lumot xabarlari"
+    },
+    {
+      "name": "msgPriority",
+      "caption": "Ustuvorlik"
+    },
+    {
+      "name": "completeDate",
+      "caption": "Tugatgan sana"
+    }
+  ]
+}

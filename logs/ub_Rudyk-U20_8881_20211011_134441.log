@@ -1,0 +1,28 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-11T10:44:41
+
+20211011 10444143  ! srvr  StartupPath: '/home/admloc/Documents/ubProject/CityPortal/'; BinPath: '/opt/unitybase/server/'
+20211011 10444143  ! srvr  JS Engine params: engine-max-mem=512Mb, engine-lifetime=360sec, engine-full-gc=every 100 HTTP req
+20211011 10444143  ! warn  CPU support for AVX2 and SSE42 not available or can not be used
+20211011 10444143  ! srvr  FTS is disabled
+20211011 10444143  "  +    init
+20211011 10444143  " srvr  	Start application initialization...
+20211011 10444151  " info  	Loading domain models...
+20211011 10444151  " info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211011 10444151  " info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211011 10444152  " info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211011 10444152  " info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211011 10444152  " info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211011 10444152  " info  	"requests"(1.0.0) from "./models/requests"
+20211011 10444152  " info  	Loading meta files for 40 entities... 
+20211011 10444154  " info  	load domain: 42ms
+20211011 10444154  " info  	applying metadata transformation hook from UB
+20211011 10444154  " debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211011 10444154  " info  	applying hooks: 4ms
+20211011 10444154  " info  	native init: 4ms
+20211011 10444154  " srvr  	The domain loaded successfully with 40 entities
+20211011 10444202  " ERROR 	GET init ERROR=500 (BLOB store "avatars" path "/home/admloc/Documents/ubProject/CityPortal/avatars" not exists)
+20211011 10444202  "  -    00.334.600
+20211011 10444202  ! EXC   EMetabaseException Failed to start - exception during initialization [] at   $000000000073AB3C
+20211011 10444202  ! mon   {"sessions_total":0,"threads_total":4,"incoming_bytes":0,"outcoming_bytes":0,"responses_total":[0,0,0,0,0,0],"security_exception_count":0,"js_gc_count":7,"js_memory_bytes":3616768,"http_perning_request_count":0}

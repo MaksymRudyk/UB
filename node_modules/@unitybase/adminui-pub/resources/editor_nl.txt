@@ -1,0 +1,5 @@
+askZoom=Schaalknop (%)
+properties=Eigenschappen
+outline=Overzicht
+tasks=Taken
+help=Hulp

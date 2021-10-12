@@ -1,0 +1,9 @@
+{
+ "isDefault": true,
+ "entity": "uba_audit",
+ "formType": "auto",
+ "caption": "SecurityAudit",
+ "description": "Security audit",
+ "formDef": "{\"fName\":\"uba_audit-show-fm.def\",\"origName\":\"uba_audit-show-fm.def\",\"ct\":\"text/javascript; charset=UTF-8\",\"size\":917,\"md5\":\"970cda385f6ee6c3430de69407cb2272\"}",
+ "formCode": "{\"fName\":\"uba_audit-show-fm.js\",\"origName\":\"uba_audit-show-fm.js\",\"ct\":\"text/javascript; charset=UTF-8\",\"size\":23,\"md5\":\"d2d27df8f6530a2faa8e24f09acd6a91\"}"
+}

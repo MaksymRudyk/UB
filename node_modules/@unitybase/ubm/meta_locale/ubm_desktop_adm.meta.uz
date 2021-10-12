@@ -1,0 +1,13 @@
+{
+  "caption": "Ish stollari",
+  "attributes": [
+    {
+      "name": "instanceID",
+      "caption": "Ish stoli"
+    },
+    {
+      "name": "admSubjID",
+      "caption": "Ma'muriyat mavzusi"
+    }
+  ]
+}

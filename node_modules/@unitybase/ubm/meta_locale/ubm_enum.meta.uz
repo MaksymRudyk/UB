@@ -1,0 +1,26 @@
+{
+  "caption": "Sanab o'tilgan qiymatlar",
+  "description": "Sanab o'tilgan qiymatlar",
+  "attributes": [
+    {
+      "name": "eGroup",
+      "caption": "Guruh"
+    },
+    {
+      "name": "code",
+      "caption": "Kod"
+    },
+    {
+      "name": "shortName",
+      "caption": "Qisqa ism"
+    },
+    {
+      "name": "name",
+      "caption": "Qiymat nomi"
+    },
+    {
+      "name": "sortOrder",
+      "caption": "№"
+    }
+  ]
+}

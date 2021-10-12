@@ -1,0 +1,34 @@
+{
+  "caption": "Korxonaning xavfsizligi (ELIS)",
+  "description": "Metabaz usullariga qanday rollar foydalanish huquqiga ega",
+  "attributes": [
+    {
+      "name": "code",
+      "caption": "Qoidalar kodi"
+    },
+    {
+      "name": "description",
+      "caption": "Tavsif"
+    },
+    {
+      "name": "disabled",
+      "caption": "Nogiron"
+    },
+    {
+      "name": "entityMask",
+      "caption": "Essence maskasi"
+    },
+    {
+      "name": "methodMask",
+      "caption": "Usul niqobi"
+    },
+    {
+      "name": "ruleType",
+      "caption": "Qoidalar turi"
+    },
+    {
+      "name": "ruleRole",
+      "caption": "Rol"
+    }
+  ]
+}

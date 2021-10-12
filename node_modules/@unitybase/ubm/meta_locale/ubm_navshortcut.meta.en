@@ -1,0 +1,45 @@
+{
+  "caption": "Shortcut",
+  "description": "Metadata for build navbars",
+  "attributes": [
+    {
+      "name": "desktopID",
+      "caption": "Desktop"
+    },
+    {
+      "name": "parentID",
+      "caption": "Shortcut folder"
+    },
+    {
+      "name": "code",
+      "caption": "Code"
+    },
+    {
+      "name": "isFolder",
+      "caption": "Is folder?"
+    },
+    {
+      "name": "caption",
+      "caption": "Shortcut caption"
+    },
+    {
+      "name": "cmdCode",
+      "caption": "Command code"
+    },
+    {
+      "name": "inWindow",
+      "caption": "In new window",
+      "description": "Display in new window"
+    },
+    {
+      "name": "isCollapsed",
+      "caption": "Collapse",
+      "description": "Show collapsed at the first start"
+    },
+    {
+      "name": "displayOrder",
+      "caption": "Order #",
+      "description": "Display order (in current node)"
+    }
+  ]
+}

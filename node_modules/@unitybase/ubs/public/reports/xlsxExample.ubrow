@@ -1,0 +1,5 @@
+{
+ "name": "XLSX example",
+ "template": "{\"fName\":\"xlsxExample.template\",\"origName\":\"xlsxExample.template\",\"ct\":\"application/ubreport\",\"size\":4767,\"md5\":\"1ed69e46ef76663a5fe80d282fd56b0b\"}",
+ "code": "{\"fName\":\"xlsxExample.js\",\"origName\":\"xlsxExample.js\",\"ct\":\"application/def\",\"size\":2602,\"md5\":\"ca367efcebcc042e95f16278e08476ca\"}"
+}

@@ -1,0 +1,18 @@
+﻿{
+    "caption": "შეტყობინების მიმღები",
+    "description": "",
+    "attributes": [
+        {
+            "name": "messageID",
+            "caption": "შეტყობინება"
+        },
+        {
+            "name": "userID",
+            "caption": "მომხმარებელი"
+        },
+        {
+            "name": "acceptDate",
+            "caption": "მიღების თარიღი"
+        }
+    ]
+}

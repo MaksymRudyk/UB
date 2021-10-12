@@ -1,0 +1,70 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-11T11:36:44
+
+20211011 11364454  ! srvr  StartupPath: '/home/admloc/Documents/ubProject/CityPortal/'; BinPath: '/opt/unitybase/server/'
+20211011 11364454  ! srvr  JS Engine params: engine-max-mem=512Mb, engine-lifetime=360sec, engine-full-gc=every 100 HTTP req
+20211011 11364454  ! warn  CPU support for AVX2 and SSE42 not available or can not be used
+20211011 11364454  ! srvr  FTS is disabled
+20211011 11364454  "  +    init
+20211011 11364454  " srvr  	Start application initialization...
+20211011 11364461  " info  	Loading domain models...
+20211011 11364461  " info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211011 11364461  " info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211011 11364462  " info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211011 11364500  " info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211011 11364500  " info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211011 11364500  " info  	"requests"(1.0.0) from "./models/requests"
+20211011 11364500  " info  	Loading meta files for 40 entities... 
+20211011 11364501  " info  	load domain: 38ms
+20211011 11364501  " info  	applying metadata transformation hook from UB
+20211011 11364501  " debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211011 11364501  " info  	applying hooks: 4ms
+20211011 11364501  " info  	native init: 4ms
+20211011 11364502  " srvr  	The domain loaded successfully with 40 entities
+20211011 11364511  "  +    	Init ELS
+20211011 11364511  "  +    		DataStore.init(uba_role)
+20211011 11364511  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11364511  "  +    				
+20211011 11364512  "  -    				00.002.202
+20211011 11364512  " SQL   				r=7 t=2235 fr=2220 c=0 q=SELECT A01.ID,A01.name,A01.sessionTimeout,A01.allowedAppMethods  FROM uba_role A01 
+20211011 11364512  "  -    			00.002.278
+20211011 11364512  "  -    		00.002.291
+20211011 11364512  "  +    		DataStore.init(uba_els)
+20211011 11364512  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11364512  " SQL   				r=24 t=47 fr=19 c=0 q=SELECT A01.ID,A01.entityMask,A01.methodMask,A01.ruleType,A01.ruleRole,A01.disabled  FROM uba_els A01 
+20211011 11364512  "  -    			00.000.064
+20211011 11364512  "  -    		00.000.075
+20211011 11364512  "  -    	00.002.768
+20211011 11364512  "  +    	DataStore.init(ubs_settings)
+20211011 11364512  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11364512  " cust1 			{"P1s34":"UBA.passwordPolicy.maxDurationDays"}
+20211011 11364512  " SQL   			r=0 t=27 fr=16 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211011 11364512  "  -    		00.000.044
+20211011 11364512  "  -    	00.000.052
+20211011 11364512  "  +    	DataStore.init(ubs_settings)
+20211011 11364512  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 11364512  " cust1 			{"P1s37":"UBA.passwordPolicy.maxInvalidAttempts"}
+20211011 11364512  " SQL   			r=0 t=32 fr=27 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211011 11364512  "  -    		00.000.014
+20211011 11364512  "  -    	00.000.019
+20211011 11364512  "  -    00.317.749
+20211011 11364512  ! srvr  Enable zip compression
+20211011 11364512  ! srvr  Local IP addresses: 10.8.125.48;127.0.0.1
+20211011 11364512  ! srvr  Socket server URLs: http://localhost:8881/
+20211011 11364512  ! srvr  Started and ready to accept requests...
+20211011 11365161  "  +    internalCall
+20211011 11365161  " http  	127.0.0.1 -> GET 
+20211011 11365161  " info  	endpoint statics
+20211011 11365161  " ERROR 	Not found httpServer.inetPub is empty
+20211011 11365161  " http  	127.0.0.1 <- 404
+20211011 11365161  "  -    00.001.051
+20211011 11365407  #  +    internalCall
+20211011 11365407  # http  	127.0.0.1 -> GET 
+20211011 11365425  # debug 	Scripting engine is already set to the same value
+20211011 11365425  # info  	endpoint statics
+20211011 11365425  # ERROR 	Not found httpServer.inetPub is empty
+20211011 11365425  # http  	127.0.0.1 <- 404
+20211011 11365425  #  -    00.303.863
+20211011 11372636  ! srvr  Terminating...
+20211011 11372636  ! mon   {"sessions_total":0,"threads_total":4,"incoming_bytes":1402,"outcoming_bytes":128,"responses_total":[0,0,0,0,2,0],"security_exception_count":0,"js_gc_count":14,"js_memory_bytes":6795264,"http_perning_request_count":0}

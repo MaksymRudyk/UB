@@ -1,0 +1,22 @@
+{
+  "caption": "Tizim rollari",
+  "description": "Ma'muriyat doirasining roli",
+  "attributes": [
+    {
+      "name": "name",
+      "caption": "Rol"
+    },
+    {
+      "name": "description",
+      "caption": "Tavsif"
+    },
+    {
+      "name": "sessionTimeout",
+      "caption": "Sessiyaning davomiyligi"
+    },
+    {
+      "name": "allowedAppMethods",
+      "caption": "Mavjud kirish punktlari"
+    }
+  ]
+}

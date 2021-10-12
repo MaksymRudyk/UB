@@ -1,0 +1,9 @@
+{
+ "isDefault": true,
+ "entity": "uba_user",
+ "formType": "auto",
+ "caption": "User",
+ "description": "User",
+ "formDef": "{\"fName\":\"uba_user-fm.def\",\"origName\":\"uba_user-fm.def\",\"ct\":\"text/javascript; charset=UTF-8\",\"size\":2345,\"md5\":\"b892f2dadd9bef0998ffe4596894a7ee\"}",
+ "formCode": "{\"fName\":\"uba_user-fm.js\",\"origName\":\"uba_user-fm.js\",\"ct\":\"text/javascript; charset=UTF-8\",\"size\":928,\"md5\":\"977e98b2e573bc2ce4dfc9dc656419c4\"}"
+}

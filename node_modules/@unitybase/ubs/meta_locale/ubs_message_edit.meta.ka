@@ -1,0 +1,26 @@
+﻿{
+    "caption": "შეტყობინება",
+    "description": "",
+    "attributes": [
+        {
+            "name": "messageBody",
+            "caption": "შეტყობინება"
+        },
+        {
+            "name": "complete",
+            "caption": "მზად გასაგზავნად"
+        },
+        {
+            "name": "messageType",
+            "caption": "ტიპი"
+        },
+        {
+            "name": "startDate",
+            "caption": "დაწყების თარიღი"
+        },
+        {
+            "name": "expireDate",
+            "caption": "დასრულების თარიღი"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+  "caption": "Sertifikatlar",
+  "description": "Foydalanuvchi sertifikatlari",
+  "attributes": [
+    {
+      "name": "userID",
+      "caption": "Foydalanuvchi"
+    },
+    {
+      "name": "issuer_serial",
+      "caption": "Serial kalit csp"
+    },
+    {
+      "name": "issuer_cn",
+      "caption": "CSP nomi"
+    },
+    {
+      "name": "serial",
+      "caption": "Ishlab chiqarish raqami"
+    },
+    {
+      "name": "certificate",
+      "caption": "Sertifikat"
+    },
+    {
+      "name": "certParsed",
+      "caption": "Sertifikat tarkibi"
+    },
+    {
+      "name": "isForSigning",
+      "caption": "Imzo uchun"
+    },
+    {
+      "name": "description",
+      "caption": "Tavsif"
+    },
+    {
+      "name": "disabled",
+      "caption": "Nogiron"
+    },
+    {
+      "name": "revoked",
+      "caption": "Olib chiqish"
+    },
+    {
+      "name": "revocationDate",
+      "caption": "Ko'rish sanasi"
+    }
+  ]
+}

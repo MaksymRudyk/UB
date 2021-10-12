@@ -1,0 +1,36 @@
+{
+  "caption": "department",
+  "description": "department",
+  "descriptionAttribute": "name",
+  "attributes": [
+    {
+      "name": "name",
+      "dataType": "String",
+      "size": 255,
+      "caption": "Name",
+      "description": "Department Name",
+      "allowNull": false,
+      "isUnique" : true
+    },
+    {
+      "name": "postAddr",
+      "dataType": "String",
+      "size": 255,
+      "caption": "Address",
+      "description": "Department Address",
+      "allowNull": false
+    },
+    {
+      "name": "phoneNum",
+      "dataType": "String",
+      "size": 255,
+      "caption": "Phone",
+      "description": "Department Phone",
+      "allowNull": false
+    }
+  ],
+  "mixins": {
+    "mStorage": {
+    }
+  }
+}

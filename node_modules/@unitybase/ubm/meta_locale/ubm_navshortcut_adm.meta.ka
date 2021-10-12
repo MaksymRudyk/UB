@@ -1,0 +1,14 @@
+﻿{
+    "caption": "ნავიგაციის პანელის ადმინისტრირება",
+    "description": "",
+    "attributes": [
+        {
+            "name": "instanceID",
+            "caption": "ნავიგაციის მალსახმობი"
+        },
+        {
+            "name": "admSubjID",
+            "caption": "ადმინისტრირების თემა"
+        }
+    ]
+}

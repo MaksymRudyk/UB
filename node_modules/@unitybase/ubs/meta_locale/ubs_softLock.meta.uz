@@ -1,0 +1,26 @@
+{
+  "caption": "Pessimistik qulflar",
+  "description": "Pessimistik qulflar",
+  "attributes": [
+    {
+      "name": "entity",
+      "caption": "Mohiyat"
+    },
+    {
+      "name": "lockID",
+      "caption": "Kirish identifikatori"
+    },
+    {
+      "name": "lockUser",
+      "caption": "Foydalanuvchi"
+    },
+    {
+      "name": "lockType",
+      "caption": "Qulf turi"
+    },
+    {
+      "name": "lockTime",
+      "caption": "Bloklash vaqti"
+    }
+  ]
+}

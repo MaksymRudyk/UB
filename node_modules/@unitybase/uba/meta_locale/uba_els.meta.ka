@@ -1,0 +1,34 @@
+﻿{
+    "caption": "ობიექტის უსაფრთხოება(ELS)",
+    "description": "",
+    "attributes": [
+        {
+            "name": "code",
+            "caption": "კოდის წესი"
+        },
+        {
+            "name": "disabled",
+            "caption": "გამორთვა"
+        },
+        {
+            "name": "entityMask",
+            "caption": "ერთეულის ფუძე"
+        },
+        {
+            "name": "methodMask",
+            "caption": "მეთოდი ნიღაბი"
+        },
+        {
+            "name": "ruleType",
+            "caption": "წესის ტიპი"
+        },
+        {
+            "name": "ruleRole",
+            "caption": "როლი "
+        },
+        {
+            "name": "description",
+            "caption": "აღწერა"
+        }
+    ]
+}

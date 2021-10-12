@@ -1,0 +1,26 @@
+﻿{
+    "caption": "რბილი ჩაკეტვა???",
+    "description": "",
+    "attributes": [
+        {
+            "name": "entity",
+            "caption": "პირის კოდი"
+        },
+        {
+            "name": "lockID",
+            "caption": "ინსტანციის ID"
+        },
+        {
+            "name": "lockUser",
+            "caption": "მომხმარებელი"
+        },
+        {
+            "name": "lockType",
+            "caption": "ჩაკეტვის ტიპი"
+        },
+        {
+            "name": "lockTime",
+            "caption": "ჩაკეტვის დრო"
+        }
+    ]
+}

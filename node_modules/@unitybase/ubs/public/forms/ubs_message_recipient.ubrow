@@ -1,0 +1,9 @@
+{
+ "isDefault": false,
+ "entity": "ubs_message_recipient",
+ "formType": "auto",
+ "caption": "Получатель",
+ "description": "ubs_message_recipient",
+ "formDef": "{\"fName\":\"ubs_message_recipient-fm.def\",\"origName\":\"ubs_message_recipient-fm.def\",\"ct\":\"text/javascript; charset=UTF-8\",\"size\":93,\"md5\":\"62e20a7793705175b26d4cde4def3b15\"}",
+ "formCode": "{\"fName\":\"ubs_message_recipient-fm.js\",\"origName\":\"ubs_message_recipient-fm.js\",\"ct\":\"text/javascript; charset=UTF-8\",\"size\":107,\"md5\":\"02eb11242b65b8d8fd4422a3dd138c62\"}"
+}

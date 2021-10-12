@@ -1,0 +1,9 @@
+{
+  "caption": "Data Queries",
+  "attributes": [
+    {"name": "code", "caption": "Code"},
+    {"name": "name", "caption": "Name"},
+    {"name": "ubql", "caption": "UBQL (JSON)"},
+    {"name": "type", "caption": "Type"}
+  ]
+}

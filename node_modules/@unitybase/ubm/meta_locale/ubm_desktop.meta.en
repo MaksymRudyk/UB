@@ -1,0 +1,28 @@
+{
+  "caption": "Desktop",
+  "description": "Application desktops",
+  "attributes": [
+    {
+      "name": "caption",
+      "caption": "Desktop name"
+    },
+    {
+      "name": "code",
+      "caption": "Code"
+    },
+    {
+      "name": "url",
+      "caption": "URL",
+      "description": "Static server page URL which is displayed in screen centre of selected desktop"
+    },
+    {
+      "name": "isDefault",
+      "caption": "By default?"
+    },
+    {
+      "name": "displayOrder",
+      "caption": "Order #",
+      "description": "Display order"
+    }
+  ]
+}

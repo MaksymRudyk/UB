@@ -1,0 +1,28 @@
+{
+  "caption": "İş masası",
+  "description": "Tətbiqin iş masaları",
+  "attributes": [
+    {
+      "name": "caption",
+      "caption": "Desktopun adı"
+    },
+    {
+      "name": "code",
+      "caption": "Коd"
+    },
+    {
+      "name": "url",
+      "caption": "URL",
+      "description": "İş masasının seçimi zamanı ekranın mərkəzində əks olunan server səhifəsinin statik URL-si"
+    },
+    {
+      "name": "isDefault",
+      "caption": "Susmaya görə?"
+    },
+    {
+      "name": "displayOrder",
+      "caption": "Sıra №si",
+      "description": "Göstərmə qaydası"
+    }
+  ]
+}

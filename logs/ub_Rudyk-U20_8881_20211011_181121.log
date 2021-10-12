@@ -1,0 +1,54 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-11T15:11:21
+
+20211011 15112113  ! srvr  StartupPath: '/home/admloc/Documents/ubProject/CityPortal/'; BinPath: '/opt/unitybase/server/'
+20211011 15112113  ! srvr  JS Engine params: engine-max-mem=512Mb, engine-lifetime=360sec, engine-full-gc=every 100 HTTP req
+20211011 15112113  ! warn  CPU support for AVX2 and SSE42 not available or can not be used
+20211011 15112113  ! srvr  FTS is disabled
+20211011 15112113  "  +    init
+20211011 15112113  " srvr  	Start application initialization...
+20211011 15112120  " info  	Loading domain models...
+20211011 15112120  " info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211011 15112120  " info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211011 15112121  " info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211011 15112121  " info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211011 15112121  " info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211011 15112121  " info  	"requests"(1.0.0) from "./models/requests"
+20211011 15112121  " info  	Loading meta files for 40 entities... 
+20211011 15112123  " info  	load domain: 50ms
+20211011 15112123  " info  	applying metadata transformation hook from UB
+20211011 15112123  " debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211011 15112123  " info  	applying hooks: 4ms
+20211011 15112124  " info  	native init: 4ms
+20211011 15112124  " srvr  	The domain loaded successfully with 40 entities
+20211011 15112134  "  +    	Init ELS
+20211011 15112134  "  +    		DataStore.init(uba_role)
+20211011 15112134  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15112134  "  +    				
+20211011 15112134  "  -    				00.001.166
+20211011 15112134  " SQL   				r=7 t=1212 fr=1188 c=0 q=SELECT A01.ID,A01.name,A01.sessionTimeout,A01.allowedAppMethods  FROM uba_role A01 
+20211011 15112134  "  -    			00.001.257
+20211011 15112134  "  -    		00.001.272
+20211011 15112134  "  +    		DataStore.init(uba_els)
+20211011 15112134  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15112134  " SQL   				r=1 t=45 fr=27 c=0 q=SELECT A01.ID,A01.entityMask,A01.methodMask,A01.ruleType,A01.ruleRole,A01.disabled  FROM uba_els A01 
+20211011 15112134  "  -    			00.000.072
+20211011 15112134  "  -    		00.000.083
+20211011 15112134  "  -    	00.001.819
+20211011 15112134  "  +    	DataStore.init(ubs_settings)
+20211011 15112134  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15112134  " cust1 			{"P1s34":"UBA.passwordPolicy.maxDurationDays"}
+20211011 15112134  " SQL   			r=0 t=40 fr=24 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211011 15112134  "  -    		00.000.064
+20211011 15112134  "  -    	00.000.077
+20211011 15112134  "  +    	DataStore.init(ubs_settings)
+20211011 15112134  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15112134  " cust1 			{"P1s37":"UBA.passwordPolicy.maxInvalidAttempts"}
+20211011 15112134  " SQL   			r=0 t=47 fr=40 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211011 15112134  "  -    		00.000.025
+20211011 15112134  "  -    	00.000.035
+20211011 15112134  "  -    00.336.046
+20211011 15112134  # EXC   ECrtSocket ("OpenBind(0.0.0.0:8881,bind) failed: Another process may be currently listening to this port! [98  Address already in use]") [] at   $000000000046B469  $000000000046AF2C  $000000000047037E
+20211011 15112134  ! EXC   EMetabaseException Failed to start - exception during initialization [] at   $000000000073AB3C
+20211011 15112134  ! mon   {"sessions_total":0,"threads_total":4,"incoming_bytes":0,"outcoming_bytes":0,"responses_total":[0,0,0,0,0,0],"security_exception_count":0,"js_gc_count":7,"js_memory_bytes":3670016,"http_perning_request_count":0}

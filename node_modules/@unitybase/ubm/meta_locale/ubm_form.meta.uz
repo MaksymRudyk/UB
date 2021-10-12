@@ -1,0 +1,46 @@
+{
+  "caption": "Shakl",
+  "description": "Interfeys shakllarini aniqlash",
+  "attributes": [
+    {
+      "name": "code",
+      "caption": "Forma kodi"
+    },
+    {
+      "name": "description",
+      "caption": "Tavsif"
+    },
+    {
+      "name": "caption",
+      "caption": "Shakl nomi"
+    },
+    {
+      "name": "formType",
+      "caption": "Shakl turi"
+    },
+    {
+      "name": "formDef",
+      "caption": "Shaklni aniqlash"
+    },
+    {
+      "name": "formCode",
+      "caption": "Shakl skript"
+    },
+    {
+      "name": "model",
+      "caption": "Model"
+    },
+    {
+      "name": "entity",
+      "caption": "Mohiyat"
+    },
+    {
+      "name": "isDefault",
+      "caption": "Bajarilish"
+    },
+    {
+      "name": "ID",
+      "caption": "Id"
+    }
+  ]
+}

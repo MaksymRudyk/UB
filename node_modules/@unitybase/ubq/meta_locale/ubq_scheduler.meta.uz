@@ -1,0 +1,58 @@
+{
+  "caption": "Reja tuzuvchi",
+  "description": "Rejalashtirilgan vazifalar",
+  "attributes": [
+    {
+      "name": "ID",
+      "caption": "Id"
+    },
+    {
+      "name": "name",
+      "caption": "Vazifa nomi"
+    },
+    {
+      "name": "schedulingCondition",
+      "caption": "Vazifani rejalashtirish shartlari"
+    },
+    {
+      "name": "cron",
+      "caption": "Cron yozuvi"
+    },
+    {
+      "name": "description",
+      "caption": "Tavsif"
+    },
+    {
+      "name": "command",
+      "caption": "Jamoa"
+    },
+    {
+      "name": "module",
+      "caption": "Modul"
+    },
+    {
+      "name": "singleton",
+      "caption": "Singleton"
+    },
+    {
+      "name": "runAs",
+      "caption": "Nomidan yugurish"
+    },
+    {
+      "name": "logSuccessful",
+      "caption": "Muvaffaqiyatli amalga oshirish jurnali"
+    },
+    {
+      "name": "overridden",
+      "caption": "Ustma-ust tushgan"
+    },
+    {
+      "name": "originalModel",
+      "caption": "Asl model"
+    },
+    {
+      "name": "actualModel",
+      "caption": "Haqiqiy model"
+    }
+  ]
+}

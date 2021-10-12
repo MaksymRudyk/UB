@@ -1,0 +1,8 @@
+{
+ "isDefault": true,
+ "entity": "ubm_desktop",
+ "formType": "vue",
+ "caption": "Desktop",
+ "description": "Desktop",
+ "formCode": "{\"fName\":\"ubm_desktop-fm.vue\",\"origName\":\"ubm_desktop-fm.vue\",\"ct\":\"script/x-vue\",\"size\":2335,\"md5\":\"aefdac67e7854593b633c1a972e51891\"}"
+}

@@ -1,0 +1,54 @@
+{
+  "caption": "Audit",
+  "description": "Audit o'zgarishlari",
+  "attributes": [
+    {
+      "name": "entity",
+      "caption": "Mohiyat"
+    },
+    {
+      "name": "entityinfo_id",
+      "caption": "Kirish kirish identifikatori"
+    },
+    {
+      "name": "actionType",
+      "caption": "Harakat qilmoq"
+    },
+    {
+      "name": "actionUser",
+      "caption": "Foydalanuvchi"
+    },
+    {
+      "name": "actionUserName",
+      "caption": "Kirish"
+    },
+    {
+      "name": "actionTime",
+      "caption": "Harakat vaqti"
+    },
+    {
+      "name": "remoteIP",
+      "caption": "IP manzili"
+    },
+    {
+      "name": "fromValue",
+      "caption": "Eski ma'no"
+    },
+    {
+      "name": "toValue",
+      "caption": "Yangi qiymat"
+    },
+    {
+      "name": "parentEntity",
+      "caption": "Ota-onalar mohiyati"
+    },
+    {
+      "name": "parentEntityInfo_id",
+      "caption": "Ota-onaga kirish identifikatori"
+    },
+    {
+      "name": "request_id",
+      "caption": "Hayit so'rovi"
+    }
+  ]
+}

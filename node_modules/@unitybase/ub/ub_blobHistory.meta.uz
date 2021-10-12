@@ -1,0 +1,26 @@
+{
+  "caption": "Tarix BDO",
+  "description": "BDO tarixi",
+  "attributes": [
+    {
+      "name": "instance",
+      "caption": "Fayl BDO tarixi"
+    },
+    {
+      "name": "attribute",
+      "caption": "Atributlar"
+    },
+    {
+      "name": "revision",
+      "caption": "Qayta ko'rib chiqish"
+    },
+    {
+      "name": "permanent",
+      "caption": "Doimiy?"
+    },
+    {
+      "name": "blobInfo",
+      "caption": "BDO ma'lumot"
+    }
+  ]
+}

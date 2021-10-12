@@ -1,0 +1,64 @@
+------------------------------------------------------------------------------
+--  BEGIN SUFFIX indexes initial script for {{{CAPTION}}}
+-- ***** WARNING: script should be executed while UB server is down!! ********
+-- **** execution can take a long time (~10 second for each 500000 rows ******
+------------------------------------------------------------------------------
+IF EXISTS (
+  SELECT * FROM sysobjects WHERE id = object_id(N'strTails')
+  AND xtype IN (N'FN', N'IF', N'TF')
+)
+  DROP FUNCTION strTails
+GO
+
+/**
+* Split sting into suffixes using / and - as separators and ignoring last separator
+* '05/2014-01-01' = '05/2014-01-01', '2014-01-01', '01-01'
+*/
+CREATE FUNCTION dbo.strTails (
+  @v NVARCHAR(128)
+)
+RETURNS @tails TABLE ( tail NVARCHAR({{ATTR_SIZE}}) )
+AS
+  BEGIN
+  IF @v IS NULL RETURN;
+  DECLARE @i INT;
+
+  insert into @tails values (@v); -- initial string
+
+  SET @i=PATINDEX('%[{{{SPLIT_CHARS}}}]%', @v);
+  WHILE @i>0
+  BEGIN
+    SET @v=SUBSTRING(@v, @i+1, {{ATTR_SIZE}}) -- string tail
+    SET @i=PATINDEX('%[{{{SPLIT_CHARS}}}]%', @v);
+    IF @i>0 -- ignore last delimiter
+      insert into @tails values (@v)
+  END
+  RETURN;
+END;
+
+GO
+-- insert using small transactions
+truncate table {{SUFFIXES_TABLE}};
+
+DECLARE @FROM_ID BIGINT
+DECLARE @TO_ID BIGINT
+
+SET @FROM_ID=-1
+SET @TO_ID=0
+WHILE @TO_ID IS NOT NULL
+BEGIN
+  SET @FROM_ID = @TO_ID
+  SET @TO_ID = (select max(ID) from (select top 100000 ID from {{MAIN_TABLE}} where {{MAIN_TABLE_ATTR}} is not null AND ID > @FROM_ID  order by ID) d)
+
+  IF @TO_ID IS NOT NULL
+  BEGIN
+    print 'Insert portion for ID < ' + CAST(@TO_ID as VARCHAR(20))
+    begin transaction;
+      insert into {{SUFFIXES_TABLE}}(tail, sourceID)
+        select t.tail, e.ID  from {{MAIN_TABLE}} e cross apply dbo.strTails(e.{{MAIN_TABLE_ATTR}}) t
+          where e.{{MAIN_TABLE_ATTR}} is not null and e.ID >= @FROM_ID and e.ID < @TO_ID;
+    commit;
+  END
+END
+-- END SUFFIXES index initial insert script for {{{CAPTION}}}
+

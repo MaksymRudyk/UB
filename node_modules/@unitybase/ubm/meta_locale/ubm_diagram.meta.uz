@@ -1,0 +1,22 @@
+{
+  "caption": "Diagrammalar",
+  "description": "Tashkilot diagrammalari",
+  "attributes": [
+    {
+      "name": "model",
+      "caption": "Model"
+    },
+    {
+      "name": "name",
+      "caption": "Ism"
+    },
+    {
+      "name": "document",
+      "caption": "Diagramma"
+    },
+    {
+      "name": "ID",
+      "caption": "Id"
+    }
+  ]
+}

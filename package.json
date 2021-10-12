@@ -1,0 +1,19 @@
+{
+  "name": "cityportal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cityPortal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@unitybase/adminui-pub": "^5.20.26",
+    "@unitybase/adminui-reg": "^5.20.26",
+    "@unitybase/adminui-vue": "^5.20.26",
+    "@unitybase/ub-migrate": "^1.22.9",
+    "@unitybase/ubcli": "^5.21.21",
+    "@unitybase/ubq": "^5.20.26"
+  }
+}

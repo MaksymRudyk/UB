@@ -1,0 +1,14 @@
+{
+  "caption": "Foydalanuvchi rollari",
+  "description": "Foydalanuvchiga tayinlangan rollar",
+  "attributes": [
+    {
+      "name": "userID",
+      "caption": "Foydalanuvchi"
+    },
+    {
+      "name": "roleID",
+      "caption": "Rol"
+    }
+  ]
+}

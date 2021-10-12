@@ -1,0 +1,47 @@
+{
+  "connectionName": "",
+  "sqlAlias": "ubmSD",
+  "cacheType": "None",
+  "caption": "Data System Dictionaries",
+  "descriptionAttribute": "name",
+
+  "mixins": {
+    "mStorage": {
+      "simpleAudit": true,
+      "safeDelete": true
+    },
+
+    "unity": {
+      "entity": "ubm_query",
+      "attributeList": ["code", "name", "ubql"],
+      "defaults": {
+        "type": "sysDict"
+      }
+    }
+  },
+
+  "attributes": [
+    {
+      "name": "code",
+      "caption": "Code",
+      "dataType": "String",
+      "size": 50,
+      "allowNull": false,
+      "isUnique": true
+    },
+    {
+      "name": "name",
+      "caption": "Name",
+      "dataType": "String",
+      "size": 256,
+      "allowNull": false,
+      "isMultiLang": true
+    },
+    {
+      "name": "ubql",
+      "caption": "UBQL (JSON)",
+      "dataType": "Json",
+      "allowNull": false
+    }
+  ]
+}

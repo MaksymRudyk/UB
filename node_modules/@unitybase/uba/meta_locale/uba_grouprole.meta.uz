@@ -1,0 +1,14 @@
+{
+  "caption": "Rol guruhi",
+  "description": "Foydalanuvchi guruhlariga tayinlangan rollar",
+  "attributes": [
+    {
+      "name": "groupID",
+      "caption": "Guruh"
+    },
+    {
+      "name": "roleID",
+      "caption": "Rol"
+    }
+  ]
+}

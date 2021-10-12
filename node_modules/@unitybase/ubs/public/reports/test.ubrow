@@ -1,0 +1,5 @@
+{
+ "name": "Report Builder manual",
+ "template": "test.template",
+ "code": "test.js"
+}

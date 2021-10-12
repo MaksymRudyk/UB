@@ -1,0 +1,14 @@
+﻿{
+    "caption": "მომხმარებლის ჯგუფი",
+    "description": "",
+    "attributes": [
+        {
+            "name": "userID",
+            "caption": "მომხმარებელი"
+        },
+        {
+            "name": "groupID",
+            "caption": "ჯგუფი"
+        }
+    ]
+}

@@ -1,0 +1,302 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-11T15:06:26
+
+20211011 15114124  "  +    adm
+20211011 15114124  " http  	127.0.0.1 -> GET adm
+20211011 15114124  " info  	endpoint adm
+20211011 15114124  " debug 	Compiled index.mustache is used
+20211011 15114124  " debug 	default-src 'self' https://localhost:8083 http://localhost:8081; connect-src 'self'  https://localhost:8083 http://localhost:8081 blob:; script-src 'self' 'nonce-80ae470e' 'unsafe-eval' https://localhost:8083 http://localhost:8081 resource://pdf.js/build/ resource://pdf.js/web/; object-src blob: https://localhost:8083 http://localhost:8081; base-uri resource:; style-src 'self' 'unsafe-inline' data: ; font-src 'self' data: ; frame-src 'self'  blob:; img-src 'self' https://unitybase.info  data: blob:; plugin-types application/pdf
+20211011 15114124  " http  	127.0.0.1 <- 200
+20211011 15114124  "  -    00.001.052
+20211011 15114126  "  +    models/adminui-pub/themes/UBGrayTheme/UBGrayTheme-all.css?ver=5.20.26
+20211011 15114126  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/UBGrayTheme-all.css?ver=5.20.26
+20211011 15114126  " info  	endpoint models
+20211011 15114126  " debug 	model file is resolved from cache
+20211011 15114127  " http  	127.0.0.1 <- 200
+20211011 15114127  "  -    00.000.278
+20211011 15114127  "  +    models/adminui-pub/ub-css-all.css?ver=5.20.26
+20211011 15114127  " http  	127.0.0.1 -> GET models/adminui-pub/ub-css-all.css?ver=5.20.26
+20211011 15114127  " info  	endpoint models
+20211011 15114127  " debug 	model file is resolved from cache
+20211011 15114127  " http  	127.0.0.1 <- 200
+20211011 15114127  "  -    00.000.469
+20211011 15114127  "  +    models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211011 15114127  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211011 15114127  " info  	endpoint models
+20211011 15114127  " debug 	model file is resolved from cache
+20211011 15114127  " http  	127.0.0.1 <- 200
+20211011 15114127  "  -    00.000.300
+20211011 15114128  "  +    models/adminui-vue/views/ub-auth.html?returnUrl=http%3A%2F%2Flocalhost%3A8881%2Fadm
+20211011 15114128  " http  	127.0.0.1 -> GET models/adminui-vue/views/ub-auth.html?returnUrl=http%3A%2F%2Flocalhost%3A8881%2Fadm
+20211011 15114128  " info  	endpoint models
+20211011 15114128  " debug 	model file is resolved from cache
+20211011 15114128  " http  	127.0.0.1 <- 200
+20211011 15114128  "  -    00.000.384
+20211011 15114128  "  +    models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211011 15114128  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211011 15114128  " info  	endpoint models
+20211011 15114128  " debug 	model file is resolved from cache
+20211011 15114128  " http  	127.0.0.1 <- 200
+20211011 15114128  "  -    00.000.322
+20211011 15114130  "  +    models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211011 15114130  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211011 15114130  " info  	endpoint models
+20211011 15114130  " debug 	model file is resolved from cache
+20211011 15114130  " http  	127.0.0.1 <- 200
+20211011 15114130  "  -    00.000.520
+20211011 15114131  "  +    models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211011 15114131  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211011 15114131  " info  	endpoint models
+20211011 15114131  " debug 	model file is resolved from cache
+20211011 15114131  " http  	127.0.0.1 <- 200
+20211011 15114131  "  -    00.000.347
+20211011 15114131  "  +    models/adminui-vue/theme/el-theme-compiled.min.css
+20211011 15114131  " http  	127.0.0.1 -> GET models/adminui-vue/theme/el-theme-compiled.min.css
+20211011 15114131  " info  	endpoint models
+20211011 15114131  " debug 	model file is resolved from cache
+20211011 15114131  " http  	127.0.0.1 <- 200
+20211011 15114131  "  -    00.001.023
+20211011 15114133  "  +    clientRequire/lodash/lodash.min.js
+20211011 15114133  " http  	127.0.0.1 -> GET clientRequire/lodash/lodash.min.js
+20211011 15114133  " info  	endpoint clientRequire
+20211011 15114133  " debug 	Retrieve cached lodash/lodash.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/lodash/lodash.min.js
+20211011 15114133  " http  	127.0.0.1 <- 200
+20211011 15114133  "  -    00.000.478
+20211011 15114133  "  +    clientRequire/@unitybase/ub-pub/dist/ub-pub.min.js
+20211011 15114133  " http  	127.0.0.1 -> GET clientRequire/@unitybase/ub-pub/dist/ub-pub.min.js
+20211011 15114133  " info  	endpoint clientRequire
+20211011 15114133  " debug 	Retrieve cached @unitybase/ub-pub/dist/ub-pub.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211011 15114133  " http  	127.0.0.1 <- 200
+20211011 15114133  "  -    00.000.290
+20211011 15114134  "  +    models/adminui-vue/dist/adminui-vue.min.js
+20211011 15114134  " http  	127.0.0.1 -> GET models/adminui-vue/dist/adminui-vue.min.js
+20211011 15114134  " info  	endpoint models
+20211011 15114134  " debug 	model file is resolved from cache
+20211011 15114134  " http  	127.0.0.1 <- 200
+20211011 15114134  "  -    00.000.252
+20211011 15114149  "  +    clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211011 15114149  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211011 15114149  " info  	endpoint clientRequire
+20211011 15114149  " debug 	Retrieve cached @unitybase/adminui-vue/dist/adminui-vue.min.css -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211011 15114149  " http  	127.0.0.1 <- 200
+20211011 15114149  "  -    00.000.296
+20211011 15114153  "  +    getAppInfo
+20211011 15114153  " http  	127.0.0.1 -> GET getAppInfo
+20211011 15114153  " info  	endpoint getAppInfo
+20211011 15114153  " http  	127.0.0.1 <- 200
+20211011 15114153  "  -    00.003.647
+20211011 15114155  "  +    models/ub-pub/locale/lang-en.json
+20211011 15114155  " http  	127.0.0.1 -> GET models/ub-pub/locale/lang-en.json
+20211011 15114155  " info  	endpoint models
+20211011 15114155  " debug 	model file is resolved from cache
+20211011 15114155  " http  	127.0.0.1 <- 200
+20211011 15114155  "  -    00.000.189
+20211011 15114156  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15114156  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15114156  " info  	endpoint clientRequire
+20211011 15114156  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15114156  " http  	127.0.0.1 <- 200
+20211011 15114156  "  -    00.000.401
+20211011 15114156  "  +    favicon.ico
+20211011 15114156  " http  	127.0.0.1 -> GET favicon.ico
+20211011 15114156  " info  	endpoint statics
+20211011 15114156  " ERROR 	Not found httpServer.inetPub is empty
+20211011 15114156  " http  	127.0.0.1 <- 404
+20211011 15114156  "  -    00.000.629
+20211011 15114159  "  +    models/ub-pub/img/login-logo.svg
+20211011 15114159  " http  	127.0.0.1 -> GET models/ub-pub/img/login-logo.svg
+20211011 15114159  " info  	endpoint models
+20211011 15114159  " debug 	model file is resolved from cache
+20211011 15114159  " http  	127.0.0.1 <- 200
+20211011 15114159  "  -    00.000.441
+20211011 15114215  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211011 15114215  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211011 15114215  " info  	endpoint clientRequire
+20211011 15114215  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211011 15114215  " http  	127.0.0.1 <- 200
+20211011 15114215  "  -    00.000.404
+20211011 15114215  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15114215  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15114215  " info  	endpoint clientRequire
+20211011 15114215  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/ub-icons.woff2 -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15114215  " http  	127.0.0.1 <- 200
+20211011 15114215  "  -    00.000.294
+20211011 15114216  "  +    models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211011 15114216  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211011 15114216  " info  	endpoint models
+20211011 15114216  " debug 	model file is resolved from cache
+20211011 15114216  " http  	127.0.0.1 <- 200
+20211011 15114216  "  -    00.000.218
+20211011 15114216  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15114216  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15114216  " info  	endpoint clientRequire
+20211011 15114216  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15114216  " http  	127.0.0.1 <- 200
+20211011 15114216  "  -    00.000.377
+20211011 15115450  "  +    adm
+20211011 15115450  " http  	127.0.0.1 -> GET adm
+20211011 15115450  " info  	endpoint adm
+20211011 15115450  " debug 	Compiled index.mustache is used
+20211011 15115450  " debug 	default-src 'self' https://localhost:8083 http://localhost:8081; connect-src 'self'  https://localhost:8083 http://localhost:8081 blob:; script-src 'self' 'nonce-80ae470e' 'unsafe-eval' https://localhost:8083 http://localhost:8081 resource://pdf.js/build/ resource://pdf.js/web/; object-src blob: https://localhost:8083 http://localhost:8081; base-uri resource:; style-src 'self' 'unsafe-inline' data: ; font-src 'self' data: ; frame-src 'self'  blob:; img-src 'self' https://unitybase.info  data: blob:; plugin-types application/pdf
+20211011 15115450  " http  	127.0.0.1 <- 200
+20211011 15115450  "  -    00.000.869
+20211011 15115452  "  +    models/adminui-pub/themes/UBGrayTheme/UBGrayTheme-all.css?ver=5.20.26
+20211011 15115452  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/UBGrayTheme-all.css?ver=5.20.26
+20211011 15115452  " info  	endpoint models
+20211011 15115453  " debug 	model file is resolved from cache
+20211011 15115453  " http  	127.0.0.1 <- 200
+20211011 15115453  "  -    00.000.229
+20211011 15115453  "  +    models/adminui-pub/ub-css-all.css?ver=5.20.26
+20211011 15115453  " http  	127.0.0.1 -> GET models/adminui-pub/ub-css-all.css?ver=5.20.26
+20211011 15115453  " info  	endpoint models
+20211011 15115453  " debug 	model file is resolved from cache
+20211011 15115453  " http  	127.0.0.1 <- 200
+20211011 15115453  "  -    00.000.225
+20211011 15115453  "  +    models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211011 15115453  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211011 15115453  " info  	endpoint models
+20211011 15115453  " debug 	model file is resolved from cache
+20211011 15115453  " http  	127.0.0.1 <- 200
+20211011 15115453  "  -    00.000.269
+20211011 15115453  "  +    models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211011 15115453  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211011 15115453  " info  	endpoint models
+20211011 15115453  " debug 	model file is resolved from cache
+20211011 15115453  " http  	127.0.0.1 <- 200
+20211011 15115453  "  -    00.000.189
+20211011 15115453  "  +    models/adminui-vue/dist/fonts/fa/css/regular.min.css
+20211011 15115453  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/regular.min.css
+20211011 15115453  " info  	endpoint models
+20211011 15115453  " debug 	model file is resolved from cache
+20211011 15115453  " http  	127.0.0.1 <- 200
+20211011 15115453  "  -    00.000.224
+20211011 15115453  "  +    models/adminui-vue/dist/fonts/fa/css/v4-shims.min.css
+20211011 15115453  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/v4-shims.min.css
+20211011 15115453  " info  	endpoint models
+20211011 15115453  " debug 	model file is resolved from cache
+20211011 15115453  " http  	127.0.0.1 <- 200
+20211011 15115453  "  -    00.000.238
+20211011 15115453  "  +    models/adminui-vue/theme/el-theme-compiled.min.css
+20211011 15115453  " http  	127.0.0.1 -> GET models/adminui-vue/theme/el-theme-compiled.min.css
+20211011 15115453  " info  	endpoint models
+20211011 15115453  " debug 	model file is resolved from cache
+20211011 15115453  " http  	127.0.0.1 <- 200
+20211011 15115453  "  -    00.000.260
+20211011 15115454  "  +    models/adminui-pub/themes/UBGrayTheme/ub.css?ver=5.20.26
+20211011 15115454  " http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/ub.css?ver=5.20.26
+20211011 15115454  " info  	endpoint models
+20211011 15115454  " debug 	model file is resolved from cache
+20211011 15115454  " http  	127.0.0.1 <- 200
+20211011 15115454  "  -    00.000.231
+20211011 15115454  "  +    clientRequire/systemjs/dist/system.js
+20211011 15115454  " http  	127.0.0.1 -> GET clientRequire/systemjs/dist/system.js
+20211011 15115454  " info  	endpoint clientRequire
+20211011 15115454  " debug 	Retrieve cached systemjs/dist/system.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/systemjs/dist/system.js
+20211011 15115454  " http  	127.0.0.1 <- 200
+20211011 15115454  "  -    00.000.318
+20211011 15115454  "  +    models/adminui-vue/views/ub-auth.html?returnUrl=http%3A%2F%2Flocalhost%3A8881%2Fadm
+20211011 15115454  " http  	127.0.0.1 -> GET models/adminui-vue/views/ub-auth.html?returnUrl=http%3A%2F%2Flocalhost%3A8881%2Fadm
+20211011 15115454  " info  	endpoint models
+20211011 15115454  " debug 	model file is resolved from cache
+20211011 15115454  " http  	127.0.0.1 <- 200
+20211011 15115454  "  -    00.000.228
+20211011 15115454  "  +    models/adminui-pub/dist/ext-all.min.js
+20211011 15115454  " http  	127.0.0.1 -> GET models/adminui-pub/dist/ext-all.min.js
+20211011 15115454  " info  	endpoint models
+20211011 15115454  " debug 	model file is resolved from cache
+20211011 15115454  " http  	127.0.0.1 <- 200
+20211011 15115454  "  -    00.000.227
+20211011 15115456  " EXC   ECrtSocket ("SndLow() len=498099 [32  Broken pipe]") [] at   $000000000046BBBD  $000000000046BB11
+20211011 15115456  "  +    models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211011 15115456  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211011 15115456  " info  	endpoint models
+20211011 15115456  " debug 	model file is resolved from cache
+20211011 15115456  " http  	127.0.0.1 <- 200
+20211011 15115456  "  -    00.000.508
+20211011 15115456  "  +    models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211011 15115456  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211011 15115456  " info  	endpoint models
+20211011 15115456  " debug 	model file is resolved from cache
+20211011 15115456  " http  	127.0.0.1 <- 200
+20211011 15115456  "  -    00.000.277
+20211011 15115457  "  +    models/adminui-vue/theme/el-theme-compiled.min.css
+20211011 15115457  " http  	127.0.0.1 -> GET models/adminui-vue/theme/el-theme-compiled.min.css
+20211011 15115457  " info  	endpoint models
+20211011 15115457  " debug 	model file is resolved from cache
+20211011 15115457  " http  	127.0.0.1 <- 200
+20211011 15115457  "  -    00.000.273
+20211011 15115457  "  +    clientRequire/lodash/lodash.min.js
+20211011 15115457  " http  	127.0.0.1 -> GET clientRequire/lodash/lodash.min.js
+20211011 15115457  " info  	endpoint clientRequire
+20211011 15115457  " debug 	Retrieve cached lodash/lodash.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/lodash/lodash.min.js
+20211011 15115458  " http  	127.0.0.1 <- 200
+20211011 15115458  "  -    00.010.636
+20211011 15115458  "  +    clientRequire/@unitybase/ub-pub/dist/ub-pub.min.js
+20211011 15115458  " http  	127.0.0.1 -> GET clientRequire/@unitybase/ub-pub/dist/ub-pub.min.js
+20211011 15115458  " info  	endpoint clientRequire
+20211011 15115458  " debug 	Retrieve cached @unitybase/ub-pub/dist/ub-pub.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211011 15115458  " http  	127.0.0.1 <- 200
+20211011 15115458  "  -    00.000.357
+20211011 15115458  "  +    models/adminui-vue/dist/adminui-vue.min.js
+20211011 15115458  " http  	127.0.0.1 -> GET models/adminui-vue/dist/adminui-vue.min.js
+20211011 15115458  " info  	endpoint models
+20211011 15115458  " debug 	model file is resolved from cache
+20211011 15115458  " http  	127.0.0.1 <- 200
+20211011 15115458  "  -    00.000.419
+20211011 15115507  "  +    clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211011 15115507  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211011 15115507  " info  	endpoint clientRequire
+20211011 15115507  " debug 	Retrieve cached @unitybase/adminui-vue/dist/adminui-vue.min.css -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211011 15115507  " http  	127.0.0.1 <- 200
+20211011 15115507  "  -    00.000.582
+20211011 15115510  "  +    getAppInfo
+20211011 15115510  " http  	127.0.0.1 -> GET getAppInfo
+20211011 15115510  " info  	endpoint getAppInfo
+20211011 15115511  " http  	127.0.0.1 <- 200
+20211011 15115511  "  -    00.004.192
+20211011 15115512  "  +    models/ub-pub/locale/lang-en.json
+20211011 15115512  " http  	127.0.0.1 -> GET models/ub-pub/locale/lang-en.json
+20211011 15115512  " info  	endpoint models
+20211011 15115512  " debug 	model file is resolved from cache
+20211011 15115512  " http  	127.0.0.1 <- 200
+20211011 15115512  "  -    00.000.286
+20211011 15115512  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15115512  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15115512  " info  	endpoint clientRequire
+20211011 15115512  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211011 15115512  " http  	127.0.0.1 <- 200
+20211011 15115512  "  -    00.000.677
+20211011 15115514  "  +    models/ub-pub/img/login-logo.svg
+20211011 15115514  " http  	127.0.0.1 -> GET models/ub-pub/img/login-logo.svg
+20211011 15115514  " info  	endpoint models
+20211011 15115514  " debug 	model file is resolved from cache
+20211011 15115514  " http  	127.0.0.1 <- 200
+20211011 15115514  "  -    00.000.471
+20211011 15115518  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211011 15115518  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211011 15115518  " info  	endpoint clientRequire
+20211011 15115518  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211011 15115518  " http  	127.0.0.1 <- 200
+20211011 15115518  "  -    00.000.340
+20211011 15115518  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15115518  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15115518  " info  	endpoint clientRequire
+20211011 15115518  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/ub-icons.woff2 -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211011 15115518  " http  	127.0.0.1 <- 200
+20211011 15115518  "  -    00.000.265
+20211011 15115518  "  +    models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211011 15115518  " http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211011 15115518  " info  	endpoint models
+20211011 15115518  " debug 	model file is resolved from cache
+20211011 15115518  " http  	127.0.0.1 <- 200
+20211011 15115518  "  -    00.000.359
+20211011 15115518  "  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15115518  " http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15115518  " info  	endpoint clientRequire
+20211011 15115518  " debug 	Retrieve cached @unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211011 15115518  " http  	127.0.0.1 <- 200
+20211011 15115518  "  -    00.000.829
+20211011 15123146  ! srvr  Terminating...
+20211011 15123146  ! mon   {"sessions_total":1,"threads_total":1,"incoming_bytes":551802,"outcoming_bytes":1971543,"responses_total":[0,0,818,0,3,13],"security_exception_count":0,"js_gc_count":31,"js_memory_bytes":3973120,"http_perning_request_count":0}
+20211011 15123160  ! EXC   EInOutError ("Disk Full") [] at   $000000000047A4A9

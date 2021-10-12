@@ -1,0 +1,106 @@
+{
+  "httpServer": {
+    "host": "+",
+    "port": "8881"
+  },
+  "logging": {
+    "levels": [
+      "*"
+    ],
+    "path": "./logs"
+  },
+  "security": {
+    "authenticationMethods": [
+      "UB"
+    ]
+  },
+  "application": {
+
+    "defaultLang": "en",
+    "domain": {
+      "models": [
+        {
+          "path": "./node_modules/@unitybase/ub"
+        },
+        {
+          "path": "./node_modules/@unitybase/uba"
+        },
+        {
+          "path": "./node_modules/@unitybase/ubs"
+        },
+        {
+          "path": "./node_modules/@unitybase/ubm"
+        },
+        {
+          "path": "./node_modules/@unitybase/ub-pub"
+        },
+        {
+          "path": "./node_modules/@unitybase/adminui-pub"
+        },
+        {
+          "path": "./node_modules/@unitybase/adminui-reg"
+        },
+        {
+          "path": "./node_modules/@unitybase/adminui-vue"
+        },
+        {
+
+          "path": "./models/requests"
+        }
+      ]
+    },
+    "connections": [
+      {
+
+        "name": "main",
+        "isDefault": true,
+        "driver": "SQLite3",
+        "dialect": "SQLite3",
+        "databaseName": "./mainDB.db",
+        "supportLang": [
+          "en","uk"
+        ]
+      }
+    ],
+    "blobStores": [
+      {
+        "name": "avatars",
+        "tempPath": "./avatars/_temp",
+        "path": "./avatars",
+        "storeSize": "Simple",
+        "isDefault": true
+      },
+      {
+        "name": "attach",
+        "path": "./docs/attach/",
+        "storeSize": "Medium",
+        "isDefault": false,
+        "historyDepth": 2
+      },
+      {
+        "name": "mdb",
+        "tempPath": "./avatars/_temp",
+        "storeType": "Virtual"
+      },
+      {
+        "name": "attach",
+        "path": ".\\docs\\attach\\",
+        "storeSize": "Medium",
+        "isDefault": false,
+        "historyDepth": 2
+      }
+    ]
+  },
+  "uiSettings": {
+    "adminUI": {
+
+      "endpoint": "adm",
+
+      "applicationName": "City Portal",
+
+      "applicationTitle": "Requests",
+
+      "defaultPasswordForDebugOnly": "admin"
+    }
+  }
+}

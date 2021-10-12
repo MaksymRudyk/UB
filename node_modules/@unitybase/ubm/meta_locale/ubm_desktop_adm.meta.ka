@@ -1,0 +1,14 @@
+﻿{
+    "caption": "კომპიუტერების ადმინისტრირება",
+    "description": "",
+    "attributes": [
+        {
+            "name": "instanceID",
+            "caption": "კომპიუტერი "
+        },
+        {
+            "name": "admSubjID",
+            "caption": "ადმინისტრატორის თემა"
+        }
+    ]
+}

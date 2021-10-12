@@ -1,0 +1,30 @@
+{
+  "caption": "Hisobot andozalari",
+  "description": "Hisobot andozalari",
+  "attributes": [
+    {
+      "name": "model",
+      "caption": "Model"
+    },
+    {
+      "name": "report_code",
+      "caption": "Hisobot kodi"
+    },
+    {
+      "name": "name",
+      "caption": "Ism"
+    },
+    {
+      "name": "template",
+      "caption": "Andoza"
+    },
+    {
+      "name": "code",
+      "caption": "JavaScript kodi"
+    },
+    {
+      "name": "ID",
+      "caption": "Id"
+    }
+  ]
+}

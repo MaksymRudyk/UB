@@ -1,0 +1,42 @@
+﻿{
+    "caption": "მომხმარებლის სერტიფიკატები",
+    "description": "",
+    "attributes": [
+        {
+            "name": "userID",
+            "caption": "მომხმარებელი"
+        },
+        {
+            "name": "issuer_serial",
+            "caption": "ემიტენტი"
+        },
+        {
+            "name": "issuer_cn",
+            "caption": "ემიტენტის ხელმოწერა"
+        },
+        {
+            "name": "serial",
+            "caption": "სერიის ნომერი"
+        },
+        {
+            "name": "certificate",
+            "caption": "სერტიფიკატი"
+        },
+        {
+            "name": "disabled",
+            "caption": "გამორთულია"
+        },
+        {
+            "name": "revoked",
+            "caption": "გაუქმებული"
+        },
+        {
+            "name": "revocationDate",
+            "caption": "გაუქმების თარიღი"
+        },
+        {
+            "name": "description",
+            "caption": "აღწერა"
+        }
+    ]
+}

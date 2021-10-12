@@ -1,0 +1,20 @@
+{
+  "caption": "İstifadəçilər qrupu",
+  "description": "İstifadəçilər qrupu",
+  "attributes": [
+    {
+      "name": "code",
+      "caption": "Kod",
+      "description": "Qrup kodu",
+      "documentation": "Unikal qrup kodu. API və skriptlər tərəfindən istifadə olunur"
+    },
+    {
+      "name": "name",
+      "caption": "Ad"
+    },
+    {
+      "name": "description",
+      "caption": "Təsvir"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "caption": "Ish stoli",
+  "description": "Ish stollari",
+  "attributes": [
+    {
+      "name": "caption",
+      "caption": "Ish stoli nomi"
+    },
+    {
+      "name": "code",
+      "caption": "Kod"
+    },
+    {
+      "name": "url",
+      "caption": "Url"
+    },
+    {
+      "name": "isDefault",
+      "caption": "Odatiymi?"
+    },
+    {
+      "name": "displayOrder",
+      "caption": "№"
+    }
+  ]
+}

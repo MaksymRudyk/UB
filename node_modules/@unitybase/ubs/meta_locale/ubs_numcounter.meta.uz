@@ -1,0 +1,14 @@
+{
+  "caption": "Ro'yxatdan o'tish tugmachasi metr",
+  "description": "Ro'yxatdan o'tish tugmachasi metr",
+  "attributes": [
+    {
+      "name": "regKey",
+      "caption": "Ro'yxatdan o'tish tugmasi"
+    },
+    {
+      "name": "counter",
+      "caption": "Peshtaxta"
+    }
+  ]
+}

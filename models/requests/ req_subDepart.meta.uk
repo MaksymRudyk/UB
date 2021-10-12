@@ -1,0 +1,15 @@
+{
+  "caption": "Підрозділ",
+  "description": "Підрозділ",
+  "attributes": [
+    {
+      "name": "name",
+      "caption": "Назва підрозділу",
+      "description": "Назва підрозділу"
+    },
+    {
+      "name": "department",
+      "caption": "Департамент"
+    }
+  ]
+}

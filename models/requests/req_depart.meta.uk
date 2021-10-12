@@ -1,0 +1,21 @@
+{
+  "caption": "Департамент",
+  "description": "Департамент",
+  "attributes": [
+    {
+      "name": "name",
+      "caption": "Назва департаменту",
+      "description": "Назва департаменту"
+    },
+    {
+      "name": "postAddr",
+      "caption": "Адреса департаменту",
+      "description": "Адреса департаменту"
+    },
+    {
+      "name": "phoneNum",
+      "caption": "Телефон департаменту",
+      "description": "Телефон департаменту"
+    }
+  ]
+}

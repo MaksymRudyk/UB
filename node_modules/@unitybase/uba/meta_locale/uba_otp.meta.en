@@ -1,0 +1,31 @@
+{
+  "caption": "One-Time Passwords",
+  "description": "One-time passwords",
+  "attributes": [
+    {
+      "name": "otp",
+      "caption": "OTP",
+      "description": "Generated one time password"
+    },
+    {
+      "name": "userID",
+      "caption": "User",
+      "description": "User for which password was generated"
+    },
+    {
+      "name": "uData",
+      "caption": "uData",
+      "description": "Additional  data"
+    },
+    {
+      "name": "expiredDate",
+      "caption": "Expired date",
+      "description": "Expired date"
+    },
+    {
+      "name": "otpKind",
+      "caption": "Otp kind",
+      "description": "Kind of otp(Email, SMS etc)"
+    }
+  ]
+}

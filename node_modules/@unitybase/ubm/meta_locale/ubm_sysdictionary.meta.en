@@ -1,0 +1,8 @@
+{
+  "caption": "Data System Dictionaries",
+  "attributes": [
+    {"name": "code", "caption": "Code"},
+    {"name": "name", "caption": "Name"},
+    {"name": "ubql", "caption": "UBQL (JSON)"}
+  ]
+}

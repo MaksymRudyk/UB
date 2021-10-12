@@ -1,0 +1,20 @@
+{
+  "caption": "User Groups",
+  "description": "User groups",
+  "attributes": [
+    {
+      "name": "code",
+      "caption": "Code",
+      "description": "Group code",
+      "documentation": "Unique group code. Used by APIs and scripts"
+    },
+    {
+      "name": "name",
+      "caption": "Name"
+    },
+    {
+      "name": "description",
+      "caption": "Description"
+    }
+  ]
+}

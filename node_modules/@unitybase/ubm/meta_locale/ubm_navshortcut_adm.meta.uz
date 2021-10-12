@@ -1,0 +1,14 @@
+{
+  "caption": "Navigatsiya panelini boshqaruvchi",
+  "description": "Tavsif",
+  "attributes": [
+    {
+      "name": "instanceID",
+      "caption": "Yorliq"
+    },
+    {
+      "name": "admSubjID",
+      "caption": "Ma'muriyat mavzusi"
+    }
+  ]
+}

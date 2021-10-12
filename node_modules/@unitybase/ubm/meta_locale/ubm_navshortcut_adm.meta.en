@@ -1,0 +1,14 @@
+{
+  "caption": "Administering of Navigation Panel",
+  "description": "Description",
+  "attributes": [
+    {
+      "name": "instanceID",
+      "caption": "Shortcut"
+    },
+    {
+      "name": "admSubjID",
+      "caption": "Subject of administration"
+    }
+  ]
+}

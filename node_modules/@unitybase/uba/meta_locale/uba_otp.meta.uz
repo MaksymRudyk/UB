@@ -1,0 +1,26 @@
+{
+  "caption": "Bir marta ishlatiladigan parollar",
+  "description": "Bir marta ishlatiladigan parollar",
+  "attributes": [
+    {
+      "name": "otp",
+      "caption": "Parol"
+    },
+    {
+      "name": "userID",
+      "caption": "Foydalanuvchi"
+    },
+    {
+      "name": "uData",
+      "caption": "Qo'shimcha ma'lumotlar"
+    },
+    {
+      "name": "expiredDate",
+      "caption": "Amal qilish muddati"
+    },
+    {
+      "name": "otpKind",
+      "caption": "Parolni ko'rish"
+    }
+  ]
+}

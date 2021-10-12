@@ -1,0 +1,75 @@
+{
+  "caption": "Users",
+  "description": "Users",
+  "attributes": [
+    {
+      "name": "name",
+      "caption": "Login",
+      "description": "User login in lower case"
+    },
+    {
+      "name": "description",
+      "caption": "Description"
+    },
+    {
+      "name": "firstName",
+      "caption": "First Name"
+    },
+    {
+      "name": "lastName",
+      "caption": "Last Name"
+    },
+    {
+      "name": "fullName",
+      "caption": "Full Name"
+    },
+    {
+      "name": "gender",
+      "caption": "User gender"
+    },
+    {
+      "name": "email",
+      "caption": "Email",
+      "description": "User email (could be used for notifications)"
+    },
+    {
+      "name": "phone",
+      "caption": "Phone",
+      "description": "User phone (could be used for sms)"
+    },
+    {
+      "name": "avatar",
+      "caption": "Avatar",
+      "description": "User avatar image (recommended 128x128)"
+    },
+    {
+      "name": "uPasswordHashHexa",
+      "caption": "Password hash",
+      "description": "Password hash"
+    },
+    {
+      "name": "disabled",
+      "caption": "Disabled",
+      "description": "Disabled"
+    },
+    {
+      "name": "isPending",
+      "caption": "Registration pending",
+      "description": "The user is waiting for confirmation of registration"
+    },
+    {
+      "name": "uData",
+      "caption": "uData",
+      "description": "Additional  data"
+    },
+    {
+      "name": "trustedIP",
+      "caption": "trusted IPs"
+    },
+    {
+      "name": "lastPasswordChangeDate",
+      "caption": "Last password change date",
+      "description": "Last password change date"
+    }
+  ]
+}

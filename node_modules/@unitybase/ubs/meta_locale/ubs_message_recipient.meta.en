@@ -1,0 +1,19 @@
+{
+  "caption": "Message Recipients",
+  "description": "System messages recipients",
+  "documentation": "System messages recipient",
+  "attributes": [
+    {
+      "name": "messageID",
+      "caption": "Message"
+    },
+    {
+      "name": "userID",
+      "caption": "User"
+    },
+    {
+      "name": "acceptDate",
+      "caption": "Accept date"
+    }
+  ]
+}

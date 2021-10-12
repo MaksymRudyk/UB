@@ -1,0 +1,211 @@
+$context:
+  type: navigation
+
+# Submenu in "Administrator" desktop
+adm_desktop:
+  $amendment: true
+  items:
+  - adm_folder_UI:
+      caption: UI
+      iconCls: u-icon-image
+      displayOrder: 30
+      items:
+      - ubs_report:
+          caption:
+            en: Reports
+            uk: Звіти
+            ru: Отчеты
+            ka: ანგარიშები
+            tg: Ҳисоботҳо
+            nl: Rapporten
+            az: Hesabatlar
+            id: Reports
+          iconCls: u-icon-book
+          displayOrder: 60
+          cmd: >
+            {
+              renderer: 'vue',
+              cmdType: 'showList',
+              cmdData: {
+                entityName: 'ubs_report',
+                columns: [
+                  'ID',
+                  'model',
+                  'report_code',
+                  {
+                    id: 'name',
+                    format: 'return UB.i18n(value)'
+                  }
+                ]
+              }
+            }
+  - adm_folder_misc:
+      access: Supervisor
+      caption:
+        en: Misc
+        uk: Різне
+        ru: Разное
+        ka: სხვადასხვა
+        tg: Гуногун
+        nl: Overige toepassingen
+        az: Müxtəlif
+        id: Misc
+      iconCls: u-icon-setting
+      displayOrder: 40
+      isCollapsed: true
+      items:
+      - ubs_settings:
+          caption:
+            en: Settings
+            uk: Налаштування
+            ru: Настройки
+            ka: პარამეტრები
+            tg: Танзимот
+            nl: Instellingen
+            az: Sazlamalar
+            id: Settings
+          iconCls: u-icon-setting
+          displayOrder: 10
+          cmd: >
+            {
+              renderer: 'vue',
+              cmdType: 'showList',
+              cmdData: {
+                entityName: 'ubs_settings'
+              }
+            }
+      - ubs_filter:
+          caption:
+            en: Saved Filters
+            uk: Збережені фільтри
+            ru: Сохраненные фильтры
+            ka: შენახული ფილტრები
+            tg: Филтрҳои ҳифзшуда
+            nl: Opgeslagen filters
+            az: Yadda saxlanılmış filtrlər
+            id: Saved Filters
+          displayOrder: 20
+          cmd: >
+            {
+              renderer: 'vue',
+              cmdType: 'showList',
+              cmdData: {
+                entityName: 'ubs_filter'
+              }
+            }
+      - ubs_numcounter:
+          caption:
+            en: Numerators
+            uk: Нумератори
+            ru: Нумераторы
+            ka: ნუმერატორები
+            tg: Рақамгузорӣ
+            nl: Tellers
+            az: Numeratorlar
+            id: Numerators
+          displayOrder: 30
+          cmd: >
+            {
+              renderer: 'vue',
+              cmdType: 'showList',
+              cmdData: {
+                entityName: 'ubs_numcounter'
+              }
+            }
+      - ubs_numcounterreserv:
+          caption:
+            en: Numerators (Reserve)
+            uk: Нумератори (резерв)
+            ru: Нумераторы (резерв)
+            ka: ნუმერატორები (რეზერვი)
+            tg: Рақамгузорӣ (захира)
+            nl: Tellers (reserve)
+            az: Numeratorlar (Rezerv)
+            id: Numerators (Reserve)
+          displayOrder: 40
+          cmd: >
+            {
+              renderer: 'vue',
+              cmdType: 'showList',
+              cmdData: {
+                entityName: 'ubs_numcounterreserv'
+              }
+            }
+      - ubs_softLock:
+          caption:
+            en: Blocking (SoftLocks)
+            uk: Блокування (SoftLocks)
+            ru: Блокировки (SoftLocks)
+            ka: დაბლოკვა (რბილი)
+            tg: Худбандӣ (SoftLocks)
+            nl: Blokkeren (SoftLocks)
+            az: Bloklamalar (SoftLocks)
+            id: Blocking (SoftLocks)
+          displayOrder: 50
+          cmd: >
+            {
+              renderer: 'vue',
+              cmdType: 'showList',
+              cmdData: {
+                entityName: 'ubs_softLock',
+                columns: [
+                  'lockUser',
+                  'entity',
+                  'lockID',
+                  'lockType',
+                  'lockTime'
+                ]
+              }
+            }
+      - ubs_message:
+          caption:
+            en: Messages
+            uk: Повідомлення
+            ru: Сообщения
+            ka: შეტყობინებები
+            tg: Паёмҳо
+            nl: Berichten
+            az: İsmarışlar
+            id: Messages
+          iconCls: u-icon-bell
+          displayOrder: 60
+          cmd: >
+            {
+              renderer: 'vue',
+              cmdType: 'showList',
+              cmdData: {
+                entityName: 'ubs_message_edit',
+                columns: [
+                  'messageBody',
+                  'messageType',
+                  'complete',
+                  'startDate',
+                  'expireDate'
+                ]
+              }
+            }
+      - ubs_globalCache:
+          caption:
+            en: Server-Side Cache
+            uk: Серверний кеш
+            ru: Серверный кэш
+            ka: სერვერის ქეში
+            tg: Кеши сервер
+            nl: Cache aan serverzijde
+            az: Server-Side Cache
+            id: Server-Side Cache
+          iconCls: u-icon-data
+          displayOrder: 60
+          cmd: >
+            {
+              renderer: 'vue',
+              cmdType: 'showList',
+              cmdData: {
+                entityName: 'ubs_globalCache',
+                columns: [
+                  'ID',
+                  'key',
+                  'value'
+                ]
+              }
+            }

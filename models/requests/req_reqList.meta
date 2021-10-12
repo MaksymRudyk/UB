@@ -1,0 +1,79 @@
+{
+  "caption": "request",
+  "description": "request",
+  "sqlAlias": "req",
+  "attributes": [
+    {
+      "name": "reqDate",
+      "dataType": "Date",
+      "caption": "Request Date",
+      "description": "Request Date",
+      "allowNull": false
+    },
+    {
+      "name": "applicantPhone",
+      "dataType": "String",
+      "size": 255,
+      "caption": "Phone",
+      "description": "Applicant`s phone",
+      "allowNull": false
+    },
+    {
+      "name": "applicantInfo",
+      "dataType": "String",
+      "size": 255,
+      "caption": "Contact info",
+      "description": "Applicant`s contact info",
+      "allowNull": false
+    },
+    {
+      "name": "department",
+      "dataType": "Entity",
+      "associatedEntity": "req_depart",
+      "caption": "Department",
+      "allowNull": false
+    },
+    {
+      "name": "subDepartment",
+      "dataType": "Entity",
+      "associatedEntity": "req_subDepart",
+      "caption": "SubDepartment"
+    },
+    {
+      "name": "reqText",
+      "dataType": "Text",
+      "size": 2500,
+      "caption": "Text of Request",
+      "description": "Text of request",
+      "allowNull": false
+    } ,
+    {
+      "name": "reqDoc",
+      "dataType": "Document",
+      "caption":"attach",
+      "description" :"doc",
+      "storeName": "attach"
+    },
+    {
+      "name": "answer",
+      "dataType": "Text",
+      "size": 2500,
+      "caption": "Request answer",
+      "description": "Request answer",
+      "allowNull": true,
+      "isMultiLang": false
+    },
+    {
+      "name":"status",
+      "dataType": "Enum",
+      "enumGroup": "REQUEST_STATUS",
+      "caption": "Status",
+      "allowNull": false
+    }
+
+  ],
+  "mixins": {
+    "mStorage": {
+    }
+  }
+}

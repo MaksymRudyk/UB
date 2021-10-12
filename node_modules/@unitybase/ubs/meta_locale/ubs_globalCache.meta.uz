@@ -1,0 +1,18 @@
+{
+  "caption": "Global kesh",
+  "description": "Global Kesh serveri",
+  "attributes": [
+    {
+      "name": "ID",
+      "caption": "Id"
+    },
+    {
+      "name": "key",
+      "caption": "Kalit"
+    },
+    {
+      "name": "value",
+      "caption": "Qiymati"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "caption": "Ro'yxatdan o'tgan hisoblangan hisoblangan kalitlar",
+  "description": "Ro'yxatdan o'tgan hisoblangan hisoblangan kalitlar",
+  "attributes": [
+    {
+      "name": "regKey",
+      "caption": "Ro'yxatdan o'tish kaliti"
+    },
+    {
+      "name": "counter",
+      "caption": "Hisoblagich"
+    },
+    {
+      "name": "reservedDate",
+      "caption": "Saqlangan kun"
+    },
+    {
+      "name": "note",
+      "caption": "Eslatma"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "name": "ubsSoftLockCleanup",
+	"schedulingCondition": "true",
+	"cron": "15 25 5 * * *",
+	"description": "Clean expired locks from ubs_softLock table",
+	"command": "ubs_softLock.cleanupSoftLocks",
+	"singleton": true,
+	"runAs": "admin",
+	"logSuccessful": true
+  }
+]

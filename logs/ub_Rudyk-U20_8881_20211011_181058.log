@@ -1,0 +1,55 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-11T15:10:58
+
+20211011 15105835  ! srvr  StartupPath: '/home/admloc/Documents/ubProject/CityPortal/'; BinPath: '/opt/unitybase/server/'
+20211011 15105835  ! srvr  JS Engine params: engine-max-mem=512Mb, engine-lifetime=360sec, engine-full-gc=every 100 HTTP req
+20211011 15105835  ! warn  CPU support for AVX2 and SSE42 not available or can not be used
+20211011 15105835  ! srvr  FTS is disabled
+20211011 15105835  "  +    init
+20211011 15105835  " srvr  	Start application initialization...
+20211011 15105846  " info  	Loading domain models...
+20211011 15105846  " info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211011 15105847  " info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211011 15105848  " info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211011 15105848  " info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211011 15105848  " info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211011 15105848  " info  	"requests"(1.0.0) from "./models/requests"
+20211011 15105848  " info  	Loading meta files for 40 entities... 
+20211011 15105850  " info  	load domain: 60ms
+20211011 15105850  " info  	applying metadata transformation hook from UB
+20211011 15105851  " debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211011 15105851  " info  	applying hooks: 6ms
+20211011 15105851  " info  	native init: 6ms
+20211011 15105851  " srvr  	The domain loaded successfully with 40 entities
+20211011 15105903  "  +    	Init ELS
+20211011 15105903  "  +    		DataStore.init(uba_role)
+20211011 15105903  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15105903  "  +    				
+20211011 15105903  "  -    				00.001.124
+20211011 15105903  " SQL   				r=7 t=1156 fr=1141 c=0 q=SELECT A01.ID,A01.name,A01.sessionTimeout,A01.allowedAppMethods  FROM uba_role A01 
+20211011 15105903  "  -    			00.001.196
+20211011 15105903  "  -    		00.001.211
+20211011 15105903  "  +    		DataStore.init(uba_els)
+20211011 15105903  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15105903  " SQL   				r=1 t=29 fr=18 c=0 q=SELECT A01.ID,A01.entityMask,A01.methodMask,A01.ruleType,A01.ruleRole,A01.disabled  FROM uba_els A01 
+20211011 15105903  "  -    			00.000.045
+20211011 15105903  "  -    		00.000.052
+20211011 15105903  "  -    	00.001.595
+20211011 15105903  "  +    	DataStore.init(ubs_settings)
+20211011 15105903  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15105903  " cust1 			{"P1s34":"UBA.passwordPolicy.maxDurationDays"}
+20211011 15105903  " SQL   			r=0 t=28 fr=17 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211011 15105903  "  -    		00.000.046
+20211011 15105903  "  -    	00.000.054
+20211011 15105903  "  +    	DataStore.init(ubs_settings)
+20211011 15105903  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211011 15105903  " cust1 			{"P1s37":"UBA.passwordPolicy.maxInvalidAttempts"}
+20211011 15105903  " SQL   			r=0 t=32 fr=28 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211011 15105903  "  -    		00.000.013
+20211011 15105903  "  -    	00.000.018
+20211011 15105903  "  -    00.497.525
+20211011 15105904  # EXC   ECrtSocket ("OpenBind(0.0.0.0:8881,bind) failed: Another process may be currently listening to this port! [98  Address already in use]") [] at   $000000000046B469  $000000000046AF2C  $000000000047037E
+20211011 15105904  ! EXC   EMetabaseException Failed to start - exception during initialization [] at   $000000000073AB3C  $0000000000737F6F
+20211011 15105904  ! EXC   /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/base/argv.js:157\n\nError: Failed to start - exception during initialization\nestablishConnectionFromCmdLineAttributes@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/base/argv.js:157:9\ngenerateDDL@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ubcli/lib/generateDDL.js:63:21\nubcli@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ubcli/bin/ubcli.js:49:42\n__UB_int._runAsShell@UB.js:63:32\n@shell.js:1:1\n
+20211011 15105904  ! mon   {"sessions_total":0,"threads_total":4,"incoming_bytes":0,"outcoming_bytes":0,"responses_total":[0,0,0,0,0,0],"security_exception_count":0,"js_gc_count":7,"js_memory_bytes":3670016,"http_perning_request_count":0}
