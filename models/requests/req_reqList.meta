@@ -73,10 +73,14 @@
 
   ],
   "mixins": {
-    "mStorage": {    "simpleAudit": true
-    },
+    "mStorage" : { "simpleAudit": true },
+    "dataHistory" : {},
     "rls": {
       "expression": "'(' + $.currentOwner() + ' OR ' + '[department.roleInSystem] in (' + Session.userRoles + '))'"
+    },
+    "softLock": {
+      "lockIdentifier": "ID",
+      "lockEntity": "req_reqList"
     }
   }
 }
