@@ -69,6 +69,15 @@
       "enumGroup": "REQUEST_STATUS",
       "caption": "Status",
       "allowNull": false
+    },
+    {
+      "name":"regionList",
+      "dataType": "Many",
+      "associatedEntity": "req_cityRegion",
+      "associationManyData": "req_city_region_map",
+      "caption": "List city regions",
+      "description": "List of city regions",
+      "allowNull": true
     }
 
   ],

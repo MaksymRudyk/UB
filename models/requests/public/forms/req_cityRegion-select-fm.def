@@ -1,0 +1,54 @@
+exports.formDef = 'request.selectRegion'
+Ext.define('request.selectRegion', {
+  extend: 'Ext.form.Panel',
+  size: {
+    width: 500,
+    height: 600
+  },
+
+  items: [{
+    xtype: 'ubcombobox',
+    width: 400,
+    name: 'cbxRegion',
+    fieldLabel: UB.i18n('City region'),
+    allowBlank: false,
+    ubRequest: {
+      entity: 'req_cityRegion',
+      method: 'select',
+      fieldList: ['ID', 'name']
+    }
+  }],
+  buttons: [{
+    ubID: 'btnOK',
+    text: UB.i18n('ok'),
+    iconCls: 'fa fa-save',
+    formBind: true
+  }, {
+    ubID: 'btnCancel',
+    text: UB.i18n('cancel'),
+    iconCls: 'fa fa-times'
+  }],
+
+  initComponent: function() {
+    let me = this
+    me.callParent(arguments)
+    me.down('button[ubID="btnOK"]').handler = function() {
+      let region = [];
+      region[0] = me.getForm().findField('cbxRegion').getValue()
+      let regionName = me.getForm().findField('cbxRegion').findRecordByValue(region[0]).get('name');
+      let requestInRegion = UB.Repository('req_reqList').attrs(['ID', 'regionList']).where('regionList', '=', region).selectAsObject()
+        .then(function(result) {
+          if (result.length) {
+            $App.dialogInfo('Number of requests for the district: ' + regionName + ' - ' + result.length);
+          } else {
+            $App.dialogInfo('There are any requests for the district: ' + regionName);
+          }
+        })
+
+    }
+
+    me.down('button[ubID="btnCancel"]').handler = function() {
+      me.up('window').close()
+    }
+  }
+})

@@ -161,3 +161,28 @@ module.exports = function (session) {
     }
 
 };
+lastID = conn.lookup('ubm_navshortcut', 'ID', {
+    expression: 'code',
+    condition: 'equal',
+    values: { code: 'req_cityRegion' }
+})
+if (!lastID) {
+    console.log('\t\tcreate `City regions` shortcut')
+    lastID = conn.insert({
+        fieldList: ['ID'],
+        entity: 'ubm_navshortcut',
+        execParams: {
+            desktopID: desktopID,
+            code: 'req_cityRegion',
+            caption: 'City region',
+            iconCls: 'fa fa-braille',
+            displayOrder: 20,
+            cmdCode: JSON.stringify({
+                cmdType: 'showList',
+                cmdData: { params: [{ entity: 'req_cityRegion', method: 'select', fieldList: '*' }] }
+            }, null, '\t')
+        }
+    })
+} else {
+    console.info('\t\tuse existed shortcut with code `req_cityRegion`', lastID)
+}

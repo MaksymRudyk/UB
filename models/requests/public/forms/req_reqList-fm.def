@@ -53,6 +53,7 @@ exports.formDef = {
  					 height: 200,
   					layout: 'auto',            // Auto width
             contentTypeMapping: {'image/jpeg': 'UB.ux.UBImg'}
-		 }
+		 },
+    { attributeName: "regionList" }
   ]
 };

@@ -1,0 +1,67 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-18T12:09:26
+
+20211018 12092628  &  +    init
+20211018 12092635  & info  	Loading domain models...
+20211018 12092635  & info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211018 12092635  & info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211018 12092636  & info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211018 12092636  & info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211018 12092636  & info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211018 12092636  & info  	"requests"(1.0.0) from "./models/requests"
+20211018 12092636  & info  	Loading meta files for 41 entities... 
+20211018 12092638  & info  	load domain: 50ms
+20211018 12092638  & info  	applying metadata transformation hook from UB
+20211018 12092638  & debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211018 12092638  & info  	applying hooks: 4ms
+20211018 12092639  & info  	native init: 4ms
+20211018 12092651  &  +    	Init ELS
+20211018 12092651  &  +    		DataStore.init(uba_role)
+20211018 12092651  &  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211018 12092651  &  +    				
+20211018 12092651  &  -    				00.010.776
+20211018 12092651  & SQL   				r=9 t=10831 fr=10806 c=0 q=SELECT A01.ID,A01.name,A01.sessionTimeout,A01.allowedAppMethods  FROM uba_role A01 
+20211018 12092651  &  -    			00.010.873
+20211018 12092651  &  -    		00.010.889
+20211018 12092651  &  +    		DataStore.init(uba_els)
+20211018 12092651  &  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211018 12092651  & SQL   				r=150 t=196 fr=27 c=0 q=SELECT A01.ID,A01.entityMask,A01.methodMask,A01.ruleType,A01.ruleRole,A01.disabled  FROM uba_els A01 
+20211018 12092651  &  -    			00.000.222
+20211018 12092651  &  -    		00.000.267
+20211018 12092651  &  -    	00.012.388
+20211018 12092651  &  +    	DataStore.init(ubs_settings)
+20211018 12092651  &  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211018 12092651  & cust1 			{"P1s34":"UBA.passwordPolicy.maxDurationDays"}
+20211018 12092651  & SQL   			r=1 t=78 fr=38 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211018 12092651  &  -    		00.000.110
+20211018 12092651  &  -    	00.000.126
+20211018 12092651  &  +    	DataStore.init(ubs_settings)
+20211018 12092651  &  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211018 12092651  & cust1 			{"P1s37":"UBA.passwordPolicy.maxInvalidAttempts"}
+20211018 12092651  & SQL   			r=1 t=92 fr=79 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211018 12092651  &  -    		00.000.028
+20211018 12092651  &  -    	00.000.036
+20211018 12092651  &  -    00.369.042
+20211018 12092652  ! srvr  Server restarted
+20211018 12095957  &  +    addUser
+20211018 12095957  & http  	127.0.0.1 -> GET addUser
+20211018 12095957  & info  	endpoint addUser
+20211018 12095957  &  +    	method(TubStorageMixin) req_user.insert
+20211018 12095957  &  +    		DataStore.ParseInsertAndExec
+20211018 12095957  &  +    			DataStore.BuildAndExecInsertSQL
+20211018 12095957  &  +    				App.fetchAllOrExec(conn=main/SQLite3)
+20211018 12095957  & cust1 					{"P1":335036205989889}
+20211018 12095957  & EXC   					ESQLite3Exception Error SQLITE_CONSTRAINT (19) [Step] using 3.36.0 - NOT NULL constraint failed: req_user.name, extended_errcode=1299 [] at   $000000000084F342  $000000000084EAFE  $000000000075EA70  $00000000005D3184  $00000000005DCAB8  $000000000058D2B4  $00000000005DEE55  $0000000000613460  $00007FE4DC05ED78
+20211018 12095957  & ERROR 					q=INSERT INTO req_user (ID) VALUES (?)
+20211018 12095957  &  -    				00.000.525
+20211018 12095957  &  -    			00.000.570
+20211018 12095957  &  -    		00.000.580
+20211018 12095957  &  -    	00.000.771
+20211018 12095957  & DB    	Rollback connection "main"
+20211018 12095957  & EXC   	ESMException: Error SQLITE_CONSTRAINT (19) [Step] using 3.36.0 - NOT NULL constraint failed: req_user.name, extended_errcode=1299 Stack: addUser@/home/admloc/Documents/ubProject/CityPortal/models/requests/addUserEndpoint.js:10:5 ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:174:9  [] at 
+20211018 12095957  & ERROR 	GET addUser ERROR=500 (HTTP Error 500 - Internal Server Error #20211018 120959)
+20211018 12095957  & http  	127.0.0.1 <- 500
+20211018 12095957  &  -    00.001.499
+20211018 12101226  ! srvr  Terminating...
+20211018 12101226  ! mon   {"sessions_total":0,"threads_total":4,"incoming_bytes":97157,"outcoming_bytes":533084,"responses_total":[0,0,139,0,1,1],"security_exception_count":0,"js_gc_count":7,"js_memory_bytes":3706880,"http_perning_request_count":0}

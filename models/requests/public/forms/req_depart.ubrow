@@ -1,9 +1,9 @@
 {
- "formType": "auto",
- "isDefault": false,
- "entity": "req_depart",
  "description": "Departments",
  "caption": "Departments",
+ "formType": "auto",
  "formDef": "req_depart-fm.def",
- "formCode": "req_depart-fm.js"
+ "formCode": "req_depart-fm.js",
+ "entity": "req_depart",
+ "isDefault": false
 }

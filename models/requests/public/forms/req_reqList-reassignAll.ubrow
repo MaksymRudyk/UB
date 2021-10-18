@@ -1,0 +1,9 @@
+{
+ "description": "Reassign to other department",
+ "caption": "Reassign to",
+ "formType": "custom",
+ "formDef": "req_reqList-reassignAll-fm.def",
+ "formCode": null,
+ "entity": "req_reqList",
+ "isDefault": false
+}

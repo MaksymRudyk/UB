@@ -5215,3 +5215,68 @@ TubLog 1.18.6324 CM PRTL 2021-10-18T08:13:20
 20211018 08264021  " debug 	Server side session.fSessionID = e61f80b1, crc32(privKey + secretWord)=890588153 checkMonoliticTime=1, client time stamp=1634545600
 20211018 08264021  " auth  	hd_user/e61f80b1
 20211018 08264021  " EXC   	ESecurityException ELS - access deny for user 'hd_user' from IP 127.0.0.1, method 'req_reqList.isLocked' [] at   $00000000005D7FBE  $00000000005D83DB  $00000000005D93BE  $000000000085CB5C  $000027FD1A27717A  $00007F06100B5ED8  $000027FD1A26B888  $00007F061F356C2A
+20211018 08264021  " EXC   	ESMException: ELS - access deny for user 'hd_user' from IP 127.0.0.1, method 'req_reqList.isLocked' Stack: ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at 
+20211018 08264021  " ERROR 	POST ubql?rq=req_reqList.isLocked&uitag=frm-req_reqList ERROR=500 (ESMException: ELS - access deny for user 'hd_user' from IP 127.0.0.1, method 'req_reqList.isLocked' Stack: ServerApp.launchEndpoint@/home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub/modules/App.js:176:9  [] at )
+20211018 08264021  " debug 	Call JS method: UBA.securityViolation
+20211018 08264021  "  +    	method(TubStorageMixin) uba_audit.insert
+20211018 08264021  "  +    		DataStore.ParseInsertAndExec
+20211018 08264021  "  +    			DataStore.BuildAndExecInsertSQL
+20211018 08264021  "  +    				DataStore.Execute
+20211018 08264021  "  +    					App.fetchAllOrExec(conn=main/SQLite3)
+20211018 08264021  " cust1 						{"P1s8":"uba_user", "P2":335035611545602, "P3s18":"SECURITY_VIOLATION", "P4s7":"hd_user", "P5s7":"hd_user", "P6d":"2021-10-18T08:26:40", "P7s9":"127.0.0.1", "P8":335035766931457, "P9s85":"ELS - access deny for user 'hd_user' from IP 127.0.0.1, method 'req_reqList.isLocked'"}
+20211018 08264021  " SQL   						r=1 t=202 c=0 q=INSERT INTO uba_audit (entity,entityinfo_id,actionType,actionUser,targetUser,actionTime,remoteIP,ID,fromValue) VALUES (?,?,?,?,?,?,?,?,?)
+20211018 08264021  "  -    					00.000.086
+20211018 08264021  "  -    				00.000.103
+20211018 08264021  "  -    			00.000.251
+20211018 08264021  "  -    		00.000.269
+20211018 08264021  "  -    	00.000.303
+20211018 08264021  "  +    	method(TubStorageMixin) uba_audit.afterinsert
+20211018 08264021  "  -    	00.000.005
+20211018 08264021  " DB    	Commit connection "main"
+20211018 08264021  " http  	127.0.0.1 <- 500
+20211018 08264021  "  -    00.002.322
+20211018 08265044  "  +    ubql?rq=req_reqList.isLocked&uitag=frm-req_reqList
+20211018 08265044  " http  	127.0.0.1 -> POST ubql?rq=req_reqList.isLocked&uitag=frm-req_reqList
+20211018 08265044  " info  	endpoint ubql
+20211018 08265044  " info  	[{"method":"isLocked","entity":"req_reqList","ID":335035624423425}]
+20211018 08265044  " debug 	Auth: got token c4c650ab616d2fcae637d3ed
+20211018 08265044  " debug 	Server side session.fSessionID = c4c650ab, crc32(privKey + secretWord)=-1591461090 checkMonoliticTime=1, client time stamp=1634545610
+20211018 08265044  " auth  	admin/c4c650ab
+20211018 08265044  "  +    	method(TubSoftLockMixin) req_reqList.isLocked
+20211018 08265044  "  +    		DataStore.init(ubs_softLock)
+20211018 08265044  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211018 08265044  " cust1 				{"P1":335035624423425, "P2s11":"req_reqList"}
+20211018 08265044  " SQL   				r=1 t=281 fr=248 c=0 q=SELECT A01.ID,A01.lockType,A02.name AS C1,A01.lockTime  FROM ubs_softLock A01  INNER JOIN uba_user A02 ON A02.ID=A01.lockUser  WHERE A01.lockID=? AND A01.entity=?
+20211018 08265044  "  -    			00.000.133
+20211018 08265044  "  -    		00.000.163
+20211018 08265044  "  -    	00.000.453
+20211018 08265044  " DB    	Commit connection "main" in 25us
+20211018 08265044  " http  	127.0.0.1 <- 200
+20211018 08265044  "  -    00.000.930
+20211018 08265044  "  +    ubql?rq=req_reqList.unlock&uitag=frm-req_reqList
+20211018 08265044  " http  	127.0.0.1 -> POST ubql?rq=req_reqList.unlock&uitag=frm-req_reqList
+20211018 08265044  " info  	endpoint ubql
+20211018 08265044  " info  	[{"method":"unlock","lockType":"ltPersist","entity":"req_reqList","ID":335035624423425}]
+20211018 08265044  " debug 	Auth: got token c4c650ab616d2fcae637d3ed
+20211018 08265044  " debug 	Server side session.fSessionID = c4c650ab, crc32(privKey + secretWord)=-1591461090 checkMonoliticTime=1, client time stamp=1634545610
+20211018 08265044  " auth  	admin/c4c650ab
+20211018 08265044  "  +    	method(TubSoftLockMixin) req_reqList.unlock
+20211018 08265044  "  +    		DataStore.init(ubs_softLock)
+20211018 08265044  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211018 08265044  " cust1 				{"P1":335035624423425, "P2s11":"req_reqList"}
+20211018 08265044  " SQL   				r=1 t=307 fr=281 c=0 q=SELECT A01.ID,A01.lockType,A02.name AS C1,A01.lockTime  FROM ubs_softLock A01  INNER JOIN uba_user A02 ON A02.ID=A01.lockUser  WHERE A01.lockID=? AND A01.entity=?
+20211018 08265044  "  -    			00.000.090
+20211018 08265044  "  -    		00.000.118
+20211018 08265044  "  +    		DataStore.Execute
+20211018 08265044  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211018 08265044  " cust1 				{"P1":335035766308865}
+20211018 08265044  " SQL   				r=1 t=66 c=0 q=DELETE FROM ubs_softLock WHERE ID = ?
+20211018 08265044  "  -    			00.000.081
+20211018 08265044  "  -    		00.000.087
+20211018 08265044  "  -    	00.000.466
+20211018 08265044  " DB    	Commit connection "main" in 183us
+20211018 08265044  " http  	127.0.0.1 <- 200
+20211018 08265044  "  -    00.001.103
+20211018 08365536  ! srvr  Restarting...
+20211018 08365536  ! mon   {"sessions_total":2,"threads_total":1,"incoming_bytes":361099,"outcoming_bytes":1277486,"responses_total":[0,0,486,0,2,6],"security_exception_count":6,"js_gc_count":19,"js_memory_bytes":4034560,"http_perning_request_count":0}
+20211018 08365543  ! srvr  Override thread pool size to 1 (dev mode)

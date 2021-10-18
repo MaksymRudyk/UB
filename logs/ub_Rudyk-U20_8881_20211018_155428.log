@@ -1,0 +1,2442 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-18T12:54:28
+
+20211018 12542818  ! srvr  StartupPath: '/home/admloc/Documents/ubProject/CityPortal/'; BinPath: '/opt/unitybase/server/'
+20211018 12542818  ! srvr  JS Engine params: engine-max-mem=512Mb, engine-lifetime=360sec, engine-full-gc=every 100 HTTP req
+20211018 12542818  ! warn  CPU support for AVX2 and SSE42 not available or can not be used
+20211018 12542818  ! srvr  FTS is disabled
+20211018 12542818  "  +    init
+20211018 12542818  " srvr  	Start application initialization...
+20211018 12542826  " info  	Loading domain models...
+20211018 12542826  " info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211018 12542827  " info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211018 12542827  " info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211018 12542827  " info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211018 12542827  " info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211018 12542827  " info  	"requests"(1.0.0) from "./models/requests"
+20211018 12542827  " info  	Loading meta files for 42 entities... 
+20211018 12542829  " info  	load domain: 50ms
+20211018 12542829  " info  	applying metadata transformation hook from UB
+20211018 12542830  " debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211018 12542830  " info  	applying hooks: 4ms
+20211018 12542830  " info  	native init: 4ms
+20211018 12542830  " srvr  	The domain loaded successfully with 43 entities
+20211018 12542840  "  +    	Init ELS
+20211018 12542840  "  +    		DataStore.init(uba_role)
+20211018 12542840  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211018 12542840  "  +    				
+20211018 12542840  "  -    				00.002.112
+20211018 12542840  " SQL   				r=9 t=2145 fr=2128 c=0 q=SELECT A01.ID,A01.name,A01.sessionTimeout,A01.allowedAppMethods  FROM uba_role A01 
+20211018 12542840  "  -    			00.002.185
+20211018 12542840  "  -    		00.002.198
+20211018 12542840  "  +    		DataStore.init(uba_els)
+20211018 12542840  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211018 12542840  " SQL   				r=150 t=142 fr=19 c=0 q=SELECT A01.ID,A01.entityMask,A01.methodMask,A01.ruleType,A01.ruleRole,A01.disabled  FROM uba_els A01 
+20211018 12542840  "  -    			00.000.160
+20211018 12542840  "  -    		00.000.194
+20211018 12542840  "  -    	00.003.292
+20211018 12542840  "  +    	DataStore.init(ubs_settings)
+20211018 12542840  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211018 12542840  " cust1 			{"P1s34":"UBA.passwordPolicy.maxDurationDays"}
+20211018 12542840  " SQL   			r=1 t=36 fr=16 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211018 12542840  "  -    		00.000.053
+20211018 12542840  "  -    	00.000.062
+20211018 12542840  "  +    	DataStore.init(ubs_settings)
+20211018 12542840  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211018 12542840  " cust1 			{"P1s37":"UBA.passwordPolicy.maxInvalidAttempts"}
+20211018 12542840  " SQL   			r=1 t=46 fr=36 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211018 12542840  "  -    		00.000.019
+20211018 12542840  "  -    	00.000.026
+20211018 12542840  "  -    00.352.269
+20211018 12542840  ! srvr  Enable zip compression
+20211018 12542840  ! srvr  Local IP addresses: 10.8.125.48;127.0.0.1
+20211018 12542840  ! srvr  Socket server URLs: http://localhost:8881/
+20211018 12542840  ! srvr  Started and ready to accept requests...
+20211018 12542842  "  +    getAppInfo
+20211018 12542842  " http  	127.0.0.1 -> GET getAppInfo
+20211018 12542842  " info  	endpoint getAppInfo
+20211018 12542842  " http  	127.0.0.1 <- 200
+20211018 12542842  "  -    00.003.058
+20211018 12542842  "  +    auth?AUTHTYPE=ROOT
+20211018 12542842  " http  	127.0.0.1 -> POST auth?AUTHTYPE=ROOT
+20211018 12542842  " info  	endpoint auth
+20211018 12542842  " http  	127.0.0.1 <- 200
+20211018 12542842  "  -    00.000.240
+20211018 12542842  "  +    getDomainInfo?extended=true&userName=root&v=4
+20211018 12542842  " http  	127.0.0.1 -> GET getDomainInfo?extended=true&userName=root&v=4
+20211018 12542842  " info  	endpoint getDomainInfo
+20211018 12542842  " auth  	root/00000002
+20211018 12542842  " http  	127.0.0.1 <- 200
+20211018 12542842  "  -    00.004.111
+20211018 12542850  "  +    runSQL?CONNECTION=main
+20211018 12542850  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542850  " info  	endpoint runSQL
+20211018 12542850  " info  	select name, tbl_name as caption from sqlite_master where type='table' and name not like 'sqlite_%'
+20211018 12542850  " auth  	root/00000002
+20211018 12542850  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542850  " SQL   		r=37 t=180 fr=76 c=0 q=select name, tbl_name as caption from sqlite_master where type='table' and name not like 'sqlite_%'
+20211018 12542850  "  -    	00.000.227
+20211018 12542850  " http  	127.0.0.1 <- 200
+20211018 12542850  "  -    00.002.625
+20211018 12542850  "  +    runSQL?CONNECTION=main
+20211018 12542850  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542850  " info  	endpoint runSQL
+20211018 12542850  " info  	PRAGMA table_info('uba_user')
+20211018 12542850  " auth  	root/00000002
+20211018 12542850  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542850  " SQL   		r=21 t=91 fr=38 c=0 q=PRAGMA table_info('uba_user')
+20211018 12542850  "  -    	00.000.137
+20211018 12542850  " http  	127.0.0.1 <- 200
+20211018 12542850  "  -    00.001.137
+20211018 12542851  "  +    runSQL?CONNECTION=main
+20211018 12542851  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542851  " info  	endpoint runSQL
+20211018 12542851  " info  	PRAGMA foreign_key_list('uba_user')
+20211018 12542851  " auth  	root/00000002
+20211018 12542851  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542851  " SQL   		r=3 t=61 fr=26 c=0 q=PRAGMA foreign_key_list('uba_user')
+20211018 12542851  "  -    	00.000.109
+20211018 12542851  " http  	127.0.0.1 <- 200
+20211018 12542851  "  -    00.000.767
+20211018 12542851  "  +    runSQL?CONNECTION=main
+20211018 12542851  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542851  " info  	endpoint runSQL
+20211018 12542851  " info  	PRAGMA index_list('uba_user')
+20211018 12542851  " auth  	root/00000002
+20211018 12542851  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542851  " SQL   		r=5 t=66 fr=29 c=0 q=PRAGMA index_list('uba_user')
+20211018 12542851  "  -    	00.000.118
+20211018 12542851  " http  	127.0.0.1 <- 200
+20211018 12542851  "  -    00.001.064
+20211018 12542851  "  +    runSQL?CONNECTION=main
+20211018 12542851  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542851  " info  	endpoint runSQL
+20211018 12542851  " info  	PRAGMA index_xinfo(IDX_USR_MI_MODIFYUSER)
+20211018 12542851  " auth  	root/00000002
+20211018 12542851  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542851  " SQL   		r=2 t=55 fr=25 c=0 q=PRAGMA index_xinfo(IDX_USR_MI_MODIFYUSER)
+20211018 12542851  "  -    	00.000.106
+20211018 12542851  " http  	127.0.0.1 <- 200
+20211018 12542851  "  -    00.000.579
+20211018 12542851  "  +    runSQL?CONNECTION=main
+20211018 12542851  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542851  " info  	endpoint runSQL
+20211018 12542851  " info  	PRAGMA index_xinfo(IDX_USR_MI_CREATEUSER)
+20211018 12542851  " auth  	root/00000002
+20211018 12542851  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542851  " SQL   		r=2 t=53 fr=24 c=0 q=PRAGMA index_xinfo(IDX_USR_MI_CREATEUSER)
+20211018 12542851  "  -    	00.000.094
+20211018 12542851  " http  	127.0.0.1 <- 200
+20211018 12542851  "  -    00.000.686
+20211018 12542851  "  +    runSQL?CONNECTION=main
+20211018 12542851  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542851  " info  	endpoint runSQL
+20211018 12542851  " info  	PRAGMA index_xinfo(IDX_USR_MI_OWNER)
+20211018 12542851  " auth  	root/00000002
+20211018 12542851  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542851  " SQL   		r=2 t=64 fr=27 c=0 q=PRAGMA index_xinfo(IDX_USR_MI_OWNER)
+20211018 12542851  "  -    	00.000.118
+20211018 12542851  " http  	127.0.0.1 <- 200
+20211018 12542851  "  -    00.000.647
+20211018 12542851  "  +    runSQL?CONNECTION=main
+20211018 12542851  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542851  " info  	endpoint runSQL
+20211018 12542851  " info  	PRAGMA index_xinfo(UIDX_USR_NAME)
+20211018 12542851  " auth  	root/00000002
+20211018 12542851  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542851  " SQL   		r=2 t=42 fr=20 c=0 q=PRAGMA index_xinfo(UIDX_USR_NAME)
+20211018 12542851  "  -    	00.000.073
+20211018 12542851  " http  	127.0.0.1 <- 200
+20211018 12542851  "  -    00.000.787
+20211018 12542852  "  +    runSQL?CONNECTION=main
+20211018 12542852  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542852  " info  	endpoint runSQL
+20211018 12542852  " info  	PRAGMA table_info('uba_role')
+20211018 12542852  " auth  	root/00000002
+20211018 12542852  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542852  " SQL   		r=11 t=57 fr=27 c=0 q=PRAGMA table_info('uba_role')
+20211018 12542852  "  -    	00.000.093
+20211018 12542852  " http  	127.0.0.1 <- 200
+20211018 12542852  "  -    00.000.556
+20211018 12542852  "  +    runSQL?CONNECTION=main
+20211018 12542852  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542852  " info  	endpoint runSQL
+20211018 12542852  " info  	PRAGMA foreign_key_list('uba_role')
+20211018 12542852  " auth  	root/00000002
+20211018 12542852  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542852  " SQL   		r=3 t=44 fr=20 c=0 q=PRAGMA foreign_key_list('uba_role')
+20211018 12542852  "  -    	00.000.079
+20211018 12542852  " http  	127.0.0.1 <- 200
+20211018 12542852  "  -    00.000.527
+20211018 12542852  "  +    runSQL?CONNECTION=main
+20211018 12542852  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542852  " info  	endpoint runSQL
+20211018 12542852  " info  	PRAGMA index_list('uba_role')
+20211018 12542852  " auth  	root/00000002
+20211018 12542852  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542852  " SQL   		r=5 t=36 fr=16 c=0 q=PRAGMA index_list('uba_role')
+20211018 12542852  "  -    	00.000.064
+20211018 12542852  " http  	127.0.0.1 <- 200
+20211018 12542852  "  -    00.000.971
+20211018 12542852  "  +    runSQL?CONNECTION=main
+20211018 12542852  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542852  " info  	endpoint runSQL
+20211018 12542852  " info  	PRAGMA index_xinfo(IDX_ROLE_MI_MODIFYUSER)
+20211018 12542852  " auth  	root/00000002
+20211018 12542852  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542852  " SQL   		r=2 t=34 fr=16 c=0 q=PRAGMA index_xinfo(IDX_ROLE_MI_MODIFYUSER)
+20211018 12542852  "  -    	00.000.061
+20211018 12542852  " http  	127.0.0.1 <- 200
+20211018 12542852  "  -    00.000.280
+20211018 12542852  "  +    runSQL?CONNECTION=main
+20211018 12542852  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542852  " info  	endpoint runSQL
+20211018 12542852  " info  	PRAGMA index_xinfo(IDX_ROLE_MI_CREATEUSER)
+20211018 12542852  " auth  	root/00000002
+20211018 12542852  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542852  " SQL   		r=2 t=39 fr=17 c=0 q=PRAGMA index_xinfo(IDX_ROLE_MI_CREATEUSER)
+20211018 12542852  "  -    	00.000.070
+20211018 12542852  " http  	127.0.0.1 <- 200
+20211018 12542852  "  -    00.000.315
+20211018 12542852  "  +    runSQL?CONNECTION=main
+20211018 12542852  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542852  " info  	endpoint runSQL
+20211018 12542852  " info  	PRAGMA index_xinfo(IDX_ROLE_MI_OWNER)
+20211018 12542852  " auth  	root/00000002
+20211018 12542852  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542852  " SQL   		r=2 t=40 fr=18 c=0 q=PRAGMA index_xinfo(IDX_ROLE_MI_OWNER)
+20211018 12542852  "  -    	00.000.074
+20211018 12542852  " http  	127.0.0.1 <- 200
+20211018 12542852  "  -    00.000.321
+20211018 12542852  "  +    runSQL?CONNECTION=main
+20211018 12542852  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542852  " info  	endpoint runSQL
+20211018 12542852  " info  	PRAGMA index_xinfo(UIDX_ROLE_NAME)
+20211018 12542852  " auth  	root/00000002
+20211018 12542852  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542852  " SQL   		r=2 t=53 fr=24 c=0 q=PRAGMA index_xinfo(UIDX_ROLE_NAME)
+20211018 12542852  "  -    	00.000.089
+20211018 12542852  " http  	127.0.0.1 <- 200
+20211018 12542852  "  -    00.000.445
+20211018 12542853  "  +    runSQL?CONNECTION=main
+20211018 12542853  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542853  " info  	endpoint runSQL
+20211018 12542853  " info  	PRAGMA table_info('uba_els')
+20211018 12542853  " auth  	root/00000002
+20211018 12542853  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542853  " SQL   		r=13 t=75 fr=33 c=0 q=PRAGMA table_info('uba_els')
+20211018 12542853  "  -    	00.000.119
+20211018 12542853  " http  	127.0.0.1 <- 200
+20211018 12542853  "  -    00.000.441
+20211018 12542853  "  +    runSQL?CONNECTION=main
+20211018 12542853  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542853  " info  	endpoint runSQL
+20211018 12542853  " info  	PRAGMA foreign_key_list('uba_els')
+20211018 12542853  " auth  	root/00000002
+20211018 12542853  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542853  " SQL   		r=3 t=65 fr=41 c=0 q=PRAGMA foreign_key_list('uba_els')
+20211018 12542853  "  -    	00.000.114
+20211018 12542853  " http  	127.0.0.1 <- 200
+20211018 12542853  "  -    00.000.453
+20211018 12542853  "  +    runSQL?CONNECTION=main
+20211018 12542853  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542853  " info  	endpoint runSQL
+20211018 12542853  " info  	PRAGMA index_list('uba_els')
+20211018 12542853  " auth  	root/00000002
+20211018 12542853  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542853  " SQL   		r=5 t=54 fr=24 c=0 q=PRAGMA index_list('uba_els')
+20211018 12542853  "  -    	00.000.093
+20211018 12542853  " http  	127.0.0.1 <- 200
+20211018 12542853  "  -    00.000.502
+20211018 12542853  "  +    runSQL?CONNECTION=main
+20211018 12542853  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542853  " info  	endpoint runSQL
+20211018 12542853  " info  	PRAGMA index_xinfo(IDX_ELS_MI_MODIFYUSER)
+20211018 12542853  " auth  	root/00000002
+20211018 12542853  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542853  " SQL   		r=2 t=44 fr=20 c=0 q=PRAGMA index_xinfo(IDX_ELS_MI_MODIFYUSER)
+20211018 12542853  "  -    	00.000.079
+20211018 12542853  " http  	127.0.0.1 <- 200
+20211018 12542853  "  -    00.000.389
+20211018 12542853  "  +    runSQL?CONNECTION=main
+20211018 12542853  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542853  " info  	endpoint runSQL
+20211018 12542853  " info  	PRAGMA index_xinfo(IDX_ELS_MI_CREATEUSER)
+20211018 12542853  " auth  	root/00000002
+20211018 12542853  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542853  " SQL   		r=2 t=49 fr=21 c=0 q=PRAGMA index_xinfo(IDX_ELS_MI_CREATEUSER)
+20211018 12542853  "  -    	00.000.090
+20211018 12542853  " http  	127.0.0.1 <- 200
+20211018 12542853  "  -    00.000.367
+20211018 12542853  "  +    runSQL?CONNECTION=main
+20211018 12542853  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542853  " info  	endpoint runSQL
+20211018 12542853  " info  	PRAGMA index_xinfo(IDX_ELS_MI_OWNER)
+20211018 12542853  " auth  	root/00000002
+20211018 12542853  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542853  " SQL   		r=2 t=46 fr=21 c=0 q=PRAGMA index_xinfo(IDX_ELS_MI_OWNER)
+20211018 12542853  "  -    	00.000.080
+20211018 12542853  " http  	127.0.0.1 <- 200
+20211018 12542853  "  -    00.000.377
+20211018 12542853  "  +    runSQL?CONNECTION=main
+20211018 12542853  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542853  " info  	endpoint runSQL
+20211018 12542853  " info  	PRAGMA index_xinfo(IDX_ELS_RULEROLE)
+20211018 12542853  " auth  	root/00000002
+20211018 12542853  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542853  " SQL   		r=2 t=39 fr=17 c=0 q=PRAGMA index_xinfo(IDX_ELS_RULEROLE)
+20211018 12542853  "  -    	00.000.072
+20211018 12542853  " http  	127.0.0.1 <- 200
+20211018 12542853  "  -    00.000.290
+20211018 12542853  "  +    runSQL?CONNECTION=main
+20211018 12542853  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542853  " info  	endpoint runSQL
+20211018 12542853  " info  	PRAGMA table_info('uba_subject')
+20211018 12542853  " auth  	root/00000002
+20211018 12542853  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542853  " SQL   		r=6 t=42 fr=19 c=0 q=PRAGMA table_info('uba_subject')
+20211018 12542853  "  -    	00.000.072
+20211018 12542853  " http  	127.0.0.1 <- 200
+20211018 12542853  "  -    00.000.325
+20211018 12542853  "  +    runSQL?CONNECTION=main
+20211018 12542853  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542853  " info  	endpoint runSQL
+20211018 12542853  " info  	PRAGMA foreign_key_list('uba_subject')
+20211018 12542853  " auth  	root/00000002
+20211018 12542853  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542853  " SQL   		r=0 t=17 fr=14 c=0 q=PRAGMA foreign_key_list('uba_subject')
+20211018 12542853  "  -    	00.000.051
+20211018 12542853  " http  	127.0.0.1 <- 200
+20211018 12542853  "  -    00.000.270
+20211018 12542853  "  +    runSQL?CONNECTION=main
+20211018 12542853  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542853  " info  	endpoint runSQL
+20211018 12542853  " info  	PRAGMA index_list('uba_subject')
+20211018 12542853  " auth  	root/00000002
+20211018 12542853  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542853  " SQL   		r=2 t=45 fr=20 c=0 q=PRAGMA index_list('uba_subject')
+20211018 12542853  "  -    	00.000.076
+20211018 12542853  " http  	127.0.0.1 <- 200
+20211018 12542853  "  -    00.000.306
+20211018 12542853  "  +    runSQL?CONNECTION=main
+20211018 12542853  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542853  " info  	endpoint runSQL
+20211018 12542853  " info  	PRAGMA index_xinfo(IDX_SUBJ_NAME)
+20211018 12542853  " auth  	root/00000002
+20211018 12542853  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542853  " SQL   		r=2 t=29 fr=13 c=0 q=PRAGMA index_xinfo(IDX_SUBJ_NAME)
+20211018 12542853  "  -    	00.000.055
+20211018 12542853  " http  	127.0.0.1 <- 200
+20211018 12542853  "  -    00.000.226
+20211018 12542853  "  +    runSQL?CONNECTION=main
+20211018 12542853  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542853  " info  	endpoint runSQL
+20211018 12542853  " info  	PRAGMA table_info('uba_userrole')
+20211018 12542853  " auth  	root/00000002
+20211018 12542853  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542853  " SQL   		r=8 t=40 fr=18 c=0 q=PRAGMA table_info('uba_userrole')
+20211018 12542853  "  -    	00.000.064
+20211018 12542853  " http  	127.0.0.1 <- 200
+20211018 12542853  "  -    00.000.228
+20211018 12542854  "  +    runSQL?CONNECTION=main
+20211018 12542854  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542854  " info  	endpoint runSQL
+20211018 12542854  " info  	PRAGMA foreign_key_list('uba_userrole')
+20211018 12542854  " auth  	root/00000002
+20211018 12542854  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542854  " SQL   		r=5 t=36 fr=17 c=0 q=PRAGMA foreign_key_list('uba_userrole')
+20211018 12542854  "  -    	00.000.065
+20211018 12542854  " http  	127.0.0.1 <- 200
+20211018 12542854  "  -    00.000.247
+20211018 12542854  "  +    runSQL?CONNECTION=main
+20211018 12542854  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542854  " info  	endpoint runSQL
+20211018 12542854  " info  	PRAGMA index_list('uba_userrole')
+20211018 12542854  " auth  	root/00000002
+20211018 12542854  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542854  " SQL   		r=7 t=41 fr=18 c=0 q=PRAGMA index_list('uba_userrole')
+20211018 12542854  "  -    	00.000.066
+20211018 12542854  " http  	127.0.0.1 <- 200
+20211018 12542854  "  -    00.000.266
+20211018 12542854  "  +    runSQL?CONNECTION=main
+20211018 12542854  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542854  " info  	endpoint runSQL
+20211018 12542854  " info  	PRAGMA index_xinfo(UK_USRROLE_USER_ROLE)
+20211018 12542854  " auth  	root/00000002
+20211018 12542854  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542854  " SQL   		r=3 t=55 fr=31 c=0 q=PRAGMA index_xinfo(UK_USRROLE_USER_ROLE)
+20211018 12542854  "  -    	00.000.090
+20211018 12542854  " http  	127.0.0.1 <- 200
+20211018 12542854  "  -    00.000.467
+20211018 12542854  "  +    runSQL?CONNECTION=main
+20211018 12542854  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542854  " info  	endpoint runSQL
+20211018 12542854  " info  	PRAGMA index_xinfo(IDX_USROLE_MI_MODIFYUSER)
+20211018 12542854  " auth  	root/00000002
+20211018 12542854  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542854  " SQL   		r=2 t=40 fr=19 c=0 q=PRAGMA index_xinfo(IDX_USROLE_MI_MODIFYUSER)
+20211018 12542854  "  -    	00.000.069
+20211018 12542854  " http  	127.0.0.1 <- 200
+20211018 12542854  "  -    00.000.321
+20211018 12542854  "  +    runSQL?CONNECTION=main
+20211018 12542854  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542854  " info  	endpoint runSQL
+20211018 12542854  " info  	PRAGMA index_xinfo(IDX_USROLE_MI_CREATEUSER)
+20211018 12542854  " auth  	root/00000002
+20211018 12542854  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542854  " SQL   		r=2 t=32 fr=14 c=0 q=PRAGMA index_xinfo(IDX_USROLE_MI_CREATEUSER)
+20211018 12542854  "  -    	00.000.061
+20211018 12542854  " http  	127.0.0.1 <- 200
+20211018 12542854  "  -    00.000.259
+20211018 12542854  "  +    runSQL?CONNECTION=main
+20211018 12542854  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542854  " info  	endpoint runSQL
+20211018 12542854  " info  	PRAGMA index_xinfo(IDX_USROLE_MI_OWNER)
+20211018 12542854  " auth  	root/00000002
+20211018 12542854  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542854  " SQL   		r=2 t=32 fr=14 c=0 q=PRAGMA index_xinfo(IDX_USROLE_MI_OWNER)
+20211018 12542854  "  -    	00.000.059
+20211018 12542854  " http  	127.0.0.1 <- 200
+20211018 12542854  "  -    00.000.256
+20211018 12542854  "  +    runSQL?CONNECTION=main
+20211018 12542854  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542854  " info  	endpoint runSQL
+20211018 12542854  " info  	PRAGMA index_xinfo(IDX_USROLE_ROLEID)
+20211018 12542854  " auth  	root/00000002
+20211018 12542854  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542854  " SQL   		r=2 t=30 fr=14 c=0 q=PRAGMA index_xinfo(IDX_USROLE_ROLEID)
+20211018 12542854  "  -    	00.000.054
+20211018 12542854  " http  	127.0.0.1 <- 200
+20211018 12542854  "  -    00.000.240
+20211018 12542854  "  +    runSQL?CONNECTION=main
+20211018 12542854  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542854  " info  	endpoint runSQL
+20211018 12542854  " info  	PRAGMA index_xinfo(IDX_USROLE_USERID)
+20211018 12542854  " auth  	root/00000002
+20211018 12542854  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542854  " SQL   		r=2 t=28 fr=12 c=0 q=PRAGMA index_xinfo(IDX_USROLE_USERID)
+20211018 12542854  "  -    	00.000.053
+20211018 12542854  " http  	127.0.0.1 <- 200
+20211018 12542854  "  -    00.000.225
+20211018 12542854  "  +    runSQL?CONNECTION=main
+20211018 12542854  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542854  " info  	endpoint runSQL
+20211018 12542854  " info  	PRAGMA table_info('uba_als')
+20211018 12542854  " auth  	root/00000002
+20211018 12542854  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542854  " SQL   		r=6 t=34 fr=16 c=0 q=PRAGMA table_info('uba_als')
+20211018 12542854  "  -    	00.000.060
+20211018 12542854  " http  	127.0.0.1 <- 200
+20211018 12542854  "  -    00.000.243
+20211018 12542854  "  +    runSQL?CONNECTION=main
+20211018 12542854  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542854  " info  	endpoint runSQL
+20211018 12542854  " info  	PRAGMA foreign_key_list('uba_als')
+20211018 12542854  " auth  	root/00000002
+20211018 12542854  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542854  " SQL   		r=0 t=13 fr=11 c=0 q=PRAGMA foreign_key_list('uba_als')
+20211018 12542854  "  -    	00.000.041
+20211018 12542854  " http  	127.0.0.1 <- 200
+20211018 12542854  "  -    00.000.215
+20211018 12542854  "  +    runSQL?CONNECTION=main
+20211018 12542854  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542854  " info  	endpoint runSQL
+20211018 12542854  " info  	PRAGMA index_list('uba_als')
+20211018 12542854  " auth  	root/00000002
+20211018 12542854  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542854  " SQL   		r=2 t=30 fr=13 c=0 q=PRAGMA index_list('uba_als')
+20211018 12542854  "  -    	00.000.101
+20211018 12542854  " http  	127.0.0.1 <- 200
+20211018 12542854  "  -    00.000.277
+20211018 12542854  "  +    runSQL?CONNECTION=main
+20211018 12542854  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542854  " info  	endpoint runSQL
+20211018 12542854  " info  	PRAGMA index_xinfo(UK_UBA_ALS_EASR)
+20211018 12542854  " auth  	root/00000002
+20211018 12542854  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542854  " SQL   		r=5 t=29 fr=12 c=0 q=PRAGMA index_xinfo(UK_UBA_ALS_EASR)
+20211018 12542854  "  -    	00.000.055
+20211018 12542854  " http  	127.0.0.1 <- 200
+20211018 12542854  "  -    00.000.235
+20211018 12542854  "  +    runSQL?CONNECTION=main
+20211018 12542854  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542854  " info  	endpoint runSQL
+20211018 12542854  " info  	PRAGMA table_info('uba_audit')
+20211018 12542854  " auth  	root/00000002
+20211018 12542854  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542854  " SQL   		r=12 t=42 fr=19 c=0 q=PRAGMA table_info('uba_audit')
+20211018 12542854  "  -    	00.000.065
+20211018 12542854  " http  	127.0.0.1 <- 200
+20211018 12542854  "  -    00.000.235
+20211018 12542854  "  +    runSQL?CONNECTION=main
+20211018 12542854  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542854  " info  	endpoint runSQL
+20211018 12542854  " info  	PRAGMA foreign_key_list('uba_audit')
+20211018 12542854  " auth  	root/00000002
+20211018 12542854  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542854  " SQL   		r=0 t=14 fr=12 c=0 q=PRAGMA foreign_key_list('uba_audit')
+20211018 12542854  "  -    	00.000.041
+20211018 12542854  " http  	127.0.0.1 <- 200
+20211018 12542854  "  -    00.000.210
+20211018 12542854  "  +    runSQL?CONNECTION=main
+20211018 12542854  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542854  " info  	endpoint runSQL
+20211018 12542854  " info  	PRAGMA index_list('uba_audit')
+20211018 12542854  " auth  	root/00000002
+20211018 12542854  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542854  " SQL   		r=2 t=27 fr=12 c=0 q=PRAGMA index_list('uba_audit')
+20211018 12542854  "  -    	00.000.049
+20211018 12542854  " http  	127.0.0.1 <- 200
+20211018 12542854  "  -    00.000.226
+20211018 12542854  "  +    runSQL?CONNECTION=main
+20211018 12542854  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542854  " info  	endpoint runSQL
+20211018 12542854  " info  	PRAGMA index_xinfo(idx_saud_targetUser)
+20211018 12542854  " auth  	root/00000002
+20211018 12542854  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542854  " SQL   		r=2 t=64 fr=26 c=0 q=PRAGMA index_xinfo(idx_saud_targetUser)
+20211018 12542854  "  -    	00.000.126
+20211018 12542854  " http  	127.0.0.1 <- 200
+20211018 12542854  "  -    00.000.432
+20211018 12542854  "  +    runSQL?CONNECTION=main
+20211018 12542854  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542854  " info  	endpoint runSQL
+20211018 12542854  " info  	PRAGMA table_info('ubs_settings')
+20211018 12542854  " auth  	root/00000002
+20211018 12542854  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542854  " SQL   		r=16 t=62 fr=23 c=0 q=PRAGMA table_info('ubs_settings')
+20211018 12542854  "  -    	00.000.097
+20211018 12542854  " http  	127.0.0.1 <- 200
+20211018 12542854  "  -    00.000.336
+20211018 12542855  "  +    runSQL?CONNECTION=main
+20211018 12542855  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542855  " info  	endpoint runSQL
+20211018 12542855  " info  	PRAGMA foreign_key_list('ubs_settings')
+20211018 12542855  " auth  	root/00000002
+20211018 12542855  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542855  " SQL   		r=3 t=44 fr=20 c=0 q=PRAGMA foreign_key_list('ubs_settings')
+20211018 12542855  "  -    	00.000.078
+20211018 12542855  " http  	127.0.0.1 <- 200
+20211018 12542855  "  -    00.000.296
+20211018 12542855  "  +    runSQL?CONNECTION=main
+20211018 12542855  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542855  " info  	endpoint runSQL
+20211018 12542855  " info  	PRAGMA index_list('ubs_settings')
+20211018 12542855  " auth  	root/00000002
+20211018 12542855  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542855  " SQL   		r=5 t=33 fr=15 c=0 q=PRAGMA index_list('ubs_settings')
+20211018 12542855  "  -    	00.000.057
+20211018 12542855  " http  	127.0.0.1 <- 200
+20211018 12542855  "  -    00.000.238
+20211018 12542855  "  +    runSQL?CONNECTION=main
+20211018 12542855  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542855  " info  	endpoint runSQL
+20211018 12542855  " info  	PRAGMA index_xinfo(IDX_STNGS_MI_MODIFYUSER)
+20211018 12542855  " auth  	root/00000002
+20211018 12542855  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542855  " SQL   		r=2 t=38 fr=12 c=0 q=PRAGMA index_xinfo(IDX_STNGS_MI_MODIFYUSER)
+20211018 12542855  "  -    	00.000.062
+20211018 12542855  " http  	127.0.0.1 <- 200
+20211018 12542855  "  -    00.000.279
+20211018 12542855  "  +    runSQL?CONNECTION=main
+20211018 12542855  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542855  " info  	endpoint runSQL
+20211018 12542855  " info  	PRAGMA index_xinfo(IDX_STNGS_MI_CREATEUSER)
+20211018 12542855  " auth  	root/00000002
+20211018 12542855  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542855  " SQL   		r=2 t=36 fr=16 c=0 q=PRAGMA index_xinfo(IDX_STNGS_MI_CREATEUSER)
+20211018 12542855  "  -    	00.000.066
+20211018 12542855  " http  	127.0.0.1 <- 200
+20211018 12542855  "  -    00.000.273
+20211018 12542855  "  +    runSQL?CONNECTION=main
+20211018 12542855  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542855  " info  	endpoint runSQL
+20211018 12542855  " info  	PRAGMA index_xinfo(IDX_STNGS_MI_OWNER)
+20211018 12542855  " auth  	root/00000002
+20211018 12542855  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542855  " SQL   		r=2 t=45 fr=21 c=0 q=PRAGMA index_xinfo(IDX_STNGS_MI_OWNER)
+20211018 12542855  "  -    	00.000.079
+20211018 12542855  " http  	127.0.0.1 <- 200
+20211018 12542855  "  -    00.000.353
+20211018 12542855  "  +    runSQL?CONNECTION=main
+20211018 12542855  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542855  " info  	endpoint runSQL
+20211018 12542855  " info  	PRAGMA index_xinfo(UIDX_STNGS_SETTINGKEY)
+20211018 12542855  " auth  	root/00000002
+20211018 12542855  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542855  " SQL   		r=2 t=46 fr=21 c=0 q=PRAGMA index_xinfo(UIDX_STNGS_SETTINGKEY)
+20211018 12542855  "  -    	00.000.083
+20211018 12542855  " http  	127.0.0.1 <- 200
+20211018 12542855  "  -    00.000.764
+20211018 12542855  "  +    runSQL?CONNECTION=main
+20211018 12542855  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542855  " info  	endpoint runSQL
+20211018 12542855  " info  	PRAGMA table_info('req_depart')
+20211018 12542855  " auth  	root/00000002
+20211018 12542855  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542855  " SQL   		r=5 t=43 fr=20 c=0 q=PRAGMA table_info('req_depart')
+20211018 12542855  "  -    	00.000.077
+20211018 12542855  " http  	127.0.0.1 <- 200
+20211018 12542855  "  -    00.000.391
+20211018 12542855  "  +    runSQL?CONNECTION=main
+20211018 12542855  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542855  " info  	endpoint runSQL
+20211018 12542855  " info  	PRAGMA foreign_key_list('req_depart')
+20211018 12542855  " auth  	root/00000002
+20211018 12542855  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542855  " SQL   		r=1 t=34 fr=15 c=0 q=PRAGMA foreign_key_list('req_depart')
+20211018 12542855  "  -    	00.000.068
+20211018 12542855  " http  	127.0.0.1 <- 200
+20211018 12542855  "  -    00.000.294
+20211018 12542855  "  +    runSQL?CONNECTION=main
+20211018 12542855  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542855  " info  	endpoint runSQL
+20211018 12542855  " info  	PRAGMA index_list('req_depart')
+20211018 12542855  " auth  	root/00000002
+20211018 12542855  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542855  " SQL   		r=3 t=35 fr=16 c=0 q=PRAGMA index_list('req_depart')
+20211018 12542855  "  -    	00.000.063
+20211018 12542855  " http  	127.0.0.1 <- 200
+20211018 12542855  "  -    00.000.346
+20211018 12542855  "  +    runSQL?CONNECTION=main
+20211018 12542855  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542855  " info  	endpoint runSQL
+20211018 12542855  " info  	PRAGMA index_xinfo(IDX_REQ_DEPART_ROLEINSYSTEM)
+20211018 12542855  " auth  	root/00000002
+20211018 12542855  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542855  " SQL   		r=2 t=48 fr=29 c=0 q=PRAGMA index_xinfo(IDX_REQ_DEPART_ROLEINSYSTEM)
+20211018 12542855  "  -    	00.000.080
+20211018 12542855  " http  	127.0.0.1 <- 200
+20211018 12542855  "  -    00.000.318
+20211018 12542855  "  +    runSQL?CONNECTION=main
+20211018 12542855  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542855  " info  	endpoint runSQL
+20211018 12542855  " info  	PRAGMA index_xinfo(UIDX_REQ_DEPART_NAME)
+20211018 12542855  " auth  	root/00000002
+20211018 12542855  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542855  " SQL   		r=2 t=33 fr=15 c=0 q=PRAGMA index_xinfo(UIDX_REQ_DEPART_NAME)
+20211018 12542855  "  -    	00.000.063
+20211018 12542855  " http  	127.0.0.1 <- 200
+20211018 12542855  "  -    00.000.258
+20211018 12542855  "  +    runSQL?CONNECTION=main
+20211018 12542855  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542855  " info  	endpoint runSQL
+20211018 12542855  " info  	PRAGMA table_info('req_reqList')
+20211018 12542855  " auth  	root/00000002
+20211018 12542855  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542855  " SQL   		r=18 t=58 fr=26 c=0 q=PRAGMA table_info('req_reqList')
+20211018 12542855  "  -    	00.000.088
+20211018 12542855  " http  	127.0.0.1 <- 200
+20211018 12542855  "  -    00.000.293
+20211018 12542856  "  +    runSQL?CONNECTION=main
+20211018 12542856  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542856  " info  	endpoint runSQL
+20211018 12542856  " info  	PRAGMA foreign_key_list('req_reqList')
+20211018 12542856  " auth  	root/00000002
+20211018 12542856  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542856  " SQL   		r=5 t=66 fr=32 c=0 q=PRAGMA foreign_key_list('req_reqList')
+20211018 12542856  "  -    	00.000.110
+20211018 12542856  " http  	127.0.0.1 <- 200
+20211018 12542856  "  -    00.000.402
+20211018 12542856  "  +    runSQL?CONNECTION=main
+20211018 12542856  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542856  " info  	endpoint runSQL
+20211018 12542856  " info  	PRAGMA index_list('req_reqList')
+20211018 12542856  " auth  	root/00000002
+20211018 12542856  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542856  " SQL   		r=8 t=45 fr=20 c=0 q=PRAGMA index_list('req_reqList')
+20211018 12542856  "  -    	00.000.076
+20211018 12542856  " http  	127.0.0.1 <- 200
+20211018 12542856  "  -    00.000.318
+20211018 12542856  "  +    runSQL?CONNECTION=main
+20211018 12542856  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542856  " info  	endpoint runSQL
+20211018 12542856  " info  	PRAGMA index_xinfo(IDX_REQ_DTODD)
+20211018 12542856  " auth  	root/00000002
+20211018 12542856  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542856  " SQL   		r=2 t=41 fr=18 c=0 q=PRAGMA index_xinfo(IDX_REQ_DTODD)
+20211018 12542856  "  -    	00.000.075
+20211018 12542856  " http  	127.0.0.1 <- 200
+20211018 12542856  "  -    00.000.334
+20211018 12542856  "  +    runSQL?CONNECTION=main
+20211018 12542856  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542856  " info  	endpoint runSQL
+20211018 12542856  " info  	PRAGMA index_xinfo(IDX_REQ_MI_DATA_ID)
+20211018 12542856  " auth  	root/00000002
+20211018 12542856  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542856  " SQL   		r=2 t=52 fr=24 c=0 q=PRAGMA index_xinfo(IDX_REQ_MI_DATA_ID)
+20211018 12542856  "  -    	00.000.101
+20211018 12542856  " http  	127.0.0.1 <- 200
+20211018 12542856  "  -    00.000.456
+20211018 12542856  "  +    runSQL?CONNECTION=main
+20211018 12542856  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542856  " info  	endpoint runSQL
+20211018 12542856  " info  	PRAGMA index_xinfo(IDX_REQ_MI_MODIFYUSER)
+20211018 12542856  " auth  	root/00000002
+20211018 12542856  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542856  " SQL   		r=2 t=52 fr=23 c=0 q=PRAGMA index_xinfo(IDX_REQ_MI_MODIFYUSER)
+20211018 12542856  "  -    	00.000.094
+20211018 12542856  " http  	127.0.0.1 <- 200
+20211018 12542856  "  -    00.000.379
+20211018 12542856  "  +    runSQL?CONNECTION=main
+20211018 12542856  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542856  " info  	endpoint runSQL
+20211018 12542856  " info  	PRAGMA index_xinfo(IDX_REQ_MI_CREATEUSER)
+20211018 12542856  " auth  	root/00000002
+20211018 12542856  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542856  " SQL   		r=2 t=40 fr=19 c=0 q=PRAGMA index_xinfo(IDX_REQ_MI_CREATEUSER)
+20211018 12542856  "  -    	00.000.072
+20211018 12542856  " http  	127.0.0.1 <- 200
+20211018 12542856  "  -    00.000.334
+20211018 12542856  "  +    runSQL?CONNECTION=main
+20211018 12542856  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542856  " info  	endpoint runSQL
+20211018 12542856  " info  	PRAGMA index_xinfo(IDX_REQ_MI_OWNER)
+20211018 12542856  " auth  	root/00000002
+20211018 12542856  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542856  " SQL   		r=2 t=37 fr=17 c=0 q=PRAGMA index_xinfo(IDX_REQ_MI_OWNER)
+20211018 12542856  "  -    	00.000.070
+20211018 12542856  " http  	127.0.0.1 <- 200
+20211018 12542856  "  -    00.000.299
+20211018 12542856  "  +    runSQL?CONNECTION=main
+20211018 12542856  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542856  " info  	endpoint runSQL
+20211018 12542856  " info  	PRAGMA index_xinfo(IDX_REQ_SUBDEPARTMENT)
+20211018 12542856  " auth  	root/00000002
+20211018 12542856  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542856  " SQL   		r=2 t=39 fr=17 c=0 q=PRAGMA index_xinfo(IDX_REQ_SUBDEPARTMENT)
+20211018 12542856  "  -    	00.000.076
+20211018 12542856  " http  	127.0.0.1 <- 200
+20211018 12542856  "  -    00.000.715
+20211018 12542856  "  +    runSQL?CONNECTION=main
+20211018 12542856  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542856  " info  	endpoint runSQL
+20211018 12542856  " info  	PRAGMA index_xinfo(IDX_REQ_DEPARTMENT)
+20211018 12542856  " auth  	root/00000002
+20211018 12542856  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542856  " SQL   		r=2 t=47 fr=21 c=0 q=PRAGMA index_xinfo(IDX_REQ_DEPARTMENT)
+20211018 12542856  "  -    	00.000.084
+20211018 12542856  " http  	127.0.0.1 <- 200
+20211018 12542856  "  -    00.000.420
+20211018 12542856  "  +    runSQL?CONNECTION=main
+20211018 12542856  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542856  " info  	endpoint runSQL
+20211018 12542856  " info  	PRAGMA table_info('req_subDepart')
+20211018 12542856  " auth  	root/00000002
+20211018 12542856  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542856  " SQL   		r=5 t=44 fr=20 c=0 q=PRAGMA table_info('req_subDepart')
+20211018 12542856  "  -    	00.000.077
+20211018 12542856  " http  	127.0.0.1 <- 200
+20211018 12542856  "  -    00.000.299
+20211018 12542856  "  +    runSQL?CONNECTION=main
+20211018 12542856  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542856  " info  	endpoint runSQL
+20211018 12542856  " info  	PRAGMA foreign_key_list('req_subDepart')
+20211018 12542856  " auth  	root/00000002
+20211018 12542856  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542856  " SQL   		r=1 t=46 fr=21 c=0 q=PRAGMA foreign_key_list('req_subDepart')
+20211018 12542856  "  -    	00.000.085
+20211018 12542856  " http  	127.0.0.1 <- 200
+20211018 12542856  "  -    00.000.350
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA index_list('req_subDepart')
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=3 t=38 fr=17 c=0 q=PRAGMA index_list('req_subDepart')
+20211018 12542857  "  -    	00.000.066
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.273
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA index_xinfo(IDX_REQ_SUBDEPART_MI_DELETEUSER)
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=2 t=32 fr=15 c=0 q=PRAGMA index_xinfo(IDX_REQ_SUBDEPART_MI_DELETEUSER)
+20211018 12542857  "  -    	00.000.061
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.263
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA index_xinfo(IDX_REQ_SUBDEPART_DEPARTMENT)
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=2 t=32 fr=15 c=0 q=PRAGMA index_xinfo(IDX_REQ_SUBDEPART_DEPARTMENT)
+20211018 12542857  "  -    	00.000.060
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.256
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA table_info('ub_blobHistory')
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=8 t=44 fr=21 c=0 q=PRAGMA table_info('ub_blobHistory')
+20211018 12542857  "  -    	00.000.075
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.279
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA foreign_key_list('ub_blobHistory')
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=0 t=14 fr=12 c=0 q=PRAGMA foreign_key_list('ub_blobHistory')
+20211018 12542857  "  -    	00.000.046
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.235
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA index_list('ub_blobHistory')
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=2 t=32 fr=14 c=0 q=PRAGMA index_list('ub_blobHistory')
+20211018 12542857  "  -    	00.000.058
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.236
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA index_xinfo(UIDX_BHIST_IAR)
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=4 t=42 fr=19 c=0 q=PRAGMA index_xinfo(UIDX_BHIST_IAR)
+20211018 12542857  "  -    	00.000.074
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.348
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA table_info('ub_migration')
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=5 t=38 fr=17 c=0 q=PRAGMA table_info('ub_migration')
+20211018 12542857  "  -    	00.000.066
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.259
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA foreign_key_list('ub_migration')
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=0 t=15 fr=13 c=0 q=PRAGMA foreign_key_list('ub_migration')
+20211018 12542857  "  -    	00.000.045
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.226
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA index_list('ub_migration')
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=1 t=74 fr=17 c=0 q=PRAGMA index_list('ub_migration')
+20211018 12542857  "  -    	00.000.106
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.319
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA table_info('ub_version')
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=4 t=34 fr=16 c=0 q=PRAGMA table_info('ub_version')
+20211018 12542857  "  -    	00.000.060
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.234
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA foreign_key_list('ub_version')
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=0 t=13 fr=11 c=0 q=PRAGMA foreign_key_list('ub_version')
+20211018 12542857  "  -    	00.000.041
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.215
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA index_list('ub_version')
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=1 t=28 fr=12 c=0 q=PRAGMA index_list('ub_version')
+20211018 12542857  "  -    	00.000.051
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.215
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA table_info('uba_advSecurity')
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=15 t=46 fr=20 c=0 q=PRAGMA table_info('uba_advSecurity')
+20211018 12542857  "  -    	00.000.072
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.240
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA foreign_key_list('uba_advSecurity')
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=4 t=36 fr=16 c=0 q=PRAGMA foreign_key_list('uba_advSecurity')
+20211018 12542857  "  -    	00.000.063
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.230
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA index_list('uba_advSecurity')
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=5 t=32 fr=14 c=0 q=PRAGMA index_list('uba_advSecurity')
+20211018 12542857  "  -    	00.000.055
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.223
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA index_xinfo(IDX_UBA_ADVSECURITY_MI_MODIFYUSER)
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=2 t=30 fr=14 c=0 q=PRAGMA index_xinfo(IDX_UBA_ADVSECURITY_MI_MODIFYUSER)
+20211018 12542857  "  -    	00.000.054
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.288
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA index_xinfo(IDX_UBA_ADVSECURITY_MI_CREATEUSER)
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=2 t=45 fr=20 c=0 q=PRAGMA index_xinfo(IDX_UBA_ADVSECURITY_MI_CREATEUSER)
+20211018 12542857  "  -    	00.000.083
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.364
+20211018 12542857  "  +    runSQL?CONNECTION=main
+20211018 12542857  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542857  " info  	endpoint runSQL
+20211018 12542857  " info  	PRAGMA index_xinfo(IDX_UBA_ADVSECURITY_MI_OWNER)
+20211018 12542857  " auth  	root/00000002
+20211018 12542857  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542857  " SQL   		r=2 t=41 fr=18 c=0 q=PRAGMA index_xinfo(IDX_UBA_ADVSECURITY_MI_OWNER)
+20211018 12542857  "  -    	00.000.079
+20211018 12542857  " http  	127.0.0.1 <- 200
+20211018 12542857  "  -    00.000.329
+20211018 12542858  "  +    runSQL?CONNECTION=main
+20211018 12542858  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542858  " info  	endpoint runSQL
+20211018 12542858  " info  	PRAGMA index_xinfo(UIDX_UBA_ADVSECURITY_USERID)
+20211018 12542858  " auth  	root/00000002
+20211018 12542858  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542858  " SQL   		r=2 t=47 fr=23 c=0 q=PRAGMA index_xinfo(UIDX_UBA_ADVSECURITY_USERID)
+20211018 12542858  "  -    	00.000.082
+20211018 12542858  " http  	127.0.0.1 <- 200
+20211018 12542858  "  -    00.000.329
+20211018 12542858  "  +    runSQL?CONNECTION=main
+20211018 12542858  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542858  " info  	endpoint runSQL
+20211018 12542858  " info  	PRAGMA table_info('uba_auditTrail')
+20211018 12542858  " auth  	root/00000002
+20211018 12542858  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542858  " SQL   		r=13 t=65 fr=29 c=0 q=PRAGMA table_info('uba_auditTrail')
+20211018 12542858  "  -    	00.000.108
+20211018 12542858  " http  	127.0.0.1 <- 200
+20211018 12542858  "  -    00.000.381
+20211018 12542858  "  +    runSQL?CONNECTION=main
+20211018 12542858  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542858  " info  	endpoint runSQL
+20211018 12542858  " info  	PRAGMA foreign_key_list('uba_auditTrail')
+20211018 12542858  " auth  	root/00000002
+20211018 12542858  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542858  " SQL   		r=0 t=20 fr=17 c=0 q=PRAGMA foreign_key_list('uba_auditTrail')
+20211018 12542858  "  -    	00.000.061
+20211018 12542858  " http  	127.0.0.1 <- 200
+20211018 12542858  "  -    00.000.324
+20211018 12542858  "  +    runSQL?CONNECTION=main
+20211018 12542858  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542858  " info  	endpoint runSQL
+20211018 12542858  " info  	PRAGMA index_list('uba_auditTrail')
+20211018 12542858  " auth  	root/00000002
+20211018 12542858  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542858  " SQL   		r=3 t=52 fr=21 c=0 q=PRAGMA index_list('uba_auditTrail')
+20211018 12542858  "  -    	00.000.152
+20211018 12542858  " http  	127.0.0.1 <- 200
+20211018 12542858  "  -    00.001.140
+20211018 12542858  "  +    runSQL?CONNECTION=main
+20211018 12542858  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542858  " info  	endpoint runSQL
+20211018 12542858  " info  	PRAGMA index_xinfo(idx_audtr_parententinfoid)
+20211018 12542858  " auth  	root/00000002
+20211018 12542858  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542858  " SQL   		r=2 t=35 fr=16 c=0 q=PRAGMA index_xinfo(idx_audtr_parententinfoid)
+20211018 12542858  "  -    	00.000.063
+20211018 12542858  " http  	127.0.0.1 <- 200
+20211018 12542858  "  -    00.000.460
+20211018 12542858  "  +    runSQL?CONNECTION=main
+20211018 12542858  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542858  " info  	endpoint runSQL
+20211018 12542858  " info  	PRAGMA index_xinfo(idx_audtr_entity)
+20211018 12542858  " auth  	root/00000002
+20211018 12542858  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542858  " SQL   		r=2 t=34 fr=15 c=0 q=PRAGMA index_xinfo(idx_audtr_entity)
+20211018 12542858  "  -    	00.000.062
+20211018 12542858  " http  	127.0.0.1 <- 200
+20211018 12542858  "  -    00.000.305
+20211018 12542858  "  +    runSQL?CONNECTION=main
+20211018 12542858  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542858  " info  	endpoint runSQL
+20211018 12542858  " info  	PRAGMA table_info('uba_group')
+20211018 12542858  " auth  	root/00000002
+20211018 12542858  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542858  " SQL   		r=10 t=46 fr=21 c=0 q=PRAGMA table_info('uba_group')
+20211018 12542858  "  -    	00.000.073
+20211018 12542858  " http  	127.0.0.1 <- 200
+20211018 12542858  "  -    00.000.275
+20211018 12542858  "  +    runSQL?CONNECTION=main
+20211018 12542858  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542858  " info  	endpoint runSQL
+20211018 12542858  " info  	PRAGMA foreign_key_list('uba_group')
+20211018 12542858  " auth  	root/00000002
+20211018 12542858  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542858  " SQL   		r=4 t=36 fr=17 c=0 q=PRAGMA foreign_key_list('uba_group')
+20211018 12542858  "  -    	00.000.064
+20211018 12542858  " http  	127.0.0.1 <- 200
+20211018 12542858  "  -    00.000.259
+20211018 12542858  "  +    runSQL?CONNECTION=main
+20211018 12542858  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542858  " info  	endpoint runSQL
+20211018 12542858  " info  	PRAGMA index_list('uba_group')
+20211018 12542858  " auth  	root/00000002
+20211018 12542858  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542858  " SQL   		r=7 t=35 fr=16 c=0 q=PRAGMA index_list('uba_group')
+20211018 12542858  "  -    	00.000.058
+20211018 12542858  " http  	127.0.0.1 <- 200
+20211018 12542858  "  -    00.000.238
+20211018 12542858  "  +    runSQL?CONNECTION=main
+20211018 12542858  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542858  " info  	endpoint runSQL
+20211018 12542858  " info  	PRAGMA index_xinfo(IDX_GR_MI_MODIFYUSER)
+20211018 12542858  " auth  	root/00000002
+20211018 12542858  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542858  " SQL   		r=2 t=40 fr=18 c=0 q=PRAGMA index_xinfo(IDX_GR_MI_MODIFYUSER)
+20211018 12542858  "  -    	00.000.072
+20211018 12542858  " http  	127.0.0.1 <- 200
+20211018 12542858  "  -    00.000.555
+20211018 12542858  "  +    runSQL?CONNECTION=main
+20211018 12542858  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542858  " info  	endpoint runSQL
+20211018 12542858  " info  	PRAGMA index_xinfo(IDX_GR_MI_CREATEUSER)
+20211018 12542858  " auth  	root/00000002
+20211018 12542858  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542858  " SQL   		r=2 t=40 fr=18 c=0 q=PRAGMA index_xinfo(IDX_GR_MI_CREATEUSER)
+20211018 12542858  "  -    	00.000.073
+20211018 12542858  " http  	127.0.0.1 <- 200
+20211018 12542858  "  -    00.000.455
+20211018 12542858  "  +    runSQL?CONNECTION=main
+20211018 12542858  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542858  " info  	endpoint runSQL
+20211018 12542858  " info  	PRAGMA index_xinfo(IDX_GR_MI_OWNER)
+20211018 12542858  " auth  	root/00000002
+20211018 12542858  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542858  " SQL   		r=2 t=43 fr=19 c=0 q=PRAGMA index_xinfo(IDX_GR_MI_OWNER)
+20211018 12542858  "  -    	00.000.076
+20211018 12542859  " http  	127.0.0.1 <- 200
+20211018 12542859  "  -    00.015.120
+20211018 12542859  "  +    runSQL?CONNECTION=main
+20211018 12542859  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542859  " info  	endpoint runSQL
+20211018 12542859  " info  	PRAGMA index_xinfo(UIDX_GR_NAME_UK)
+20211018 12542859  " auth  	root/00000002
+20211018 12542860  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542860  " SQL   		r=2 t=48 fr=22 c=0 q=PRAGMA index_xinfo(UIDX_GR_NAME_UK)
+20211018 12542860  "  -    	00.000.081
+20211018 12542860  " http  	127.0.0.1 <- 200
+20211018 12542860  "  -    00.001.124
+20211018 12542860  "  +    runSQL?CONNECTION=main
+20211018 12542860  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542860  " info  	endpoint runSQL
+20211018 12542860  " info  	PRAGMA index_xinfo(UIDX_GR_NAME)
+20211018 12542860  " auth  	root/00000002
+20211018 12542860  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542860  " SQL   		r=2 t=46 fr=22 c=0 q=PRAGMA index_xinfo(UIDX_GR_NAME)
+20211018 12542860  "  -    	00.000.078
+20211018 12542860  " http  	127.0.0.1 <- 200
+20211018 12542860  "  -    00.000.454
+20211018 12542860  "  +    runSQL?CONNECTION=main
+20211018 12542860  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542860  " info  	endpoint runSQL
+20211018 12542860  " info  	PRAGMA index_xinfo(UIDX_GR_CODE)
+20211018 12542860  " auth  	root/00000002
+20211018 12542860  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542860  " SQL   		r=2 t=31 fr=14 c=0 q=PRAGMA index_xinfo(UIDX_GR_CODE)
+20211018 12542860  "  -    	00.000.057
+20211018 12542860  " http  	127.0.0.1 <- 200
+20211018 12542860  "  -    00.000.582
+20211018 12542860  "  +    runSQL?CONNECTION=main
+20211018 12542860  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542860  " info  	endpoint runSQL
+20211018 12542860  " info  	PRAGMA table_info('uba_grouprole')
+20211018 12542860  " auth  	root/00000002
+20211018 12542860  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542860  " SQL   		r=8 t=44 fr=22 c=0 q=PRAGMA table_info('uba_grouprole')
+20211018 12542860  "  -    	00.000.071
+20211018 12542860  " http  	127.0.0.1 <- 200
+20211018 12542860  "  -    00.000.599
+20211018 12542860  "  +    runSQL?CONNECTION=main
+20211018 12542860  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542860  " info  	endpoint runSQL
+20211018 12542860  " info  	PRAGMA foreign_key_list('uba_grouprole')
+20211018 12542860  " auth  	root/00000002
+20211018 12542860  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542860  " SQL   		r=5 t=40 fr=20 c=0 q=PRAGMA foreign_key_list('uba_grouprole')
+20211018 12542860  "  -    	00.000.066
+20211018 12542860  " http  	127.0.0.1 <- 200
+20211018 12542860  "  -    00.000.381
+20211018 12542860  "  +    runSQL?CONNECTION=main
+20211018 12542860  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542860  " info  	endpoint runSQL
+20211018 12542860  " info  	PRAGMA index_list('uba_grouprole')
+20211018 12542860  " auth  	root/00000002
+20211018 12542860  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542860  " SQL   		r=7 t=46 fr=22 c=0 q=PRAGMA index_list('uba_grouprole')
+20211018 12542860  "  -    	00.000.075
+20211018 12542860  " http  	127.0.0.1 <- 200
+20211018 12542860  "  -    00.000.892
+20211018 12542860  "  +    runSQL?CONNECTION=main
+20211018 12542860  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542860  " info  	endpoint runSQL
+20211018 12542860  " info  	PRAGMA index_xinfo(UK_GRPROLE_USER_ROLE)
+20211018 12542860  " auth  	root/00000002
+20211018 12542860  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542860  " SQL   		r=3 t=34 fr=16 c=0 q=PRAGMA index_xinfo(UK_GRPROLE_USER_ROLE)
+20211018 12542860  "  -    	00.000.059
+20211018 12542860  " http  	127.0.0.1 <- 200
+20211018 12542860  "  -    00.000.332
+20211018 12542860  "  +    runSQL?CONNECTION=main
+20211018 12542860  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542860  " info  	endpoint runSQL
+20211018 12542860  " info  	PRAGMA index_xinfo(IDX_UBA_GROUPROLE_MI_MODIFYUSER)
+20211018 12542860  " auth  	root/00000002
+20211018 12542860  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542860  " SQL   		r=2 t=44 fr=21 c=0 q=PRAGMA index_xinfo(IDX_UBA_GROUPROLE_MI_MODIFYUSER)
+20211018 12542860  "  -    	00.000.074
+20211018 12542860  " http  	127.0.0.1 <- 200
+20211018 12542860  "  -    00.000.406
+20211018 12542860  "  +    runSQL?CONNECTION=main
+20211018 12542860  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542860  " info  	endpoint runSQL
+20211018 12542860  " info  	PRAGMA index_xinfo(IDX_UBA_GROUPROLE_MI_CREATEUSER)
+20211018 12542860  " auth  	root/00000002
+20211018 12542860  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542860  " SQL   		r=2 t=32 fr=15 c=0 q=PRAGMA index_xinfo(IDX_UBA_GROUPROLE_MI_CREATEUSER)
+20211018 12542860  "  -    	00.000.054
+20211018 12542860  " http  	127.0.0.1 <- 200
+20211018 12542860  "  -    00.000.314
+20211018 12542860  "  +    runSQL?CONNECTION=main
+20211018 12542860  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542860  " info  	endpoint runSQL
+20211018 12542860  " info  	PRAGMA index_xinfo(IDX_UBA_GROUPROLE_MI_OWNER)
+20211018 12542860  " auth  	root/00000002
+20211018 12542860  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542860  " SQL   		r=2 t=32 fr=16 c=0 q=PRAGMA index_xinfo(IDX_UBA_GROUPROLE_MI_OWNER)
+20211018 12542860  "  -    	00.000.055
+20211018 12542860  " http  	127.0.0.1 <- 200
+20211018 12542860  "  -    00.000.311
+20211018 12542861  "  +    runSQL?CONNECTION=main
+20211018 12542861  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542861  " info  	endpoint runSQL
+20211018 12542861  " info  	PRAGMA index_xinfo(IDX_UBA_GROUPROLE_ROLEID)
+20211018 12542861  " auth  	root/00000002
+20211018 12542861  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542861  " SQL   		r=2 t=47 fr=21 c=0 q=PRAGMA index_xinfo(IDX_UBA_GROUPROLE_ROLEID)
+20211018 12542861  "  -    	00.000.085
+20211018 12542861  " http  	127.0.0.1 <- 200
+20211018 12542861  "  -    00.002.412
+20211018 12542861  "  +    runSQL?CONNECTION=main
+20211018 12542861  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542861  " info  	endpoint runSQL
+20211018 12542861  " info  	PRAGMA index_xinfo(IDX_UBA_GROUPROLE_GROUPID)
+20211018 12542861  " auth  	root/00000002
+20211018 12542861  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542861  " SQL   		r=2 t=36 fr=17 c=0 q=PRAGMA index_xinfo(IDX_UBA_GROUPROLE_GROUPID)
+20211018 12542861  "  -    	00.000.065
+20211018 12542861  " http  	127.0.0.1 <- 200
+20211018 12542861  "  -    00.000.359
+20211018 12542861  "  +    runSQL?CONNECTION=main
+20211018 12542861  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542861  " info  	endpoint runSQL
+20211018 12542861  " info  	PRAGMA table_info('uba_otp')
+20211018 12542861  " auth  	root/00000002
+20211018 12542861  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542861  " SQL   		r=11 t=53 fr=26 c=0 q=PRAGMA table_info('uba_otp')
+20211018 12542861  "  -    	00.000.083
+20211018 12542861  " http  	127.0.0.1 <- 200
+20211018 12542861  "  -    00.000.287
+20211018 12542861  "  +    runSQL?CONNECTION=main
+20211018 12542861  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542861  " info  	endpoint runSQL
+20211018 12542861  " info  	PRAGMA foreign_key_list('uba_otp')
+20211018 12542861  " auth  	root/00000002
+20211018 12542861  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542861  " SQL   		r=4 t=46 fr=22 c=0 q=PRAGMA foreign_key_list('uba_otp')
+20211018 12542861  "  -    	00.000.076
+20211018 12542861  " http  	127.0.0.1 <- 200
+20211018 12542861  "  -    00.000.288
+20211018 12542861  "  +    runSQL?CONNECTION=main
+20211018 12542861  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542861  " info  	endpoint runSQL
+20211018 12542861  " info  	PRAGMA index_list('uba_otp')
+20211018 12542861  " auth  	root/00000002
+20211018 12542861  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542861  " SQL   		r=6 t=35 fr=16 c=0 q=PRAGMA index_list('uba_otp')
+20211018 12542861  "  -    	00.000.059
+20211018 12542861  " http  	127.0.0.1 <- 200
+20211018 12542861  "  -    00.000.241
+20211018 12542861  "  +    runSQL?CONNECTION=main
+20211018 12542861  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542861  " info  	endpoint runSQL
+20211018 12542861  " info  	PRAGMA index_xinfo(uidx_otp)
+20211018 12542861  " auth  	root/00000002
+20211018 12542861  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542861  " SQL   		r=2 t=37 fr=13 c=0 q=PRAGMA index_xinfo(uidx_otp)
+20211018 12542861  "  -    	00.000.070
+20211018 12542861  " http  	127.0.0.1 <- 200
+20211018 12542861  "  -    00.000.364
+20211018 12542861  "  +    runSQL?CONNECTION=main
+20211018 12542861  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542861  " info  	endpoint runSQL
+20211018 12542861  " info  	PRAGMA index_xinfo(IDX_OTP_MI_MODIFYUSER)
+20211018 12542861  " auth  	root/00000002
+20211018 12542861  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542861  " SQL   		r=2 t=38 fr=17 c=0 q=PRAGMA index_xinfo(IDX_OTP_MI_MODIFYUSER)
+20211018 12542861  "  -    	00.000.066
+20211018 12542861  " http  	127.0.0.1 <- 200
+20211018 12542861  "  -    00.000.265
+20211018 12542861  "  +    runSQL?CONNECTION=main
+20211018 12542861  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542861  " info  	endpoint runSQL
+20211018 12542861  " info  	PRAGMA index_xinfo(IDX_OTP_MI_CREATEUSER)
+20211018 12542861  " auth  	root/00000002
+20211018 12542861  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542861  " SQL   		r=2 t=29 fr=13 c=0 q=PRAGMA index_xinfo(IDX_OTP_MI_CREATEUSER)
+20211018 12542861  "  -    	00.000.054
+20211018 12542861  " http  	127.0.0.1 <- 200
+20211018 12542861  "  -    00.000.222
+20211018 12542861  "  +    runSQL?CONNECTION=main
+20211018 12542861  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542861  " info  	endpoint runSQL
+20211018 12542861  " info  	PRAGMA index_xinfo(IDX_OTP_MI_OWNER)
+20211018 12542861  " auth  	root/00000002
+20211018 12542861  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542861  " SQL   		r=2 t=28 fr=13 c=0 q=PRAGMA index_xinfo(IDX_OTP_MI_OWNER)
+20211018 12542861  "  -    	00.000.054
+20211018 12542861  " http  	127.0.0.1 <- 200
+20211018 12542861  "  -    00.000.222
+20211018 12542861  "  +    runSQL?CONNECTION=main
+20211018 12542861  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542861  " info  	endpoint runSQL
+20211018 12542861  " info  	PRAGMA index_xinfo(IDX_OTP_USERID)
+20211018 12542861  " auth  	root/00000002
+20211018 12542861  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542861  " SQL   		r=2 t=35 fr=16 c=0 q=PRAGMA index_xinfo(IDX_OTP_USERID)
+20211018 12542861  "  -    	00.000.064
+20211018 12542861  " http  	127.0.0.1 <- 200
+20211018 12542861  "  -    00.000.498
+20211018 12542861  "  +    runSQL?CONNECTION=main
+20211018 12542861  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542861  " info  	endpoint runSQL
+20211018 12542861  " info  	PRAGMA table_info('uba_prevPasswordsHash')
+20211018 12542861  " auth  	root/00000002
+20211018 12542861  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542861  " SQL   		r=8 t=45 fr=22 c=0 q=PRAGMA table_info('uba_prevPasswordsHash')
+20211018 12542861  "  -    	00.000.073
+20211018 12542861  " http  	127.0.0.1 <- 200
+20211018 12542861  "  -    00.000.256
+20211018 12542861  "  +    runSQL?CONNECTION=main
+20211018 12542861  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542861  " info  	endpoint runSQL
+20211018 12542861  " info  	PRAGMA foreign_key_list('uba_prevPasswordsHash')
+20211018 12542861  " auth  	root/00000002
+20211018 12542861  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542861  " SQL   		r=4 t=52 fr=25 c=0 q=PRAGMA foreign_key_list('uba_prevPasswordsHash')
+20211018 12542861  "  -    	00.000.089
+20211018 12542861  " http  	127.0.0.1 <- 200
+20211018 12542861  "  -    00.000.329
+20211018 12542862  "  +    runSQL?CONNECTION=main
+20211018 12542862  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542862  " info  	endpoint runSQL
+20211018 12542862  " info  	PRAGMA index_list('uba_prevPasswordsHash')
+20211018 12542862  " auth  	root/00000002
+20211018 12542862  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542862  " SQL   		r=5 t=34 fr=16 c=0 q=PRAGMA index_list('uba_prevPasswordsHash')
+20211018 12542862  "  -    	00.000.061
+20211018 12542862  " http  	127.0.0.1 <- 200
+20211018 12542862  "  -    00.000.242
+20211018 12542862  "  +    runSQL?CONNECTION=main
+20211018 12542862  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542862  " info  	endpoint runSQL
+20211018 12542862  " info  	PRAGMA index_xinfo(IDX_PREVP_MI_MODIFYUSER)
+20211018 12542862  " auth  	root/00000002
+20211018 12542862  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542862  " SQL   		r=2 t=29 fr=13 c=0 q=PRAGMA index_xinfo(IDX_PREVP_MI_MODIFYUSER)
+20211018 12542862  "  -    	00.000.055
+20211018 12542862  " http  	127.0.0.1 <- 200
+20211018 12542862  "  -    00.000.223
+20211018 12542862  "  +    runSQL?CONNECTION=main
+20211018 12542862  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542862  " info  	endpoint runSQL
+20211018 12542862  " info  	PRAGMA index_xinfo(IDX_PREVP_MI_CREATEUSER)
+20211018 12542862  " auth  	root/00000002
+20211018 12542862  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542862  " SQL   		r=2 t=32 fr=15 c=0 q=PRAGMA index_xinfo(IDX_PREVP_MI_CREATEUSER)
+20211018 12542862  "  -    	00.000.058
+20211018 12542862  " http  	127.0.0.1 <- 200
+20211018 12542862  "  -    00.000.251
+20211018 12542862  "  +    runSQL?CONNECTION=main
+20211018 12542862  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542862  " info  	endpoint runSQL
+20211018 12542862  " info  	PRAGMA index_xinfo(IDX_PREVP_MI_OWNER)
+20211018 12542862  " auth  	root/00000002
+20211018 12542862  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542862  " SQL   		r=2 t=48 fr=22 c=0 q=PRAGMA index_xinfo(IDX_PREVP_MI_OWNER)
+20211018 12542862  "  -    	00.000.083
+20211018 12542862  " http  	127.0.0.1 <- 200
+20211018 12542862  "  -    00.000.317
+20211018 12542862  "  +    runSQL?CONNECTION=main
+20211018 12542862  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542862  " info  	endpoint runSQL
+20211018 12542862  " info  	PRAGMA index_xinfo(IDX_PREVP_USERID)
+20211018 12542862  " auth  	root/00000002
+20211018 12542862  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542862  " SQL   		r=2 t=32 fr=16 c=0 q=PRAGMA index_xinfo(IDX_PREVP_USERID)
+20211018 12542862  "  -    	00.000.059
+20211018 12542862  " http  	127.0.0.1 <- 200
+20211018 12542862  "  -    00.000.235
+20211018 12542862  "  +    runSQL?CONNECTION=main
+20211018 12542862  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542862  " info  	endpoint runSQL
+20211018 12542862  " info  	PRAGMA table_info('uba_usercertificate')
+20211018 12542862  " auth  	root/00000002
+20211018 12542862  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542862  " SQL   		r=17 t=56 fr=26 c=0 q=PRAGMA table_info('uba_usercertificate')
+20211018 12542862  "  -    	00.000.088
+20211018 12542862  " http  	127.0.0.1 <- 200
+20211018 12542862  "  -    00.000.270
+20211018 12542862  "  +    runSQL?CONNECTION=main
+20211018 12542862  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542862  " info  	endpoint runSQL
+20211018 12542862  " info  	PRAGMA foreign_key_list('uba_usercertificate')
+20211018 12542862  " auth  	root/00000002
+20211018 12542862  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542862  " SQL   		r=4 t=42 fr=20 c=0 q=PRAGMA foreign_key_list('uba_usercertificate')
+20211018 12542862  "  -    	00.000.072
+20211018 12542862  " http  	127.0.0.1 <- 200
+20211018 12542862  "  -    00.000.261
+20211018 12542900  "  +    runSQL?CONNECTION=main
+20211018 12542900  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542900  " info  	endpoint runSQL
+20211018 12542900  " info  	PRAGMA index_list('uba_usercertificate')
+20211018 12542900  " auth  	root/00000002
+20211018 12542900  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542900  " SQL   		r=7 t=52 fr=25 c=0 q=PRAGMA index_list('uba_usercertificate')
+20211018 12542900  "  -    	00.000.086
+20211018 12542900  " http  	127.0.0.1 <- 200
+20211018 12542900  "  -    00.000.308
+20211018 12542900  "  +    runSQL?CONNECTION=main
+20211018 12542900  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542900  " info  	endpoint runSQL
+20211018 12542900  " info  	PRAGMA index_xinfo(uidx_usercert)
+20211018 12542900  " auth  	root/00000002
+20211018 12542900  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542900  " SQL   		r=4 t=42 fr=21 c=0 q=PRAGMA index_xinfo(uidx_usercert)
+20211018 12542900  "  -    	00.000.072
+20211018 12542900  " http  	127.0.0.1 <- 200
+20211018 12542900  "  -    00.000.275
+20211018 12542900  "  +    runSQL?CONNECTION=main
+20211018 12542900  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542900  " info  	endpoint runSQL
+20211018 12542900  " info  	PRAGMA index_xinfo(IDX_USRCER_MI_MODIFYUSER)
+20211018 12542900  " auth  	root/00000002
+20211018 12542900  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542900  " SQL   		r=2 t=31 fr=15 c=0 q=PRAGMA index_xinfo(IDX_USRCER_MI_MODIFYUSER)
+20211018 12542900  "  -    	00.000.055
+20211018 12542900  " http  	127.0.0.1 <- 200
+20211018 12542900  "  -    00.000.229
+20211018 12542900  "  +    runSQL?CONNECTION=main
+20211018 12542900  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542900  " info  	endpoint runSQL
+20211018 12542900  " info  	PRAGMA index_xinfo(IDX_USRCER_MI_CREATEUSER)
+20211018 12542900  " auth  	root/00000002
+20211018 12542900  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542900  " SQL   		r=2 t=33 fr=16 c=0 q=PRAGMA index_xinfo(IDX_USRCER_MI_CREATEUSER)
+20211018 12542900  "  -    	00.000.062
+20211018 12542900  " http  	127.0.0.1 <- 200
+20211018 12542900  "  -    00.000.506
+20211018 12542900  "  +    runSQL?CONNECTION=main
+20211018 12542900  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542900  " info  	endpoint runSQL
+20211018 12542900  " info  	PRAGMA index_xinfo(IDX_USRCER_MI_OWNER)
+20211018 12542900  " auth  	root/00000002
+20211018 12542900  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542900  " SQL   		r=2 t=31 fr=14 c=0 q=PRAGMA index_xinfo(IDX_USRCER_MI_OWNER)
+20211018 12542900  "  -    	00.000.060
+20211018 12542900  " http  	127.0.0.1 <- 200
+20211018 12542900  "  -    00.000.350
+20211018 12542900  "  +    runSQL?CONNECTION=main
+20211018 12542900  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542900  " info  	endpoint runSQL
+20211018 12542900  " info  	PRAGMA index_xinfo(UIDX_USRCER_SERIAL)
+20211018 12542900  " auth  	root/00000002
+20211018 12542900  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542900  " SQL   		r=2 t=29 fr=13 c=0 q=PRAGMA index_xinfo(UIDX_USRCER_SERIAL)
+20211018 12542900  "  -    	00.000.053
+20211018 12542900  " http  	127.0.0.1 <- 200
+20211018 12542900  "  -    00.000.222
+20211018 12542900  "  +    runSQL?CONNECTION=main
+20211018 12542900  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542900  " info  	endpoint runSQL
+20211018 12542900  " info  	PRAGMA index_xinfo(IDX_USRCER_USERID)
+20211018 12542900  " auth  	root/00000002
+20211018 12542900  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542900  " SQL   		r=2 t=30 fr=14 c=0 q=PRAGMA index_xinfo(IDX_USRCER_USERID)
+20211018 12542900  "  -    	00.000.055
+20211018 12542900  " http  	127.0.0.1 <- 200
+20211018 12542900  "  -    00.000.228
+20211018 12542900  "  +    runSQL?CONNECTION=main
+20211018 12542900  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542900  " info  	endpoint runSQL
+20211018 12542900  " info  	PRAGMA table_info('uba_usergroup')
+20211018 12542900  " auth  	root/00000002
+20211018 12542900  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542900  " SQL   		r=8 t=39 fr=19 c=0 q=PRAGMA table_info('uba_usergroup')
+20211018 12542900  "  -    	00.000.065
+20211018 12542900  " http  	127.0.0.1 <- 200
+20211018 12542900  "  -    00.000.228
+20211018 12542900  "  +    runSQL?CONNECTION=main
+20211018 12542900  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542900  " info  	endpoint runSQL
+20211018 12542900  " info  	PRAGMA foreign_key_list('uba_usergroup')
+20211018 12542900  " auth  	root/00000002
+20211018 12542900  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542900  " SQL   		r=5 t=37 fr=19 c=0 q=PRAGMA foreign_key_list('uba_usergroup')
+20211018 12542900  "  -    	00.000.064
+20211018 12542900  " http  	127.0.0.1 <- 200
+20211018 12542900  "  -    00.000.232
+20211018 12542900  "  +    runSQL?CONNECTION=main
+20211018 12542900  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542900  " info  	endpoint runSQL
+20211018 12542900  " info  	PRAGMA index_list('uba_usergroup')
+20211018 12542900  " auth  	root/00000002
+20211018 12542900  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542900  " SQL   		r=7 t=35 fr=17 c=0 q=PRAGMA index_list('uba_usergroup')
+20211018 12542900  "  -    	00.000.058
+20211018 12542900  " http  	127.0.0.1 <- 200
+20211018 12542900  "  -    00.000.253
+20211018 12542900  "  +    runSQL?CONNECTION=main
+20211018 12542900  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542900  " info  	endpoint runSQL
+20211018 12542900  " info  	PRAGMA index_xinfo(UK_USRGROUP_USER_GROUP)
+20211018 12542900  " auth  	root/00000002
+20211018 12542900  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542900  " SQL   		r=3 t=26 fr=11 c=0 q=PRAGMA index_xinfo(UK_USRGROUP_USER_GROUP)
+20211018 12542900  "  -    	00.000.050
+20211018 12542900  " http  	127.0.0.1 <- 200
+20211018 12542900  "  -    00.000.214
+20211018 12542900  "  +    runSQL?CONNECTION=main
+20211018 12542900  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542900  " info  	endpoint runSQL
+20211018 12542900  " info  	PRAGMA index_xinfo(IDX_USRGROUP_MI_MODIFYUSER)
+20211018 12542900  " auth  	root/00000002
+20211018 12542900  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542900  " SQL   		r=2 t=27 fr=12 c=0 q=PRAGMA index_xinfo(IDX_USRGROUP_MI_MODIFYUSER)
+20211018 12542900  "  -    	00.000.051
+20211018 12542900  " http  	127.0.0.1 <- 200
+20211018 12542900  "  -    00.000.223
+20211018 12542900  "  +    runSQL?CONNECTION=main
+20211018 12542900  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542900  " info  	endpoint runSQL
+20211018 12542900  " info  	PRAGMA index_xinfo(IDX_USRGROUP_MI_CREATEUSER)
+20211018 12542900  " auth  	root/00000002
+20211018 12542900  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542900  " SQL   		r=2 t=28 fr=13 c=0 q=PRAGMA index_xinfo(IDX_USRGROUP_MI_CREATEUSER)
+20211018 12542900  "  -    	00.000.051
+20211018 12542900  " http  	127.0.0.1 <- 200
+20211018 12542900  "  -    00.000.217
+20211018 12542900  "  +    runSQL?CONNECTION=main
+20211018 12542900  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542900  " info  	endpoint runSQL
+20211018 12542900  " info  	PRAGMA index_xinfo(IDX_USRGROUP_MI_OWNER)
+20211018 12542900  " auth  	root/00000002
+20211018 12542900  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542900  " SQL   		r=2 t=46 fr=17 c=0 q=PRAGMA index_xinfo(IDX_USRGROUP_MI_OWNER)
+20211018 12542900  "  -    	00.000.083
+20211018 12542900  " http  	127.0.0.1 <- 200
+20211018 12542900  "  -    00.000.313
+20211018 12542900  "  +    runSQL?CONNECTION=main
+20211018 12542900  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542900  " info  	endpoint runSQL
+20211018 12542900  " info  	PRAGMA index_xinfo(IDX_USRGROUP_GROUPID)
+20211018 12542900  " auth  	root/00000002
+20211018 12542900  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542900  " SQL   		r=2 t=47 fr=22 c=0 q=PRAGMA index_xinfo(IDX_USRGROUP_GROUPID)
+20211018 12542900  "  -    	00.000.078
+20211018 12542900  " http  	127.0.0.1 <- 200
+20211018 12542900  "  -    00.000.306
+20211018 12542900  "  +    runSQL?CONNECTION=main
+20211018 12542900  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542900  " info  	endpoint runSQL
+20211018 12542900  " info  	PRAGMA index_xinfo(IDX_USRGROUP_USERID)
+20211018 12542900  " auth  	root/00000002
+20211018 12542900  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542900  " SQL   		r=2 t=29 fr=14 c=0 q=PRAGMA index_xinfo(IDX_USRGROUP_USERID)
+20211018 12542900  "  -    	00.000.053
+20211018 12542900  " http  	127.0.0.1 <- 200
+20211018 12542900  "  -    00.000.218
+20211018 12542900  "  +    runSQL?CONNECTION=main
+20211018 12542900  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542900  " info  	endpoint runSQL
+20211018 12542900  " info  	PRAGMA table_info('ubm_desktop')
+20211018 12542900  " auth  	root/00000002
+20211018 12542900  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542900  " SQL   		r=17 t=53 fr=26 c=0 q=PRAGMA table_info('ubm_desktop')
+20211018 12542900  "  -    	00.000.080
+20211018 12542900  " http  	127.0.0.1 <- 200
+20211018 12542900  "  -    00.000.244
+20211018 12542900  "  +    runSQL?CONNECTION=main
+20211018 12542900  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542900  " info  	endpoint runSQL
+20211018 12542900  " info  	PRAGMA foreign_key_list('ubm_desktop')
+20211018 12542900  " auth  	root/00000002
+20211018 12542900  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542900  " SQL   		r=4 t=37 fr=18 c=0 q=PRAGMA foreign_key_list('ubm_desktop')
+20211018 12542900  "  -    	00.000.066
+20211018 12542900  " http  	127.0.0.1 <- 200
+20211018 12542900  "  -    00.000.236
+20211018 12542901  "  +    runSQL?CONNECTION=main
+20211018 12542901  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542901  " info  	endpoint runSQL
+20211018 12542901  " info  	PRAGMA index_list('ubm_desktop')
+20211018 12542901  " auth  	root/00000002
+20211018 12542901  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542901  " SQL   		r=6 t=32 fr=15 c=0 q=PRAGMA index_list('ubm_desktop')
+20211018 12542901  "  -    	00.000.058
+20211018 12542901  " http  	127.0.0.1 <- 200
+20211018 12542901  "  -    00.000.232
+20211018 12542901  "  +    runSQL?CONNECTION=main
+20211018 12542901  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542901  " info  	endpoint runSQL
+20211018 12542901  " info  	PRAGMA index_xinfo(IDX_DESK_MI_DELETEUSER)
+20211018 12542901  " auth  	root/00000002
+20211018 12542901  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542901  " SQL   		r=2 t=27 fr=12 c=0 q=PRAGMA index_xinfo(IDX_DESK_MI_DELETEUSER)
+20211018 12542901  "  -    	00.000.051
+20211018 12542901  " http  	127.0.0.1 <- 200
+20211018 12542901  "  -    00.000.238
+20211018 12542901  "  +    runSQL?CONNECTION=main
+20211018 12542901  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542901  " info  	endpoint runSQL
+20211018 12542901  " info  	PRAGMA index_xinfo(IDX_DESK_MI_MODIFYUSER)
+20211018 12542901  " auth  	root/00000002
+20211018 12542901  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542901  " SQL   		r=2 t=42 fr=20 c=0 q=PRAGMA index_xinfo(IDX_DESK_MI_MODIFYUSER)
+20211018 12542901  "  -    	00.000.072
+20211018 12542901  " http  	127.0.0.1 <- 200
+20211018 12542901  "  -    00.000.597
+20211018 12542901  "  +    runSQL?CONNECTION=main
+20211018 12542901  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542901  " info  	endpoint runSQL
+20211018 12542901  " info  	PRAGMA index_xinfo(IDX_DESK_MI_CREATEUSER)
+20211018 12542901  " auth  	root/00000002
+20211018 12542901  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542901  " SQL   		r=2 t=31 fr=15 c=0 q=PRAGMA index_xinfo(IDX_DESK_MI_CREATEUSER)
+20211018 12542901  "  -    	00.000.056
+20211018 12542901  " http  	127.0.0.1 <- 200
+20211018 12542901  "  -    00.000.302
+20211018 12542901  "  +    runSQL?CONNECTION=main
+20211018 12542901  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542901  " info  	endpoint runSQL
+20211018 12542901  " info  	PRAGMA index_xinfo(IDX_DESK_MI_OWNER)
+20211018 12542901  " auth  	root/00000002
+20211018 12542901  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542901  " SQL   		r=2 t=30 fr=14 c=0 q=PRAGMA index_xinfo(IDX_DESK_MI_OWNER)
+20211018 12542901  "  -    	00.000.055
+20211018 12542901  " http  	127.0.0.1 <- 200
+20211018 12542901  "  -    00.000.224
+20211018 12542901  "  +    runSQL?CONNECTION=main
+20211018 12542901  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542901  " info  	endpoint runSQL
+20211018 12542901  " info  	PRAGMA index_xinfo(UIDX_DESK_CODE)
+20211018 12542901  " auth  	root/00000002
+20211018 12542901  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542901  " SQL   		r=3 t=35 fr=16 c=0 q=PRAGMA index_xinfo(UIDX_DESK_CODE)
+20211018 12542901  "  -    	00.000.061
+20211018 12542901  " http  	127.0.0.1 <- 200
+20211018 12542901  "  -    00.000.236
+20211018 12542901  "  +    runSQL?CONNECTION=main
+20211018 12542901  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542901  " info  	endpoint runSQL
+20211018 12542901  " info  	PRAGMA table_info('ubm_desktop_adm')
+20211018 12542901  " auth  	root/00000002
+20211018 12542901  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542901  " SQL   		r=3 t=30 fr=15 c=0 q=PRAGMA table_info('ubm_desktop_adm')
+20211018 12542901  "  -    	00.000.055
+20211018 12542901  " http  	127.0.0.1 <- 200
+20211018 12542901  "  -    00.000.212
+20211018 12542901  "  +    runSQL?CONNECTION=main
+20211018 12542901  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542901  " info  	endpoint runSQL
+20211018 12542901  " info  	PRAGMA foreign_key_list('ubm_desktop_adm')
+20211018 12542901  " auth  	root/00000002
+20211018 12542901  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542901  " SQL   		r=2 t=38 fr=18 c=0 q=PRAGMA foreign_key_list('ubm_desktop_adm')
+20211018 12542901  "  -    	00.000.069
+20211018 12542901  " http  	127.0.0.1 <- 200
+20211018 12542901  "  -    00.000.275
+20211018 12542901  "  +    runSQL?CONNECTION=main
+20211018 12542901  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542901  " info  	endpoint runSQL
+20211018 12542901  " info  	PRAGMA index_list('ubm_desktop_adm')
+20211018 12542901  " auth  	root/00000002
+20211018 12542901  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542901  " SQL   		r=4 t=32 fr=15 c=0 q=PRAGMA index_list('ubm_desktop_adm')
+20211018 12542901  "  -    	00.000.055
+20211018 12542901  " http  	127.0.0.1 <- 200
+20211018 12542901  "  -    00.000.240
+20211018 12542901  "  +    runSQL?CONNECTION=main
+20211018 12542901  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542901  " info  	endpoint runSQL
+20211018 12542901  " info  	PRAGMA index_xinfo(UK_ADMDESC_INST_ADMSUBJ)
+20211018 12542901  " auth  	root/00000002
+20211018 12542901  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542901  " SQL   		r=3 t=28 fr=13 c=0 q=PRAGMA index_xinfo(UK_ADMDESC_INST_ADMSUBJ)
+20211018 12542901  "  -    	00.000.052
+20211018 12542901  " http  	127.0.0.1 <- 200
+20211018 12542901  "  -    00.000.208
+20211018 12542901  "  +    runSQL?CONNECTION=main
+20211018 12542901  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542901  " info  	endpoint runSQL
+20211018 12542901  " info  	PRAGMA index_xinfo(IDX_ADMDESK_ADMSUBJID)
+20211018 12542901  " auth  	root/00000002
+20211018 12542901  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542901  " SQL   		r=2 t=28 fr=13 c=0 q=PRAGMA index_xinfo(IDX_ADMDESK_ADMSUBJID)
+20211018 12542901  "  -    	00.000.052
+20211018 12542901  " http  	127.0.0.1 <- 200
+20211018 12542901  "  -    00.000.209
+20211018 12542901  "  +    runSQL?CONNECTION=main
+20211018 12542901  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542901  " info  	endpoint runSQL
+20211018 12542901  " info  	PRAGMA index_xinfo(IDX_ADMDESK_INSTANCEID)
+20211018 12542901  " auth  	root/00000002
+20211018 12542901  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542901  " SQL   		r=2 t=33 fr=14 c=0 q=PRAGMA index_xinfo(IDX_ADMDESK_INSTANCEID)
+20211018 12542901  "  -    	00.000.062
+20211018 12542901  " http  	127.0.0.1 <- 200
+20211018 12542901  "  -    00.000.248
+20211018 12542901  "  +    runSQL?CONNECTION=main
+20211018 12542901  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542901  " info  	endpoint runSQL
+20211018 12542901  " info  	PRAGMA table_info('ubm_enum')
+20211018 12542901  " auth  	root/00000002
+20211018 12542901  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542901  " SQL   		r=15 t=54 fr=24 c=0 q=PRAGMA table_info('ubm_enum')
+20211018 12542901  "  -    	00.000.085
+20211018 12542901  " http  	127.0.0.1 <- 200
+20211018 12542901  "  -    00.000.274
+20211018 12542901  "  +    runSQL?CONNECTION=main
+20211018 12542901  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542901  " info  	endpoint runSQL
+20211018 12542901  " info  	PRAGMA foreign_key_list('ubm_enum')
+20211018 12542901  " auth  	root/00000002
+20211018 12542901  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542901  " SQL   		r=4 t=56 fr=27 c=0 q=PRAGMA foreign_key_list('ubm_enum')
+20211018 12542901  "  -    	00.000.091
+20211018 12542901  " http  	127.0.0.1 <- 200
+20211018 12542901  "  -    00.000.342
+20211018 12542901  "  +    runSQL?CONNECTION=main
+20211018 12542901  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542901  " info  	endpoint runSQL
+20211018 12542901  " info  	PRAGMA index_list('ubm_enum')
+20211018 12542901  " auth  	root/00000002
+20211018 12542901  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542901  " SQL   		r=6 t=31 fr=14 c=0 q=PRAGMA index_list('ubm_enum')
+20211018 12542901  "  -    	00.000.056
+20211018 12542901  " http  	127.0.0.1 <- 200
+20211018 12542901  "  -    00.000.228
+20211018 12542901  "  +    runSQL?CONNECTION=main
+20211018 12542901  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542901  " info  	endpoint runSQL
+20211018 12542901  " info  	PRAGMA index_xinfo(UK_UBM_ENUM_GROUPCODE)
+20211018 12542901  " auth  	root/00000002
+20211018 12542901  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542901  " SQL   		r=4 t=28 fr=12 c=0 q=PRAGMA index_xinfo(UK_UBM_ENUM_GROUPCODE)
+20211018 12542901  "  -    	00.000.052
+20211018 12542901  " http  	127.0.0.1 <- 200
+20211018 12542901  "  -    00.000.213
+20211018 12542901  "  +    runSQL?CONNECTION=main
+20211018 12542901  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542901  " info  	endpoint runSQL
+20211018 12542901  " info  	PRAGMA index_xinfo(IDX_ENU_MI_DELETEUSER)
+20211018 12542901  " auth  	root/00000002
+20211018 12542901  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542901  " SQL   		r=2 t=33 fr=15 c=0 q=PRAGMA index_xinfo(IDX_ENU_MI_DELETEUSER)
+20211018 12542901  "  -    	00.000.059
+20211018 12542901  " http  	127.0.0.1 <- 200
+20211018 12542901  "  -    00.000.235
+20211018 12542901  "  +    runSQL?CONNECTION=main
+20211018 12542901  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542901  " info  	endpoint runSQL
+20211018 12542901  " info  	PRAGMA index_xinfo(IDX_ENU_MI_MODIFYUSER)
+20211018 12542901  " auth  	root/00000002
+20211018 12542901  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542902  " SQL   		r=2 t=32 fr=14 c=0 q=PRAGMA index_xinfo(IDX_ENU_MI_MODIFYUSER)
+20211018 12542902  "  -    	00.000.099
+20211018 12542902  " http  	127.0.0.1 <- 200
+20211018 12542902  "  -    00.000.297
+20211018 12542902  "  +    runSQL?CONNECTION=main
+20211018 12542902  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542902  " info  	endpoint runSQL
+20211018 12542902  " info  	PRAGMA index_xinfo(IDX_ENU_MI_CREATEUSER)
+20211018 12542902  " auth  	root/00000002
+20211018 12542902  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542902  " SQL   		r=2 t=31 fr=14 c=0 q=PRAGMA index_xinfo(IDX_ENU_MI_CREATEUSER)
+20211018 12542902  "  -    	00.000.059
+20211018 12542902  " http  	127.0.0.1 <- 200
+20211018 12542902  "  -    00.000.245
+20211018 12542902  "  +    runSQL?CONNECTION=main
+20211018 12542902  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542902  " info  	endpoint runSQL
+20211018 12542902  " info  	PRAGMA index_xinfo(IDX_ENU_MI_OWNER)
+20211018 12542902  " auth  	root/00000002
+20211018 12542902  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542902  " SQL   		r=2 t=29 fr=13 c=0 q=PRAGMA index_xinfo(IDX_ENU_MI_OWNER)
+20211018 12542902  "  -    	00.000.056
+20211018 12542902  " http  	127.0.0.1 <- 200
+20211018 12542902  "  -    00.000.241
+20211018 12542902  "  +    runSQL?CONNECTION=main
+20211018 12542902  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542902  " info  	endpoint runSQL
+20211018 12542902  " info  	PRAGMA table_info('ubm_navshortcut')
+20211018 12542902  " auth  	root/00000002
+20211018 12542902  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542902  " SQL   		r=24 t=80 fr=37 c=0 q=PRAGMA table_info('ubm_navshortcut')
+20211018 12542902  "  -    	00.000.116
+20211018 12542902  " http  	127.0.0.1 <- 200
+20211018 12542902  "  -    00.000.384
+20211018 12542902  "  +    runSQL?CONNECTION=main
+20211018 12542902  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542902  " info  	endpoint runSQL
+20211018 12542902  " info  	PRAGMA foreign_key_list('ubm_navshortcut')
+20211018 12542902  " auth  	root/00000002
+20211018 12542902  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542902  " SQL   		r=6 t=49 fr=24 c=0 q=PRAGMA foreign_key_list('ubm_navshortcut')
+20211018 12542902  "  -    	00.000.085
+20211018 12542902  " http  	127.0.0.1 <- 200
+20211018 12542902  "  -    00.000.296
+20211018 12542902  "  +    runSQL?CONNECTION=main
+20211018 12542902  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542902  " info  	endpoint runSQL
+20211018 12542902  " info  	PRAGMA index_list('ubm_navshortcut')
+20211018 12542902  " auth  	root/00000002
+20211018 12542902  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542902  " SQL   		r=9 t=43 fr=20 c=0 q=PRAGMA index_list('ubm_navshortcut')
+20211018 12542902  "  -    	00.000.072
+20211018 12542902  " http  	127.0.0.1 <- 200
+20211018 12542902  "  -    00.000.270
+20211018 12542902  "  +    runSQL?CONNECTION=main
+20211018 12542902  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542902  " info  	endpoint runSQL
+20211018 12542902  " info  	PRAGMA index_xinfo(IDX_NAVSH_TREEPATH)
+20211018 12542902  " auth  	root/00000002
+20211018 12542902  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542902  " SQL   		r=2 t=31 fr=14 c=0 q=PRAGMA index_xinfo(IDX_NAVSH_TREEPATH)
+20211018 12542902  "  -    	00.000.060
+20211018 12542902  " http  	127.0.0.1 <- 200
+20211018 12542902  "  -    00.000.254
+20211018 12542902  "  +    runSQL?CONNECTION=main
+20211018 12542902  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542902  " info  	endpoint runSQL
+20211018 12542902  " info  	PRAGMA index_xinfo(IDX_NAVSH_MI_DELETEUSER)
+20211018 12542902  " auth  	root/00000002
+20211018 12542902  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542902  " SQL   		r=2 t=32 fr=14 c=0 q=PRAGMA index_xinfo(IDX_NAVSH_MI_DELETEUSER)
+20211018 12542902  "  -    	00.000.060
+20211018 12542902  " http  	127.0.0.1 <- 200
+20211018 12542902  "  -    00.000.254
+20211018 12542902  "  +    runSQL?CONNECTION=main
+20211018 12542902  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542902  " info  	endpoint runSQL
+20211018 12542902  " info  	PRAGMA index_xinfo(IDX_NAVSH_MI_MODIFYUSER)
+20211018 12542902  " auth  	root/00000002
+20211018 12542902  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542902  " SQL   		r=2 t=29 fr=13 c=0 q=PRAGMA index_xinfo(IDX_NAVSH_MI_MODIFYUSER)
+20211018 12542902  "  -    	00.000.056
+20211018 12542902  " http  	127.0.0.1 <- 200
+20211018 12542902  "  -    00.000.245
+20211018 12542902  "  +    runSQL?CONNECTION=main
+20211018 12542902  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542902  " info  	endpoint runSQL
+20211018 12542902  " info  	PRAGMA index_xinfo(IDX_NAVSH_MI_CREATEUSER)
+20211018 12542902  " auth  	root/00000002
+20211018 12542902  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542902  " SQL   		r=2 t=30 fr=13 c=0 q=PRAGMA index_xinfo(IDX_NAVSH_MI_CREATEUSER)
+20211018 12542902  "  -    	00.000.056
+20211018 12542902  " http  	127.0.0.1 <- 200
+20211018 12542902  "  -    00.000.234
+20211018 12542902  "  +    runSQL?CONNECTION=main
+20211018 12542902  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542902  " info  	endpoint runSQL
+20211018 12542902  " info  	PRAGMA index_xinfo(IDX_NAVSH_MI_OWNER)
+20211018 12542902  " auth  	root/00000002
+20211018 12542902  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542902  " SQL   		r=2 t=32 fr=15 c=0 q=PRAGMA index_xinfo(IDX_NAVSH_MI_OWNER)
+20211018 12542902  "  -    	00.000.061
+20211018 12542902  " http  	127.0.0.1 <- 200
+20211018 12542902  "  -    00.000.280
+20211018 12542902  "  +    runSQL?CONNECTION=main
+20211018 12542902  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542902  " info  	endpoint runSQL
+20211018 12542902  " info  	PRAGMA index_xinfo(UIDX_NAVSH_CODE)
+20211018 12542902  " auth  	root/00000002
+20211018 12542902  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542902  " SQL   		r=3 t=39 fr=19 c=0 q=PRAGMA index_xinfo(UIDX_NAVSH_CODE)
+20211018 12542902  "  -    	00.000.080
+20211018 12542902  " http  	127.0.0.1 <- 200
+20211018 12542902  "  -    00.000.411
+20211018 12542902  "  +    runSQL?CONNECTION=main
+20211018 12542902  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542902  " info  	endpoint runSQL
+20211018 12542902  " info  	PRAGMA index_xinfo(IDX_NAVSH_PARENTID)
+20211018 12542902  " auth  	root/00000002
+20211018 12542902  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542902  " SQL   		r=2 t=33 fr=15 c=0 q=PRAGMA index_xinfo(IDX_NAVSH_PARENTID)
+20211018 12542902  "  -    	00.000.065
+20211018 12542902  " http  	127.0.0.1 <- 200
+20211018 12542902  "  -    00.000.284
+20211018 12542902  "  +    runSQL?CONNECTION=main
+20211018 12542902  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542902  " info  	endpoint runSQL
+20211018 12542902  " info  	PRAGMA index_xinfo(IDX_NAVSH_DESKTOPID)
+20211018 12542902  " auth  	root/00000002
+20211018 12542902  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542902  " SQL   		r=2 t=32 fr=15 c=0 q=PRAGMA index_xinfo(IDX_NAVSH_DESKTOPID)
+20211018 12542902  "  -    	00.000.061
+20211018 12542902  " http  	127.0.0.1 <- 200
+20211018 12542902  "  -    00.000.266
+20211018 12542902  "  +    runSQL?CONNECTION=main
+20211018 12542902  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542902  " info  	endpoint runSQL
+20211018 12542902  " info  	PRAGMA table_info('ubm_navshortcut_adm')
+20211018 12542902  " auth  	root/00000002
+20211018 12542902  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542902  " SQL   		r=3 t=50 fr=24 c=0 q=PRAGMA table_info('ubm_navshortcut_adm')
+20211018 12542902  "  -    	00.000.083
+20211018 12542902  " http  	127.0.0.1 <- 200
+20211018 12542902  "  -    00.000.333
+20211018 12542902  "  +    runSQL?CONNECTION=main
+20211018 12542902  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542902  " info  	endpoint runSQL
+20211018 12542902  " info  	PRAGMA foreign_key_list('ubm_navshortcut_adm')
+20211018 12542902  " auth  	root/00000002
+20211018 12542902  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542902  " SQL   		r=2 t=29 fr=15 c=0 q=PRAGMA foreign_key_list('ubm_navshortcut_adm')
+20211018 12542902  "  -    	00.000.053
+20211018 12542902  " http  	127.0.0.1 <- 200
+20211018 12542902  "  -    00.000.201
+20211018 12542902  "  +    runSQL?CONNECTION=main
+20211018 12542902  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542902  " info  	endpoint runSQL
+20211018 12542902  " info  	PRAGMA index_list('ubm_navshortcut_adm')
+20211018 12542902  " auth  	root/00000002
+20211018 12542902  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542902  " SQL   		r=4 t=27 fr=13 c=0 q=PRAGMA index_list('ubm_navshortcut_adm')
+20211018 12542902  "  -    	00.000.047
+20211018 12542902  " http  	127.0.0.1 <- 200
+20211018 12542902  "  -    00.000.185
+20211018 12542902  "  +    runSQL?CONNECTION=main
+20211018 12542902  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542902  " info  	endpoint runSQL
+20211018 12542902  " info  	PRAGMA index_xinfo(UK_ADMNAV_INST_ADMSUBJ)
+20211018 12542902  " auth  	root/00000002
+20211018 12542902  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542902  " SQL   		r=3 t=24 fr=11 c=0 q=PRAGMA index_xinfo(UK_ADMNAV_INST_ADMSUBJ)
+20211018 12542902  "  -    	00.000.046
+20211018 12542902  " http  	127.0.0.1 <- 200
+20211018 12542902  "  -    00.000.177
+20211018 12542903  "  +    runSQL?CONNECTION=main
+20211018 12542903  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542903  " info  	endpoint runSQL
+20211018 12542903  " info  	PRAGMA index_xinfo(IDX_ADMNAV_ADMSUBJID)
+20211018 12542903  " auth  	root/00000002
+20211018 12542903  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542903  " SQL   		r=2 t=27 fr=13 c=0 q=PRAGMA index_xinfo(IDX_ADMNAV_ADMSUBJID)
+20211018 12542903  "  -    	00.000.050
+20211018 12542903  " http  	127.0.0.1 <- 200
+20211018 12542903  "  -    00.000.201
+20211018 12542903  "  +    runSQL?CONNECTION=main
+20211018 12542903  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542903  " info  	endpoint runSQL
+20211018 12542903  " info  	PRAGMA index_xinfo(IDX_ADMNAV_INSTANCEID)
+20211018 12542903  " auth  	root/00000002
+20211018 12542903  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542903  " SQL   		r=2 t=41 fr=19 c=0 q=PRAGMA index_xinfo(IDX_ADMNAV_INSTANCEID)
+20211018 12542903  "  -    	00.000.070
+20211018 12542903  " http  	127.0.0.1 <- 200
+20211018 12542903  "  -    00.000.299
+20211018 12542903  "  +    runSQL?CONNECTION=main
+20211018 12542903  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542903  " info  	endpoint runSQL
+20211018 12542903  " info  	PRAGMA table_info('ubm_query')
+20211018 12542903  " auth  	root/00000002
+20211018 12542903  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542903  " SQL   		r=14 t=71 fr=34 c=0 q=PRAGMA table_info('ubm_query')
+20211018 12542903  "  -    	00.000.108
+20211018 12542903  " http  	127.0.0.1 <- 200
+20211018 12542903  "  -    00.000.362
+20211018 12542903  "  +    runSQL?CONNECTION=main
+20211018 12542903  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542903  " info  	endpoint runSQL
+20211018 12542903  " info  	PRAGMA foreign_key_list('ubm_query')
+20211018 12542903  " auth  	root/00000002
+20211018 12542903  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542903  " SQL   		r=4 t=44 fr=21 c=0 q=PRAGMA foreign_key_list('ubm_query')
+20211018 12542903  "  -    	00.000.078
+20211018 12542903  " http  	127.0.0.1 <- 200
+20211018 12542903  "  -    00.000.290
+20211018 12542903  "  +    runSQL?CONNECTION=main
+20211018 12542903  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542903  " info  	endpoint runSQL
+20211018 12542903  " info  	PRAGMA index_list('ubm_query')
+20211018 12542903  " auth  	root/00000002
+20211018 12542903  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542903  " SQL   		r=6 t=39 fr=19 c=0 q=PRAGMA index_list('ubm_query')
+20211018 12542903  "  -    	00.000.068
+20211018 12542903  " http  	127.0.0.1 <- 200
+20211018 12542903  "  -    00.000.264
+20211018 12542903  "  +    runSQL?CONNECTION=main
+20211018 12542903  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542903  " info  	endpoint runSQL
+20211018 12542903  " info  	PRAGMA index_xinfo(IDX_UBMQR_MI_DELETEUSER)
+20211018 12542903  " auth  	root/00000002
+20211018 12542903  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542903  " SQL   		r=2 t=31 fr=14 c=0 q=PRAGMA index_xinfo(IDX_UBMQR_MI_DELETEUSER)
+20211018 12542903  "  -    	00.000.061
+20211018 12542903  " http  	127.0.0.1 <- 200
+20211018 12542903  "  -    00.000.250
+20211018 12542903  "  +    runSQL?CONNECTION=main
+20211018 12542903  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542903  " info  	endpoint runSQL
+20211018 12542903  " info  	PRAGMA index_xinfo(IDX_UBMQR_MI_MODIFYUSER)
+20211018 12542903  " auth  	root/00000002
+20211018 12542903  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542903  " SQL   		r=2 t=28 fr=12 c=0 q=PRAGMA index_xinfo(IDX_UBMQR_MI_MODIFYUSER)
+20211018 12542903  "  -    	00.000.049
+20211018 12542903  " http  	127.0.0.1 <- 200
+20211018 12542903  "  -    00.000.205
+20211018 12542903  "  +    runSQL?CONNECTION=main
+20211018 12542903  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542903  " info  	endpoint runSQL
+20211018 12542903  " info  	PRAGMA index_xinfo(IDX_UBMQR_MI_CREATEUSER)
+20211018 12542903  " auth  	root/00000002
+20211018 12542903  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542903  " SQL   		r=2 t=45 fr=19 c=0 q=PRAGMA index_xinfo(IDX_UBMQR_MI_CREATEUSER)
+20211018 12542903  "  -    	00.000.085
+20211018 12542903  " http  	127.0.0.1 <- 200
+20211018 12542903  "  -    00.000.330
+20211018 12542903  "  +    runSQL?CONNECTION=main
+20211018 12542903  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542903  " info  	endpoint runSQL
+20211018 12542903  " info  	PRAGMA index_xinfo(IDX_UBMQR_MI_OWNER)
+20211018 12542903  " auth  	root/00000002
+20211018 12542903  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542903  " SQL   		r=2 t=57 fr=26 c=0 q=PRAGMA index_xinfo(IDX_UBMQR_MI_OWNER)
+20211018 12542903  "  -    	00.000.101
+20211018 12542903  " http  	127.0.0.1 <- 200
+20211018 12542903  "  -    00.000.400
+20211018 12542903  "  +    runSQL?CONNECTION=main
+20211018 12542903  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542903  " info  	endpoint runSQL
+20211018 12542903  " info  	PRAGMA index_xinfo(UIDX_UBMQR_CODE)
+20211018 12542903  " auth  	root/00000002
+20211018 12542903  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542903  " SQL   		r=3 t=44 fr=19 c=0 q=PRAGMA index_xinfo(UIDX_UBMQR_CODE)
+20211018 12542903  "  -    	00.000.080
+20211018 12542903  " http  	127.0.0.1 <- 200
+20211018 12542903  "  -    00.000.322
+20211018 12542904  "  +    runSQL?CONNECTION=main
+20211018 12542904  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542904  " info  	endpoint runSQL
+20211018 12542904  " info  	PRAGMA table_info('ubm_sysdictionary')
+20211018 12542904  " auth  	root/00000002
+20211018 12542904  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542904  " SQL   		r=12 t=62 fr=29 c=0 q=PRAGMA table_info('ubm_sysdictionary')
+20211018 12542904  "  -    	00.000.099
+20211018 12542904  " http  	127.0.0.1 <- 200
+20211018 12542904  "  -    00.000.331
+20211018 12542904  "  +    runSQL?CONNECTION=main
+20211018 12542904  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542904  " info  	endpoint runSQL
+20211018 12542904  " info  	PRAGMA foreign_key_list('ubm_sysdictionary')
+20211018 12542904  " auth  	root/00000002
+20211018 12542904  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542904  " SQL   		r=5 t=56 fr=26 c=0 q=PRAGMA foreign_key_list('ubm_sysdictionary')
+20211018 12542904  "  -    	00.000.098
+20211018 12542904  " http  	127.0.0.1 <- 200
+20211018 12542904  "  -    00.000.346
+20211018 12542904  "  +    runSQL?CONNECTION=main
+20211018 12542904  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542904  " info  	endpoint runSQL
+20211018 12542904  " info  	PRAGMA index_list('ubm_sysdictionary')
+20211018 12542904  " auth  	root/00000002
+20211018 12542904  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542904  " SQL   		r=6 t=44 fr=20 c=0 q=PRAGMA index_list('ubm_sysdictionary')
+20211018 12542904  "  -    	00.000.077
+20211018 12542904  " http  	127.0.0.1 <- 200
+20211018 12542904  "  -    00.000.299
+20211018 12542904  "  +    runSQL?CONNECTION=main
+20211018 12542904  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542904  " info  	endpoint runSQL
+20211018 12542904  " info  	PRAGMA index_xinfo(IDX_UBMSD_MI_DELETEUSER)
+20211018 12542904  " auth  	root/00000002
+20211018 12542904  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542904  " SQL   		r=2 t=35 fr=16 c=0 q=PRAGMA index_xinfo(IDX_UBMSD_MI_DELETEUSER)
+20211018 12542904  "  -    	00.000.066
+20211018 12542904  " http  	127.0.0.1 <- 200
+20211018 12542904  "  -    00.000.289
+20211018 12542904  "  +    runSQL?CONNECTION=main
+20211018 12542904  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542904  " info  	endpoint runSQL
+20211018 12542904  " info  	PRAGMA index_xinfo(IDX_UBMSD_MI_MODIFYUSER)
+20211018 12542904  " auth  	root/00000002
+20211018 12542904  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542904  " SQL   		r=2 t=34 fr=16 c=0 q=PRAGMA index_xinfo(IDX_UBMSD_MI_MODIFYUSER)
+20211018 12542904  "  -    	00.000.060
+20211018 12542904  " http  	127.0.0.1 <- 200
+20211018 12542904  "  -    00.000.247
+20211018 12542904  "  +    runSQL?CONNECTION=main
+20211018 12542904  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542904  " info  	endpoint runSQL
+20211018 12542904  " info  	PRAGMA index_xinfo(IDX_UBMSD_MI_CREATEUSER)
+20211018 12542904  " auth  	root/00000002
+20211018 12542904  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542904  " SQL   		r=2 t=35 fr=16 c=0 q=PRAGMA index_xinfo(IDX_UBMSD_MI_CREATEUSER)
+20211018 12542904  "  -    	00.000.061
+20211018 12542904  " http  	127.0.0.1 <- 200
+20211018 12542904  "  -    00.000.235
+20211018 12542904  "  +    runSQL?CONNECTION=main
+20211018 12542904  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542904  " info  	endpoint runSQL
+20211018 12542904  " info  	PRAGMA index_xinfo(IDX_UBMSD_MI_OWNER)
+20211018 12542904  " auth  	root/00000002
+20211018 12542904  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542904  " SQL   		r=2 t=38 fr=17 c=0 q=PRAGMA index_xinfo(IDX_UBMSD_MI_OWNER)
+20211018 12542904  "  -    	00.000.068
+20211018 12542904  " http  	127.0.0.1 <- 200
+20211018 12542904  "  -    00.001.852
+20211018 12542904  "  +    runSQL?CONNECTION=main
+20211018 12542904  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542904  " info  	endpoint runSQL
+20211018 12542904  " info  	PRAGMA index_xinfo(UIDX_UBMSD_CODE)
+20211018 12542904  " auth  	root/00000002
+20211018 12542904  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542904  " SQL   		r=3 t=38 fr=17 c=0 q=PRAGMA index_xinfo(UIDX_UBMSD_CODE)
+20211018 12542904  "  -    	00.000.067
+20211018 12542904  " http  	127.0.0.1 <- 200
+20211018 12542904  "  -    00.000.801
+20211018 12542904  "  +    runSQL?CONNECTION=main
+20211018 12542904  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542904  " info  	endpoint runSQL
+20211018 12542904  " info  	PRAGMA table_info('ubs_filter')
+20211018 12542904  " auth  	root/00000002
+20211018 12542904  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542904  " SQL   		r=11 t=48 fr=23 c=0 q=PRAGMA table_info('ubs_filter')
+20211018 12542904  "  -    	00.000.078
+20211018 12542905  " http  	127.0.0.1 <- 200
+20211018 12542905  "  -    00.006.736
+20211018 12542905  "  +    runSQL?CONNECTION=main
+20211018 12542905  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542905  " info  	endpoint runSQL
+20211018 12542905  " info  	PRAGMA foreign_key_list('ubs_filter')
+20211018 12542905  " auth  	root/00000002
+20211018 12542905  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542905  " SQL   		r=4 t=51 fr=24 c=0 q=PRAGMA foreign_key_list('ubs_filter')
+20211018 12542905  "  -    	00.000.089
+20211018 12542905  " http  	127.0.0.1 <- 200
+20211018 12542905  "  -    00.001.125
+20211018 12542905  "  +    runSQL?CONNECTION=main
+20211018 12542905  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542905  " info  	endpoint runSQL
+20211018 12542905  " info  	PRAGMA index_list('ubs_filter')
+20211018 12542905  " auth  	root/00000002
+20211018 12542905  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542905  " SQL   		r=7 t=38 fr=18 c=0 q=PRAGMA index_list('ubs_filter')
+20211018 12542905  "  -    	00.000.062
+20211018 12542905  " http  	127.0.0.1 <- 200
+20211018 12542905  "  -    00.000.357
+20211018 12542905  "  +    runSQL?CONNECTION=main
+20211018 12542905  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542905  " info  	endpoint runSQL
+20211018 12542905  " info  	PRAGMA index_xinfo(ix_ubs_filter_code)
+20211018 12542905  " auth  	root/00000002
+20211018 12542905  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542905  " SQL   		r=2 t=24 fr=10 c=0 q=PRAGMA index_xinfo(ix_ubs_filter_code)
+20211018 12542905  "  -    	00.000.047
+20211018 12542905  " http  	127.0.0.1 <- 200
+20211018 12542905  "  -    00.000.518
+20211018 12542905  "  +    runSQL?CONNECTION=main
+20211018 12542905  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542905  " info  	endpoint runSQL
+20211018 12542905  " info  	PRAGMA index_xinfo(uix_ubs_filter)
+20211018 12542905  " auth  	root/00000002
+20211018 12542905  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542905  " SQL   		r=4 t=32 fr=14 c=0 q=PRAGMA index_xinfo(uix_ubs_filter)
+20211018 12542905  "  -    	00.000.056
+20211018 12542905  " http  	127.0.0.1 <- 200
+20211018 12542905  "  -    00.000.528
+20211018 12542905  "  +    runSQL?CONNECTION=main
+20211018 12542905  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542905  " info  	endpoint runSQL
+20211018 12542905  " info  	PRAGMA index_xinfo(IDX_SFILTER_MI_MODIFYUSER)
+20211018 12542905  " auth  	root/00000002
+20211018 12542905  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542905  " SQL   		r=2 t=26 fr=12 c=0 q=PRAGMA index_xinfo(IDX_SFILTER_MI_MODIFYUSER)
+20211018 12542905  "  -    	00.000.047
+20211018 12542905  " http  	127.0.0.1 <- 200
+20211018 12542905  "  -    00.000.325
+20211018 12542905  "  +    runSQL?CONNECTION=main
+20211018 12542905  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542905  " info  	endpoint runSQL
+20211018 12542905  " info  	PRAGMA index_xinfo(IDX_SFILTER_MI_CREATEUSER)
+20211018 12542905  " auth  	root/00000002
+20211018 12542905  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542905  " SQL   		r=2 t=27 fr=12 c=0 q=PRAGMA index_xinfo(IDX_SFILTER_MI_CREATEUSER)
+20211018 12542905  "  -    	00.000.050
+20211018 12542905  " http  	127.0.0.1 <- 200
+20211018 12542905  "  -    00.000.684
+20211018 12542905  "  +    runSQL?CONNECTION=main
+20211018 12542905  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542905  " info  	endpoint runSQL
+20211018 12542905  " info  	PRAGMA index_xinfo(IDX_SFILTER_MI_OWNER)
+20211018 12542905  " auth  	root/00000002
+20211018 12542905  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542905  " SQL   		r=2 t=27 fr=12 c=0 q=PRAGMA index_xinfo(IDX_SFILTER_MI_OWNER)
+20211018 12542905  "  -    	00.000.048
+20211018 12542905  " http  	127.0.0.1 <- 200
+20211018 12542905  "  -    00.000.285
+20211018 12542905  "  +    runSQL?CONNECTION=main
+20211018 12542905  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542905  " info  	endpoint runSQL
+20211018 12542905  " info  	PRAGMA index_xinfo(IDX_SFILTER_OWNER)
+20211018 12542905  " auth  	root/00000002
+20211018 12542905  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542905  " SQL   		r=2 t=23 fr=10 c=0 q=PRAGMA index_xinfo(IDX_SFILTER_OWNER)
+20211018 12542905  "  -    	00.000.045
+20211018 12542905  " http  	127.0.0.1 <- 200
+20211018 12542905  "  -    00.000.265
+20211018 12542905  "  +    runSQL?CONNECTION=main
+20211018 12542905  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542905  " info  	endpoint runSQL
+20211018 12542905  " info  	PRAGMA table_info('ubs_message')
+20211018 12542905  " auth  	root/00000002
+20211018 12542905  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542905  " SQL   		r=13 t=39 fr=19 c=0 q=PRAGMA table_info('ubs_message')
+20211018 12542905  "  -    	00.000.062
+20211018 12542905  " http  	127.0.0.1 <- 200
+20211018 12542905  "  -    00.000.289
+20211018 12542905  "  +    runSQL?CONNECTION=main
+20211018 12542905  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542905  " info  	endpoint runSQL
+20211018 12542905  " info  	PRAGMA foreign_key_list('ubs_message')
+20211018 12542905  " auth  	root/00000002
+20211018 12542905  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542905  " SQL   		r=4 t=30 fr=14 c=0 q=PRAGMA foreign_key_list('ubs_message')
+20211018 12542905  "  -    	00.000.053
+20211018 12542905  " http  	127.0.0.1 <- 200
+20211018 12542905  "  -    00.000.283
+20211018 12542905  "  +    runSQL?CONNECTION=main
+20211018 12542905  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542905  " info  	endpoint runSQL
+20211018 12542905  " info  	PRAGMA index_list('ubs_message')
+20211018 12542905  " auth  	root/00000002
+20211018 12542905  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542905  " SQL   		r=6 t=48 fr=22 c=0 q=PRAGMA index_list('ubs_message')
+20211018 12542905  "  -    	00.000.083
+20211018 12542905  " http  	127.0.0.1 <- 200
+20211018 12542905  "  -    00.002.065
+20211018 12542906  "  +    runSQL?CONNECTION=main
+20211018 12542906  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542906  " info  	endpoint runSQL
+20211018 12542906  " info  	PRAGMA index_xinfo(idx_ubsmsg_period)
+20211018 12542906  " auth  	root/00000002
+20211018 12542906  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542906  " SQL   		r=3 t=38 fr=18 c=0 q=PRAGMA index_xinfo(idx_ubsmsg_period)
+20211018 12542906  "  -    	00.000.067
+20211018 12542906  " http  	127.0.0.1 <- 200
+20211018 12542906  "  -    00.000.332
+20211018 12542906  "  +    runSQL?CONNECTION=main
+20211018 12542906  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542906  " info  	endpoint runSQL
+20211018 12542906  " info  	PRAGMA index_xinfo(IDX_MSG_MI_DELETEUSER)
+20211018 12542906  " auth  	root/00000002
+20211018 12542906  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542906  " SQL   		r=2 t=30 fr=14 c=0 q=PRAGMA index_xinfo(IDX_MSG_MI_DELETEUSER)
+20211018 12542906  "  -    	00.000.053
+20211018 12542906  " http  	127.0.0.1 <- 200
+20211018 12542906  "  -    00.000.222
+20211018 12542906  "  +    runSQL?CONNECTION=main
+20211018 12542906  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542906  " info  	endpoint runSQL
+20211018 12542906  " info  	PRAGMA index_xinfo(IDX_MSG_MI_MODIFYUSER)
+20211018 12542906  " auth  	root/00000002
+20211018 12542906  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542906  " SQL   		r=2 t=35 fr=16 c=0 q=PRAGMA index_xinfo(IDX_MSG_MI_MODIFYUSER)
+20211018 12542906  "  -    	00.000.061
+20211018 12542906  " http  	127.0.0.1 <- 200
+20211018 12542906  "  -    00.000.239
+20211018 12542906  "  +    runSQL?CONNECTION=main
+20211018 12542906  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542906  " info  	endpoint runSQL
+20211018 12542906  " info  	PRAGMA index_xinfo(IDX_MSG_MI_CREATEUSER)
+20211018 12542906  " auth  	root/00000002
+20211018 12542906  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542906  " SQL   		r=2 t=33 fr=15 c=0 q=PRAGMA index_xinfo(IDX_MSG_MI_CREATEUSER)
+20211018 12542906  "  -    	00.000.060
+20211018 12542906  " http  	127.0.0.1 <- 200
+20211018 12542906  "  -    00.000.235
+20211018 12542906  "  +    runSQL?CONNECTION=main
+20211018 12542906  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542906  " info  	endpoint runSQL
+20211018 12542906  " info  	PRAGMA index_xinfo(IDX_MSG_MI_OWNER)
+20211018 12542906  " auth  	root/00000002
+20211018 12542906  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542906  " SQL   		r=2 t=29 fr=13 c=0 q=PRAGMA index_xinfo(IDX_MSG_MI_OWNER)
+20211018 12542906  "  -    	00.000.055
+20211018 12542906  " http  	127.0.0.1 <- 200
+20211018 12542906  "  -    00.000.243
+20211018 12542906  "  +    runSQL?CONNECTION=main
+20211018 12542906  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542906  " info  	endpoint runSQL
+20211018 12542906  " info  	PRAGMA table_info('ubs_message_recipient')
+20211018 12542906  " auth  	root/00000002
+20211018 12542906  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542906  " SQL   		r=4 t=59 fr=27 c=0 q=PRAGMA table_info('ubs_message_recipient')
+20211018 12542906  "  -    	00.000.100
+20211018 12542906  " http  	127.0.0.1 <- 200
+20211018 12542906  "  -    00.000.378
+20211018 12542906  "  +    runSQL?CONNECTION=main
+20211018 12542906  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542906  " info  	endpoint runSQL
+20211018 12542906  " info  	PRAGMA foreign_key_list('ubs_message_recipient')
+20211018 12542906  " auth  	root/00000002
+20211018 12542906  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542906  " SQL   		r=2 t=41 fr=18 c=0 q=PRAGMA foreign_key_list('ubs_message_recipient')
+20211018 12542906  "  -    	00.000.072
+20211018 12542906  " http  	127.0.0.1 <- 200
+20211018 12542906  "  -    00.000.331
+20211018 12542906  "  +    runSQL?CONNECTION=main
+20211018 12542906  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542906  " info  	endpoint runSQL
+20211018 12542906  " info  	PRAGMA index_list('ubs_message_recipient')
+20211018 12542906  " auth  	root/00000002
+20211018 12542906  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542906  " SQL   		r=4 t=44 fr=20 c=0 q=PRAGMA index_list('ubs_message_recipient')
+20211018 12542906  "  -    	00.000.081
+20211018 12542906  " http  	127.0.0.1 <- 200
+20211018 12542906  "  -    00.000.329
+20211018 12542906  "  +    runSQL?CONNECTION=main
+20211018 12542906  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542906  " info  	endpoint runSQL
+20211018 12542906  " info  	PRAGMA index_xinfo(uidx_ubsmsg_rc)
+20211018 12542906  " auth  	root/00000002
+20211018 12542906  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542906  " SQL   		r=3 t=43 fr=19 c=0 q=PRAGMA index_xinfo(uidx_ubsmsg_rc)
+20211018 12542906  "  -    	00.000.083
+20211018 12542906  " http  	127.0.0.1 <- 200
+20211018 12542906  "  -    00.000.617
+20211018 12542906  "  +    runSQL?CONNECTION=main
+20211018 12542906  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542906  " info  	endpoint runSQL
+20211018 12542906  " info  	PRAGMA index_xinfo(IDX_MSG_RC_USERID)
+20211018 12542906  " auth  	root/00000002
+20211018 12542906  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542906  " SQL   		r=2 t=40 fr=18 c=0 q=PRAGMA index_xinfo(IDX_MSG_RC_USERID)
+20211018 12542906  "  -    	00.000.072
+20211018 12542906  " http  	127.0.0.1 <- 200
+20211018 12542906  "  -    00.000.311
+20211018 12542906  "  +    runSQL?CONNECTION=main
+20211018 12542906  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542906  " info  	endpoint runSQL
+20211018 12542906  " info  	PRAGMA index_xinfo(IDX_MSG_RC_MESSAGEID)
+20211018 12542906  " auth  	root/00000002
+20211018 12542906  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542906  " SQL   		r=2 t=54 fr=26 c=0 q=PRAGMA index_xinfo(IDX_MSG_RC_MESSAGEID)
+20211018 12542906  "  -    	00.000.092
+20211018 12542906  " http  	127.0.0.1 <- 200
+20211018 12542906  "  -    00.000.361
+20211018 12542906  "  +    runSQL?CONNECTION=main
+20211018 12542906  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542906  " info  	endpoint runSQL
+20211018 12542906  " info  	PRAGMA table_info('ubs_numcounter')
+20211018 12542906  " auth  	root/00000002
+20211018 12542906  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542906  " SQL   		r=4 t=49 fr=23 c=0 q=PRAGMA table_info('ubs_numcounter')
+20211018 12542906  "  -    	00.000.085
+20211018 12542906  " http  	127.0.0.1 <- 200
+20211018 12542906  "  -    00.000.328
+20211018 12542906  "  +    runSQL?CONNECTION=main
+20211018 12542906  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542906  " info  	endpoint runSQL
+20211018 12542906  " info  	PRAGMA foreign_key_list('ubs_numcounter')
+20211018 12542906  " auth  	root/00000002
+20211018 12542906  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542906  " SQL   		r=0 t=20 fr=17 c=0 q=PRAGMA foreign_key_list('ubs_numcounter')
+20211018 12542906  "  -    	00.000.059
+20211018 12542906  " http  	127.0.0.1 <- 200
+20211018 12542906  "  -    00.000.286
+20211018 12542906  "  +    runSQL?CONNECTION=main
+20211018 12542906  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542906  " info  	endpoint runSQL
+20211018 12542906  " info  	PRAGMA index_list('ubs_numcounter')
+20211018 12542906  " auth  	root/00000002
+20211018 12542907  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542907  " SQL   		r=2 t=51 fr=23 c=0 q=PRAGMA index_list('ubs_numcounter')
+20211018 12542907  "  -    	00.000.086
+20211018 12542907  " http  	127.0.0.1 <- 200
+20211018 12542907  "  -    00.000.362
+20211018 12542907  "  +    runSQL?CONNECTION=main
+20211018 12542907  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542907  " info  	endpoint runSQL
+20211018 12542907  " info  	PRAGMA index_xinfo(UIDX_NUCO_REGKEY)
+20211018 12542907  " auth  	root/00000002
+20211018 12542907  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542907  " SQL   		r=2 t=37 fr=17 c=0 q=PRAGMA index_xinfo(UIDX_NUCO_REGKEY)
+20211018 12542907  "  -    	00.000.068
+20211018 12542907  " http  	127.0.0.1 <- 200
+20211018 12542907  "  -    00.000.268
+20211018 12542907  "  +    runSQL?CONNECTION=main
+20211018 12542907  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542907  " info  	endpoint runSQL
+20211018 12542907  " info  	PRAGMA table_info('ubs_numcounterreserv')
+20211018 12542907  " auth  	root/00000002
+20211018 12542907  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542907  " SQL   		r=5 t=37 fr=16 c=0 q=PRAGMA table_info('ubs_numcounterreserv')
+20211018 12542907  "  -    	00.000.064
+20211018 12542907  " http  	127.0.0.1 <- 200
+20211018 12542907  "  -    00.000.261
+20211018 12542907  "  +    runSQL?CONNECTION=main
+20211018 12542907  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542907  " info  	endpoint runSQL
+20211018 12542907  " info  	PRAGMA foreign_key_list('ubs_numcounterreserv')
+20211018 12542907  " auth  	root/00000002
+20211018 12542907  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542907  " SQL   		r=0 t=15 fr=13 c=0 q=PRAGMA foreign_key_list('ubs_numcounterreserv')
+20211018 12542907  "  -    	00.000.047
+20211018 12542907  " http  	127.0.0.1 <- 200
+20211018 12542907  "  -    00.000.218
+20211018 12542907  "  +    runSQL?CONNECTION=main
+20211018 12542907  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542907  " info  	endpoint runSQL
+20211018 12542907  " info  	PRAGMA index_list('ubs_numcounterreserv')
+20211018 12542907  " auth  	root/00000002
+20211018 12542907  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542907  " SQL   		r=2 t=33 fr=15 c=0 q=PRAGMA index_list('ubs_numcounterreserv')
+20211018 12542907  "  -    	00.000.054
+20211018 12542907  " http  	127.0.0.1 <- 200
+20211018 12542907  "  -    00.000.233
+20211018 12542907  "  +    runSQL?CONNECTION=main
+20211018 12542907  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542907  " info  	endpoint runSQL
+20211018 12542907  " info  	PRAGMA index_xinfo(UK_UBS_NUMCOUNT_RKC)
+20211018 12542907  " auth  	root/00000002
+20211018 12542907  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542907  " SQL   		r=3 t=29 fr=12 c=0 q=PRAGMA index_xinfo(UK_UBS_NUMCOUNT_RKC)
+20211018 12542907  "  -    	00.000.054
+20211018 12542907  " http  	127.0.0.1 <- 200
+20211018 12542907  "  -    00.000.218
+20211018 12542907  "  +    runSQL?CONNECTION=main
+20211018 12542907  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542907  " info  	endpoint runSQL
+20211018 12542907  " info  	PRAGMA table_info('ubs_softLock')
+20211018 12542907  " auth  	root/00000002
+20211018 12542907  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542907  " SQL   		r=6 t=41 fr=19 c=0 q=PRAGMA table_info('ubs_softLock')
+20211018 12542907  "  -    	00.000.069
+20211018 12542907  " http  	127.0.0.1 <- 200
+20211018 12542907  "  -    00.000.284
+20211018 12542907  "  +    runSQL?CONNECTION=main
+20211018 12542907  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542907  " info  	endpoint runSQL
+20211018 12542907  " info  	PRAGMA foreign_key_list('ubs_softLock')
+20211018 12542907  " auth  	root/00000002
+20211018 12542907  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542907  " SQL   		r=1 t=27 fr=12 c=0 q=PRAGMA foreign_key_list('ubs_softLock')
+20211018 12542907  "  -    	00.000.055
+20211018 12542907  " http  	127.0.0.1 <- 200
+20211018 12542907  "  -    00.000.215
+20211018 12542907  "  +    runSQL?CONNECTION=main
+20211018 12542907  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542907  " info  	endpoint runSQL
+20211018 12542907  " info  	PRAGMA index_list('ubs_softLock')
+20211018 12542907  " auth  	root/00000002
+20211018 12542907  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542907  " SQL   		r=3 t=32 fr=16 c=0 q=PRAGMA index_list('ubs_softLock')
+20211018 12542907  "  -    	00.000.056
+20211018 12542907  " http  	127.0.0.1 <- 200
+20211018 12542907  "  -    00.000.444
+20211018 12542907  "  +    runSQL?CONNECTION=main
+20211018 12542907  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542907  " info  	endpoint runSQL
+20211018 12542907  " info  	PRAGMA index_xinfo(UIDX_SOFTLOCK_LOENT)
+20211018 12542907  " auth  	root/00000002
+20211018 12542907  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542907  " SQL   		r=3 t=28 fr=12 c=0 q=PRAGMA index_xinfo(UIDX_SOFTLOCK_LOENT)
+20211018 12542907  "  -    	00.000.055
+20211018 12542907  " http  	127.0.0.1 <- 200
+20211018 12542907  "  -    00.000.328
+20211018 12542907  "  +    runSQL?CONNECTION=main
+20211018 12542907  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542907  " info  	endpoint runSQL
+20211018 12542907  " info  	PRAGMA index_xinfo(IDX_SLOCK_LOCKUSER)
+20211018 12542907  " auth  	root/00000002
+20211018 12542907  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542907  " SQL   		r=2 t=36 fr=14 c=0 q=PRAGMA index_xinfo(IDX_SLOCK_LOCKUSER)
+20211018 12542907  "  -    	00.000.071
+20211018 12542907  " http  	127.0.0.1 <- 200
+20211018 12542907  "  -    00.000.271
+20211018 12542907  "  +    runSQL?CONNECTION=main
+20211018 12542907  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542907  " info  	endpoint runSQL
+20211018 12542907  " info  	PRAGMA table_info('req_user')
+20211018 12542907  " auth  	root/00000002
+20211018 12542907  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542907  " SQL   		r=5 t=40 fr=18 c=0 q=PRAGMA table_info('req_user')
+20211018 12542907  "  -    	00.000.070
+20211018 12542907  " http  	127.0.0.1 <- 200
+20211018 12542907  "  -    00.000.260
+20211018 12542907  "  +    runSQL?CONNECTION=main
+20211018 12542907  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542907  " info  	endpoint runSQL
+20211018 12542907  " info  	PRAGMA foreign_key_list('req_user')
+20211018 12542907  " auth  	root/00000002
+20211018 12542907  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542907  " SQL   		r=0 t=13 fr=11 c=0 q=PRAGMA foreign_key_list('req_user')
+20211018 12542907  "  -    	00.000.043
+20211018 12542907  " http  	127.0.0.1 <- 200
+20211018 12542907  "  -    00.000.222
+20211018 12542907  "  +    runSQL?CONNECTION=main
+20211018 12542907  " http  	127.0.0.1 -> POST runSQL?CONNECTION=main
+20211018 12542907  " info  	endpoint runSQL
+20211018 12542907  " info  	PRAGMA index_list('req_user')
+20211018 12542907  " auth  	root/00000002
+20211018 12542907  "  +    	NDBExecute(conn=main/SQLite3)
+20211018 12542907  " SQL   		r=1 t=27 fr=12 c=0 q=PRAGMA index_list('req_user')
+20211018 12542907  "  -    	00.000.053
+20211018 12542907  " http  	127.0.0.1 <- 200
+20211018 12542907  "  -    00.000.245
+20211018 12542910  ! mon   {"sessions_total":0,"threads_total":4,"incoming_bytes":73109,"outcoming_bytes":291466,"responses_total":[0,0,240,0,0,0],"security_exception_count":0,"js_gc_count":13,"js_memory_bytes":3481600,"http_perning_request_count":0}

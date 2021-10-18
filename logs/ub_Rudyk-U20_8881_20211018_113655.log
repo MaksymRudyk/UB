@@ -1,0 +1,51 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-18T08:36:55
+
+20211018 08365544  ! auth  Build-in session admin/00000000 created
+20211018 08365544  ! auth  Build-in session anonymous/00000001 created
+20211018 08365544  ! auth  Build-in session root/00000002 created
+20211018 08365544  #  +    init
+20211018 08365552  # info  	Loading domain models...
+20211018 08365552  # info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211018 08365552  # info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211018 08365553  # info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211018 08365553  # info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211018 08365553  # info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211018 08365553  # info  	"requests"(1.0.0) from "./models/requests"
+20211018 08365553  # info  	Loading meta files for 40 entities... 
+20211018 08365555  # info  	load domain: 50ms
+20211018 08365555  # info  	applying metadata transformation hook from UB
+20211018 08365555  # debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211018 08365555  # info  	applying hooks: 4ms
+20211018 08365556  # info  	native init: 6ms
+20211018 08365603  #  +    	Init ELS
+20211018 08365603  #  +    		DataStore.init(uba_role)
+20211018 08365603  #  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211018 08365603  #  +    				
+20211018 08365604  #  -    				00.006.786
+20211018 08365604  # SQL   				r=9 t=6825 fr=6806 c=0 q=SELECT A01.ID,A01.name,A01.sessionTimeout,A01.allowedAppMethods  FROM uba_role A01 
+20211018 08365604  #  -    			00.006.870
+20211018 08365604  #  -    		00.006.887
+20211018 08365604  #  +    		DataStore.init(uba_els)
+20211018 08365604  #  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211018 08365604  # SQL   				r=58 t=95 fr=25 c=0 q=SELECT A01.ID,A01.entityMask,A01.methodMask,A01.ruleType,A01.ruleRole,A01.disabled,A01.code  FROM uba_els A01 
+20211018 08365604  #  -    			00.000.117
+20211018 08365604  #  -    		00.000.141
+20211018 08365604  #  -    	00.007.628
+20211018 08365604  #  +    	DataStore.init(ubs_settings)
+20211018 08365604  #  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211018 08365604  # cust1 			{"P1s34":"UBA.passwordPolicy.maxDurationDays"}
+20211018 08365604  # SQL   			r=1 t=59 fr=29 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211018 08365604  #  -    		00.000.087
+20211018 08365604  #  -    	00.000.098
+20211018 08365604  #  +    	DataStore.init(ubs_settings)
+20211018 08365604  #  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211018 08365604  # cust1 			{"P1s37":"UBA.passwordPolicy.maxInvalidAttempts"}
+20211018 08365604  # SQL   			r=1 t=70 fr=59 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211018 08365604  #  -    		00.000.022
+20211018 08365604  #  -    	00.000.028
+20211018 08365604  #  -    00.360.723
+20211018 08365604  ! srvr  Server restarted
+20211018 08365743  ! srvr  Terminating...
+20211018 08365743  ! mon   {"sessions_total":0,"threads_total":1,"incoming_bytes":361099,"outcoming_bytes":1277486,"responses_total":[0,0,486,0,2,6],"security_exception_count":6,"js_gc_count":7,"js_memory_bytes":3973120,"http_perning_request_count":0}

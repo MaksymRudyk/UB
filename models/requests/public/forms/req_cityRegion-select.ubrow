@@ -1,0 +1,9 @@
+{
+ "description": "Select the city's region name",
+ "caption": "Select the city's region name",
+ "formType": "custom",
+ "formDef": "req_cityRegion-select-fm.def",
+ "formCode": "req_cityRegion-select-fm.js",
+ "entity": "req_cityRegion",
+ "isDefault": false
+}

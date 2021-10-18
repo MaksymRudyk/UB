@@ -1,0 +1,57 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-18T12:34:15
+
+20211018 12341548  ! srvr  StartupPath: '/home/admloc/Documents/ubProject/CityPortal/'; BinPath: '/opt/unitybase/server/'
+20211018 12341548  ! srvr  JS Engine params: engine-max-mem=512Mb, engine-lifetime=360sec, engine-full-gc=every 100 HTTP req
+20211018 12341548  ! warn  CPU support for AVX2 and SSE42 not available or can not be used
+20211018 12341548  ! srvr  FTS is disabled
+20211018 12341548  "  +    init
+20211018 12341548  " srvr  	Start application initialization...
+20211018 12341556  " info  	Loading domain models...
+20211018 12341556  " info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211018 12341556  " info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211018 12341556  " info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211018 12341557  " info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211018 12341557  " info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211018 12341557  " info  	"requests"(1.0.0) from "./models/requests"
+20211018 12341557  " info  	Loading meta files for 42 entities... 
+20211018 12341559  " info  	load domain: 58ms
+20211018 12341559  " info  	applying metadata transformation hook from UB
+20211018 12341559  " debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211018 12341559  " info  	applying hooks: 4ms
+20211018 12341560  " info  	native init: 4ms
+20211018 12341560  " srvr  	The domain loaded successfully with 43 entities
+20211018 12341608  "  +    	Init ELS
+20211018 12341608  "  +    		DataStore.init(uba_role)
+20211018 12341608  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211018 12341608  "  +    				
+20211018 12341608  "  -    				00.002.507
+20211018 12341608  " SQL   				r=9 t=2554 fr=2532 c=0 q=SELECT A01.ID,A01.name,A01.sessionTimeout,A01.allowedAppMethods  FROM uba_role A01 
+20211018 12341608  "  -    			00.002.610
+20211018 12341608  "  -    		00.002.628
+20211018 12341608  "  +    		DataStore.init(uba_els)
+20211018 12341608  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211018 12341608  " SQL   				r=150 t=224 fr=25 c=0 q=SELECT A01.ID,A01.entityMask,A01.methodMask,A01.ruleType,A01.ruleRole,A01.disabled  FROM uba_els A01 
+20211018 12341608  "  -    			00.000.253
+20211018 12341608  "  -    		00.000.306
+20211018 12341608  "  -    	00.004.283
+20211018 12341608  "  +    	DataStore.init(ubs_settings)
+20211018 12341608  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211018 12341608  " cust1 			{"P1s34":"UBA.passwordPolicy.maxDurationDays"}
+20211018 12341608  " SQL   			r=1 t=47 fr=22 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211018 12341608  "  -    		00.000.070
+20211018 12341608  "  -    	00.000.082
+20211018 12341608  "  +    	DataStore.init(ubs_settings)
+20211018 12341608  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211018 12341608  " cust1 			{"P1s37":"UBA.passwordPolicy.maxInvalidAttempts"}
+20211018 12341608  " SQL   			r=1 t=60 fr=48 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211018 12341608  "  -    		00.000.028
+20211018 12341608  "  -    	00.000.037
+20211018 12341608  "  -    00.360.380
+20211018 12341608  ! srvr  Enable zip compression
+20211018 12341608  ! srvr  Local IP addresses: 10.8.125.48;127.0.0.1
+20211018 12341608  ! srvr  Socket server URLs: http://localhost:8881/
+20211018 12341608  ! srvr  Started and ready to accept requests...
+20211018 12495320  ! srvr  Restarting...
+20211018 12495320  ! mon   {"sessions_total":0,"threads_total":4,"incoming_bytes":0,"outcoming_bytes":0,"responses_total":[0,0,0,0,0,0],"security_exception_count":0,"js_gc_count":7,"js_memory_bytes":3715072,"http_perning_request_count":0}

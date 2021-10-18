@@ -1,0 +1,20 @@
+{
+  "caption": "City region",
+  "description": "city region",
+  "descriptionAttribute": "name",
+  "attributes": [
+    {
+      "name": "name",
+      "dataType": "String",
+      "size": 255,
+      "caption": "Region name",
+      "description": "Region name",
+      "allowNull": false,
+      "isMultiLang": false,
+      "isUnique": true
+    }
+  ],
+  "mixins": {
+    "mStorage": {}
+  }
+}
