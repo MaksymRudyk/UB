@@ -1,0 +1,68 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-19T07:50:05
+
+20211019 07500504  "  +    init
+20211019 07500511  " info  	Loading domain models...
+20211019 07500511  " info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211019 07500511  " info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211019 07500512  " info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211019 07500512  " info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211019 07500512  " info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211019 07500512  " info  	"requests"(1.0.0) from "./models/requests"
+20211019 07500512  " info  	Loading meta files for 42 entities... 
+20211019 07500514  " info  	load domain: 54ms
+20211019 07500514  " info  	applying metadata transformation hook from UB
+20211019 07500514  " debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211019 07500514  " info  	applying hooks: 4ms
+20211019 07500514  " info  	native init: 4ms
+20211019 07500524  "  +    	Init ELS
+20211019 07500524  "  +    		DataStore.init(uba_role)
+20211019 07500524  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211019 07500524  "  +    				
+20211019 07500524  "  -    				00.002.475
+20211019 07500524  " SQL   				r=9 t=2525 fr=2498 c=0 q=SELECT A01.ID,A01.name,A01.sessionTimeout,A01.allowedAppMethods  FROM uba_role A01 
+20211019 07500524  "  -    			00.002.568
+20211019 07500524  "  -    		00.002.585
+20211019 07500524  "  +    		DataStore.init(uba_els)
+20211019 07500524  "  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211019 07500524  " SQL   				r=150 t=229 fr=28 c=0 q=SELECT A01.ID,A01.entityMask,A01.methodMask,A01.ruleType,A01.ruleRole,A01.disabled  FROM uba_els A01 
+20211019 07500524  "  -    			00.000.258
+20211019 07500524  "  -    		00.000.312
+20211019 07500524  "  -    	00.004.209
+20211019 07500524  "  +    	DataStore.init(ubs_settings)
+20211019 07500524  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211019 07500524  " cust1 			{"P1s34":"UBA.passwordPolicy.maxDurationDays"}
+20211019 07500524  " SQL   			r=1 t=50 fr=23 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211019 07500524  "  -    		00.000.073
+20211019 07500524  "  -    	00.000.085
+20211019 07500524  "  +    	DataStore.init(ubs_settings)
+20211019 07500524  "  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211019 07500524  " cust1 			{"P1s37":"UBA.passwordPolicy.maxInvalidAttempts"}
+20211019 07500524  " SQL   			r=1 t=63 fr=50 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211019 07500524  "  -    		00.000.027
+20211019 07500524  "  -    	00.000.035
+20211019 07500524  "  -    00.328.747
+20211019 07500524  ! srvr  Server restarted
+20211019 07500949  "  +    internalCall
+20211019 07500949  " http  	127.0.0.1 -> GET 
+20211019 07500949  " info  	endpoint statics
+20211019 07500949  " info  	reqPath index.html
+20211019 07500949  " http  	127.0.0.1 <- 200
+20211019 07500949  "  -    00.002.294
+20211019 07500955  #  +    node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07500955  # http  	127.0.0.1 -> GET node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07501015  "  +    app.js
+20211019 07501015  " http  	127.0.0.1 -> GET app.js
+20211019 07501015  " info  	endpoint statics
+20211019 07501015  " info  	reqPath app.js
+20211019 07501015  " http  	127.0.0.1 <- 200
+20211019 07501015  "  -    00.000.670
+20211019 07501022  # debug 	Scripting engine is already set to the same value
+20211019 07501022  # info  	endpoint statics
+20211019 07501022  # info  	reqPath node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07501022  # ERROR 	Not found "/home/admloc/Documents/ubProject/CityPortal/www/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js"
+20211019 07501022  # http  	127.0.0.1 <- 404
+20211019 07501022  #  -    00.468.936
+20211019 07540433  ! srvr  Restarting...
+20211019 07540433  ! mon   {"sessions_total":0,"threads_total":4,"incoming_bytes":193838,"outcoming_bytes":586482,"responses_total":[0,0,232,0,31,0],"security_exception_count":0,"js_gc_count":14,"js_memory_bytes":6909952,"http_perning_request_count":0}

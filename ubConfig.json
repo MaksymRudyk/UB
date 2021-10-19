@@ -1,7 +1,8 @@
 {
   "httpServer": {
     "host": "+",
-    "port": "8881"
+    "port": "8881",
+    "inetPub": "./www"
   },
   "logging": {
     "levels": [

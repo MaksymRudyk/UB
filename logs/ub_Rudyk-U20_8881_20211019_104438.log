@@ -1,0 +1,373 @@
+/opt/unitybase/server/ub 5.20.8.32294 (2021-10-01 10:01:06)
+Host=Rudyk-U20 User=admloc CPU=4xIntel(R)Core(TM)i3-3240CPU@3.40GHz(x64):FFFBEBBFBFE39A3D81020000000000000004009C OS=Ubuntu=Linux-5.11.0-37-generic#41~20.04.2-Ubuntu-SMP-Fri-Sep-24-09:06:38-UTC-2021 Wow64=0 Freq=1000000
+TubLog 1.18.6324 CM PRTL 2021-10-19T07:44:38
+
+20211019 07443821  &  +    init
+20211019 07443828  & info  	Loading domain models...
+20211019 07443828  & info  	"UB"(5.22.15) from "./node_modules/@unitybase/ub"
+20211019 07443828  & info  	"UBA"(5.20.26) from "./node_modules/@unitybase/uba"
+20211019 07443828  & info  	"UBS"(5.20.26) from "./node_modules/@unitybase/ubs"
+20211019 07443828  & info  	"UBM"(5.20.26) from "./node_modules/@unitybase/ubm"
+20211019 07443829  & info  	"adminui-reg"(5.20.26) from "./node_modules/@unitybase/adminui-reg"
+20211019 07443829  & info  	"requests"(1.0.0) from "./models/requests"
+20211019 07443829  & info  	Loading meta files for 42 entities... 
+20211019 07443831  & info  	load domain: 44ms
+20211019 07443831  & info  	applying metadata transformation hook from UB
+20211019 07443831  & debug 	Adding implicitlyAddedMixins: [ 'audit' ]
+20211019 07443831  & info  	applying hooks: 4ms
+20211019 07443831  & info  	native init: 4ms
+20211019 07443841  &  +    	Init ELS
+20211019 07443841  &  +    		DataStore.init(uba_role)
+20211019 07443841  &  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211019 07443841  &  +    				
+20211019 07443842  &  -    				00.012.197
+20211019 07443842  & SQL   				r=9 t=12238 fr=12218 c=0 q=SELECT A01.ID,A01.name,A01.sessionTimeout,A01.allowedAppMethods  FROM uba_role A01 
+20211019 07443842  &  -    			00.012.278
+20211019 07443842  &  -    		00.012.293
+20211019 07443842  &  +    		DataStore.init(uba_els)
+20211019 07443842  &  +    			App.fetchAllOrExec(conn=main/SQLite3)
+20211019 07443842  & SQL   				r=150 t=172 fr=22 c=0 q=SELECT A01.ID,A01.entityMask,A01.methodMask,A01.ruleType,A01.ruleRole,A01.disabled  FROM uba_els A01 
+20211019 07443842  &  -    			00.000.195
+20211019 07443842  &  -    		00.000.236
+20211019 07443842  &  -    	00.013.615
+20211019 07443842  &  +    	DataStore.init(ubs_settings)
+20211019 07443842  &  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211019 07443842  & cust1 			{"P1s34":"UBA.passwordPolicy.maxDurationDays"}
+20211019 07443842  & SQL   			r=1 t=44 fr=21 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211019 07443842  &  -    		00.000.063
+20211019 07443842  &  -    	00.000.075
+20211019 07443842  &  +    	DataStore.init(ubs_settings)
+20211019 07443842  &  +    		App.fetchAllOrExec(conn=main/SQLite3)
+20211019 07443842  & cust1 			{"P1s37":"UBA.passwordPolicy.maxInvalidAttempts"}
+20211019 07443842  & SQL   			r=1 t=56 fr=44 c=0 q=select settingValue from ubs_settings where settingKey =?
+20211019 07443842  &  -    		00.000.025
+20211019 07443842  &  -    	00.000.032
+20211019 07443842  &  -    00.336.752
+20211019 07443842  ! srvr  Server restarted
+20211019 07445339  &  +    adm
+20211019 07445339  & http  	127.0.0.1 -> GET adm
+20211019 07445339  & info  	endpoint adm
+20211019 07445340  & info  	index.mustache is generated from template /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-pub/index.mustache
+20211019 07445340  & debug 	default-src 'self' https://localhost:8083 http://localhost:8081; connect-src 'self'  https://localhost:8083 http://localhost:8081 blob:; script-src 'self' 'nonce-df9199a5' 'unsafe-eval' https://localhost:8083 http://localhost:8081 resource://pdf.js/build/ resource://pdf.js/web/; object-src blob: https://localhost:8083 http://localhost:8081; base-uri resource:; style-src 'self' 'unsafe-inline' data: ; font-src 'self' data: ; frame-src 'self'  blob:; img-src 'self' https://unitybase.info  data: blob:; plugin-types application/pdf
+20211019 07445340  & http  	127.0.0.1 <- 200
+20211019 07445340  &  -    00.025.058
+20211019 07445342  %  +    models/adminui-pub/themes/UBGrayTheme/UBGrayTheme-all.css?ver=5.20.26
+20211019 07445342  % http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/UBGrayTheme-all.css?ver=5.20.26
+20211019 07445343  $  +    models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211019 07445343  $ http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211019 07445343  #  +    models/adminui-vue/theme/el-theme-compiled.min.css
+20211019 07445343  # http  	127.0.0.1 -> GET models/adminui-vue/theme/el-theme-compiled.min.css
+20211019 07445343  &  +    models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211019 07445343  & http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211019 07445349  & info  	endpoint models
+20211019 07445349  & http  	127.0.0.1 <- 200
+20211019 07445349  &  -    00.093.207
+20211019 07445349  &  +    models/adminui-pub/ub-css-all.css?ver=5.20.26
+20211019 07445349  & http  	127.0.0.1 -> GET models/adminui-pub/ub-css-all.css?ver=5.20.26
+20211019 07445349  & info  	endpoint models
+20211019 07445349  & http  	127.0.0.1 <- 200
+20211019 07445349  &  -    00.004.157
+20211019 07445349  &  +    models/adminui-vue/dist/fonts/fa/css/regular.min.css
+20211019 07445349  & http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/regular.min.css
+20211019 07445349  & info  	endpoint models
+20211019 07445349  & http  	127.0.0.1 <- 200
+20211019 07445349  &  -    00.000.494
+20211019 07445349  &  +    models/adminui-vue/dist/fonts/fa/css/v4-shims.min.css
+20211019 07445349  & http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/v4-shims.min.css
+20211019 07445349  & info  	endpoint models
+20211019 07445349  & http  	127.0.0.1 <- 200
+20211019 07445349  &  -    00.000.542
+20211019 07445349  &  +    models/adminui-pub/themes/UBGrayTheme/ub.css?ver=5.20.26
+20211019 07445349  & http  	127.0.0.1 -> GET models/adminui-pub/themes/UBGrayTheme/ub.css?ver=5.20.26
+20211019 07445349  & info  	endpoint models
+20211019 07445349  & http  	127.0.0.1 <- 200
+20211019 07445349  &  -    00.000.590
+20211019 07445350  &  +    models/adminui-vue/views/ub-auth.html?returnUrl=http%3A%2F%2Flocalhost%3A8881%2Fadm
+20211019 07445350  & http  	127.0.0.1 -> GET models/adminui-vue/views/ub-auth.html?returnUrl=http%3A%2F%2Flocalhost%3A8881%2Fadm
+20211019 07445350  & info  	endpoint models
+20211019 07445350  & http  	127.0.0.1 <- 200
+20211019 07445350  &  -    00.000.650
+20211019 07445350  &  +    clientRequire/systemjs/dist/system.js
+20211019 07445350  & http  	127.0.0.1 -> GET clientRequire/systemjs/dist/system.js
+20211019 07445350  & info  	endpoint clientRequire
+20211019 07445350  & debug 	Try to resolve systemjs/dist/system.js
+20211019 07445350  & debug 	Resolve systemjs/dist/system.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/systemjs/dist/system.js
+20211019 07445350  & http  	127.0.0.1 <- 200
+20211019 07445350  &  -    00.002.295
+20211019 07445351  &  +    models/adminui-pub/dist/ext-all.min.js
+20211019 07445351  & http  	127.0.0.1 -> GET models/adminui-pub/dist/ext-all.min.js
+20211019 07445351  & info  	endpoint models
+20211019 07445351  & http  	127.0.0.1 <- 200
+20211019 07445351  &  -    00.000.546
+20211019 07445353  & EXC   ECrtSocket ("SndLow() len=498099 [32  Broken pipe]") [] at   $000000000046BBBD  $000000000046BB11
+20211019 07445353  &  +    models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211019 07445353  & http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/fontawesome.min.css
+20211019 07445353  & info  	endpoint models
+20211019 07445353  & debug 	model file is resolved from cache
+20211019 07445353  & http  	127.0.0.1 <- 200
+20211019 07445353  &  -    00.000.481
+20211019 07445354  &  +    models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211019 07445354  & http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/css/solid.min.css
+20211019 07445354  & info  	endpoint models
+20211019 07445354  & http  	127.0.0.1 <- 200
+20211019 07445354  &  -    00.001.166
+20211019 07445355  &  +    models/adminui-vue/theme/el-theme-compiled.min.css
+20211019 07445355  & http  	127.0.0.1 -> GET models/adminui-vue/theme/el-theme-compiled.min.css
+20211019 07445355  & info  	endpoint models
+20211019 07445355  & http  	127.0.0.1 <- 200
+20211019 07445355  &  -    00.000.769
+20211019 07445355  &  +    clientRequire/lodash/lodash.min.js
+20211019 07445355  & http  	127.0.0.1 -> GET clientRequire/lodash/lodash.min.js
+20211019 07445355  & info  	endpoint clientRequire
+20211019 07445355  & debug 	Try to resolve lodash/lodash.min.js
+20211019 07445355  & debug 	Resolve lodash/lodash.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/lodash/lodash.min.js
+20211019 07445355  & http  	127.0.0.1 <- 200
+20211019 07445355  &  -    00.001.038
+20211019 07445356  &  +    clientRequire/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07445356  & http  	127.0.0.1 -> GET clientRequire/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07445356  & info  	endpoint clientRequire
+20211019 07445356  & debug 	Try to resolve @unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07445356  & debug 	Resolve @unitybase/ub-pub/dist/ub-pub.min.js -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07445356  & http  	127.0.0.1 <- 200
+20211019 07445356  &  -    00.000.521
+20211019 07445356  &  +    models/adminui-vue/dist/adminui-vue.min.js
+20211019 07445356  & http  	127.0.0.1 -> GET models/adminui-vue/dist/adminui-vue.min.js
+20211019 07445356  & info  	endpoint models
+20211019 07445356  & http  	127.0.0.1 <- 200
+20211019 07445356  &  -    00.001.328
+20211019 07445409  &  +    clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211019 07445409  & http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211019 07445409  & info  	endpoint clientRequire
+20211019 07445409  & debug 	Try to resolve @unitybase/adminui-vue/dist/adminui-vue.min.css
+20211019 07445409  & debug 	Resolve @unitybase/adminui-vue/dist/adminui-vue.min.css -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/adminui-vue.min.css
+20211019 07445409  & http  	127.0.0.1 <- 200
+20211019 07445409  &  -    00.000.699
+20211019 07445411  $ debug 	Scripting engine is already set to the same value
+20211019 07445411  $ info  	endpoint models
+20211019 07445411  $ debug 	model file is resolved from cache
+20211019 07445411  $ http  	127.0.0.1 <- 200
+20211019 07445411  $  -    00.493.240
+20211019 07445412  % debug 	Scripting engine is already set to the same value
+20211019 07445412  % info  	endpoint models
+20211019 07445412  % http  	127.0.0.1 <- 200
+20211019 07445412  %  -    00.512.524
+20211019 07445412  % EXC   ECrtSocket ("SndLow() len=27434 [32  Broken pipe]") [] at   $000000000046BBBD  $000000000046BB11
+20211019 07445415  &  +    getAppInfo
+20211019 07445415  & http  	127.0.0.1 -> GET getAppInfo
+20211019 07445415  & info  	endpoint getAppInfo
+20211019 07445415  & http  	127.0.0.1 <- 200
+20211019 07445415  &  -    00.005.802
+20211019 07445417  &  +    models/ub-pub/locale/lang-en.json
+20211019 07445417  & http  	127.0.0.1 -> GET models/ub-pub/locale/lang-en.json
+20211019 07445417  & info  	endpoint models
+20211019 07445417  & http  	127.0.0.1 <- 200
+20211019 07445417  &  -    00.000.424
+20211019 07445417  &  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211019 07445417  & http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211019 07445417  & info  	endpoint clientRequire
+20211019 07445417  & debug 	Try to resolve @unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211019 07445417  & debug 	Resolve @unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Regular.ttf
+20211019 07445417  & http  	127.0.0.1 <- 200
+20211019 07445417  &  -    00.000.575
+20211019 07445417  # debug 	Scripting engine is already set to the same value
+20211019 07445417  # info  	endpoint models
+20211019 07445417  # debug 	model file is resolved from cache
+20211019 07445417  # http  	127.0.0.1 <- 200
+20211019 07445417  #  -    00.594.318
+20211019 07445417  # EXC   ECrtSocket ("SndLow() len=46388 [32  Broken pipe]") [] at   $000000000046BBBD  $000000000046BB11
+20211019 07445419  &  +    models/ub-pub/img/login-logo.svg
+20211019 07445419  & http  	127.0.0.1 -> GET models/ub-pub/img/login-logo.svg
+20211019 07445419  & info  	endpoint models
+20211019 07445419  & http  	127.0.0.1 <- 200
+20211019 07445419  &  -    00.000.431
+20211019 07445424  &  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211019 07445424  & http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211019 07445424  & info  	endpoint clientRequire
+20211019 07445424  & debug 	Try to resolve @unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211019 07445424  & debug 	Resolve @unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Light.ttf
+20211019 07445424  & http  	127.0.0.1 <- 200
+20211019 07445424  &  -    00.000.627
+20211019 07445424  %  +    clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211019 07445424  % http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211019 07445424  % info  	endpoint clientRequire
+20211019 07445424  % debug 	Try to resolve @unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211019 07445424  $  +    models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211019 07445424  $ http  	127.0.0.1 -> GET models/adminui-vue/dist/fonts/fa/webfonts/fa-solid-900.woff2
+20211019 07445424  $ info  	endpoint models
+20211019 07445424  $ http  	127.0.0.1 <- 200
+20211019 07445424  $  -    00.001.077
+20211019 07445424  % debug 	Resolve @unitybase/adminui-vue/dist/fonts/ub-icons.woff2 -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/ub-icons.woff2
+20211019 07445424  % http  	127.0.0.1 <- 200
+20211019 07445424  %  -    00.003.129
+20211019 07445424  #  +    clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211019 07445424  # http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211019 07445424  # info  	endpoint clientRequire
+20211019 07445424  # debug 	Try to resolve @unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211019 07445424  # debug 	Resolve @unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf -> /home/admloc/Documents/ubProject/CityPortal/node_modules/@unitybase/adminui-vue/dist/fonts/Roboto-Medium.ttf
+20211019 07445424  # http  	127.0.0.1 <- 200
+20211019 07445424  #  -    00.001.531
+20211019 07450124  &  +    www
+20211019 07450124  & http  	127.0.0.1 -> GET www
+20211019 07450124  & info  	endpoint statics
+20211019 07450124  & info  	reqPath www
+20211019 07450124  & ERROR 	Not found "/home/admloc/Documents/ubProject/CityPortal/www/www"
+20211019 07450124  & http  	127.0.0.1 <- 404
+20211019 07450124  &  -    00.000.771
+20211019 07451515  %  +    internalCall
+20211019 07451515  % http  	127.0.0.1 -> GET 
+20211019 07451515  % info  	endpoint statics
+20211019 07451515  % info  	reqPath index.html
+20211019 07451515  % http  	127.0.0.1 <- 200
+20211019 07451515  %  -    00.001.264
+20211019 07451516  &  +    node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07451516  & http  	127.0.0.1 -> GET node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07451516  & info  	endpoint statics
+20211019 07451516  & info  	reqPath node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07451516  & ERROR 	Not found "/home/admloc/Documents/ubProject/CityPortal/www/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js"
+20211019 07451516  & http  	127.0.0.1 <- 404
+20211019 07451516  &  -    00.000.355
+20211019 07451520  &  +    app.js
+20211019 07451520  & http  	127.0.0.1 -> GET app.js
+20211019 07451520  & info  	endpoint statics
+20211019 07451520  & info  	reqPath app.js
+20211019 07451520  & http  	127.0.0.1 <- 200
+20211019 07451520  &  -    00.000.326
+20211019 07451523  &  +    node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07451523  & http  	127.0.0.1 -> GET node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07451523  & info  	endpoint statics
+20211019 07451523  & info  	reqPath node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07451523  & ERROR 	Not found "/home/admloc/Documents/ubProject/CityPortal/www/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js"
+20211019 07451523  & http  	127.0.0.1 <- 404
+20211019 07451523  &  -    00.000.455
+20211019 07473031  &  +    internalCall
+20211019 07473031  & http  	127.0.0.1 -> GET 
+20211019 07473031  & info  	endpoint statics
+20211019 07473031  & info  	reqPath index.html
+20211019 07473031  & http  	127.0.0.1 <- 200
+20211019 07473031  &  -    00.000.389
+20211019 07473033  %  +    node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07473033  % http  	127.0.0.1 -> GET node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07473033  % info  	endpoint statics
+20211019 07473033  % info  	reqPath node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07473033  % ERROR 	Not found "/home/admloc/Documents/ubProject/CityPortal/www/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js"
+20211019 07473033  % http  	127.0.0.1 <- 404
+20211019 07473033  %  -    00.000.499
+20211019 07473036  &  +    app.js
+20211019 07473036  & http  	127.0.0.1 -> GET app.js
+20211019 07473036  & info  	endpoint statics
+20211019 07473036  & info  	reqPath app.js
+20211019 07473036  & http  	127.0.0.1 <- 200
+20211019 07473036  &  -    00.000.370
+20211019 07473042  &  +    node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07473042  & http  	127.0.0.1 -> GET node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07473042  & info  	endpoint statics
+20211019 07473042  & info  	reqPath node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07473042  & ERROR 	Not found "/home/admloc/Documents/ubProject/CityPortal/www/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js"
+20211019 07473042  & http  	127.0.0.1 <- 404
+20211019 07473042  &  -    00.000.540
+20211019 07473716  &  +    internalCall
+20211019 07473716  & http  	127.0.0.1 -> GET 
+20211019 07473716  & info  	endpoint statics
+20211019 07473716  & info  	reqPath index.html
+20211019 07473716  & http  	127.0.0.1 <- 200
+20211019 07473716  &  -    00.000.469
+20211019 07473718  %  +    node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07473718  % http  	127.0.0.1 -> GET node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07473718  % info  	endpoint statics
+20211019 07473718  % info  	reqPath node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07473718  % ERROR 	Not found "/home/admloc/Documents/ubProject/CityPortal/www/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js"
+20211019 07473718  % http  	127.0.0.1 <- 404
+20211019 07473718  %  -    00.000.654
+20211019 07473721  &  +    app.js
+20211019 07473721  & http  	127.0.0.1 -> GET app.js
+20211019 07473721  & info  	endpoint statics
+20211019 07473721  & info  	reqPath app.js
+20211019 07473721  & http  	127.0.0.1 <- 200
+20211019 07473721  &  -    00.000.412
+20211019 07473729  &  +    node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07473729  & http  	127.0.0.1 -> GET node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07473729  & info  	endpoint statics
+20211019 07473729  & info  	reqPath node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07473729  & ERROR 	Not found "/home/admloc/Documents/ubProject/CityPortal/www/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js"
+20211019 07473729  & http  	127.0.0.1 <- 404
+20211019 07473729  &  -    00.000.365
+20211019 07474532  &  +    internalCall
+20211019 07474532  & http  	127.0.0.1 -> GET 
+20211019 07474532  & info  	endpoint statics
+20211019 07474532  & info  	reqPath index.html
+20211019 07474532  & http  	127.0.0.1 <- 200
+20211019 07474532  &  -    00.000.917
+20211019 07474534  %  +    node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07474534  % http  	127.0.0.1 -> GET node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07474534  % info  	endpoint statics
+20211019 07474534  % info  	reqPath node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07474534  % ERROR 	Not found "/home/admloc/Documents/ubProject/CityPortal/www/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js"
+20211019 07474534  % http  	127.0.0.1 <- 404
+20211019 07474534  %  -    00.000.448
+20211019 07474537  &  +    app.js
+20211019 07474537  & http  	127.0.0.1 -> GET app.js
+20211019 07474537  & info  	endpoint statics
+20211019 07474537  & info  	reqPath app.js
+20211019 07474537  & http  	127.0.0.1 <- 200
+20211019 07474537  &  -    00.000.307
+20211019 07474545  &  +    node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07474545  & http  	127.0.0.1 -> GET node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07474545  & info  	endpoint statics
+20211019 07474545  & info  	reqPath node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07474545  & ERROR 	Not found "/home/admloc/Documents/ubProject/CityPortal/www/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js"
+20211019 07474545  & http  	127.0.0.1 <- 404
+20211019 07474545  &  -    00.000.296
+20211019 07474630  &  +    internalCall
+20211019 07474630  & http  	127.0.0.1 -> GET 
+20211019 07474630  & info  	endpoint statics
+20211019 07474630  & info  	reqPath index.html
+20211019 07474630  & http  	127.0.0.1 <- 200
+20211019 07474630  &  -    00.000.391
+20211019 07474632  %  +    node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07474632  % http  	127.0.0.1 -> GET node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07474632  % info  	endpoint statics
+20211019 07474632  % info  	reqPath node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07474632  % ERROR 	Not found "/home/admloc/Documents/ubProject/CityPortal/www/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js"
+20211019 07474632  % http  	127.0.0.1 <- 404
+20211019 07474632  %  -    00.000.759
+20211019 07474636  &  +    app.js
+20211019 07474636  & http  	127.0.0.1 -> GET app.js
+20211019 07474636  & info  	endpoint statics
+20211019 07474636  & info  	reqPath app.js
+20211019 07474636  & http  	127.0.0.1 <- 200
+20211019 07474636  &  -    00.000.413
+20211019 07474642  &  +    node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07474642  & http  	127.0.0.1 -> GET node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07474642  & info  	endpoint statics
+20211019 07474642  & info  	reqPath node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07474642  & ERROR 	Not found "/home/admloc/Documents/ubProject/CityPortal/www/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js"
+20211019 07474642  & http  	127.0.0.1 <- 404
+20211019 07474642  &  -    00.000.332
+20211019 07485319  &  +    internalCall
+20211019 07485319  & http  	127.0.0.1 -> GET 
+20211019 07485319  & info  	endpoint statics
+20211019 07485319  & info  	reqPath index.html
+20211019 07485319  & http  	127.0.0.1 <- 200
+20211019 07485319  &  -    00.000.437
+20211019 07485321  %  +    node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07485321  % http  	127.0.0.1 -> GET node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07485321  % info  	endpoint statics
+20211019 07485321  % info  	reqPath node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07485321  % ERROR 	Not found "/home/admloc/Documents/ubProject/CityPortal/www/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js"
+20211019 07485321  % http  	127.0.0.1 <- 404
+20211019 07485321  %  -    00.000.628
+20211019 07485324  &  +    app.js
+20211019 07485324  & http  	127.0.0.1 -> GET app.js
+20211019 07485324  & info  	endpoint statics
+20211019 07485324  & info  	reqPath app.js
+20211019 07485324  & http  	127.0.0.1 <- 200
+20211019 07485324  &  -    00.000.325
+20211019 07485332  &  +    node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07485332  & http  	127.0.0.1 -> GET node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07485332  & info  	endpoint statics
+20211019 07485332  & info  	reqPath node_modules/@unitybase/ub-pub/dist/ub-pub.min.js
+20211019 07485332  & ERROR 	Not found "/home/admloc/Documents/ubProject/CityPortal/www/node_modules/@unitybase/ub-pub/dist/ub-pub.min.js"
+20211019 07485332  & http  	127.0.0.1 <- 404
+20211019 07485332  &  -    00.000.327
+20211019 07500459  ! srvr  Restarting...
+20211019 07500459  ! mon   {"sessions_total":0,"threads_total":4,"incoming_bytes":191830,"outcoming_bytes":586131,"responses_total":[0,0,230,0,30,0],"security_exception_count":0,"js_gc_count":28,"js_memory_bytes":13647872,"http_perning_request_count":0}

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/umd/locale/en.js"></script>
+    <!-- lodash UB -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
+    <script src="/clientRequire/@unitybase/ub-pub/dist/ub-pub.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <el-menu default-active="1"
+             mode="horizontal"
+             background-color="#545c64"
+             text-color="#fff"
+             active-text-color="#ffd04b">
+
+        <el-menu-item index="0">
+            <a href="https://unitybase.info/" target="_blank">
+                <img alt="Brand" src="https://unitybase.info/img/logo.svg" height="40px"></a>
+        </el-menu-item>
+
+        <el-menu-item index="1">Home</el-menu-item>
+
+        <el-menu-item index="2">
+            <a href="https://git-pub.intecracy.com/unitybase/samples/tree/master/courses/tutorial-v5" target="_blank">Tutorials</a>
+        </el-menu-item>
+
+        <el-menu-item index="3" v-if="!isLogIn">
+            <el-button @click='logInFormVisible = true' type="primary">Log in</el-button>
+        </el-menu-item>
+
+        <el-menu-item index="3" v-else>
+            <el-button @click="logout" type="primary">Log out</el-button>
+        </el-menu-item>
+
+    </el-menu>
+
+    <el-dialog title="Log in to City Portal"
+               :visible.sync="logInFormVisible">
+        <el-dialog
+                width="30%"
+                title="Failed to log in"
+                :visible.sync="failedToLogInDialogVisible"
+                append-to-body>
+        </el-dialog>
+        <el-form size="medium">
+            <el-form-item label="Login">
+                <el-input v-model="form.login" placeholder="Login"></el-input>
+            </el-form-item>
+            <el-form-item label="Password">
+                <el-input type="password" v-model="form.pass" placeholder="Password"
+                          @keyup.enter.native="login"></el-input>
+            </el-form-item>
+            <el-button :loading="isLoading" type="primary" @click="login">Continue</el-button>
+        </el-form>
+    </el-dialog>
+
+    <el-row type="flex" class="row-bg" justify="center">
+        <el-col>
+            <div style="display: flex; justify-content: center">
+                <h1>{{isLogIn?"Requests":"Welcome to CITY PORTAL!"}}</h1>
+            </div>
+        </el-col>
+    </el-row>
+    <el-table
+            v-show="isLogIn"
+            :data="tableData">
+        <el-table-column
+                prop="ID"
+                label="ID">
+        </el-table-column>
+        <el-table-column
+                prop="reqDate"
+                label="Request Date">
+        </el-table-column>
+        <el-table-column
+                prop="applicantPhone"
+                label="Applicant Phone">
+        </el-table-column>
+        <el-table-column
+                prop="applicantInfo"
+                label="Applicant Info">
+        </el-table-column>
+        <el-table-column
+                prop="status"
+                label="Status">
+        </el-table-column>
+        <el-table-column
+                prop="reqText"
+                label="Request Text">
+        </el-table-column>
+        <el-table-column
+                prop="answer"
+                label="Answer">
+        </el-table-column>
+    </el-table>
+</div>
+
+
+<script defer src="app.js"></script>
+
+</body>
+</html>
